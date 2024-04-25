@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #F8F8F8;
+}
+.main-container {
+  max-width: 1272px;
+  margin: auto;
+}
+
+.home {
+  background-color: #fff;
+}
+.container {
+  max-width: 1272px;
+  margin: auto;
+}
+/*********** HEADER ***********/
+
+.header-container {
+  background-color: #fff;
+}
+
+.header {
+  max-width: 1272px;
+  margin: auto;
+  height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-links {
+  width: 100%;
+  max-width: 845px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+}
+
+.active {
+  color: #0264FA;
+}
+
+.header-select select {
+  padding: 4px 6px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+}
+
+.header-select select option {
+  border-radius: 2px;
+  padding: 4px 6px;
+  background-color: #fff;
+  color: #333;
+}
+
+.header-select select option:hover {
+  background-color: #f0f0f0;
+}
+
+.header-select select option:checked {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/*********** FOOTER ***********/
+
+.footer {
+  margin:0 auto 20px;
+}
+
+.footer-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links-group {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+}
+.bold {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+}
+.instagram {
+  padding: 0;
+  margin: 0;
+  font-size: 36px;
+}
+.tiktok {
+  padding: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 2px;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  color: #707071;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.divider {
+  margin: 20px 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e0dfe7;
+}
+.copyright {
+  display: flex;
+  justify-content: space-between;
+}
+.copyright-links {
+  color: #707071;
+  display: flex;
+  gap: 30px;
+}
+.footer-link-copyright {
+  text-decoration: none;
+  color: #707071;
+}
+
+.swiper {
+  width: 100%;
+  height: 576px;
+}
+
+.swiper-slide {
+  text-align: center;
+  border-radius: 16px !important;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*********** RECOMMENDED PHONES ***********/
+
+.phones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recommended-phones {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin:100px auto 40px;
+}
+
+.recommended-phone-card {
+  display: grid;
+  place-items: center;
+  background-color: #F8F8F8;
+  border-radius: 16px;
+  color: #707071;
+  padding: 15px 0 30px;
+  height: 528px;
+  width: 624px;
+}
+.recommended-logo {
+  max-width: 170px;
+  object-fit: contain;
+}
+
+
+.recommended-phone-specs {
+  font-size: 12px;
+  display: flex;
+  gap: 20px;
+}
+.recommended-links {
+  margin: 20px 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.recommended-link {
+  text-decoration: none;
+  color: #000;
+}
+.buy-btn {
+  cursor: pointer;
+  width: 124px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #0264FA;
+}
+
+.about-phone {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.vl {
+  height: 15px;
+  width: 1px;
+  background-color: #707071;
+}
+
+.recommended-phone-img {
+  max-width: 289px;
+  height: 100%;
+  max-height: 289px;
+}
+
+.banner {
+  width: 100%;
+  margin: 50px 0;
+  max-width: 1272px;
+  max-height: 576px;
+  border-radius: 16px;
+}
+
+/*********** NEWS ***********/
+.news {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  background-color: #fff;
+}
+
+.news-card {
+  background-color: #F8F8F8;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.news-card-img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.news-card-content{
+  padding: 20px 10px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.news-data {
+  font-size: 12px;
+  color: #707071;
+}
+.news-card-text {
+  font-size: 12px;
+  color: #707071;
+}
+
+.news-card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.news-links{
+  margin: 50px 10px 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  color: #000;
+}
+.news-link {
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/*********** SHOP CARD ***********/
+.shop {
+  margin-bottom: 100px;
+}
+.shop-img{
+  max-width: 260px;
+  object-fit: contain;
+}
+.shop-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.shop-card {
+  width: 300px;
+}
+
+.shop-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.shop-box {
+  background-color: #fff;
+  border-radius: 8px;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.shop-links{
+  margin: 10px 0;
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+  color: #000;
+}
+.shop-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
