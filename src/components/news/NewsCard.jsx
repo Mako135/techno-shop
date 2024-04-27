@@ -4,7 +4,7 @@ import newsImg from "../../assets/news.png";
 const NewsCard = () => {
   return (
     <div className="news-card">
-      <img src={newsImg} alt="" className="news-card-img" />
+      <img src={newsImg} alt="" className="news-card-img"/>
       <div className="news-card-content">
         <div className="news-data">
           <p>14 Апреля, 2022</p>

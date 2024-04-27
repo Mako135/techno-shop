@@ -4,13 +4,17 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 body {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
 }
 .main-container {
   max-width: 1272px;
   margin: auto;
+}
+.white {
+  background-color: #fff;
 }
 
 .home {
@@ -49,7 +53,7 @@ body {
 }
 
 .active {
-  color: #0264FA;
+  color: #0264fa;
 }
 
 .header-select select {
@@ -81,7 +85,7 @@ body {
 /*********** FOOTER ***********/
 
 .footer {
-  margin:0 auto 20px;
+  margin: 0 auto 20px;
 }
 
 .footer-header {
@@ -181,40 +185,34 @@ body {
 /*********** RECOMMENDED PHONES ***********/
 
 .phones {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
-.recommended-phones {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .title {
   text-align: center;
   font-size: 32px;
   font-weight: 600;
-  margin:100px auto 40px;
+  margin: 50px auto 40px;
 }
 
 .recommended-phone-card {
   display: grid;
   place-items: center;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   border-radius: 16px;
   color: #707071;
-  padding: 15px 0 30px;
+  padding: 15px 10px 30px;
   height: 528px;
-  width: 624px;
+  width: 100%;
+  max-width: 624px;
 }
 .recommended-logo {
   max-width: 170px;
   object-fit: contain;
 }
-
 
 .recommended-phone-specs {
   font-size: 12px;
@@ -241,7 +239,7 @@ body {
   color: #fff;
   font-size: 14px;
   font-weight: 600;
-  background-color: #0264FA;
+  background-color: #0264fa;
 }
 
 .about-phone {
@@ -275,15 +273,16 @@ body {
   display: flex;
   justify-content: space-between;
   padding-bottom: 100px;
+  gap: 10px;
   background-color: #fff;
 }
 
 .news-card {
-  background-color: #F8F8F8;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
   width: 100%;
   max-width: 400px;
+  max-height: 559px;
 }
 
 .news-card-img {
@@ -293,7 +292,9 @@ body {
   height: 300px;
   object-fit: cover;
 }
-.news-card-content{
+
+
+.news-card-content {
   padding: 20px 10px 30px;
   display: flex;
   flex-direction: column;
@@ -313,8 +314,8 @@ body {
   font-size: 16px;
   font-weight: 600;
 }
-.news-links{
-  margin: 50px 10px 0;
+.news-links {
+  margin: 1em 10px 0;
   text-decoration: none;
   display: flex;
   justify-content: end;
@@ -330,9 +331,9 @@ body {
 
 /*********** SHOP CARD ***********/
 .shop {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
-.shop-img{
+.shop-img {
   max-width: 260px;
   object-fit: contain;
 }
@@ -343,6 +344,7 @@ body {
 }
 .shop-card {
   width: 300px;
+  margin-bottom: 30px;
 }
 
 .shop-title {
@@ -359,7 +361,7 @@ body {
   justify-content: center;
   margin-bottom: 10px;
 }
-.shop-links{
+.shop-links {
   margin: 10px 0;
   text-decoration: none;
   display: flex;
@@ -370,4 +372,97 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+/*********** ABOUT PAGE ***********/
+.about-page{
+  background-color: #f8f8f8;
+}
+.img-container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.more-links {
+  margin: 10px 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #000;
+}
+.more-link {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 5px;
+}
+
+.slogan {
+  margin: 100px auto 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slogan-title {
+  display: grid;
+  place-items: center;
+}
+
+.slogan-title p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.slogan-title h3 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #0034ee;
+  margin-bottom: 20px;
+}
+
+.history-card-date {
+  font-size: 12px;
+  color: #707071;
+}
+.history-card-img {
+  margin: 13px 0 15px;
+  width: 300px;
+  max-height: 175px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.mySwiper {
+  max-height: 400px;
+  margin-bottom: 50px;
+}
+
+.history-slide {
+  max-width: 300px;
+  max-height: 320px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.navigation {
+  margin: auto;
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: #fff;
+  background-color: #0034ee;
+  cursor: pointer;
 }

@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage";
 import WhereToBuy from "./pages/WhereToBuy";
+import About from "./pages/About";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           >
             <Route index element={<HomePage />} />
             <Route path="/where-to-buy" element={<WhereToBuy />} />
+            <Route path="/about" element={<About />} />
           </Route>
         </Routes>
       </main>

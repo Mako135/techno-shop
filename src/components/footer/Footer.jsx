@@ -3,9 +3,10 @@ import tiktok from "../../assets/tiktok.svg";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
-const Footer = (className) => {
+// eslint-disable-next-line react/prop-types
+const Footer = ({ className }) => {
   return (
-    <div className={`footer ${className}`}>
+    <div className="footer" style={{backgroundColor: className? "#fff" : ""}}>
       <div className="container">
         <div className="divider"></div>
 
