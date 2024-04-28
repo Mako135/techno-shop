@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+  .phones {
+    place-items: center;
+    grid-template-columns: 1fr;
+  }
+  .home-news {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .news {
+    flex-direction: column;
+  }
+}

@@ -6,6 +6,7 @@
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
+
 body {
   background-color: #f8f8f8;
 }
@@ -23,6 +24,7 @@ body {
 .container {
   max-width: 1272px;
   margin: auto;
+  padding: 0 10px;
 }
 /*********** HEADER ***********/
 
@@ -269,12 +271,21 @@ body {
 }
 
 /*********** NEWS ***********/
-.news {
-  display: flex;
-  justify-content: space-between;
+.home-news {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 100px;
   gap: 10px;
   background-color: #fff;
+}
+
+.news {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 100px;
+  background-color: #fff;
+  gap: 20px;
 }
 
 .news-card {
@@ -340,11 +351,11 @@ body {
 .shop-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 10px;
+  justify-content: center;
 }
 .shop-card {
   width: 300px;
-  margin-bottom: 30px;
 }
 
 .shop-title {
@@ -437,17 +448,20 @@ body {
   border-radius: 8px;
 }
 .mySwiper {
+  width: 100%;
   max-height: 400px;
   margin-bottom: 50px;
 }
 
 .history-slide {
+  min-width: 200px;
   max-width: 300px;
   max-height: 320px;
   display: flex;
   flex-direction: column;
   text-align: start;
 }
+
 .navigation {
   margin: auto;
   width: 80px;
@@ -465,4 +479,90 @@ body {
   color: #fff;
   background-color: #0034ee;
   cursor: pointer;
+}
+
+/*********** MAIN NEWS CARD ***********/
+.main-news{
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.main-news img {
+  width: 60%;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.main-news-date {
+  font-size: 12px;
+  color: #707071;
+}
+.main-news-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*********** NEWS PAGE ***********/
+
+.news-header-content{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.news-header-date{
+  display: flex;
+  gap: 20px;
+  color: #707071;
+  font-size: 12px;
+}
+.news-header-title {
+  font-weight: 600;
+  font-size: 32px;
+}
+.news-main-content{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.news-main-content img{
+  width: 100%;
+  margin: 40px 0;
+  border-radius: 16px; 
+}
+
+.news-main-content-title{
+  font-size: 16px;
+  font-weight: 600;
+}
+.news-main-navigation{
+  margin-top: 3em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-link-left, .news-link-right {
+  font-size: 14px;
+  margin: 1em 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  color: #707071;
+}
+.news-main-content-ps{
+  font-style: italic;
+}
+
+.news-link-left img{
+  rotate: 180deg;
+}
+.news-link {
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

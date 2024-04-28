@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import arrow from "../../assets/arrow.png";
+import PropTypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
 const ShopCard = ({ img, title, link }) => {
   return (
     <div className="shop-card">
@@ -17,6 +17,12 @@ const ShopCard = ({ img, title, link }) => {
       </Link>
     </div>
   );
+};
+
+ShopCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired
 };
 
 export default ShopCard

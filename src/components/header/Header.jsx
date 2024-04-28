@@ -12,10 +12,10 @@ const Header = () => {
           <NavLink className="link" to="/">
             Главная
           </NavLink>
-          <NavLink className="link" to="/">
+          <NavLink className="link" to="/phones">
             Смартфоны
           </NavLink>
-          <NavLink className="link" to="/">
+          <NavLink className="link" to="/accessories">
             Аксессуары
           </NavLink>
           <NavLink className="link" to="/where-to-buy">
@@ -24,13 +24,13 @@ const Header = () => {
           <NavLink className="link" to="/about">
             О нас
           </NavLink>
-          <NavLink className="link" to="/">
+          <NavLink className="link" to="/news">
             Новости
           </NavLink>
-          <NavLink className="link" to="/">
+          <NavLink className="link" to="/support">
             Поддержка
           </NavLink>
-          <NavLink className="link" to="/">
+          <NavLink className="link" to="/stocks">
             Акции
           </NavLink>
         </div>

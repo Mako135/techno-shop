@@ -1,0 +1,12 @@
+@media (max-width: 480px) {
+  .phones {
+    place-items: center;
+    grid-template-columns: 1fr;
+  }
+  .shop-cards {
+    justify-content: center;
+  }
+  .news {
+    flex-direction: column;
+  }
+}

@@ -1,8 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage";
+import Smartphones from "./pages/Smartphones";
+import Accessories from "./pages/Accessories";
 import WhereToBuy from "./pages/WhereToBuy";
 import About from "./pages/About";
+import News from "./pages/News";
+import Support from "./pages/Support";
+import Stocks from "./pages/Stocks";
+import NewsPage from "./components/news/NewsPage";
 
 function App() {
 
@@ -10,13 +16,16 @@ function App() {
     <>
       <main>
         <Routes>
-          <Route
-            path="/"
-            element={<Layout />}
-          >
+          <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
+            <Route path="/phones" element={<Smartphones />} />
+            <Route path="/accessories" element={<Accessories />} />
             <Route path="/where-to-buy" element={<WhereToBuy />} />
             <Route path="/about" element={<About />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/news/:id" element={<NewsPage />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/stocks" element={<Stocks />} />
           </Route>
         </Routes>
       </main>

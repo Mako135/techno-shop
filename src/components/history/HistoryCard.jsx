@@ -1,5 +1,5 @@
+import PropTypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
 const HistoryCard = ({ year, img, title }) => {
   return (
     <div>
@@ -10,4 +10,9 @@ const HistoryCard = ({ year, img, title }) => {
   );
 };
 
-export default HistoryCard
+HistoryCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired
+};
+export default HistoryCard;

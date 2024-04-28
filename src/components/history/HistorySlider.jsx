@@ -24,13 +24,25 @@ const HistorSlider = () => {
         </button>
       </div>
       <Swiper
-        slidesPerView={3}
         spaceBetween={24}
         onSwiper={setSwiper}
         modules={[Navigation]}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.3
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2.5
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 4
+          }
         }}
         className="mySwiper"
       >

@@ -1,27 +1,24 @@
 import { Link } from "react-router-dom";
 import arrow from "../../assets/arrow.png";
-import newsImg from "../../assets/news.png";
-const NewsCard = () => {
+import PropTypes from "prop-types";
+
+const NewsCard = ({img, date, title, description}) => {
   return (
     <div className="news-card">
-      <img src={newsImg} alt="" className="news-card-img"/>
+      <img src={img} alt="" className="news-card-img" />
       <div className="news-card-content">
         <div className="news-data">
-          <p>14 Апреля, 2022</p>
+          <p>{date}</p>
         </div>
         <div className="news-card-title">
-          <p>Инновационный проект TECNO Mobile и Manchester City</p>
+          <p>{title}</p>
         </div>
         <div className="news-card-text">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-            quaerat, quas, quo, quod quibusdam voluptatibus repellendus
-            voluptates nihil.
-          </p>
+          <p>{description}</p>
         </div>
-        <Link className="news-links" to="/">
+        <Link className="news-links" to="/news/1">
           <div className="news-link">
-            <p>Подробнее</p>
+            <p>Читать</p>
             <img src={arrow} alt="" height={12} />
           </div>
         </Link>
@@ -29,5 +26,12 @@ const NewsCard = () => {
     </div>
   );
 }
+
+NewsCard.propTypes = {
+  date: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  img: PropTypes.string
+};
 
 export default NewsCard
