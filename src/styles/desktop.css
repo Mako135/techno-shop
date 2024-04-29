@@ -564,5 +564,52 @@ body {
   right: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
+}
+
+/*********** SUPPORT ***********/
+
+
+.support-title{
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+}
+.support-subtitle {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 2em;
+}
+.support-search {
+  padding: 5px 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  height: 48px;
+  width: 624px;
+  display: flex;
+  gap: 10px;
+  font-size: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.support-search input {
+  height: 100%;
+  font-size: 20px;
+}
+.download-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.download-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.download-subtitle{
+  font-size: 20px;
+  color: #707071;
 }

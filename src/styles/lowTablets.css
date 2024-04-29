@@ -10,4 +10,7 @@
   .news {
     flex-direction: column;
   }
+  .support-search {
+    width: 100%;
+  }
 }
