@@ -1,0 +1,985 @@
+window.comon17Config = {
+  "pc": {
+    "config": {
+      "language": "ru",
+      "model": "ck8",
+      "enableSmoothScroll": false,
+      "sectionSwitch": {
+        "useImageHomePage": true,
+        "officialVideo": true
+      }
+    },
+    "global": {
+      "play": "play",
+      "pause": "pause",
+      "before": "Before",
+      "after": "After",
+      "closeBt": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/closeIcon.png",
+      "playBt": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/playIcon.png"
+    },
+    "title": {
+      "aesthetics": {
+        "title": "<b>Новый мир твоих<br/>фотографий</b>",
+        "background": {
+          "type": "video",
+          "video": {
+            "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/title/aestheticsCK8.m4v",
+            "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/title/aestheticsCK8.jpg"
+          },
+          "pos": "right"
+        },
+        "model": {
+          "w": "371",
+          "h": "40",
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/title/modelCK8.png"
+        }
+      },
+      "image": {
+        "title": "<b>Эстетичный дизайн</b>",
+        "background": {
+          "type": "image",
+          "imageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/title/imageCK8.png",
+          "pos": "middle"
+        },
+        "model": {
+          "w": "371",
+          "h": "40",
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/title/modelCK8.png"
+        }
+      },
+      "performance": {
+        "title": "<b>Выдающаяся<br/>производительность</b>",
+        "background": {
+          "type": "video",
+          "video": {
+            "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/title/performanceTitleCK8.m4v",
+            "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/title/performanceTitleCK8.jpg"
+          },
+          "pos": "right"
+        },
+        "model": {
+          "w": "371",
+          "h": "40",
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/title/modelCK8.png"
+        }
+      }
+    },
+    "firstSection": {
+      "homePageImageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/firstSection/backgroundCK8RU.jpg",
+      "bluePhoneSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/firstSection/bluePhoneCK8.png",
+      "blackPhoneSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/firstSection/blackPhoneCK8.png",
+      "downIconSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/firstSection/downIcon.png",
+      "officialVideo": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/tvc/officialVideo.mp4",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/tvc/officialVideo.jpg"
+      },
+      "previewVideo": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/tvc/previewVideo.mp4",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/tvc/previewVideo.jpg"
+      }
+    },
+    "highlightSection": {
+      "model": {
+        "w": "295",
+        "h": "33",
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/highlightSection/modelCK8.png"
+      },
+      "aesthetics": {
+        "title": "<b>Новый мир твоих<br/>фотографий</b>",
+        "imageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/highlightSection/aestheticsCK8.png"
+      },
+      "master": {
+        "title": "<b>Эстетичный<br/>дизайн</b>",
+        "imageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/highlightSection/masterCK8.png",
+        "marginRight": "43",
+        "w": "442",
+        "h": "268"
+      },
+      "performance": {
+        "title": "<b>Выдающаяся<br/>производительность</b>",
+        "imageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/highlightSection/performanceCK8.png",
+        "marginRight": "0",
+        "w": "517",
+        "h": "279"
+      },
+      "iconSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/highlightSection/downIcon.svg"
+    },
+    "cameraParameterSection": {
+      "param0": {
+        "title": "<b>64 Мп Основная камера</b>",
+        "subtitle": "",
+        "content": [
+          "OIS оптическая стабилизация / Модуль RGBW",
+          "1 стеклянная + 5 пластиковых линз",
+          "F/1.77 / PDAF"
+        ]
+      },
+      "param1": {
+        "title": "<b>2 Мп  Макрообъектив</b>",
+        "content": [
+          "F/2.4"
+        ],
+        "title2": ""
+      },
+      "param2": {
+        "title": "<b>Кольцевая вспышка</b>",
+        "content": [
+          "4 диода"
+        ],
+        "title2": "<b>2 Мп Датчик глубины</b>",
+        "content2": [
+          "Боке / F/2.4"
+        ]
+      },
+      "param3": {
+        "title": "<b>Двойная вспышка в рамке экрана</b>"
+      },
+      "param4": {
+        "title": "<b>32 Мп Селфи-камера</b>",
+        "content": [
+          "Угол обзора 80.6° / 1/1.28”",
+          "F/2.4 / 24 mm",
+          "0.8 мкм"
+        ]
+      },
+      "backPhoneSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/cameraParameterSection/backPhoneCK8.png",
+      "frontPhoneSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/cameraParameterSection/frontPhoneCK8.png"
+    },
+    "cameraDescriptionSection": {
+      "headTitle": [
+        "Снимай динамичные и красивые кадры.",
+        "От заката до рассвета"
+      ],
+      "button": {
+        "title": "Sample Image",
+        "text": "View More"
+      },
+      "title": [
+        "RGBW Светочувствительность",
+        "высокого уровня"
+      ],
+      "content": [
+        "Шесть линз идеально отфильтровывают свет. Высокая светопроницаемость поможет запечатлеть даже мелкие детали. 64 миллиона пикселей образуют сенсор, который отличается дополнительным белым (W) каналом в традиционной компоновке RGB-фильтра. Светопроницаемость увеличена на 200%, а шумы на фото уменьшены на 35% по сравнению с предыдущей моделью.",
+        "Испытайте лучший в индустрии сенсор для ночной съемки. Невероятная светочувствительность каждого пикселя. Запечатлейте все детали памятного события."
+      ],
+      "list": [
+        {
+          "title": "RGBW",
+          "content": "Светочувствительный сенсор"
+        },
+        {
+          "title": "64 Мп",
+          "content": "Высокое разрешение"
+        },
+        {
+          "title": "0,8 мкм",
+          "content": "Ультраширокий пиксель"
+        },
+        {
+          "title": "OIS",
+          "content": "Оптическая стабилизация"
+        },
+        {
+          "title": "1 стеклянная<br/>5 пластиковых линз",
+          "content": "Высокая светопропускаемость"
+        }
+      ],
+      "video": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/nightPortrait.mp4",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/nightPortrait.jpg"
+      },
+      "popUps": {
+        "title": [
+          "Снимай динамичные и красивые кадры.",
+          "От заката до рассвета"
+        ],
+        "model": {
+          "w": 122,
+          "h": 14,
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/title/modelCK8.png"
+        },
+        "phone": {
+          "title": "CAMON 20 Pro 5G",
+          "imageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/cameraDescriptionSection/leftCK6.jpg"
+        },
+        "compared": {
+          "title": "OTHER PHONE",
+          "imageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/cameraDescriptionSection/rightCK6.jpg"
+        },
+        "button": {
+          "title": "Sample Image",
+          "text": "Back"
+        }
+      }
+    },
+    "clearSelfieSection": {
+      "headTitle": [
+        "Сделай",
+        "день ярким!"
+      ],
+      "content": [
+        "Фронтальная камера высокого разрешения изящно подчеркнет вашу красоту.",
+        "Красивые селфи получаются благодаря мягкой двойной вспышке. Получите идеальные снимки даже в условиях низкого освещения."
+      ],
+      "title": [
+        "Яркие селфи с",
+        "фронтальной камерой 32 Мп"
+      ],
+      "list": [
+        {
+          "title": "32 Мп",
+          "content": "Высокое разрешение"
+        },
+        {
+          "title": "1/2.8''",
+          "content": "Сверхчувствительный сенсор"
+        },
+        {
+          "title": "0.8 мкм",
+          "content": "Пиксель сверхкрупного размера"
+        },
+        {
+          "title": "Двойная вспышка в рамке экрана",
+          "content": "Мягкая подсветка лица"
+        }
+      ],
+      "blackPictureSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/clearSelfieSection/blackPicture.jpg",
+      "pictureSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/clearSelfieSection/picture.jpg",
+      "phoneSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/clearSelfieSection/phoneCK8.png",
+      "lightSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/clearSelfieSection/light.png",
+      "phoneDesc": "*Изображения приведены для ознакомления. Реальный интерфейс может отличаться."
+    },
+    "portraitMasterSection": {
+      "headTitle": [
+        "Наслаждайся",
+        "естественной красотой"
+      ],
+      "content": [
+        "AI анализирует черты лица по 319 точкам для качественной бьютификации, после чего отдельно сегментирует участки лица, вплоть до мельчайших прядей волос.  Следующим этапом искусственный интеллект анализирует пол, оттенок кожи и окружающую среду.",
+        "Это тоже помогает выстроить дополнительные элементы бьютификации. За созданием технологии стоят миллиарды проанализированных изображений высокого качества, чтобы предоставить индивидуальные алгоритмы бьютификации для каждого пользователя."
+      ],
+      "title": [
+        "Бесподобные",
+        "портретные",
+        "снимки"
+      ],
+      "list": [
+        {
+          "title": "319 точек",
+          "content": "для анализа<br/>индивидуальных черт лица"
+        },
+        {
+          "title": "Создание портретов",
+          "content": "на основе базы<br/>данных миллиардов тонов"
+        },
+        {
+          "title": "Точность более 95%",
+          "content": "Распознавание по семи<br/>оттенкам кожи"
+        },
+        {
+          "title": "1000 точек",
+          "content": "Технология Face 3D"
+        },
+        {
+          "title": "Более 50<br>миллионов портретов",
+          "content": "База данных изображений"
+        },
+        {
+          "title": "100 уровней",
+          "content": "Регулировка алгоритма<br/>бьютификации"
+        }
+      ],
+      "video": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/portraitMasterSection/portraitMasterCK8.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/portraitMasterSection/portraitMasterCK8.jpg"
+      }
+    },
+    "portraitVideoSection": {
+      "headTitle": [
+        "Потрясающее качество",
+        "каждого кадра"
+      ],
+      "title": [
+        "Снимайте видео в 4К"
+      ],
+      "content": [
+        "Основная камера 64 Мп помогает снимать видео в формате высокой четкости 4К. Сохраните памятные и захватывающие моменты жизни в идеальном качестве, чтобы вновь и вновь окунаться в них даже спустя годы.",
+        "Даже во время монтажа каждый кадр остается в отличном качестве, который можно сохранить, как фотографию"
+      ],
+      "list": [
+        {
+          "title": "4K 30 к/с",
+          "content": "Съемка видео в высоком разрешении"
+        },
+        {
+          "title": "HDR",
+          "content": "Высокий динамический контраст"
+        },
+        {
+          "title": "AI-бьютификация",
+          "content": "во время видеосъемки"
+        }
+      ],
+      "video": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/4KPortraitVideo.mp4",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/4KPortraitVideo.jpg"
+      }
+    },
+    "dualVideoSection": {
+      "headTitle": [
+        "Одновременная съемка<br/>на основную и фронтальную камеру.",
+        "Вдвое больше впечатлений"
+      ],
+      "desc": [
+        "Фронтальная камера 32 Мп и основная камера 50 Мп могут снимать видео с двух противоположных сторон одновременно. Создай новый жанр в твоих соцсетях!"
+      ],
+      "leftVideo": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/dualLeftVideo.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/dualLeftVideo.jpg"
+      },
+      "rightVideo": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/dualRightVideo.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/dualRightVideo.jpg"
+      },
+      "phoneSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/dualVideoSection/phoneCK8.png",
+      "phoneTitle": "Режим двойного видео"
+    },
+    "cuttingEdgeSection": {
+      "title": [
+        "Выдающийся дизайн<br/>CAMON PUZZLE"
+      ],
+      "slogan": [
+        {
+          "title": "Эстетика геометрических фигур"
+        },
+        {
+          "title": "Полигоны Тиссена"
+        },
+        {
+          "title": "Авангардные мотивы"
+        }
+      ],
+      "features": [
+        {
+          "title": "7.8 мм",
+          "desc": "Тонкий корпус"
+        },
+        {
+          "title": "IP53",
+          "desc": "Защита от пыли и влаги"
+        }
+      ],
+      "subtitle": [
+        "Уникальный",
+        "абстрактный стиль"
+      ],
+      "desc": "Оцените новый абстрактный дизайн CAMON PUZZLE! Яркое сочетание эстетики геометрических фигур и авангардных мотивов. Фигуры выстроенные по принципу полигонов Тиссена создают яркие и нестандартные узоры. Такой дизайн стильно выделяется среди других устройств. Теперь вы законодатель моды.",
+      "strokeImg": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/cuttingEdgeSection/ck8Stroke.svg",
+      "phoneImg": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/cuttingEdgeSection/ck8.png",
+      "museImg": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/cuttingEdgeSection/muse.png",
+      "video": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/cuttingEdgeSection/ck8.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/cuttingEdgeSection/ck8.jpg"
+      }
+    },
+    "appearanceSection": {
+      "firstPage": {
+        "title": "Премиальный внешний вид и эргономика",
+        "desc": "Задняя крышка из экокожи, как в люксовых автомобилях. Прочный керамический модуль камер. Изысканная отделка и безупречный дизайн. Бесшовное сочетание двух премиум-материалов создает эффект фундаментальности и долговечности, в отличие от хрупкого пластика.",
+        "features": [
+          {
+            "title": "Твердость 7H по шкале Мооса",
+            "desc": "Прочность уровня сапфира"
+          },
+          {
+            "title": "1400°C",
+            "desc": "температура закаливания керамической поверхности"
+          },
+          {
+            "title": "56 часов",
+            "desc": "алмазной полировки"
+          },
+          {
+            "title": "576 часов",
+            "desc": "на изготовление и обработку"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/appearanceSection/phoneCK8.jpg"
+        },
+        {
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/appearanceSection/ck8_1.jpg"
+        },
+        {
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/appearanceSection/ck8_2.jpg"
+        }
+      ],
+      "finalPage": {
+        "title": "Премиальная экокожа<br/>и высококачественная<br/>нанокристаллическая керамика",
+        "phones": [
+          {
+            "img": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/appearanceSection/ck9Blue.png",
+            "colorName": "Голубая фиалка",
+            "hex": "5374CB"
+          },
+          {
+            "img": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/appearanceSection/ck9Black.png",
+            "colorName": "Черный небосвод",
+            "hex": "000000"
+          }
+        ]
+      }
+    },
+    "sleepingSection": {
+      "title": "Новые возможности динамических обоев",
+      "subtitle": "Невероятное погружение благодаря дизайну экрана с тонкими рамками",
+      "backgroundVideo": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/sleepingSection/ck9.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/sleepingSection/ck9.jpg"
+      },
+      "phoneVideo": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/sleepingSection/ck8Phone.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/sleepingSection/ck9Phone.jpg",
+        "mask": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/sleepingSection/ck9Off.png"
+      },
+      "features": [
+        {
+          "title": "Always On Display",
+          "desc": "Вы не пропустите важных уведомлений"
+        },
+        {
+          "title": "Нижняя рамка",
+          "desc": "На 47% тоньше"
+        },
+        {
+          "title": "Динамические обои",
+          "desc": "Завораживающие визуальные эффекты"
+        }
+      ],
+      "phone": {
+        "on": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/sleepingSection/ck9On.png",
+        "off": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/sleepingSection/ck9Off.png"
+      },
+      "desc": [
+        "Нижняя рамка стала еще на 47% меньше, чем в предыдущей модели, что делает его практически безрамочным смартфоном.",
+        "В активном состоянии экрана динамические обои создают захватывающий объемный эффект. В режиме блокировки экрана создается тонкая темная эстетика. И только функция Always On Display (AOD) может нарушить эту безмятежность важными уведомлениями."
+      ]
+    },
+    "screenSection": {
+      "title": [
+        "Яркий экран, который",
+        "заботится о вашем зрении"
+      ],
+      "pages": [
+        {
+          "subtitle": [
+            "Адаптивная частота",
+            "обновления экрана 120 Гц"
+          ],
+          "desc": [
+            "Адаптивная частота обновления экрана до 120 Гц автоматически подстраивается под ваши пользовательские сценарии. Она возрастает во время высокопроизводительных игр и снижается когда необходимо сэкономить ресурс заряда аккумулятора. Частота дискретизации экрана 360 Гц обеспечивает мгновенный отклик даже от легкого касания."
+          ],
+          "features": [
+            {
+              "title": "120 Гц",
+              "desc": "Частота обновления экрана"
+            },
+            {
+              "title": "360 Гц",
+              "desc": "Частота дискретизации"
+            }
+          ],
+          "video": {
+            "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/screenSection/120hzCK8.m4v",
+            "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/screenSection/120hzCK8.jpg"
+          }
+        },
+        {
+          "subtitle": [
+            "Безупречная",
+            "цветопередача AMOLED-экрана"
+          ],
+          "desc": [
+            "Большой экран 6.7\" с повышенной контрастностью и динамическим диапазоном.",
+            "Фотографии в галерее отличаются насыщенной и естественной цветовой гаммой. Наслаждайтесь потрясающим качеством каждой детали ваших снимков."
+          ],
+          "features": [
+            {
+              "title": "6.7\" AMOLED",
+              "desc": "Большой экран"
+            },
+            {
+              "title": "Кинематографические цвета",
+              "desc": "100% расширенная цветовая гамма DCI-P3"
+            },
+            {
+              "title": "800000:1",
+              "desc": "Уровень контрастности"
+            },
+            {
+              "title": "AI-галерея",
+              "desc": "Яркий фотоальбом"
+            }
+          ],
+          "video": {
+            "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/screenSection/amoledCK8.m4v",
+            "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/screenSection/amoledCK8.jpg"
+          },
+          "note": "*Поддержка дисплеем полной гаммы DCI-P3 производится только в Галерее AI"
+        },
+        {
+          "subtitle": [
+            "Двойная защита",
+            "зрения"
+          ],
+          "desc": [
+            "Потенциальный вред зрению устранен, благодаря безопасной частоте мерцания и снижению синего спектра. Высокочастотное затемнение снижает утомляемость глазных мышц, а специальная технология экрана отфильтровывает значительную часть синего спектра и сводит к минимуму его вредное воздействие."
+          ],
+          "features": [
+            {
+              "title": "1920 Гц ШИМ",
+              "desc": "Безопасная частота мерцания<br/>даже на низкой яркости"
+            },
+            {
+              "title": "Минимум вреда для зрения",
+              "desc": "от синего света"
+            }
+          ],
+          "videoDesc": {
+            "other": "Другие",
+            "camon": "Серия CAMON 20<br/>1920 Гц ШИМ"
+          },
+          "video": {
+            "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/screenSection/pwm.m4v",
+            "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/screenSection/pwm.jpg"
+          },
+          "tuvLogo": [
+            "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/screenSection/tuvLogo.png",
+            "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/screenSection/waveLogo.png"
+          ]
+        }
+      ]
+    },
+    "performanceSection": {
+      "title": [
+        "Невероятная скорость",
+        "и производительность"
+      ],
+      "pages": [
+        {
+          "subtitle": [
+            "Впервые в серии CAMON",
+            "флагманский процессор",
+            "MediaTek Dimensity 8050"
+          ],
+          "desc": "Смартфон оснащен продвинутым 6-нанометровым процессором с частотой до 3 ГГц. Зависания и притормаживания остались в прошлом. Играйте в современные игры и нагружайте смартфон любым объемом задач. Большой объем памяти и возможность расширения оперативной памяти еще на 8 Гб позволяют запускать сразу несколько приложений и хранить внушительное количество контента.",
+          "features": [
+            {
+              "title": "6-нанометровый",
+              "desc": "мощный процессор"
+            },
+            {
+              "title": "8 + 8 Гб ОЗУ",
+              "desc": "расширение оперативной памяти"
+            },
+            {
+              "title": "Восемь ядер",
+              "desc": "Выдающаяся производительность"
+            },
+            {
+              "title": "256 Гб",
+              "desc": "Внутренняя память"
+            }
+          ]
+        },
+        {
+          "subtitle": [
+            "Трехступенчатое рассеивание",
+            "тепла с помощью полимерного",
+            "графена"
+          ],
+          "desc": "Графен + высокополимерный гель + жидкостное охлаждение = микс решений для эффективного рассеивания тепла. Усовершенствованная система охлаждения предотвращает зависания и притормаживания во время интенсивного использования смартфона. Сокрушительная победа над перегревом.",
+          "features": [
+            {
+              "title": "Площадь графена 5515 мм²",
+              "desc": "Высокая проводимость материала"
+            },
+            {
+              "title": "Высокополимерный гель",
+              "desc": "Улучшенная теплопроводимость"
+            }
+          ]
+        }
+      ],
+      "videos": [
+        {
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/performanceSection/8050.m4v",
+          "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/performanceSection/8050.jpg"
+        },
+        {
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/performanceSection/heatCK8.m4v",
+          "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/performanceSection/heatCK8.jpg"
+        }
+      ]
+    },
+    "batterySection": {
+      "title": [
+        "Занимайтесь делами и не",
+        "беспокойтесь о заряде аккумулятора"
+      ],
+      "features": [
+        {
+          "title": "Режим продолжительной работы",
+          "desc": "На 1 час дольше"
+        },
+        {
+          "title": "Энергосберегающий режим",
+          "desc": "На 10 часов дольше"
+        },
+        {
+          "title": "Умная AI-зарядка",
+          "desc": "Продлевает срок работы аккумулятора"
+        }
+      ],
+      "subtitle": "Аккумулятор 5000 мАч<br/>Быстрая зарядка 33 Вт",
+      "desc": "Энергоёмкий аккумулятор для непрерывной работы в течение дня. Восстанавливайте запас энергии смартфона за короткий кофе-брейк с помощью быстрой и безопасной зарядки.",
+      "video": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/batterySection/5000mAh33WCK8.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/batterySection/5000mAh33WCK8.jpg"
+      }
+    },
+    "fingerprintSection": {
+      "title": "Удобство и безопасность",
+      "subtitle": "Сканер отпечатка пальца внизу<br/>экрана для быстрой разблокировки",
+      "features": [
+        {
+          "title": "295 миллисекунд",
+          "desc": "Скорость срабатывания разблокировки"
+        },
+        {
+          "title": "Защитный алгоритм",
+          "desc": "Распознавание чужих отпечатков"
+        },
+        {
+          "title": "Google BCR 13",
+          "desc": "Сертификат безопасности"
+        }
+      ],
+      "video": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/fingerprint.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/fingerprint.jpg"
+      },
+      "desc": [
+        "Сканер отпечатка пальца срабатывает молниеносно.",
+        "Разблокируйте смартфон легким касанием. Благодаря индивидуальному биометрическому алгоритму, содержимое вашего телефона надежно защищено от мошенников. Наслаждайтесь чувством безопасности."
+      ]
+    },
+    "dualSpeakerSection": {
+      "title": "Время услышать весь мир",
+      "subtitle": "Качество живого звука",
+      "logo": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/dualSpeakerSection/logo.png",
+      "features": [
+        {
+          "title": "Двойные стереодинамики",
+          "desc": "В сочетании с эффектными басами"
+        },
+        {
+          "title": "Hi-Res Audio",
+          "desc": "Профессиональная сертификация"
+        }
+      ],
+      "video": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/dualSpeaker/ck8.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/dualSpeaker/ck8.jpg"
+      },
+      "desc": [
+        "Двойные стереодинамики в сочетании с эффектными басами создают неповторимое звучание. Сертифицированные динамики выдают качество звука на уровне компакт-диска.",
+        "Определяйте местоположение соперника в игре по звуку шагов, наслаждайтесь чистым звучанием любимых композиций. Z-осевой вибромоторчик дополнит пользовательский опыт тактильным откликом на входящие звонки и нажатие клавиатуры."
+      ]
+    },
+    "networkSection": {
+      "title": [
+        "Оставайся на связи.",
+        "Всегда и везде"
+      ],
+      "subtitle": [
+        "Умная оптимизация",
+        "слабого сигнала сети"
+      ],
+      "features": [
+        {
+          "title": "ADA Engine",
+          "desc": "Интеллектуальное распределение сигнала сети"
+        },
+        {
+          "title": "Синергия нескольких соединений",
+          "desc": "Умный двухканальный переключатель"
+        }
+      ],
+      "desc": "Улучшенное соединение и плавность работы достигается за счет интеллектуального распределения потока данных внутри сети и синергии нескольких соединений. Скорость работы в мессенджерах увеличилась на 25%. Наслаждайтесь бесперебойной работой Интернет-соединения даже в местах со слабым сигналом и в час пик",
+      "images": [
+        "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/networkSection/0CK8.jpg",
+        "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/networkSection/1CK8.jpg"
+      ],
+      "videos": [
+        {
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/networkSection/ck8V0.m4v",
+          "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/networkSection/ck8V0.jpg"
+        },
+        {
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/networkSection/ck8V1.m4v",
+          "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/networkSection/ck8V1.jpg"
+        }
+      ]
+    }
+  },
+  "mobile": {
+    "config": {
+      "enableSmoothScroll": false
+    },
+    "firstSection": {
+      "homePageImageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/firstSection/backgroundCK8MobileRU.jpg",
+      "officialVideo": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/tvc/officialVideoMobile.mp4",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/tvc/officialVideoMobile.jpg"
+      },
+      "previewVideo": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/tvc/previewVideoMobile.mp4",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/tvc/previewVideoMobile.jpg"
+      }
+    },
+    "title": {
+      "aesthetics": {
+        "title": "<b>Новый мир твоих<br/>фотографий</b>",
+        "background": {
+          "type": "video",
+          "video": {
+            "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/title/aestheticsCK8Mobile.m4v",
+            "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/title/aestheticsCK8Mobile.jpg"
+          },
+          "pos": "bottom"
+        },
+        "model": {
+          "w": "371",
+          "h": "40",
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/title/modelCK8.png"
+        }
+      },
+      "image": {
+        "title": "<b>Эстетичный дизайн</b>",
+        "background": {
+          "type": "image",
+          "imageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/title/imageMobileCK8.png",
+          "pos": "bottom"
+        },
+        "model": {
+          "w": "371",
+          "h": "40",
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/title/modelCK8.png"
+        }
+      },
+      "performance": {
+        "title": "<b>Выдающаяся<br/>производительность</b>",
+        "background": {
+          "type": "video",
+          "video": {
+            "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/title/performanceTitleCK8Mobile.m4v",
+            "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/title/performanceTitleCK8Mobile.jpg"
+          },
+          "pos": "bottom"
+        },
+        "model": {
+          "w": "371",
+          "h": "40",
+          "src": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/title/modelCK8.png"
+        }
+      }
+    },
+    "highlightSection": {
+      "model": "",
+      "aesthetics": {
+        "imageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/highlightSection/aestheticsMobileCK8.png",
+        "marginRight": "0",
+        "w": "301"
+      },
+      "master": {
+        "marginRight": "20",
+        "w": "339",
+        "h": "213"
+      },
+      "performance": {
+        "imageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/highlightSection/performanceCK8.png",
+        "marginRight": "0",
+        "w": "294",
+        "h": "156"
+      }
+    },
+    "cameraParameterSection": {
+      "param2": {
+        "title": "<b>Кольцевая<br/>вспышка</b>",
+        "content": [
+          "4 диода"
+        ],
+        "title2": "<b>2 Мп Датчик<br/>глубины</b>",
+        "content2": [
+          "Боке / F/2.4"
+        ]
+      }
+    },
+    "cameraDescriptionSection": {
+      "video": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/nightPortraitMobile.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/nightPortraitMobile.jpg"
+      }
+    },
+    "portraitVideoSection": {
+      "video": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/4KPortraitVideoMobile.mp4",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/4KPortraitVideoMobile.jpg"
+      }
+    },
+    "appearanceSection": {
+      "firstPage": {
+        "title": "Премиальный внешний<br/>вид и эргономика"
+      }
+    },
+    "sleepingSection": {
+      "title": "Новые возможности",
+      "innerTitle": "динамических обоев",
+      "backgroundVideo": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/sleepingSection/ck9Mobile.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/sleepingSection/ck9Mobile.jpg"
+      }
+    },
+    "screenSection": {
+      "pages": [
+        {
+          "subtitle": [
+            "Адаптивная частота",
+            "обновления экрана 120 Гц"
+          ],
+          "desc": [
+            "Адаптивная частота обновления экрана до 120 Гц автоматически подстраивается под ваши пользовательские сценарии. Она возрастает во время высокопроизводительных игр и снижается когда необходимо сэкономить ресурс заряда аккумулятора. Частота дискретизации экрана 360 Гц обеспечивает мгновенный отклик даже от легкого касания."
+          ],
+          "features": [
+            {
+              "title": "120 Гц",
+              "desc": "Частота обновления экрана"
+            },
+            {
+              "title": "360 Гц",
+              "desc": "Частота дискретизации"
+            }
+          ],
+          "video": {
+            "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/screenSection/120hzCK8Mobile.m4v",
+            "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/screenSection/120hzCK8Mobile.jpg"
+          }
+        },
+        {
+          "subtitle": [
+            "Безупречная",
+            "цветопередача AMOLED-экрана"
+          ],
+          "desc": [
+            "Большой экран 6.7\" с повышенной контрастностью и динамическим диапазоном.",
+            "Фотографии в галерее отличаются насыщенной и естественной цветовой гаммой. Наслаждайтесь потрясающим качеством каждой детали ваших снимков.",
+            "<br/>*Поддержка дисплеем полной гаммы DCI-P3 производится только в Галерее AI"
+          ],
+          "features": [
+            {
+              "title": "6.7\" AMOLED",
+              "desc": "Большой экран"
+            },
+            {
+              "title": "Кинематографические цвета",
+              "desc": "100% расширенная цветовая гамма DCI-P3"
+            },
+            {
+              "title": "800000:1",
+              "desc": "Уровень контрастности"
+            },
+            {
+              "title": "AI-галерея",
+              "desc": "Яркий фотоальбом"
+            }
+          ],
+          "video": {
+            "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/screenSection/amoledCK8Mobile.m4v",
+            "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/screenSection/amoledCK8Mobile.jpg"
+          }
+        },
+        {
+          "subtitle": [
+            "Двойная защита",
+            "зрения"
+          ],
+          "desc": [
+            "Потенциальный вред зрению устранен, благодаря безопасной частоте мерцания и снижению синего спектра. Высокочастотное затемнение снижает утомляемость глазных мышц, а специальная технология экрана отфильтровывает значительную часть синего спектра и сводит к минимуму его вредное воздействие."
+          ],
+          "features": [
+            {
+              "title": "1920 Гц ШИМ",
+              "desc": "Безопасная частота мерцания<br/>даже на низкой яркости"
+            },
+            {
+              "title": "Минимум вреда для зрения",
+              "desc": "от синего света"
+            }
+          ],
+          "video": {
+            "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/screenSection/pwmMobile.m4v",
+            "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/screenSection/pwmMobile.jpg"
+          },
+          "videoDesc": {
+            "other": "Другие",
+            "camon": "Серия CAMON 20<br/>1920 Гц ШИМ"
+          },
+          "tuvLogo": [
+            "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/screenSection/tuvLogo.png",
+            "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/screenSection/waveLogo.png"
+          ]
+        }
+      ]
+    },
+    "batterySection": {
+      "video": {
+        "src": "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon20pro5g/videos/batterySection/5000mAh33WCK8Mobile.m4v",
+        "poster": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/posters/batterySection/5000mAh33WCK8Mobile.jpg"
+      }
+    },
+    "fingerprintSection": {
+      "title": "Удобство и безопасность"
+    },
+    "dualSpeakerSection": {
+      "subtitle": "Качество<br/>живого звука",
+      "logo": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/dualSpeakerSection/logoHorizontal.png"
+    },
+    "networkSection": {
+      "features": [
+        {
+          "title": "ADA Engine",
+          "desc": "Интеллектуальное распределение сигнала сети"
+        },
+        {
+          "title": "Синергия нескольких<br/>соединений",
+          "desc": "Умный двухканальный переключатель"
+        }
+      ]
+    }
+  },
+  "tablet": {
+    "config": {
+      "enableSmoothScroll": false,
+      "sectionSwitch": {
+        "hiOS": true,
+        "nfc": true
+      }
+    },
+    "firstSection": {
+      "homePageImageSrc": "https://d3fyizz0b46qgr.cloudfront.net/global/ru/images/firstSection/backgroundCK8TabletRU.jpg"
+    }
+  }
+}

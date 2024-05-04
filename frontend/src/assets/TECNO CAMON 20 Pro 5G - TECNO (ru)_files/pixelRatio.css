@@ -1,0 +1,101 @@
+/* 修复之前错误的 media 取值范围 */
+@media screen and (-webkit-min-device-pixel-ratio:1.25) and (-webkit-max-device-pixel-ratio:1.25) and (min-width:614.6px) and (max-width:1152px) {
+    .camon20_app {
+        font-size: 115.2px !important;
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:1.25) and (-webkit-max-device-pixel-ratio:1.25) and (min-width:614.6px) and (max-width:1152px) {
+    .camon20_app {
+        font-size: 115.2px !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.25) and (-webkit-max-device-pixel-ratio:1.25) and (min-width:1153px) and (max-width:1536px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.25) and (-webkit-max-device-pixel-ratio:1.25) and (min-width:1537px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.25) and (-webkit-max-device-pixel-ratio:1.25) and (max-width:767px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.5) and (-webkit-max-device-pixel-ratio:1.5) and (min-width:512.33333px) and (max-width:960px) {
+    .camon20_app {
+        font-size: 96px !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.5) and (-webkit-max-device-pixel-ratio:1.5) and (min-width:961px) and (max-width:1280px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.5) and (-webkit-max-device-pixel-ratio:1.5) and (min-width:1281px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.5) and (-webkit-max-device-pixel-ratio:1.5) and (max-width:767px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.75) and (-webkit-max-device-pixel-ratio:1.75) and (min-width:439.28571px) and (max-width:822.85714px) {
+    .camon20_app {
+        font-size: 82.28571px !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.75) and (-webkit-max-device-pixel-ratio:1.75) and (min-width:823.85714px) and (max-width:1097.14286px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.75) and (-webkit-max-device-pixel-ratio:1.75) and (min-width:1098.14286px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1.75) and (-webkit-max-device-pixel-ratio:1.75) and (max-width:767px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2) and (-webkit-max-device-pixel-ratio:2) and (min-width:384.5px) and (max-width:720px) {
+    .camon20_app {
+        font-size: 72px !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2) and (-webkit-max-device-pixel-ratio:2) and (min-width:721px) and (max-width:960px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2) and (-webkit-max-device-pixel-ratio:2) and (min-width:961px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2) and (-webkit-max-device-pixel-ratio:2) and (max-width:767px) {
+    .camon20_app {
+        font-size: 10vw !important;
+    }
+}

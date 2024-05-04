@@ -1,0 +1,228 @@
+.cs-product-tech-spec .cs-product-tech-spec-list li{width:100% !important;}.sticky-nav .sticky-nav-action{padding-bottom:0}header.headerHomePage{position:fixed}#topNav{position:sticky;top:0;width:100%;max-width:100%;transition:all .3s linear;background:#fff;z-index:9991}.HomePage{background:#fff;transition:all .3s linear;position:relative}.HomePage .logo a img{filter:unset}.HomePage .item a{color:#000}.HomePage .denglu .dengluIcon,.HomePage .sousuo img.w-100{filter:brightness(1) invert(1)}.swiper-pagination-bullet{border-radius:50%}@media screen and (max-width:767px){.sticky-nav{border-top:0}}.filter-options{z-index:1}.Bluetooth:before{content:"";display:inline-block;width:60px;height:30px;background:url("https://d3fyizz0b46qgr.cloudfront.net/global/Bluetooth_CM_Black1.png");background-size:cover}@media screen and (min-width:768px){.cs-product-tech-spec ul.cs-product-tech-spec-list{display:grid;grid-template-columns:25% 25% 25% 25% 25%;width:70%}.cs-product-tech-spec .cs-product-tech-spec-list li{width:100%;display:flex;align-items:center;margin-bottom:1rem}.cs-product-tech-spec .cs-product-tech-spec-list li p{margin-bottom:0}.cs-product-tech-spec .cs-product-tech-spec-list li:before{top:unset}}#topNav .container{max-width:100%;width:100%;padding:0 5%}.backbg{position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(255,255,255,0);z-index:100}@media screen and (min-width:1440px){#topNav .container{width:1300px;max-width:1300px;padding:unset}}@media screen and (max-width:767px){#topNav .container{padding:unset}nav.auto-height{margin-top:10px}.cs-product-tech-spec{padding:unset}div.row .parameter-col{padding-left:15px !important}}@media screen and (min-width:1441px){.main .on-top,.container,.main .cs-product-tech-spec>.row{width:1300px;max-width:1300px;margin:15px auto}.on-top .container,.main .cs-product-tech-spec{max-width:100%;width:100%}.compare-product-title,.row .parameter-col{padding-left:0}}@media screen and (min-width:768px) and (max-width:1440px){.on-top .container{width:100%;max-width:100%;margin:unset;padding:0 5%}.cs-product-tech-spec{width:100%;max-width:100%;margin:15px 0 0 0}.cs-product-tech-spec>.row{padding:0 5%}nav.auto-height .row{margin:auto}}.row .parameter-col{padding-left:0 !important}.parameter-section .parameter-title{padding:unset}
+
+
+/* 详情页二级导航 */
+#newNav {
+  border: 1px solid #F8F8F8;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  background: white;
+  font-weight: 400;
+}
+#newNav a {
+  color: unset;
+}
+#newNav a:hover {
+  color: #287DFF !important;
+}
+#newNav .width-1440 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#newNav .width-1440,
+#newNav .nav_left,
+#newNav .point {
+  height: 100%;
+}
+#newNav .nav_left {
+  display: flex;
+  align-items: center;
+}
+#newNav .nav_left .nav_name {
+  display: flex;
+  align-items: center;
+}
+#newNav .nav_left .name {
+  font-size: 16px;
+}
+#newNav .nav_left .navIcon {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  margin: 0 36px 0 24px;
+  transition: all 0.3s ease;
+}
+#newNav .nav_left .navIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#newNav .nav_left .icon_rotate .navIcon {
+  transform: rotate(180deg);
+}
+#newNav .nav_left .line {
+  width: 2px;
+  height: 14px;
+  background-color: #a8a8a8;
+  margin-right: 36px;
+}
+#newNav .nav_left .point {
+  display: flex;
+  align-items: center;
+  margin: unset;
+  padding: unset;
+  font-size: 16px;
+}
+#newNav .nav_left .point .point-item {
+  margin-right: 24px;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  color: #b2b2b2;
+}
+#newNav .nav_left .point .point-item a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#newNav .nav_left .point .active {
+  color: #000;
+}
+#newNav .nav_left .point .point-item::after {
+  content: '';
+  width: 0;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+#newNav .nav_left .point .active::after {
+  width: 100%;
+}
+#newNav .nav_right {
+  height: 34px;
+  display: flex;
+  align-items: center;
+}
+#newNav .nav_right .nav-btn {
+  color: white;
+  background: #287DFF;
+  padding: 0 17.75px;
+  border-radius: 4.05px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+#newNav .nav_right .nav-btn:hover {
+  color: white !important;
+}
+#newNav .nav_right a {
+  font-size: 16px;
+  color: #000;
+  height: 100%;
+  display: block;
+}
+#newNav .drop_down {
+  background-color: #f5f5f5;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+#newNav .drop_down p {
+  width: 1300px;
+  padding: 10px 0;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  font-size: 16px;
+}
+#newNav .drop_down p a {
+  color: #666;
+  padding: 20px 0;
+  cursor: pointer;
+}
+#newNav .drop_down p .active {
+  color: #000;
+}
+#newNav .drop_down_active {
+  max-height: 1080px;
+}
+@media screen and (max-width: 1440px) and (min-width: 1081px) {
+  #newNav .width-1440,
+  #newNav .drop_down {
+    padding: 0 5%;
+  }
+  #newNav .nav_left .name {
+    font-size: 1.1111vw;
+  }
+  #newNav .nav_left .navIcon {
+    width: 1.25vw;
+    height: 1.25vw;
+    line-height: 0;
+    margin: 0 2.5vw 0 1.6667vw;
+  }
+  #newNav .nav_left .line {
+    margin-right: 2.5vw;
+    height: 0.9722vw;
+    width: 1px;
+  }
+  #newNav .nav_left .point {
+    font-size: 1.1111vw;
+  }
+  #newNav .nav_left .point .point-item {
+    margin-right: 1.6667vw;
+  }
+  #newNav .nav_right {
+    height: 2.3611vw;
+  }
+  #newNav .nav_right .nav-btn {
+    padding: 0 1.2326vw;
+    border-radius: 0.2813vw;
+    margin-right: 1.6667vw;
+  }
+  #newNav .nav_right a {
+    font-size: 1.1111vw;
+  }
+  #newNav .drop_down p {
+    padding: 0.6944vw 0;
+    font-size: 1.1111vw;
+  }
+  #newNav .drop_down p a {
+    padding: 1.3889vw 0;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #newNav {
+    height: 11.1111vw;
+  }
+  #newNav .width-1440,
+  #newNav .drop_down {
+    padding: 0 5%;
+  }
+  #newNav .nav_left .name {
+    font-size: 2.963vw;
+  }
+  #newNav .nav_left .navIcon {
+    width: 3.3333vw;
+    height: 3.3333vw;
+    line-height: 0;
+    margin: 0 0 0 3.3333vw;
+  }
+  #newNav .nav_left .line,
+  #newNav .nav_left .point {
+    display: none;
+  }
+  #newNav .nav_right {
+    height: 5.9259vw;
+  }
+  #newNav .nav_right .nav-btn {
+    padding: 0 3.3333vw;
+    border-radius: 0.8426vw;
+    margin-right: 3.3333vw;
+  }
+  #newNav .nav_right a {
+    font-size: 2.963vw;
+    line-height: 2;
+  }
+  #newNav .drop_down p {
+    padding: 1.8519vw 0;
+    font-size: 2.963vw;
+  }
+  #newNav .drop_down p a {
+    padding: 2.8704vw 0;
+  }
+}
+
+  

@@ -1,0 +1,14 @@
+getArress()
+function getArress(){
+    $.ajax({
+        type : "POST",
+        url : "/index.php/getAddress",
+        dataType : "json",
+        data : {},
+        success : function(res) {
+          if(res.responseContent.isoCode=='UA'){
+            window.location.replace(res.responseContent.redirectUrl)
+          }
+        },
+    });
+}
