@@ -9,6 +9,7 @@ import News from "./pages/News";
 import Support from "./pages/Support";
 import Stocks from "./pages/Stocks";
 import NewsPage from "./components/news/NewsPage";
+import PhoneDetailPage from "./components/phones/PhoneDetailPage";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="/phones" element={<Smartphones />} />
+            <Route path="/phones/:id" element={<PhoneDetailPage />} />
             <Route path="/accessories" element={<Accessories />} />
             <Route path="/where-to-buy" element={<WhereToBuy />} />
             <Route path="/about" element={<About />} />

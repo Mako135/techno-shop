@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 const RecommendedPhones = ({spec1, spec2, spec3, img}) => {
   return (
     <div>
-      <div className="recommended-phones">
         <div className="recommended-phone-card">
           <img src={spark} alt="" height={32} className="recommended-logo" />
           <div className="recommended-phone-specs">
@@ -29,7 +28,6 @@ const RecommendedPhones = ({spec1, spec2, spec3, img}) => {
           </div>
           <img src={img} alt="" className="recommended-phone-img" />
         </div>
-      </div>
     </div>
   );
 }

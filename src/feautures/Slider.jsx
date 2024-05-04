@@ -13,9 +13,9 @@ const Slider = () => {
         }}
         loop={true}
         modules={[Autoplay, Pagination]}
-        className="mySwiper"
+        className="mySlider"
       >
-        <SwiperSlide >
+        <SwiperSlide>
           <img src={banner1} alt="" />
         </SwiperSlide>
         <SwiperSlide>

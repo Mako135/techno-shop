@@ -8,7 +8,6 @@ const Footer = ({ className }) => {
   return (
     <div className="footer" style={{backgroundColor: className? "#fff" : ""}}>
       <div className="container">
-        <div className="divider"></div>
 
         <div className="footer-header">
           <div className="footer-links-group">

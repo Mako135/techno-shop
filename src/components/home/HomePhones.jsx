@@ -3,7 +3,7 @@ import RecommendedPhones from "./RecommendedPhones";
 
 const HomePhones = () => {
   return (
-    <div className="phones">
+    <div className="recommended-phones">
       <RecommendedPhones
         spec1="6.6” экран с частотой 90 Гц"
         spec2="128 Гб + 8 Гб* память"

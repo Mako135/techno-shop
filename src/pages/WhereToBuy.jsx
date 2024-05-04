@@ -11,6 +11,7 @@ const WhereToBuy = () => {
         <Banner src={banner2} />
         <Title text="Онлайн магазины" />
         <Shops />
+        <div className="divider"></div>
       </div>
       <Footer />
     </div>

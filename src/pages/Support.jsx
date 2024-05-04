@@ -10,9 +10,9 @@ const Support = () => {
     <div>
       <div
         style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           width: "100%",
           minHeight: "70vh",
           backgroundImage: `url(${banner})`,
@@ -27,7 +27,7 @@ const Support = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            margin: "5px",
+            margin: "5px"
           }}
         >
           <p className="support-title">Добро пожаловать в службу поддержки!</p>
@@ -42,6 +42,7 @@ const Support = () => {
       <div className="container">
         <SupportTabs />
         <Downloads />
+        <div className="divider"></div>
       </div>
       <Footer />
     </div>

@@ -19,7 +19,9 @@ const HomePage = () => {
         <Banner src={banner2} />
         <p className="title">Последние новости</p>
         <HomeNews />
+        <div className="divider"></div>
       </div>
+
       <Footer />
     </div>
   );

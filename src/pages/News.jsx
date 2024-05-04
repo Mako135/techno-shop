@@ -50,6 +50,7 @@ const News = () => {
             description="Проект #AnnounceYourself включен в шорт–лист конкурса «Лучшая коллаборация бренда 2022 года с футбольным клубом»."
           />
         </div>
+        <div className="divider"></div>
       </div>
       <Footer />
     </div>

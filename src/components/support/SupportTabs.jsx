@@ -22,7 +22,6 @@ const SupportTabs = () => {
         <Tabs value={value} onChange={handleChange} centered>
           <Tab value={1} label="Tab 1"></Tab>
           <Tab value={2} label="Tab 2">
-            {/* Content for Tab 2 */}
           </Tab>
         </Tabs>
         <TabPanel value={value} index={1}>
@@ -78,6 +77,7 @@ const SupportTabs = () => {
             </AccordionDetails>
           </Accordion>
         </TabPanel>
+        
         <TabPanel value={value} index={2}>
           Item Onedqwdqwd
         </TabPanel>
