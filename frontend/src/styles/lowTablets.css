@@ -1,0 +1,16 @@
+@media (max-width: 767px) {
+  .recommended-phones {
+    place-items: center;
+    grid-template-columns: 1fr;
+  }
+  .home-news {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .news {
+    flex-direction: column;
+  }
+  .support-search {
+    width: 100%;
+  }
+}
