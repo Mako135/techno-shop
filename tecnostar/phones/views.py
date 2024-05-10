@@ -1,14 +1,14 @@
 from django.shortcuts import render
 # from rest_framework.views import APIView, Response
 from rest_framework.generics import ListAPIView, RetrieveAPIView
-# from rest_framework.response import Response
+from rest_framework.response import Response
 # from rest_framework import status
+from django.utils.translation import gettext as _
+from rest_framework.decorators import api_view
 
 from phones.models import Phone, News
 from phones.serializers import PhoneSerializer, PhoneListSerializer, NewsSerializer
 
-# Create your views here.
-from phones.models import Phone, News
 
 
 # TODO:
@@ -32,6 +32,10 @@ class NewsDetailPage(RetrieveAPIView):
     serializer_class = NewsSerializer
     lookup_field = 'slug'
 
+
+@api_view(['GET'])
+def home(request):
+    return Response({"lanuage":_('Привет')})
 
 
 

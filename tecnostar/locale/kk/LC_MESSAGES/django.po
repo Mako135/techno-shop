@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-10 12:58+0000\n"
+"PO-Revision-Date: 2024-05-10 13:03+0000\n"
+"Last-Translator:   <snurekeee03@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: phones/models.py:15 phones/models.py:71 phones/models.py:127
+msgid "Название"
+msgstr ""
+
+#: phones/models.py:15
+msgid "Введите название категории"
+msgstr ""
+
+#: phones/models.py:20
+msgid "Категория"
+msgstr ""
+
+#: phones/models.py:21
+msgid "Категории"
+msgstr ""
+
+#: phones/models.py:31
+msgid "Название цвета"
+msgstr ""
+
+#: phones/models.py:31
+msgid "Введите название цвета"
+msgstr ""
+
+#: phones/models.py:35
+msgid "Цвет"
+msgstr ""
+
+#: phones/models.py:36
+msgid "Цвета"
+msgstr ""
+
+#: phones/models.py:47
+msgid "Название сети"
+msgstr ""
+
+#: phones/models.py:47
+msgid "Введите название сети"
+msgstr ""
+
+#: phones/models.py:51
+msgid "Сеть"
+msgstr ""
+
+#: phones/models.py:52
+msgid "Сети"
+msgstr ""
+
+#: phones/models.py:71
+msgid "Введите название телефона"
+msgstr ""
+
+#: phones/models.py:73 phones/models.py:132
+msgid "Статус"
+msgstr ""
+
+#: phones/models.py:75
+msgid "Основная информация"
+msgstr ""
+
+#: phones/models.py:75
+msgid "Введите основную информацию о телефоне"
+msgstr ""
+
+#: phones/models.py:76
+msgid "Характеристики"
+msgstr ""
+
+#: phones/models.py:76
+msgid "Введите характеристики телефона"
+msgstr ""
+
+#: phones/models.py:80
+msgid "Камера"
+msgstr ""
+
+#: phones/models.py:80
+msgid "Введите информацию о камере"
+msgstr ""
+
+#: phones/models.py:81
+msgid "Датчики"
+msgstr ""
+
+#: phones/models.py:81
+msgid "Введите информацию о датчиках"
+msgstr ""
+
+#: phones/models.py:82
+msgid "Комплект поставки"
+msgstr ""
+
+#: phones/models.py:82
+msgid "Введите информацию о комплекте поставки"
+msgstr ""
+
+#: phones/models.py:86
+msgid "Телефон"
+msgstr ""
+
+#: phones/models.py:87
+msgid "Телефоны"
+msgstr ""
+
+#: phones/models.py:99 phones/models.py:129
+msgid "Загрузите изображение"
+msgstr ""
+
+#: phones/models.py:103 phones/models.py:104
+msgid "Фото"
+msgstr ""
+
+#: phones/models.py:129
+msgid "Превью"
+msgstr ""
+
+#: phones/models.py:130
+msgid "Описание"
+msgstr ""
+
+#: phones/models.py:131
+msgid "Контент"
+msgstr ""
+
+#: phones/models.py:131
+msgid "Введите контент"
+msgstr ""
+
+#: phones/models.py:133
+msgid "Дата создания"
+msgstr ""
+
+#: phones/models.py:136
+msgid "Новость"
+msgstr ""
+
+#: phones/models.py:137
+msgid "Новости"
+msgstr ""
+
+#: phones/views.py:35
+msgid "Привет"
+msgstr "Сәлеметсіз бе"
+
+#: tecnostar/settings.py:133
+msgid "Russian"
+msgstr ""
+
+#: tecnostar/settings.py:134
+msgid "Kazakh"
+msgstr ""

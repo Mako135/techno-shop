@@ -1,5 +1,5 @@
 from django.db import models
-from gettext import gettext as _
+from django.utils.translation import gettext as _
 from django.conf import settings
 from django.utils.text import slugify
 
@@ -96,7 +96,7 @@ class Phone(models.Model):
 
 class Photo(models.Model):
     color = models.ForeignKey(Color, related_name='photos', on_delete=models.CASCADE)
-    image = models.ImageField(_(''), upload_to='phones', help_text=_('Загрузите изображение'))
+    image = models.ImageField(upload_to='phones', help_text=_('Загрузите изображение'))
     phone = models.ForeignKey('Phone', related_name='photos', on_delete=models.CASCADE, blank=True, null=True)
 
     class Meta:
