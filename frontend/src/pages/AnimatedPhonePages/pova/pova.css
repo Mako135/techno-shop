@@ -1,3 +1,22 @@
+.pova-title {
+  font-size: 3.125vw;
+  font-weight: 400;
+  background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
+  -webkit-background-clip: text; /* Для Safari */
+  color: transparent;
+}
+
+.pova-subtitle {
+  font-size: 1.5625vw;
+  margin-top: 1.171875vw;
+  font-weight: 400 !important;
+}
+
+.pova-desc {
+  font-size: 1.25vw;
+  margin-top: 2.34375vw;
+}
+
 .pova-container {
   background-color: #000;
 }
@@ -12,7 +31,8 @@
 
   background-repeat: no-repeat;
   width: 100%;
-  height: 60vw;
+  min-height: 60vw;
+  height: 100%;
 }
 
 .content-inner {
@@ -21,11 +41,10 @@
   display: flex;
   height: 100%;
   margin: auto;
-  width: 80vw;
+  width: 100vw;
   flex-direction: flex;
   justify-content: space-between;
   gap: 5vw;
-  padding: 5vw 0;
 }
 
 .content {
@@ -83,7 +102,6 @@
 
 .image-container {
   position: relative;
-  background-image: url("./assets/Background.png");
   background-size: 100%; /* Фон будет растягиваться на всю ширину и высоту элемента */
   background-position: center;
   background-repeat: no-repeat;
@@ -93,8 +111,9 @@
 
 .image-container img {
   position: absolute;
-  width: 35.625vw;
-  height: 41.5625vw;
+  object-fit: contain;
+  width: 46.625vw;
+  max-height: 60vw;
   margin-top: 10vw;
   right: 10vw;
 }
@@ -218,6 +237,7 @@
 }
 
 .body-container {
+  padding-top: 12vw;
   height: 70%;
   width: 75vw;
   margin: auto;
@@ -265,7 +285,7 @@
   height: 85vw !important;
 }
 
-.slider-slogan {
+.color-slogan {
   position: absolute;
   text-align: center;
   top: 55vw;
@@ -320,7 +340,7 @@
   height: 2rem;
 }
 
-.fade-slider{
+.fade-slider {
   position: relative;
   height: 100vh !important;
 }
@@ -343,3 +363,193 @@
   object-fit: cover;
 }
 
+.second-battery-container {
+  position: relative;
+}
+.second-battery-container video {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.first {
+  position: absolute;
+  padding: 3vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first h1 {
+  font-size: 3.125vw;
+  font-weight: 400;
+  background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
+  -webkit-background-clip: text; /* Для Safari */
+  color: transparent;
+}
+.first h3 {
+  font-size: 1.5625vw;
+  margin-top: 1.171875vw;
+  font-weight: 400 !important;
+}
+
+.first p {
+  font-size: 1.25vw;
+  margin-top: 2.34375vw;
+}
+
+.content-inner-2 {
+  color: #fff;
+  position: relative;
+  display: flex;
+  height: 100vh;
+  margin: auto;
+  width: 80vw;
+  flex-direction: flex;
+  justify-content: space-between;
+  gap: 5vw;
+}
+
+.first ul {
+  list-style: none;
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  margin-top: 3.125vw;
+  column-gap: 3.125vw;
+}
+
+.first ul li {
+  font-size: 1.25vw;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+.first ul li strong {
+  font-size: 4.6875vw;
+  background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+.first ul li strong sup {
+  font-size: 1.5625vw;
+}
+.first ul li span {
+  font-size: 1.5625vw;
+}
+
+.second {
+  width: 100%;
+  padding: 3vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.second h1 {
+  font-size: 3.125vw;
+  font-weight: 400;
+  background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
+  -webkit-background-clip: text; /* Для Safari */
+  color: transparent;
+}
+.second h3 {
+  font-size: 1.5625vw;
+  margin-top: 1.171875vw;
+  font-weight: 400 !important;
+}
+
+.second p {
+  font-size: 1.25vw;
+  margin-top: 2.34375vw;
+}
+
+.charge-section {
+  padding: 10vw;
+}
+
+.charge-section-second {
+  padding: 10vw;
+  margin: auto;
+  height: 90vw;
+}
+
+.charge-section-second ul {
+  list-style: none;
+  display: grid;
+
+  width: 95%;
+  margin-top: 17.125vw;
+  row-gap: 2.125vw;
+}
+
+.charge-section-second ul li {
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/chapter2-4ladder-card-9f729e89.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 36.6796875vw;
+  height: 14.609375vw;
+  font-size: 1.25vw;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.953125vw;
+}
+
+.charge-section-second-list {
+  margin-left: 40vw;
+}
+
+.charge-third-section {
+  padding: 5vw;
+  width: 100%;
+}
+
+.charge-third-section h1 {
+  color: #dbffef;
+  font-size: 3.359375vw;
+}
+.charge-third-section img {
+  margin-top: 10vw;
+  height: 26.171875vw;
+  width: 85.0390625vw;
+}
+
+.water-save{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 10vw 5vw;
+}
+
+.ramka {
+  position: relative;
+  margin: auto;
+  color: #fff;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.ramka img {
+  width: 70%;
+  padding: 5vw 0;
+}
+
+.ramka-images{
+  position: relative;
+}
+.ramka-images img:first-child {  /* Target the first image */
+    position: absolute;
+    top: 5vw;
+    right: 5vw;
+    border-radius: 5% !important;
+}
