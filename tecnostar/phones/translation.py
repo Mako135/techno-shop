@@ -9,6 +9,7 @@ class PhoneTranslationOptions(TranslationOptions):
 
 class NewsTranslationOptions(TranslationOptions):
     fields = ('title', 'description', 'content')
+    required_languages = ('ru', 'kk')
 
 translator.register(Phone, PhoneTranslationOptions)
 translator.register(News, NewsTranslationOptions)
