@@ -41,7 +41,7 @@
   display: flex;
   height: 100%;
   margin: auto;
-  width: 100vw;
+  width: 100%;
   flex-direction: flex;
   justify-content: space-between;
   gap: 5vw;
@@ -521,7 +521,7 @@
   width: 85.0390625vw;
 }
 
-.water-save{
+.water-save {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -544,12 +544,179 @@
   padding: 5vw 0;
 }
 
-.ramka-images{
+.ramka-images {
   position: relative;
 }
-.ramka-images img:first-child {  /* Target the first image */
-    position: absolute;
-    top: 5vw;
-    right: 5vw;
-    border-radius: 5% !important;
+.ramka-images img:first-child {
+  /* Target the first image */
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+  border-radius: 5% !important;
+}
+
+.certificate {
+  padding-top: 5vw;
+}
+
+.certificate-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.certificate-container img {
+  position: relative;
+  height: 99%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+  padding: 10vw 0;
+}
+
+.overlay img {
+  width: 6.6015625vw;
+  height: 6.6015625vw;
+}
+
+.overlay p {
+  color: #b4e2cb;
+}
+
+.certificate-title {
+  font-size: 3.125vw;
+  font-weight: 400;
+  background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
+  -webkit-background-clip: text; /* Для Safari */
+  color: transparent;
+}
+
+.certificate-subtitle {
+  font-size: 1.5625vw;
+  margin-top: 1.171875vw;
+  font-weight: 400 !important;
+}
+
+.speed-container {
+  position: relative;
+  margin-top: 11.71875vw;
+  height: 70vw;
+}
+.speed-bacground {
+  position: absolute;
+  width: 100%;
+}
+
+.speed-perfomance {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  gap: 40vw;
+}
+.speed-frame {
+  margin-top: 4.6875vw;
+  width: 70%;
+  position: relative;
+  margin: auto;
+}
+
+.speed-title {
+  color: #b4e2cb;
+}
+
+.speed-frame img {
+  width: 100%;
+  position: absolute;
+}
+
+.speed-frame-overlay {
+  padding: 2.34375vw 3.515625vw;
+  position: absolute;
+}
+
+.speed-frame-overlay h1 {
+  background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
+  -webkit-background-clip: text; /* Для Safari */
+  color: transparent;
+}
+
+.speed-frame-overlay p {
+  font-size: 1.25vw;
+  margin-top: 2.34375vw;
+  color: #fff;
+}
+
+.audio {
+  position: relative;
+  margin-top: 4.6875vw;
+}
+
+.audio video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.audio-container {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.audio-overlay {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10vw 5vw;
+  z-index: 1;
+  width: 100%;
+}
+
+.audio-title {
+  font-size: 3.125vw;
+  font-weight: 400;
+  background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
+  -webkit-background-clip: text; /* Для Safari */
+  color: transparent;
+}
+
+.audio-subtitle {
+  font-size: 1.5625vw;
+  margin-top: 1.171875vw;
+  font-weight: 400 !important;
+  color: #dbffef;
+}
+
+.audio-desc {
+  font-size: 1.25vw;
+  margin-top: 2.34375vw;
+  color: #fff;
+}
+
+.audio-overlay img {
+  margin-top: 2.34375vw;
+  width: 14.4921875vw;
+  height: 6.6015625vw;
 }

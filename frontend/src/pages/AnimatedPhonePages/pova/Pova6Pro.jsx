@@ -18,6 +18,9 @@ import FourthBatterySection from "./components/FourthBatterySection";
 import WaterSave from "./components/WaterSave";
 import GamePerfomance from "./components/GamePerfomance";
 import Ramka from "./components/Ramka";
+import Certificate from "./components/Certificate";
+import SpeedPerfomance from "./components/SpeedPerfomance";
+import AudioSection from "./components/AudioSection";
 
 const Pova6Pro = () => {
   const firstVideo =
@@ -47,6 +50,9 @@ const Pova6Pro = () => {
       <WaterSave />
       <GamePerfomance />
       <Ramka />
+      <Certificate />
+      <SpeedPerfomance />
+      <AudioSection />
     </div>
   );
 };
