@@ -1,10 +1,13 @@
 from django.urls import path, include
-from phones.views import PhoneList, PhoneDetailPage, NewsList, NewsDetailPage, home
+from django.conf import settings
+from django.conf.urls.static import static
+from rest_framework.routers import DefaultRouter
 
-urlpatterns = [
-    path('phones/', PhoneList.as_view(), name='phones'),
-    path('phones/<slug:slug>/', PhoneDetailPage.as_view(), name='phone_detail'),
-    path('news/', NewsList.as_view(), name='news'),
-    path('news/<slug:slug>/', NewsDetailPage.as_view(), name='news_detail'),
-    path('i18-test/', home, name='home')
-]
+from phones.views import PhoneViewSet, NewsViewSet
+
+router = DefaultRouter()
+router.register('phones', PhoneViewSet, basename='phone')
+router.register('news', NewsViewSet, basename='news')
+urlpatterns = router.urls
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

@@ -8,8 +8,19 @@ from django.urls import reverse
 from django.conf import settings
 from django.urls import reverse
 
+from phones.managers import PublishedManager
+
 
 # Create your models here.
+
+DRAFT = 'draft'
+PUBLISHED = 'published'
+
+STATUS_CHOICES = (
+    (DRAFT, 'Не активен'),
+    (PUBLISHED, 'Активен')
+)
+
 
 class Category(models.Model):
     name = models.CharField(_('Название'), max_length=100, help_text=_('Введите название категории'))
@@ -59,14 +70,6 @@ class Network(models.Model):
         return super().save(*args, **kwargs)
 
 class Phone(models.Model):
-    DRAFT = 'draft'
-    PUBLISHED = 'published'
-
-    STATUS_CHOICES = (
-        (DRAFT, 'Не активен'),
-        (PUBLISHED, 'Активен')
-    )
-
     category = models.ForeignKey(Category, related_name='phones', on_delete=models.CASCADE)
     title = models.CharField(_('Название'), max_length=100, help_text=_('Введите название телефона'))
     slug = models.SlugField(max_length=100, unique=True) 
@@ -80,6 +83,8 @@ class Phone(models.Model):
     camera_info = RichTextField(_('Камера'), config_name='awesome_ckeditor', help_text=_('Введите информацию о камере'))
     sensors = RichTextField(_('Датчики'), config_name='awesome_ckeditor', help_text=_('Введите информацию о датчиках'))
     kit_info = RichTextField(_('Комплект поставки'), config_name='awesome_ckeditor', help_text=_('Введите информацию о комплекте поставки'))
+
+    published = PublishedManager()
 
 
     class Meta:
@@ -105,32 +110,29 @@ class Photo(models.Model):
 
     def __str__(self):
         return self.color.name
-    
-    @property
-    def image_url(self):
-        if self.image:
-            return self.image.url
-        return None
 
 
 class News(models.Model):
-    
-    DRAFT = 'draft'
-    PUBLISHED = 'published'
 
-    STATUS_CHOICES = (
-        (DRAFT, 'Не активен'),
-        (PUBLISHED, 'Активен')
+    SLIDER = 'slider_news'
+    SECOND_FORM = 'second_form_news'
+
+    NEWS_TYPE_CHOICES = (
+        (SLIDER, 'На слайдере'),
+        (SECOND_FORM, 'На второй форме')
     )
 
 
     title = models.CharField(_('Название'), max_length=100)
     slug = models.SlugField(max_length=100, unique=True)
+    pattern = models.CharField(_('Тип'), max_length=20, choices=NEWS_TYPE_CHOICES, default=SECOND_FORM)
     preview_image = models.ImageField(_('Превью'), upload_to='newspapers', help_text=_('Загрузите изображение'), blank=False)
     description = models.TextField(_('Описание'), blank=True,)
     content = RichTextField(_('Контент'), config_name='awesome_ckeditor', help_text=_('Введите контент'))
     status = models.CharField(_('Статус'), max_length=10, choices=STATUS_CHOICES, default=DRAFT)
     created_at = models.DateTimeField(_('Дата создания'), auto_now_add=True)
+
+    published = PublishedManager()
 
     class Meta:
         verbose_name = _('Новость')
@@ -139,26 +141,10 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
-    
+
+    def get_preview_image(self):
+        return f"sdfsdf{self.preview_image.url}"
+       
     def save(self, *args, **kwargs):
         self.slug = self.slug or slugify(self.title)
         return super().save(*args, **kwargs)
-
-"""
-Цвета:
-model Color, Photos
-
-Сводная инфоормация:
-- Описание цвета:
-    AdminSummernote
-- Характеристики:
-    AdminSummernote
-- Сеть и подключение:
-    ManyToManyField with related_name='networks'
-- Камера:
-    AdminSummernote
-- Датчики:
-    AdminSummernote
-- Комплект поставки:
-    AdminSummernote
-"""
