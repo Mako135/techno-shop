@@ -40,7 +40,7 @@ const ColorSection = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      <div className="slogan">
+      <div className="slider-slogan">
         <h1>Здесь ваш слоган!</h1>
       </div>
 
