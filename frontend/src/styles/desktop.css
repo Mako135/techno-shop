@@ -8,6 +8,7 @@
 }
 
 body {
+  overflow-x: hidden;
   background-color: #f8f8f8;
   height: 100%;
 }
