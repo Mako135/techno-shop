@@ -51,8 +51,23 @@ class PhoneSerializer(ModelSerializer):
 
     class Meta:
         model = Phone
-        fields = ('__all__')
+        fields = ('network', 'category', 'title', 'slug', 'main_info', 'characteristics', 'camera_info', 'sensors', 'kit_info', 'photos')
         
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        request = self.context.get('request')
+        
+        if request:
+            print(request.GET)
+            lang = request.GET.get('lang')
+            print(lang)
+    
+            if lang:
+                fields_to_remove = [field for field in representation if not field.endswith(f'_{lang}')]
+                for field in fields_to_remove:
+                    representation.pop(field, None)
+        return representation
+    
     def get_photos(self, obj):
         request = self.context.get('request')
         base_url = request.build_absolute_uri('/')[:-1] if request else ''
