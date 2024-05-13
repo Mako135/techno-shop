@@ -83,7 +83,6 @@
 
 .image-container {
   position: relative;
-  background-image: url("./assets/Background.png");
   background-size: 100%; /* Фон будет растягиваться на всю ширину и высоту элемента */
   background-position: center;
   background-repeat: no-repeat;
@@ -93,8 +92,9 @@
 
 .image-container img {
   position: absolute;
+  object-fit: contain;
   width: 35.625vw;
-  height: 41.5625vw;
+  max-height: 60vw;
   margin-top: 10vw;
   right: 10vw;
 }
@@ -265,7 +265,7 @@
   height: 85vw !important;
 }
 
-.slogan {
+.color-slogan {
   position: absolute;
   text-align: center;
   top: 55vw;
@@ -320,7 +320,7 @@
   height: 2rem;
 }
 
-.fade-slider{
+.fade-slider {
   position: relative;
   height: 100vh !important;
 }
@@ -343,3 +343,77 @@
   object-fit: cover;
 }
 
+.second-battery-container {
+  position: relative;
+}
+.second-battery-container video {
+  position: absolute;
+  width: 100%;
+}
+
+.first {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first h1 {
+  font-size: 3.125vw;
+  font-weight: 400;
+  background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
+  -webkit-background-clip: text; /* Для Safari */
+  color: transparent;
+}
+.first h3 {
+  font-size: 1.5625vw;
+  margin-top: 1.171875vw;
+  font-weight: 400 !important;
+}
+
+.first p {
+  font-size: 1.25vw;
+  margin-top: 2.34375vw;
+}
+
+.content-inner-2 {
+  color: #fff;
+  position: relative;
+  display: flex;
+  height: 100%;
+  margin: auto;
+  width: 80vw;
+  flex-direction: flex;
+  justify-content: space-between;
+  gap: 5vw;
+}
+
+.first ul {
+  list-style: none;
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  margin-top: 3.125vw;
+  column-gap: 3.125vw;
+}
+
+.first ul li {
+  font-size: 1.25vw;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+.first ul li strong {
+  font-size: 4.6875vw;
+  background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
+  -webkit-background-clip: text; 
+  color: transparent;
+  text-align: center;
+}
+.first ul li strong sup {
+  font-size: 1.5625vw;
+}
+.first ul li span {
+  font-size: 1.5625vw;
+}

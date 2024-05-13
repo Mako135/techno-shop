@@ -1,9 +1,9 @@
-import Figure from "../assets/Figure.png";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import PropTypes from "prop-types";
 
-const Design = () => {
+const Design = ({backImg, frontImg, children, width}) => {
     gsap.registerPlugin(ScrollTrigger);
 
     useLayoutEffect(() => {
@@ -39,23 +39,22 @@ const Design = () => {
 
 
   return (
-    <div className="image-container">
-      <img src={Figure} alt="Изображение 2" id="figure" />
+    <div
+      className="image-container"
+      style={{ backgroundImage: `url(${backImg})` }}
+    >
+      <img src={frontImg} alt="Изображение 2" id="figure" width={width} />
 
-      <div className="content">
-        <div>
-          <h1 id="title">Технологичный <br /> дизайн</h1>
-          <h2 id="subtitle">Знания,<br /> технологии, будущее</h2>
-        </div>
-        <p id="desc">
-          Футуристичный дизайн POVA 6 Pro 5G был вдохновлен высокими
-          технологиями, искусственным интеллектом и эстетикой научной
-          фантастики. Добро пожаловать в мир, где искусство и техника слились
-          воедино!
-        </p>
-      </div>
+      <div className="content">{children}</div>
     </div>
   );
+};
+
+Design.propTypes = {
+  backImg: PropTypes.string.isRequired,
+  frontImg: PropTypes.string.isRequired,
+  width: PropTypes.string.isRequired,
+  children: PropTypes.any.isRequired
 };
 
 export default Design;
