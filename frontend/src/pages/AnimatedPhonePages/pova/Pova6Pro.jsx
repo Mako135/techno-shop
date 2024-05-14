@@ -21,6 +21,27 @@ import Ramka from "./components/Ramka";
 import Certificate from "./components/Certificate";
 import SpeedPerfomance from "./components/SpeedPerfomance";
 import AudioSection from "./components/AudioSection";
+import FirstVideoSection from "./components/FirstVideoSection";
+import SecondVideoSection from "./components/SecondVideoSection";
+import SecondAudioSection from "./components/SecondAudioSection";
+import ThirdSection from "./components/ThirdSection";
+import ThirdVideoSection from "./components/ThirdVideoSection";
+import FourthVideoSection from "./components/FourthVideoSection";
+import WaterProof from "./components/WaterProof";
+import FourthSection from "./components/FourthSection";
+import FifthVideoSection from "./components/FifthVideoSection";
+import SixthVideoSection from "./components/SixthVideoSection";
+import PhotoCards from "./components/PhotoCards";
+import ScrollAndVideoSection from "./components/ScrollAndVideoSection";
+import CameraSection from "./components/CameraSection";
+import FifthSection from "./components/FifthSection";
+import WallpaperSection from "./components/WallpaperSection";
+import SecondDesignSection from "./components/SecondDesignSection";
+import SecondGameSection from "./components/SecondGameSection";
+import SearchSection from "./components/SearchSection";
+import PortSection from "./components/PortSection";
+import LastSection from "./components/LastSection";
+import Footer from "../../../components/footer/Footer";
 
 const Pova6Pro = () => {
   const firstVideo =
@@ -53,6 +74,32 @@ const Pova6Pro = () => {
       <Certificate />
       <SpeedPerfomance />
       <AudioSection />
+      <FirstVideoSection />
+      <SecondVideoSection />
+      <SecondAudioSection />
+      <ThirdSection />
+      <ThirdVideoSection />
+      <FourthVideoSection />
+      <WaterProof />
+      <FourthSection />
+      <FifthVideoSection />
+      <img
+        src="https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6/assets-ru/chapter5-2pic-6323795a.jpg"
+        width={"100%"}
+        alt=""
+      />
+      <SixthVideoSection />
+      <PhotoCards />
+      <ScrollAndVideoSection />
+      <CameraSection />
+      <FifthSection />
+      <WallpaperSection />
+      <SecondDesignSection />
+      <SecondGameSection />
+      <SearchSection />
+      <PortSection />
+      <LastSection />
+      <Footer className={"white"}/>
     </div>
   );
 };

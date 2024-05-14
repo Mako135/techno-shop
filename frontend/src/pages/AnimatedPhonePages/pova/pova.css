@@ -10,11 +10,13 @@
   font-size: 1.5625vw;
   margin-top: 1.171875vw;
   font-weight: 400 !important;
+  color: #b4e2cb;
 }
 
 .pova-desc {
   font-size: 1.25vw;
   margin-top: 2.34375vw;
+  color: #fff;
 }
 
 .pova-container {
@@ -42,7 +44,7 @@
   height: 100%;
   margin: auto;
   width: 100%;
-  flex-direction: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 5vw;
 }
@@ -64,7 +66,6 @@
   font-size: 4.6875vw;
   font-weight: 400 !important;
   background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
-
   -webkit-background-clip: text; /* Для Safari */
   color: transparent;
 }
@@ -719,4 +720,243 @@
   margin-top: 2.34375vw;
   width: 14.4921875vw;
   height: 6.6015625vw;
+}
+
+.video-section {
+  margin-top: 10vw;
+}
+
+.video-section header {
+  width: 75%;
+  margin: auto;
+}
+
+.video-container {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 11.71875vw;
+}
+.video-container footer {
+  margin-top: 5vw;
+  width: 70.3125vw;
+  height: 37.34375vw;
+  position: relative;
+  display: flex;
+}
+
+.video-container img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.video-container video {
+  margin: auto;
+  object-fit: cover;
+  width: 100%;
+  height: 99%;
+  position: absolute;
+}
+
+.audio-header {
+  width: 75%;
+  margin: auto;
+  height: 68.90625vw;
+  text-align: center;
+  padding: 5vw;
+}
+
+.video-container ul {
+  margin-top: 5.46875vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 5.078125vw;
+}
+
+.video-container ul li {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.video-container ul li img {
+  margin-right: 1.5625vw;
+  position: relative;
+  width: 6.1328125vw;
+  height: 6.1328125vw;
+  object-fit: cover;
+}
+
+.footer-list {
+  margin: 5vw auto 0;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-list li {
+  color: #fff;
+  font-size: 1.8125vw;
+  line-height: 1.15;
+  display: flex;
+  align-items: flex-start;
+  gap: 2vw;
+}
+
+.video-footer {
+  height: 25vw;
+  background-size: contain;
+  background-position: bottom;
+  width: 100%;
+}
+
+.water-proof-title {
+  width: 100%;
+  padding: 5vw;
+  text-align: center;
+}
+
+.photo-cards {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 68.75vw;
+}
+
+.photo-cards img {
+  width: 33.8671875vw;
+  height: 45.859375vw;
+  object-fit: contain;
+}
+
+.scroll-video-container {
+  width: 75vw;
+  margin: auto;
+  padding-top: 13.671875vw;
+  padding-bottom: 7.8125vw;
+}
+
+.scroll-slide-container {
+  width: 68.8671875vw;
+  height: 37.1484375vw;
+  margin: auto;
+}
+.scroll-slide-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+}
+.scroll-slider {
+  height: 100% !important;
+}
+
+.scroll-slider-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 46.09375vw;
+  margin: 5vw auto 0;
+  align-items: center;
+  gap: 2vw;
+}
+
+.scroll-slider-footer img {
+  height: 3.125vw;
+  width: 3.125vw;
+}
+
+.double-video {
+  margin: 11.71875vw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.double-video video {
+  width: 19.53125vw;
+  height: 42.1875vw;
+}
+
+.double-video header {
+  display: flex;
+}
+.double-video p {
+  margin-top: 3vw;
+}
+
+.camera-section {
+  color: #fff;
+  width: 75vw;
+  margin: auto;
+  text-align: center;
+}
+
+.camera-section-image {
+  width: 100%;
+}
+
+.fifth-section-title {
+  margin-top: 15vw;
+  font-size: 4.6875vw;
+  color: #fff !important;
+}
+
+.wallpaper-section {
+  width: 75vw;
+  text-align: center;
+  margin: auto;
+}
+
+.design-section {
+  width: 75vw;
+  text-align: center;
+  height: 75vw;
+  margin: auto;
+}
+
+.design-section img {
+  width: 100%;
+  height: 6.328125vw;
+  object-fit: contain;
+}
+
+.design-icons {
+  width: 53.984375vw;
+  height: 24.21875vw;
+  margin: 11.9375vw auto 9.765625vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-section {
+  padding-top: 13.9453125vw;
+  height: 82.03125vw;
+  width: 75vw;
+  text-align: center;
+  margin: auto;
+}
+
+.search-section {
+  height: 82.03125vw;
+  width: 75vw;
+  text-align: center;
+  margin: auto;
+}
+
+.port-section {
+  height: 80.703125vw;
+  padding-top: 14.453125vw;
+  width: 75vw;
+  margin: auto;
+}
+
+.last-section {
+  padding-top: 13vw;
+  width: 75vw;
+  margin: auto;
 }
