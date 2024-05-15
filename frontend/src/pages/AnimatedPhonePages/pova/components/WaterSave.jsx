@@ -10,6 +10,7 @@ const WaterSave = () => {
         <h3 className="pova-subtitle">В порт для зарядки попала вода?</h3>
         <p className="pova-desc">Смартфон предупредит об этом с помощью уведомления на экране</p>
       </div>
+      
     </ContentSection>
   );
 }

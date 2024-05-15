@@ -10,7 +10,7 @@ const Ramka = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".ramka",
-        start: "top top",
+        start: "top center",
         end: "center center",
         markers: true // Optional, for debugging
       }
