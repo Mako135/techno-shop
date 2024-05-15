@@ -48,7 +48,7 @@ const Pova6Pro = () => {
     "https://d3fyizz0b46qgr.cloudfront.net/global/POVA-60S/POVA-60S.mp4";
   const secondVideo =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6/pova6-5g/powg-4k-li7-v2.mp4";
-
+  
   return (
     <div className="pova-container">
       <img src={pova_pro} alt="" className="pova-banner" />

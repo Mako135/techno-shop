@@ -1,0 +1,107 @@
+.common-first-section {
+  position: relative;
+  width: 100%;
+}
+.common-first-section img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.common-second-section {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.slide-figure {
+  position: absolute;
+  width: 50%;
+  top: -108px;
+  right: 0;
+}
+
+.second-inner {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.second-titles {
+  padding: 5vw 0 0;
+}
+
+.second-titles h1 {
+  font-size: 6vw;
+  color: rgb(161, 161, 161);
+  font-weight: 700;
+}
+
+.second-inner-figure {
+  width: 30%;
+  height: 100%;
+}
+.second-inner-figure img {
+  display: block;
+}
+
+
+.third-section {
+    height: 100vh;
+    position: relative;
+}
+.third-section img{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.third-section-content {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 6vw;
+}
+
+.third-section-first {
+    font-size: 1.5vw;
+    font-style: italic;
+    position: absolute;
+    z-index: 1;
+}
+.third-section-second {
+    position: absolute;
+    z-index: 1;
+}
+.third-section-second h1{
+    font-size: 2vw;
+}
+.third-section-second p{
+    font-size: 1.125vw;
+    padding-top: 2vw;
+}
+.third-section-second ul{
+    margin: 3vw 0 0 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.third-section-second li::marker {
+    color: red;
+    transform: scale(1.5);
+}
+
+.third-section-second span {
+    font-size: 1.25vw;
+    display: flex;
+    flex-direction: column;
+}
