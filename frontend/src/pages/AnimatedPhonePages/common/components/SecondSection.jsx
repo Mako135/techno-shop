@@ -9,21 +9,26 @@ const SecondSection = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".common-second-section",
-        start: "-=200 center",
-        end: "center center",
+        start: "-=300 center",
+        end: "+=800",
         scrub: true,
         markers: true // Optional, for debugging
       }
     });
 
     tl.from(".slide-figure", { duration: 2, xPercent: 100 })
-      .from(".second-titles", {
-        y: -500,
-        x: 300,
-        opacity: 0.5,
-        duration: 10
-      })
-      .from(".second-inner-figure", { y: 300, duration: 10 });
+      .from(
+        ".second-titles",
+        {
+          y: -500,
+          x: 300,
+          opacity: 0.5,
+          duration: 10,
+          animation: "tween"
+        },
+        "<"
+      ) // Start this animation at the same time as the previous one
+      .from(".second-inner-figure", { y: 300, duration: 10 }, "<");
   }, []);
 
   const figure =
