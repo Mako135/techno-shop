@@ -22,6 +22,29 @@ STATUS_CHOICES = (
 )
 
 
+class Memory(models.Model):
+    size = models.PositiveIntegerField(_("Объем памяти"), help_text=_('Введите объем памяти'))
+
+    class Meta:
+        verbose_name = _('Память')
+        verbose_name_plural = _('Память')
+
+    def __str__(self) -> str:
+        return f"{self.size} GB"
+
+
+    
+class CameraInfo(models.Model):
+    megapixels = models.PositiveIntegerField(_('Мегапиксели'), help_text=_('Введите количество мегапикселей'))
+
+    class Meta:
+        verbose_name = _('Мегапиксель')
+        verbose_name_plural = _('Мегапиксели')
+    
+    def __str__(self) -> str:
+        return f"{self.megapixels} MP"
+    
+
 class Category(models.Model):
     name = models.CharField(_('Название'), max_length=100, help_text=_('Введите название категории'))
     slug = models.SlugField(max_length=100, unique=True)
@@ -70,11 +93,58 @@ class Network(models.Model):
         return super().save(*args, **kwargs)
 
 class Phone(models.Model):
+
+    FIVE_INCH = 5.0
+    FIVE_FIVE_INCH = 5.5
+    FIVE_SIX_FIVE_INCH = 5.65
+    FIVE_SEVEN_INCH = 5.7
+    SIX_INCH = 6.0
+    SIX_ONE_INCH = 6.1
+    SIX_TWO_INCH = 6.2
+    SIX_THREE_FIVE_INCH = 6.35
+    SIX_FOUR_INCH = 6.4
+
+    DISAPLAY_CHOICES = (
+        (FIVE_INCH, '5,6"'),
+        (FIVE_FIVE_INCH, '5,5"'),
+        (FIVE_SIX_FIVE_INCH, '5,65"'),
+        (FIVE_SEVEN_INCH, '5,7"'),
+        (SIX_INCH, '6"'),
+        (SIX_ONE_INCH, '6,1"'),
+        (SIX_TWO_INCH, '6,2"'),
+        (SIX_THREE_FIVE_INCH, '6,35"'),
+        (SIX_FOUR_INCH, '6,4"')
+    )
+
+    FHD = 'FHD'
+    HD = 'HD'
+    FWVGA = 'FWVGA'
+    WVGA = 'WVGA'
+
+    RESOLUTION_CHOICES = (
+        (FHD, 'FHD'),
+        (HD, 'HD'),
+        (FWVGA, 'FWVGA'),
+        (WVGA, 'WVGA')
+    )
+
+    
+
     category = models.ForeignKey(Category, related_name='phones', on_delete=models.CASCADE)
     title = models.CharField(_('Название'), max_length=100, help_text=_('Введите название телефона'))
     slug = models.SlugField(max_length=100, unique=True) 
     status = models.CharField(_('Статус'), max_length=10, choices=STATUS_CHOICES, default=DRAFT)
 
+    display = models.FloatField(_('Дисплей'), choices=DISAPLAY_CHOICES, help_text=_('Выберите диагональ дисплея'), default=FIVE_INCH)
+
+    memories = models.ManyToManyField(
+        'Memory', related_name='phones'
+    )
+    resolution = models.CharField(_('Разрешение'), max_length=10, choices=RESOLUTION_CHOICES, help_text=_('Выберите разрешение экрана'), default=HD)
+    front_camera = models.ForeignKey('CameraInfo', related_name='front_camera', on_delete=models.CASCADE, blank=True, null=True)
+    back_camera = models.ForeignKey('CameraInfo', related_name='back_camera', on_delete=models.CASCADE, blank=True, null=True)
+    has_touch_id = models.BooleanField(_('Есть Touch ID'), default=False)
+    battery = models.FloatField(_('Батарея'), help_text=_('Введите емкость батареи'), default=3500)
     main_info = RichTextField(_('Основная информация'), config_name='awesome_ckeditor', help_text=_('Введите основную информацию о телефоне'))
     characteristics = RichTextField(_('Характеристики'), config_name='awesome_ckeditor',  help_text=_('Введите характеристики телефона'))
     network = models.ManyToManyField(
@@ -85,7 +155,6 @@ class Phone(models.Model):
     kit_info = RichTextField(_('Комплект поставки'), config_name='awesome_ckeditor', help_text=_('Введите информацию о комплекте поставки'))
 
     published = PublishedManager()
-
 
     class Meta:
         verbose_name = _('Телефон')

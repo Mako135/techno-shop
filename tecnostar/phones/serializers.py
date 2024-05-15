@@ -2,7 +2,26 @@ from rest_framework.serializers import ModelSerializer
 from rest_framework.serializers import SerializerMethodField
 
 
-from phones.models import Phone, Category, Color, Network, Photo, News
+from phones.models import (
+    Phone, 
+    Category, 
+    Color, 
+    Network, 
+    Photo, 
+    News,
+    Memory,
+    CameraInfo
+)
+
+class CameraInfoSerializer(ModelSerializer):
+    class Meta:
+        model = CameraInfo
+        fields = '__all__'
+
+class MemeorySerializer(ModelSerializer):
+    class Meta:
+        model = Memory
+        fields = '__all__'
 
 class CategorySerializer(ModelSerializer):
     class Meta:
@@ -29,10 +48,11 @@ class PhotoSerializer(ModelSerializer):
 
 class PhoneListSerializer(ModelSerializer):
     photos = PhotoSerializer(read_only=True, many=True)
+    category = CategorySerializer(read_only=True)
 
     class Meta:
         model = Phone
-        fields = ('id', 'slug', 'title', 'photos')
+        fields = ('id', 'category', 'slug', 'title', 'photos')
 
 
 
@@ -41,14 +61,28 @@ class PhoneSerializer(ModelSerializer):
     network = NetworkSerializer(read_only=True, many=True)
     category = CategorySerializer(read_only=True)
     photos = PhotoSerializer(read_only=True, many=True)
+    memories = MemeorySerializer(read_only=True, many=True)
+    front_camera = CameraInfoSerializer(read_only=True)
+    back_camera = CameraInfoSerializer(read_only=True)
 
     class Meta:
         model = Phone
-        fields = ('network', 'category', 'title', 'slug', 'main_info', 'characteristics', 'camera_info', 'sensors', 'kit_info', 'photos')
+        fields = (
+            'network', 
+            'category', 
+            'memories', 
+            'front_camera', 
+            'back_camera', 
+            'title', 
+            'slug', 
+            'main_info', 
+            'characteristics', 
+            'camera_info', 
+            'sensors', 
+            'kit_info', 
+            'photos'
+        )
         
-
-
-
 
 
 class NewsSerializer(ModelSerializer):

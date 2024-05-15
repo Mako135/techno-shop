@@ -1,7 +1,16 @@
 from django.contrib import admin
 from mptt.admin import MPTTModelAdmin
 from modeltranslation.admin import TranslationAdmin
-from phones.models import Category, Color, Photo, Network, Phone, News
+from phones.models import (
+    Category, 
+    Color, 
+    Photo,
+    Network, 
+    Phone, 
+    News, 
+    CameraInfo, 
+    Memory
+)
 
 # Register your models here.
 
@@ -53,5 +62,7 @@ class NewsAdmin(TranslationAdmin, admin.ModelAdmin):
 admin.site.register(Photo)
 admin.site.register(Phone, PhoneAdmin) 
 admin.site.register(News, NewsAdmin)
+admin.site.register(CameraInfo)
+admin.site.register(Memory)
 
 
