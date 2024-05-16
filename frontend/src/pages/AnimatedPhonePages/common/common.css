@@ -1,3 +1,8 @@
+.camon-container {
+  max-width: 1300px;
+  margin: auto;
+}
+
 .common-first-section {
   position: relative;
   width: 100%;
@@ -203,11 +208,17 @@
 }
 
 .fifth-section video {
-    margin: auto;
-    width: 35vw;
-    height: 35vw;
-    object-fit: cover;
-    object-position: top;
+  margin: auto;
+  width: 35vw;
+  height: 35vw;
+  object-fit: cover;
+  object-position: top;
+}
+
+.fifth-section img {
+  width: 100%;
+  object-fit: cover;
+  margin: auto;
 }
 
 .fifth-section-first-content,
@@ -218,7 +229,7 @@
   width: 95vw;
   justify-content: space-between;
   margin: auto;
-
+  align-items: center;
 }
 .fifth-section-first-content p,
 .fifth-section-second-content p {
@@ -234,8 +245,6 @@
   font-weight: 600;
 }
 
-
-
 .fifth-section-first-content section,
 .fifth-section-second-content section {
   width: 60vw;
@@ -244,26 +253,101 @@
   gap: 1.5vw;
   margin: auto;
 }
-.dot-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    gap: 2vw;
+.dot-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
 }
 
 .dot-container {
-    display: flex;
+  display: flex;
+  align-items: center;
+}
+
+.dot-container b{
+  font-size: 1.5vw;
+  font-weight: 700;
 }
 .dot {
-    width: 1vw;
-    height: 1vw;
-    border-radius: 50%;
-    background-color: rgb(216, 37, 37);
-    margin: 0.5vw;
+  min-width: 8px;
+  min-height: 8px;
+  width: 100%;
+  height: 100%;
+  max-width: 10px;
+  max-height: 10px;
+  border-radius: 50%;
+  background-color: rgb(216, 37, 37);
+  margin: 0.5vw;
 }
 
 .fifth-section-first-content span,
 .fifth-section-second-content span {
-    font-size: 1.5vw;
-    display: flex;
-    flex-direction: column;
+  font-size: 1.5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.six-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #333333;
+  gap: 4vw;
+  margin-bottom: 5vw;
+}
+.six-section h2 {
+  font-size: 3vw;
+  font-weight: 600;
+  font-style: Italic;
+  line-height: 1.14;
+}
+.six-section h4 {
+  font-size: 1.5vw;
+  font-weight: 700;
+  line-height: 1.14;
+  width: 50vw;
+}
+.six-section p {
+  font-size: 1.125vw;
+  font-weight: 400;
+}
+
+.six-section-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+}
+
+.seven-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+  color: #fff;
+  padding: 5vw 0;
+  text-align: center;
+}
+.seven-section h2 {
+  font-size: 2vw;
+  font-weight: 600;
+  font-style: Italic;
+  line-height: 1.14;
+}
+
+.seven-footer {
+  text-align: start;
+  display: flex;
+}
+.seven-footer-desc {
+  color: #8f8f8f;
+}
+
+.seven-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.seven-dots p {
+  font-size: 0.75vw;
 }

@@ -4,6 +4,8 @@ import SecondSection from "./components/SecondSection";
 import ThirdSection from "./components/ThirdSection";
 import FourthSection from "./components/FourthSection";
 import FifthSection from "./components/FifthSection";
+import SixthSection from "./components/SixthSection";
+import SeventhSection from "./components/SeventhSection";
 
 const Common30 = () => {
 
@@ -14,6 +16,8 @@ const Common30 = () => {
       <ThirdSection />
       <FourthSection />
       <FifthSection />
+      <SixthSection />
+      <SeventhSection />
     </div>
   );
 }

@@ -17,16 +17,7 @@ const FifthSection = () => {
       }
     });
 
-    tl.from(
-      ".fifth-section-first-content h1, .fifth-section-first-content p, .fifth-section-first-content .dot-container, .fifth-section-first-content video",
-      {
-        opacity: 0,
-        y: 100,
-        duration: 1,
-        stagger: 0.3
-      }
-    )
-      .to(
+    tl      .to(
         ".fifth-section-first-content h1, .fifth-section-first-content p, .fifth-section-first-content .dot-container, .fifth-section-first-content video ",
         {
           y: -150,

@@ -30,7 +30,7 @@ function App() {
             <Route path="/support" element={<Support />} />
             <Route path="/stocks" element={<Stocks />} />
             <Route path="/pova/pova-6-pro" element={<Pova6Pro />} />
-            <Route path="/common/common-30" element={<Common30 />} />
+            <Route path="/camon/camon-30" element={<Common30 />} />
 
           </Route>
         </Routes>
