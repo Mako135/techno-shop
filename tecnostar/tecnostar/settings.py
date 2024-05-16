@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'ckeditor',
     'rosetta',
+    'django_filters',
 
     # Local apps
     'phones',
@@ -179,7 +180,9 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
-    ]
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
+
 }
 
 # Default primary key field type
