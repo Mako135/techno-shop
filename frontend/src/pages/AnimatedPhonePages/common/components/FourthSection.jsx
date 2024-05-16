@@ -21,10 +21,7 @@ const FourthSection = () => {
     });
 
     tl.to(".slide-1", { xPercent: -100, opacity: 0.5, duration: 2 })
-      .add(
-        gsap.to(".progress-bar", { xPercent: 50, duration: 2 }),
-        "-=2" // Запуск анимации прогресс-бара одновременно с анимацией слайда
-      )
+      
       .fromTo(
         ".slide-2",
         { xPercent: 100, opacity: 0 },
@@ -35,10 +32,7 @@ const FourthSection = () => {
         "-=1" // Запуск анимации прогресс-бара одновременно с анимацией слайда
       )
       .to(".slide-2", { xPercent: -100, opacity: 0.5, duration: 2 })
-      .add(
-        gsap.to(".progress-bar", { xPercent: 150, duration: 2 }),
-        "-=2" // Запуск анимации прогресс-бара одновременно с анимацией слайда
-      )
+      
       .fromTo(
         ".slide-3",
         { xPercent: 100, opacity: 0 },

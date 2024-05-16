@@ -48,146 +48,222 @@
   display: block;
 }
 
-
 .third-section {
-    height: 100vh;
-    position: relative;
+  height: 100vh;
+  position: relative;
 }
-.third-section img{
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
+.third-section img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .third-section-content {
-    color: #fff;
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 6vw;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 6vw;
 }
 
 .third-section-first {
-    font-size: 1.5vw;
-    font-style: italic;
-    position: absolute;
-    z-index: 1;
+  font-size: 1.5vw;
+  font-style: italic;
+  position: absolute;
+  z-index: 1;
 }
 .third-section-second {
-    position: absolute;
-    z-index: 1;
+  position: absolute;
+  z-index: 1;
 }
-.third-section-second h1{
-    font-size: 2vw;
+.third-section-second h1 {
+  font-size: 2vw;
 }
-.third-section-second p{
-    font-size: 1.125vw;
-    padding-top: 2vw;
+.third-section-second p {
+  font-size: 1.125vw;
+  padding-top: 2vw;
 }
-.third-section-second ul{
-    margin: 3vw 0 0 2vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+.third-section-second ul {
+  margin: 3vw 0 0 2vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .third-section-second li::marker {
-    color: red;
-    transform: scale(1.5);
+  color: red;
+  transform: scale(1.5);
 }
 
 .third-section-second span {
-    font-size: 1.25vw;
-    display: flex;
-    flex-direction: column;
+  font-size: 1.25vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .fourth-section {
-    height: 100vh;
+  height: 100vh;
 }
 .fourth-section-inner {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .swiper-common {
-    height: 80% !important;
-    width: 100%;
+  height: 80% !important;
+  width: 100%;
 }
 
 .swiper-slide {
-    background-color: black;
+  background-color: black;
 }
 
 .fourth-slider {
-    height: 80%;
-    position: relative;
+  height: 80%;
+  position: relative;
 }
 .slider-absolute {
-    width: 100%;
-    position: absolute;
-    top: 10%;
-    left: 0;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 0;
 }
 
-
 .fourth-progress {
-    margin:0 auto;
-    width: 30vw;
-    height: 4px;
-    background-color: rgb(217, 217, 217);
+  margin: 0 auto;
+  width: 30vw;
+  height: 4px;
+  background-color: rgb(217, 217, 217);
 }
 
 .progress-bar {
-    height: 100%;
-    width: 33.33%;
-    background-color: red;
+  height: 100%;
+  width: 33.33%;
+  background-color: red;
 }
 
 .slider-container {
-    width: 40vw;
-    margin: auto;
-    position: relative;
+  width: 40vw;
+  margin: auto;
+  position: relative;
 }
 .slider-inner {
-    padding: 3vw;
-    margin: auto;
+  padding: 3vw;
+  margin: auto;
 }
 
 .frames {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
-.left-bottom, .left-top, .right-bottom , .right-top {
-    position: absolute;
+.left-bottom,
+.left-top,
+.right-bottom,
+.right-top {
+  position: absolute;
 }
 
 .left-bottom {
-    left: 0;
-    bottom: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .left-top {
-    left: 0;
-    top: 0;
+  left: 0;
+  top: 0;
 }
 
 .right-bottom {
-    right: 0;
-    bottom: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .right-top {
-    right: 0;
-    top: 0;
+  right: 0;
+  top: 0;
+}
+
+.fifth-section {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fifth-section video {
+    margin: auto;
+    width: 35vw;
+    height: 35vw;
+    object-fit: cover;
+    object-position: top;
+}
+
+.fifth-section-first-content,
+.fifth-section-second-content {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  width: 95vw;
+  justify-content: space-between;
+  margin: auto;
+
+}
+.fifth-section-first-content p,
+.fifth-section-second-content p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: gray;
+}
+
+.fifth-section-first-content h1,
+.fifth-section-second-content h1 {
+  font-size: 2.25vw;
+  color: rgb(71, 71, 71);
+  font-weight: 600;
+}
+
+
+
+.fifth-section-first-content section,
+.fifth-section-second-content section {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  margin: auto;
+}
+.dot-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 2vw;
+}
+
+.dot-container {
+    display: flex;
+}
+.dot {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    background-color: rgb(216, 37, 37);
+    margin: 0.5vw;
+}
+
+.fifth-section-first-content span,
+.fifth-section-second-content span {
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
 }
