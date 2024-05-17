@@ -20,7 +20,7 @@ const SecondSection = () => {
       .from(
         ".second-titles",
         {
-          yPercent: -80,
+          yPercent: -120,
           xPercent: 50,
           opacity: 0.5,
           duration: 10,

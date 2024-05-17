@@ -19,8 +19,8 @@ const ThirteenSection = () => {
 
       tl.from("#thirteen-wallpaper", {
         duration: 2,
-        scale: 3,
-        yPercent: -60
+        scale: 4,
+        yPercent: -20
       })
         .fromTo(
           ".section-title-text, #hrz",
