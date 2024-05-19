@@ -92,6 +92,43 @@ const SectionEleven = () => {
           </div>
         </div>
       </div>
+
+      <div className="section-eleven-fourth-block">
+        <div className="left-6">
+          <h2 className="section-right-title">
+            5000 мАч энергоемкий аккумулятор 33 Вт быстрая зарядка
+          </h2>
+          <p className="section-right-subtitle">
+            Работает долго. Заряжается быстро
+          </p>
+          <p className="section-right-desc">
+            Энергоемкий аккумулятор 5000 мАч дополнен быстрой зарядкой 33 Вт.
+            Длительное время работы и быстрое восстановление энергии с
+            увеличенным сроком службы батареи
+          </p>
+          <div className="datas">
+            <div className="data">
+              <h2>5000 мАч</h2>
+              <p>аккумулятор</p>
+            </div>
+            <div className="data">
+              <h2>33 Вт</h2>
+              <p>быстрая зарядка</p>
+            </div>
+            <div className="data">
+              <h2>Type-C</h2>
+              <p>разъем зарядки</p>
+            </div>
+            <div className="data"></div>
+          </div>
+        </div>
+        <div className="right-6">
+          <img
+            src="https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec11MbF4.png"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
   );
 };

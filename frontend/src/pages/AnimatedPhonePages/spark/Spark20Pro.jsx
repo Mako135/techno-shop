@@ -10,6 +10,8 @@ import SectionEight from "./widgets/SectionEight";
 import SectionNine from "./widgets/SectionNine";
 import SectionTen from "./widgets/SectionTen";
 import SectionEleven from "./widgets/SectionEleven";
+import SectionTwelve from "./widgets/SectionTwelve";
+import SectionThirteen from "./widgets/SectionThirteen";
 const Spark20Pro = () => {
   return (
     <div className="spark-container">
@@ -24,8 +26,12 @@ const Spark20Pro = () => {
         <SectionEight />
         <SectionNine />
       </div>
-      <SectionTen />
-      <SectionEleven />
+      <div className="bg_white2">
+        <SectionTen />
+        <SectionEleven />
+        <SectionTwelve />
+        <SectionThirteen />
+      </div>
     </div>
   );
 }
