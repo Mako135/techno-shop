@@ -12,6 +12,11 @@ import SectionTen from "./widgets/SectionTen";
 import SectionEleven from "./widgets/SectionEleven";
 import SectionTwelve from "./widgets/SectionTwelve";
 import SectionThirteen from "./widgets/SectionThirteen";
+import SectionFourteen from "./widgets/SectionFourteen";
+import SectionFifteen from "./widgets/SectionFifteen";
+import Footer from '../../../components/footer/Footer'
+
+
 const Spark20Pro = () => {
   return (
     <div className="spark-container">
@@ -31,7 +36,10 @@ const Spark20Pro = () => {
         <SectionEleven />
         <SectionTwelve />
         <SectionThirteen />
+        <SectionFourteen />
+        <SectionFifteen />
       </div>
+      <Footer className={"#fff"}/>
     </div>
   );
 }

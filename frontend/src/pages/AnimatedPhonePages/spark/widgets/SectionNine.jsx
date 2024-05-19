@@ -15,8 +15,7 @@ const SectionNine = () => {
       }
     });
 
-    tl.to(".section-nine, .bg-green", {
-      y: -50,
+    tl.to(".bg-green", {
       duration: 2,
         scale: 0.9,
       opacity: 0.7
