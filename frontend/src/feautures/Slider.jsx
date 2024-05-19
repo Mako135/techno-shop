@@ -19,15 +19,12 @@ const Slider = () => {
           <img src={banner1} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
           <img src={banner1} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
           <img src={banner1} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
           <img src={banner1} alt="" />
         </SwiperSlide>
       </Swiper>

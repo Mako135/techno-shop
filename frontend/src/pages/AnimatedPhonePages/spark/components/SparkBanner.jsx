@@ -1,13 +1,10 @@
 import PropTypes from "prop-types";
 import { useRef } from "react";
 
-const SparkBanner = ({ color, title, subtitle, fontColor }) => {
+const SparkBanner = ({ color, title, subtitle, fontColor, small, medium }) => {
   const imageRef = useRef(null);
   const bannerRef = useRef(null);
-  const medium =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec3PcBg.png";
-  const small =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec3MbBg.png";
+
 
   return (
     <div
@@ -25,8 +22,8 @@ const SparkBanner = ({ color, title, subtitle, fontColor }) => {
             style={{
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
-              color: "transparent",
-              backgroundImage: fontColor,
+              color: fontColor === "#000" ? "black" : "transparent",
+              backgroundImage: fontColor !== "#000" ? fontColor : "none",
               fontSize: "4vw"
             }}
           >
@@ -36,8 +33,8 @@ const SparkBanner = ({ color, title, subtitle, fontColor }) => {
             style={{
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
-              color: "transparent",
-              backgroundImage: fontColor,
+              color: fontColor === "#000" ? "black" : "transparent",
+              backgroundImage: fontColor !== "#000" ? fontColor : "none",
               fontSize: "1.25vw"
             }}
           >
@@ -54,7 +51,9 @@ SparkBanner.propTypes = {
   children: PropTypes.any.isRequired,
   title: PropTypes.any.isRequired,
   subtitle: PropTypes.any.isRequired,
-  fontColor: PropTypes.any.isRequired
+  fontColor: PropTypes.any.isRequired,
+  small: PropTypes.any.isRequired,
+  medium: PropTypes.any.isRequired
 };
 
 export default SparkBanner;

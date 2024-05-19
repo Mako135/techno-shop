@@ -42,7 +42,7 @@ const SectionFive = () => {
         <header>
           <video src={video} muted autoPlay id="camera-video"></video>
           <div className="section-right">
-            <h2>32 Мп безупречные селфи</h2>
+            <h2 className="section-right-title">32 Мп безупречные селфи</h2>
             <p className="section-right-subtitle">
               Яркие фото даже глубокой ночью
             </p>

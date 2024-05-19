@@ -1,22 +1,22 @@
 import SparkBanner from "../components/SparkBanner";
 
-const ThirdSection = () => {
+const SectionTen = () => {
     const medium =
       "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec3PcBg.png";
     const small =
       "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec3MbBg.png";
   return (
-    <div className="sec-content">
+    <div className="section-ten">
       <SparkBanner
-        color="#000"
-        title="Камера"
-        subtitle="Съемка в высоком разрешении"
-        fontColor="linear-gradient(90deg, #eba9d9 0%, #fdedcf 53%, #f5dbff 100%)"
+        color="transparent"
+        title="Производительность"
+        subtitle="Быстрая и плавная работа"
+        fontColor="linear-gradient(90deg, #0160aa 0%, #45a4ce 36%, #77d5e8 65%, #a2ffff 100%)"
         medium={medium}
         small={small}
       />
     </div>
   );
-};
+}
 
-export default ThirdSection;
+export default SectionTen

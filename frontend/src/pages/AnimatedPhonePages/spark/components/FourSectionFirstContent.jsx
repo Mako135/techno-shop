@@ -6,7 +6,9 @@ const FourSectionFirstContent = () => {
       <header>
         <video src={video} muted autoPlay></video>
         <div className="section-right">
-          <h2>108 Мп камера высокой четкости</h2>
+          <h2 className="section-right-title">
+            108 Мп камера высокой четкости
+          </h2>
           <p className="section-right-subtitle">Впервые в серии SPARK</p>
           <p className="section-right-desc">
             Запечатлейте мир в мельчайших подробностях с помощью камеры высокой

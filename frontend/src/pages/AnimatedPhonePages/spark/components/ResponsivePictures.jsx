@@ -22,9 +22,9 @@ const ResponsivePictures = ({ large, medium, small, animate, padding,color }) =>
       });
 
       tl.to(imageRef.current, {
-        y: -50,
         duration: 2,
-        scale: 0.9
+        scale: 0.9,
+        opacity: 0.7
       });
     }
   }, [animate]);
