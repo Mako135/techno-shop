@@ -85,7 +85,7 @@ const FifthSection = () => {
             </div>
           </div>
         </section>
-        <video src={video} muted autoPlay></video>
+        <video src={video} muted autoPlay loop></video>
       </div>
       <div className="fifth-section-second-content">
         <section>

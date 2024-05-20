@@ -1,4 +1,4 @@
-import ResponsivePictures from "../components/ResponsivePictures";
+import ResponsivePictures from "../../components/ResponsivePictures";
 
 const FirstBanner = () => {
   const large =

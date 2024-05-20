@@ -1,15 +1,14 @@
-import SectionFiveFirstCard from "../components/SectionFiveFirstCard";
-import SectionFiveSecondCard from "../components/SectionFiveSecondCard";
-import SectionFiveThirdCard from "../components/SectionFiveThirdCard";
 import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import PropTypes from "prop-types";
+import SectionFiveFirstCard from "../../components/SectionFiveFirstCard";
+import SectionFiveSecondCard from "../../components/SectionFiveSecondCard";
+import SectionFiveThirdCard from "../../components/SectionFiveThirdCard";
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SectionFive = ({className}) => {
+const SparkSectionFive = () => {
   useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -25,7 +24,7 @@ const SectionFive = ({className}) => {
       y: -50,
       duration: 2,
       scale: 0.9,
-      opacity: 0.7,
+      opacity: 0.7
     });
   }, []); //
 
@@ -33,7 +32,7 @@ const SectionFive = ({className}) => {
     "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/video/sec5PcSelfie.mp4";
   return (
     <div className="section-five">
-      <div className={`section-titles ${className}`}>
+      <div className="section-titles-4">
         <p>
           <span>Удивительно ярко.</span>
         </p>
@@ -58,10 +57,10 @@ const SectionFive = ({className}) => {
 
             <div className="section-right-features">
               <div className="section-right-feature">
-                <h2>f/2.2</h2> <p>широкая диафрагма</p>
+                <h4>f/2.2</h4> <p>широкая диафрагма</p>
               </div>
               <div className="section-right-feature">
-                <h3>5 линз</h3> <p>высокая светопроницаемость</p>
+                <h4>5 линз</h4> <p>высокая светопроницаемость</p>
               </div>
             </div>
           </div>
@@ -76,8 +75,5 @@ const SectionFive = ({className}) => {
   );
 };
 
-SectionFive.propTypes = {
-  className: PropTypes.string
-};
 
-export default SectionFive;
+export default SparkSectionFive;

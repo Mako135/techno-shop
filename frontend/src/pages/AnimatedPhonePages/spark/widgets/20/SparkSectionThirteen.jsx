@@ -1,9 +1,12 @@
 
-const SectionThirteen = () => {
+const SparkSectionThirteen = () => {
   return (
-    <div className="section-thirteen">
+    <div className="spark-section-thirteen">
       <p>
-        <span>Наслаждайтесь каждым мгновением</span>
+        <span>Калейдоскоп новых</span>
+      </p>
+      <p>
+        <span>впечатлений</span>
       </p>
 
       <div className="section-thirteen-content">
@@ -22,36 +25,41 @@ const SectionThirteen = () => {
             качества звука с функцией Volume Plu
           </p>
         </header>
-        <video src="https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/video/sec13PcV1.mp4" muted autoPlay loop></video>
+        <video
+          src="https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/video/sec13PcV1.mp4"
+          muted
+          autoPlay
+          loop
+        ></video>
         <footer>
           <div className="footer-left">
             <div className="items">
               <div className="item">
-                <h4>Громкость 100%</h4>
-                <div className="footer-line line1"></div>
+                <h3>Громкость 100%</h3>
+                <div className="footer-line line1 line-purp"></div>
               </div>
               <div className="item">
-                <h4>Увеличенная громкость 400%</h4>
-                <div className="footer-line line2"></div>
+                <h3>Увеличенная громкость 400%</h3>
+                <div className="footer-line line2 line-purp"></div>
               </div>
             </div>
           </div>
           <div className="footer-right2">
-            <div className="datas">
+            <div className="datas-2">
               <div className="data">
-                <h5>Двойные стереодинамики%</h5>
+                <div className="data-title">Двойные <br /> стереодинамики</div>
                 <p>улучшают качество</p>
               </div>
               <div className="data">
-                <h5>Volume Plus%</h5>
+                <div className="data-title">Volume Plus</div>
                 <p>усиливает громкость</p>
               </div>
               <div className="data">
-                <h5>Бинауральная технология</h5>
+                <div className="data-title">Бинауральная <br /> технология</div>
                 <p>распределяет каналы</p>
               </div>
               <div className="data">
-                <div className="dts"></div>
+                <div className="data-title">DTS</div>
                 <p>создает объемный звук</p>
               </div>
             </div>
@@ -60,6 +68,6 @@ const SectionThirteen = () => {
       </div>
     </div>
   );
-}
+};
 
-export default SectionThirteen
+export default SparkSectionThirteen;

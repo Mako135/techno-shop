@@ -3,12 +3,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const SectionNine = () => {
+const PlusSectionNine = () => {
   useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-nine",
-        start: "bottom-=200 center",
+        start: "bottom center",
         end: "+=400",
         scrub: true,
         markers: true
@@ -17,49 +17,53 @@ const SectionNine = () => {
 
     tl.to(".bg-green", {
       duration: 2,
-        scale: 0.9,
+      scale: 0.9,
       opacity: 0.7
     });
   }, []);
 
   const phone_1 =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec9PcBlack.png";
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20_Pro_Plus/SPARK_20_Pro_Plus/dist/images/sec9PcF1.webp";
   const phone_2 =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec9PcIvory.png";
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20_Pro_Plus/SPARK_20_Pro_Plus/dist/images/sec9PcF2.webp";
   const phone_3 =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec9PcBlush.png";
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20_Pro_Plus/SPARK_20_Pro_Plus/dist/images/sec9PcF3.webp";
   const phone_4 =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec9PcMagicSkin.png";
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20_Pro_Plus/SPARK_20_Pro_Plus/dist/images/sec9PcF4.webp";
   return (
     <div className="section-nine">
       <header>
-        <div className="left-images">
+        <div className="left-images-2">
           <img src={phone_1} alt="" />
           <img src={phone_2} alt="" />
           <img src={phone_3} alt="" />
           <img src={phone_4} alt="" />
         </div>
         <div className="section-right2">
-          <h3 className="section-right-title">Новая текстура корпуса</h3>
-          <p className="section-right-subtitle">Гармония стиля и мощности</p>
+          <h3 className="section-right-title">Сияющий эффект</h3>
           <p className="section-right-subtitle">
-            Выберите свой SPARK: <br />
-            Белая заря 一 игра света и тени <br />
-            Золотой закат 一 блеск благородного металла
+            Красота снаружи, технологии внутри
+          </p>
+          <p className="section-right-subtitle">
+            Зеленая планета (экокожа Magic Skin 2.0)- <br />
+            приятный природный цвет зернистой экокожи с прострочкой напоминает
+            отделку салона дорогой яхты. В пять раз более износостойкое покрытие
+            корпуса и на 25% лучше защищенное от воздействия ультрафиолета по
+            сравнению с аналогичным материалом предыдущего поколения
           </p>
 
           <div className="sec-nine-datas">
             <div className="data">
-              <h4>Композитный пластик</h4>
-              <p>Изящный матовый корпус</p>
+              <h4>Матовая экокожа</h4>
+              <p>приятная на ощупь</p>
             </div>
             <div className="data">
-              <h4>Glitter Sand 2.0</h4>
-              <p>Переливающийся эффект</p>
+              <h4>Экологичный материал</h4>
+              <p>искусственная экокожа</p>
             </div>
             <div className="data">
-              <h4>Трендовые цвета</h4>
-              <p>Яркие и спокойные оттенки</p>
+              <h4>Прочно и устойчиво</h4>
+              <p>к загрязнениям и повреждениям</p>
             </div>
           </div>
         </div>
@@ -87,4 +91,4 @@ const SectionNine = () => {
   );
 };
 
-export default SectionNine;
+export default PlusSectionNine;

@@ -1,4 +1,4 @@
-import SparkBanner from "../components/SparkBanner";
+import SparkBanner from "../../components/SparkBanner";
 
 const ThirdSection = () => {
     const medium =

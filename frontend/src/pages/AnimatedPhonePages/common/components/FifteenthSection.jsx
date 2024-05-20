@@ -100,6 +100,7 @@ const FifteenthSection = () => {
         src="https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon30/30pro5g/videos/charge_cl6.mp4"
         muted
         autoPlay
+        loop
       ></video>
     </div>
   );

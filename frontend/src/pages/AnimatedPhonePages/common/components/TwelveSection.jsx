@@ -38,7 +38,7 @@ const TwelveSection = () => {
           </div>
         </div>
           </header>
-          <video src={video} muted autoPlay></video>
+          <video src={video} muted autoPlay loop></video>
     </div>
   );
 };

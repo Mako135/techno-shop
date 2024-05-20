@@ -1,15 +1,8 @@
 import { Autoplay, Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
+import PropTypes from "prop-types";
 
-const SectionEight = () => {
-    const figure_1 =
-        "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/jpg/sec8PcF1.jpg";
-    const figure_2 =
-        "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/jpg/sec8PcF2.jpg";
-    const figure_3 =
-        "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/jpg/sec8PcF3.jpg";
-    const figure_4 =
-      "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/jpg/sec8PcF4.jpg";
+const SectionEight = ({ figure_1, figure_2, figure_3, figure_4 }) => {
   return (
     <Swiper
       autoplay={{
@@ -34,6 +27,13 @@ const SectionEight = () => {
       </SwiperSlide>
     </Swiper>
   );
+};
+
+SectionEight.propTypes = {
+  figure_1: PropTypes.string.isRequired,
+  figure_2: PropTypes.string.isRequired,
+  figure_3: PropTypes.string.isRequired,
+  figure_4: PropTypes.string.isRequired,
 };
 
 export default SectionEight;

@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const SectionFourteen = () => {
+const SparkSectionFourteen = () => {
   useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -22,20 +22,23 @@ const SectionFourteen = () => {
     });
   }, []);
   const figure =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/jpg/sec13PcF2.jpg";
+    "https://d3fyizz0b46qgr.cloudfront.net/global/SPARK_20/en/new_1209/dist/png/sec13PcF2.png";
   return (
     <div className="section-fourteen">
       <img src={figure} alt="" />
       <div className="section-fourteen-content">
         <div className="text_wrapper left-7">
-          <h2>120 Гц LCD-экран</h2>
-          <h4>Новое слово в своем классе</h4>
+          <h2>Широкий экран с частотой обновления 90 Гц</h2>
+          <h4>
+            Редкий в сегменте экран с отдельным вырезом под фронтальную камеру
+          </h4>
           <p>
-            Широкий экран с повышенной частотой обновления 120 Гц и отдельным
-            вырезом под селфи-камеру занимает 91% площади корпуса, что
-            многократно улучшает визуальное восприятие во время использования
-            смартфона. А функция Smart Refresh 3.0 адаптируется к
-            пользовательским сценариям и снижает энергопотребления на 3-5%
+            Дизайн смартфона стал еще более изящным благодаря отдельному
+            отверстию для селфи-камеры, при этом полезная площадь экрана в
+            соотношении с корпусом выросла до 90%. Адаптивная частота обновления
+            90 Гц обеспечивает плавность, а функция Smart Refresh 3.0 позволяет
+            автоматически переключаться со статического экрана в игровой режим,
+            снижая энергопотребление на 3-5%
           </p>
         </div>
         <div className="datas right-7">
@@ -57,4 +60,4 @@ const SectionFourteen = () => {
   );
 };
 
-export default SectionFourteen;
+export default SparkSectionFourteen;

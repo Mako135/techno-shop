@@ -1,10 +1,10 @@
-const FourSectionFirstContent = () => {
-  const video =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/video/sec4PcV1.mp4";
+import PropTypes from "prop-types";
+
+const FourSectionFirstContent = ({ video, className }) => {
   return (
     <div className="section-first-content">
       <header>
-        <video src={video} muted autoPlay></video>
+        <video src={video} muted autoPlay loop></video>
         <div className="section-right">
           <h2 className="section-right-title">
             108 Мп камера высокой четкости
@@ -22,7 +22,7 @@ const FourSectionFirstContent = () => {
           </p>
         </div>
       </header>
-      <footer>
+      <footer className={className}>
         <div>
           <h2>108 Мп</h2>
           <p>выдающееся качество</p>
@@ -54,6 +54,11 @@ const FourSectionFirstContent = () => {
       </footer>
     </div>
   );
+};
+
+FourSectionFirstContent.propTypes = {
+  video: PropTypes.string.isRequired,
+  className: PropTypes.string
 };
 
 export default FourSectionFirstContent;

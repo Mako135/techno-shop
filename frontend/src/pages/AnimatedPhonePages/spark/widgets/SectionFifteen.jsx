@@ -67,13 +67,13 @@ const SectionFifteen = () => {
               </p>
             </div>
           </div>
-          <video src={video_2} muted autoPlay className="left-2"></video>
+          <video src={video_2} muted loop autoPlay className="left-2"></video>
         </div>
         {/* VIDEO CARD 2 END */}
 
         {/* VIDEO CARD 3 START */}
         <div className="spark-content">
-          <video src={video_3} muted autoPlay className="left-2"></video>
+          <video src={video_3} muted loop autoPlay className="left-2"></video>
           <div className="right-8">
             <img src={icon_3} alt="" className="right-8-icon" />
             <div className="text_wrapper">
@@ -113,10 +113,10 @@ const SectionFifteen = () => {
               </p>
             </div>
           </div>
-          <video src={video_4} muted autoPlay className="left-2"></video>
+          <video src={video_4} muted loop autoPlay className="left-2"></video>
         </div>
         <div className="spark-content">
-          <video src={video_5} muted autoPlay className="left-2"></video>
+          <video src={video_5} muted loop autoPlay className="left-2"></video>
           <div className="right-8">
             <img src={icon_5} alt="" className="right-8-icon" />
             <div className="text_wrapper">
@@ -131,7 +131,7 @@ const SectionFifteen = () => {
           </div>
         </div>
         <div className="spark-content">
-          <video src={video_6} muted autoPlay className="left-2"></video>
+          <video src={video_6} muted loop autoPlay className="left-2"></video>
           <div className="right-8">
             <img src={icon_6} alt="" className="right-8-icon" />
             <div className="text_wrapper">
@@ -156,8 +156,9 @@ const SectionFifteen = () => {
 
       <p className="tips">
         *Вся информация на данной странице предоставлена TECNO LAB на основании
-        лабораторных тестов <br /> *Все изображения видео и текст на данной странице
-        представлены исключительно для ознакомления и могут отличаться от <br />
+        лабораторных тестов <br /> *Все изображения видео и текст на данной
+        странице представлены исключительно для ознакомления и могут отличаться
+        от <br />
         реального продукта <br /> *Указанные данные предоставлены по результатам
         лабораторных тестирований продукта, в том числе в сравнении с
         предыдущими моделями.Реальные данные могут отличаться в зависимости от

@@ -24,7 +24,7 @@ const SparkBanner = ({ color, title, subtitle, fontColor, small, medium }) => {
               backgroundClip: "text",
               color: fontColor === "#000" ? "black" : "transparent",
               backgroundImage: fontColor !== "#000" ? fontColor : "none",
-              fontSize: "4vw"
+              fontSize: "5vw"
             }}
           >
             {title}

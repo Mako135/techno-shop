@@ -14,8 +14,9 @@ const FifthVideoSection = () => {
 
           <footer>
             <img src={frame} alt="" />
-            <video src={video} muted autoPlay></video>
+            <video src={video} muted autoPlay loop></video>
           </footer>
+          
           <p className="pova-desc">
             10-кратный цифровой зум без потери качества и большой сенсор с
             размером пикселя 0.7 мкм помогут создать яркие и живые снимки

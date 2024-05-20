@@ -1,21 +1,21 @@
-const SectionEleven = () => {
+const SparkSectionEleven = () => {
   const video =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20_Pro_Plus/SPARK_20_Pro_Plus/dist/videos/sec11PcProcessor.mp4";
+    "https://d3fyizz0b46qgr.cloudfront.net/global/SPARK_20/en/new_1209/dist/video/sec11PcV1.mp4";
   return (
     <div className="section-eleven">
       <div className="section-eleven-titles">
         <p>
-          <span>Улучшенный процессор</span>
+          <span>Еще быстрее</span>
         </p>
         <p>
-          <span>Еще быстрее, чем раньше</span>
+          <span>и эффективнее</span>
         </p>
       </div>
-      <div className="section-eleven-first-block">
-        <div className="section-left-3">
+      <div className="section-eleven-spark">
+        <div className="section-left-4">
           <video src={video} muted autoPlay loop></video>
         </div>
-        <div className="section-right-3">
+        <div className="section-right-4">
           <h2 className="section-right-title">Процессор Helio G99</h2>
           <p className="section-right-subtitle">Один из лучших 4G-чипов</p>
           <p className="section-right-desc">
@@ -29,7 +29,7 @@ const SectionEleven = () => {
           </div>
         </div>
       </div>
-      <div className="section-eleven-second-block">
+      <div className="section-eleven-second-block m-top">
         <div className="left-4">
           <h2 className="section-right-title">
             Продвинутая производительность
@@ -92,44 +92,45 @@ const SectionEleven = () => {
         </div>
       </div>
 
-      <div className="section-eleven-fourth-block">
-        <div className="left-6">
-          <h2 className="section-right-title">
-            5000 мАч энергоемкий аккумулятор 33 Вт быстрая зарядка
-          </h2>
-          <p className="section-right-subtitle">
-            Работает долго. Заряжается быстро
-          </p>
-          <p className="section-right-desc">
-            Энергоемкий аккумулятор 5000 мАч дополнен быстрой зарядкой 33 Вт.
-            Длительное время работы и быстрое восстановление энергии с
-            увеличенным сроком службы батареи
-          </p>
-          <div className="datas">
-            <div className="data">
-              <h2>5000 мАч</h2>
-              <p>аккумулятор</p>
-            </div>
-            <div className="data">
-              <h2>33 Вт</h2>
-              <p>быстрая зарядка</p>
-            </div>
-            <div className="data">
-              <h2>Type-C</h2>
-              <p>разъем зарядки</p>
-            </div>
-            <div className="data"></div>
+      <div className="spark-eleven-fourth-block">
+        <img
+          src="https://d3fyizz0b46qgr.cloudfront.net/global/SPARK_20/en/new_1209/dist/png/sec11PcF4.png"
+          alt=""
+        />
+        <div className="box">
+          <div className="left-6" style={{marginRight: "9.1145833333vw"}}>
+            <h2 className="section-right-title">
+              Энергоемкий аккумулятор 5000 мАч Быстрая зарядка 18 Вт (Type-C)
+            </h2>
+            <p className="section-right-subtitle">
+              Выдающаяся выносливость и быстрое восстановление
+            </p>
+            <p className="section-right-desc">
+              Энергоемкий аккумулятор 5000 мАч с длительным сроком службы
+              батареи и быстрая зарядка 18 Вт в комплекте обеспечат долгое время
+              работы и быстрое восстановление энергии
+            </p>
           </div>
-        </div>
-        <div className="right-6">
-          <img
-            src="https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec11MbF4.png"
-            alt=""
-          />
+          <div className="right-6">
+            <div className="datas" style={{ width: "200px" }}>
+              <div className="data">
+                <h2>5000 мАч</h2>
+                <p>энергоемкий аккумулятор</p>
+              </div>
+              <div className="data">
+                <h2>18 Вт</h2>
+                <p>быстрая зарядка</p>
+              </div>
+              <div className="data">
+                <h2>Type-C</h2>
+                <p>разъем зарядки</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default SectionEleven;
+export default SparkSectionEleven;

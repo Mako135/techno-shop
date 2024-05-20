@@ -17,7 +17,7 @@ const SixthVideoSection = () => {
 
           <footer>
             <img src={frame} alt="" />
-            <video src={video} muted autoPlay></video>
+            <video src={video} muted autoPlay loop></video>
           </footer>
           <p className="pova-desc">
             Фронтальная камера высокой четкости 32 Мп оснащена светодиодной
