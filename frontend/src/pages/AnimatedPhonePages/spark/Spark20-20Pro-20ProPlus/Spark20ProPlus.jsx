@@ -13,7 +13,7 @@ import SectionTwelve from "./widgets/SectionTwelve";
 import SectionThirteen from "./widgets/SectionThirteen";
 import SectionFourteen from "./widgets/SectionFourteen";
 import SectionFifteen from "./widgets/SectionFifteen";
-import Footer from "../../../components/footer/Footer";
+import Footer from "../../../../components/footer/Footer";
 import PlusSectionNine from "./widgets/20ProPlus/PlusSectionNine";
 
 const Spark20ProPlus = () => {

@@ -9,7 +9,7 @@ import SectionEight from './widgets/SectionEight';
 import SparkSectionNine from './widgets/20/SparkSectionNine';
 import SectionTen from './widgets/SectionTen';
 import SectionFifteen from './widgets/SectionFifteen';
-import Footer from '../../../components/footer/Footer';
+import Footer from '../../../../components/footer/Footer';
 import SparkSectionEleven from './widgets/20/SparkSectionEleven';
 import SparkSectionTwelve from "./widgets/20/SparkSectionTwelve";
 import SparkSectionThirteen from "./widgets/20/SparkSectionThirteen";
