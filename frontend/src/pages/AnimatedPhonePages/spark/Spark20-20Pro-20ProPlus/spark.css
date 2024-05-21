@@ -800,9 +800,9 @@
 
 .right-4-title,
 .right-4-title-2 {
-  position: absolute;
+  position: absolute !important;
   text-align: center;
-  left: 25%;
+  left: 15%;
 }
 
 .right-4-title {
@@ -983,7 +983,7 @@
   border-radius: 1.0416666667vw;
 }
 
-.items {
+.footer-items {
   display: flex;
   flex-direction: column;
   gap: 2vw;

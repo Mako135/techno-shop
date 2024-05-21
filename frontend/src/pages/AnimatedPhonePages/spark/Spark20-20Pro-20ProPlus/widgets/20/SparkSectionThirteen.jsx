@@ -33,7 +33,7 @@ const SparkSectionThirteen = () => {
         ></video>
         <footer>
           <div className="footer-left">
-            <div className="items">
+            <div className="footer-items">
               <div className="item">
                 <h3>Громкость 100%</h3>
                 <div className="footer-line line1 line-purp"></div>
@@ -47,7 +47,9 @@ const SparkSectionThirteen = () => {
           <div className="footer-right2">
             <div className="datas-2">
               <div className="data">
-                <div className="data-title">Двойные <br /> стереодинамики</div>
+                <div className="data-title">
+                  Двойные <br /> стереодинамики
+                </div>
                 <p>улучшают качество</p>
               </div>
               <div className="data">
@@ -55,7 +57,9 @@ const SparkSectionThirteen = () => {
                 <p>усиливает громкость</p>
               </div>
               <div className="data">
-                <div className="data-title">Бинауральная <br /> технология</div>
+                <div className="data-title">
+                  Бинауральная <br /> технология
+                </div>
                 <p>распределяет каналы</p>
               </div>
               <div className="data">

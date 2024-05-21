@@ -22,10 +22,15 @@ const SectionThirteen = () => {
             качества звука с функцией Volume Plu
           </p>
         </header>
-        <video src="https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/video/sec13PcV1.mp4" muted autoPlay loop></video>
+        <video
+          src="https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/video/sec13PcV1.mp4"
+          muted
+          autoPlay
+          loop
+        ></video>
         <footer>
           <div className="footer-left">
-            <div className="items">
+            <div className="footer-items">
               <div className="item">
                 <h4>Громкость 100%</h4>
                 <div className="footer-line line1"></div>

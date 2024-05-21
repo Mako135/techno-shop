@@ -47,7 +47,6 @@
 
 .second-titles {
   padding: 5vw 0 0;
-  opacity: 0;
 }
 
 .second-titles h1 {
@@ -308,6 +307,7 @@
   color: #333333;
   gap: 4vw;
   margin-bottom: 5vw;
+  padding: 2vw;
 }
 .six-section h2 {
   font-size: 3vw;
@@ -339,7 +339,7 @@
   flex-direction: column;
   gap: 4vw;
   color: #fff;
-  padding: 5vw 0;
+  padding: 5vw 2vw;
   text-align: center;
 }
 .seven-section h2 {
@@ -394,7 +394,7 @@
 }
 
 .ninth-section {
-  margin: 10vw 0;
+  margin: 10vw 2vw;
 }
 
 .section-title {

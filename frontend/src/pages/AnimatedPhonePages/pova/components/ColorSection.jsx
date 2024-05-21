@@ -56,7 +56,7 @@ const ColorSection = () => {
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
-              className="circle"
+              className="circle-pagination"
             />
             {index === activeIndex && (
               <span className="pagination-text">{slide.text}</span>

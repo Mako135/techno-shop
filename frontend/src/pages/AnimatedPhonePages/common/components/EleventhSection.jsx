@@ -7,7 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 const EleventhSection = () => {
   useLayoutEffect(() => {
     const yValue = () => (window.innerWidth > 768 ? -500 : -1200);
-    const yValuePhone = () => (window.innerWidth > 1220 ? -150 : -125);
+    const yValuePhone = () => {
+      if (window.innerWidth > 1400) {
+        return -200;
+      } else if (window.innerWidth > 1220) {
+        return -150;
+      } else if (window.innerWidth > 768) {
+        return -125;
+      } 
+    };
     const yValue2 = yValue() + 100;
     const tl = gsap.timeline({
       scrollTrigger: {
