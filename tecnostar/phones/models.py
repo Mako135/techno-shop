@@ -133,7 +133,7 @@ class Phone(models.Model):
     category = models.ForeignKey(Category, related_name='phones', on_delete=models.CASCADE)
     title = models.CharField(_('Название'), max_length=100, help_text=_('Введите название телефона'))
     slug = models.SlugField(max_length=100, unique=True) 
-    status = models.CharField(_('Статус'), max_length=10, choices=STATUS_CHOICES, default=DRAFT)
+    status = models.CharField(_('Статус на сайте'), max_length=10, choices=STATUS_CHOICES, default=DRAFT)
 
     display = models.FloatField(_('Дисплей'), choices=DISAPLAY_CHOICES, help_text=_('Выберите диагональ дисплея'), default=FIVE_INCH)
 
@@ -145,6 +145,7 @@ class Phone(models.Model):
     back_camera = models.ForeignKey('CameraInfo', related_name='back_camera', on_delete=models.CASCADE, blank=True, null=True)
     has_touch_id = models.BooleanField(_('Есть Touch ID'), default=False)
     battery = models.FloatField(_('Батарея'), help_text=_('Введите емкость батареи'), default=3500)
+    
     main_info = RichTextField(_('Основная информация'), config_name='awesome_ckeditor', help_text=_('Введите основную информацию о телефоне'))
     characteristics = RichTextField(_('Характеристики'), config_name='awesome_ckeditor',  help_text=_('Введите характеристики телефона'))
     network = models.ManyToManyField(

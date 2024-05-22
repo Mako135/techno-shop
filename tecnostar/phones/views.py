@@ -58,18 +58,6 @@ class NewsViewSet(viewsets.ViewSet):
         return Response(serializer.data)
     
 
-@api_view(['GET'])
-def get_phone_by_params(request):
-    try:
-        model = request.data['model']
-        print(f"Model: {model}")
-        result = Phone.published.filter(category__name=model)
-        print(f"DATA: {result}")
-        return Response(data={"key":"success"}, status=status.HTTP_200_OK)
-    except Exception as e:
-        return Response(str(e), status=status.HTTP_400_BAD_REQUEST)
-
-
 # phones_view = PhoneViewSet.as_view({'get':'list'})
 # phone_detail = PhoneViewSet.as_view({'get':'retrieve'})
 # news_view = NewsViewSet.as_view({'get':'list'})

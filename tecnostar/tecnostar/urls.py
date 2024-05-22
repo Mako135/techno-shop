@@ -19,12 +19,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 
-from phones.views import get_phone_by_params
 
 urlpatterns = [
+    path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('filter/', get_phone_by_params)
 ]
 
 urlpatterns += i18n_patterns(

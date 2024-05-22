@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
-
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,12 +30,11 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 CORS_ALLOW_ALL_ORIGINS = True
 
-ALLOWED_HOSTS = ['*']
-CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
 INSTALLED_APPS = [
+    'grappelli',
     'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,6 +49,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'rosetta',
     'django_filters',
+    'djangoql',
 
     # Local apps
     'phones',
@@ -86,6 +86,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
             ],
         },
     },
@@ -149,6 +150,7 @@ MODELTRANSLATION_TRANSLATION_REGISTRY = 'phones.translation'
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
@@ -162,7 +164,7 @@ CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 CKEDITOR_CONFIGS = {
     'awesome_ckeditor': {
         'toolbar': 'Custom',
-        'height': 300,
+        'height': 220,
         'skin': 'moono',
     },
     'default': {
@@ -189,3 +191,8 @@ REST_FRAMEWORK = {
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Grappelli settings
+GRAPPELLI_ADMIN_TITLE = 'TECNO' 
+GRAPPELLI_CLEAN_INPUT_TYPES = True
