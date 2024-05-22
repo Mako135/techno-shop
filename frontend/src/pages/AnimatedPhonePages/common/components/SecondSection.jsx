@@ -20,8 +20,8 @@ const SecondSection = () => {
       .from(
         ".second-titles",
         {
-          y: -500,
-          x: 300,
+          yPercent: -120,
+          xPercent: 50,
           opacity: 0.5,
           duration: 10,
           animation: "tween"

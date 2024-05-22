@@ -8,7 +8,7 @@ const SecondVideoSection = () => {
       "https://d3fyizz0b46qgr.cloudfront.net/global/pova6/video-c3-8.mp4";
   return (
     <ContentSection backImg={background} backPos="bottom">
-      <section style={{marginTop: "7.8125vw"}}>
+      <section style={{ marginTop: "7.8125vw" }}>
         <div className="video-container">
           <h1 className="pova-title">
             Новая система охлаждения POVA SuperCooled System 1.0
@@ -27,7 +27,7 @@ const SecondVideoSection = () => {
 
           <footer>
             <img src={frame} alt="" />
-            <video src={video} muted autoPlay></video>
+            <video src={video} muted autoPlay loop></video>
           </footer>
         </div>
       </section>

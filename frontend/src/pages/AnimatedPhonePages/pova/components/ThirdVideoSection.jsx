@@ -43,7 +43,7 @@ const ThirdVideoSection = () => {
           </ul>
           <footer>
             <img src={frame} alt="" />
-            <video src={video} muted autoPlay></video>
+            <video src={video} muted autoPlay loop></video>
           </footer>
         </div>
       </section>

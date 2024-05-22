@@ -35,7 +35,7 @@ const AudioSection = () => {
   return (
     <div className="audio">
       <div className="audio-container">
-        <video height="100%" muted autoPlay width="100%">
+        <video height="100%" muted autoPlay loop width="100%">
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
