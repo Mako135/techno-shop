@@ -12,9 +12,9 @@ const SectionThree = () => {
             Две текстуры. <br /> Один дизайн
           </div>
           <div className="icon icon-2"></div>
-              </div>
-              <PhonesAnimation />
-              <WonderfulWorld />
+        </div>
+        <PhonesAnimation />
+        <WonderfulWorld />
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
 .spark-container-2 {
-  background-color: #fff;
+  background-color: #f964b8;
 }
 
 .c-one {
   position: relative;
   padding-bottom: 8.3333333333vw;
+  background-color: #fff;
 }
 
 .c-one video {
@@ -87,6 +88,7 @@
   gap: 1.25vw;
   justify-content: center;
   padding: 5.2083333333vw 0 14.5833333333vw;
+  background-color: #fff;
 }
 
 .item {
@@ -565,19 +567,24 @@
   left: 62%;
 }
 
-.sec-4 .icon_container {
+.sec-4 .icon_container,
+.sec-7 .icon_container,
+.sec-8 .icon_container {
   position: relative;
   margin: 0 12.5vw;
   max-width: 100%;
 }
 
-.sec-4 .title {
+.sec-4 .title,
+.sec-7 .title,
+.sec-8 .title {
   text-align: start;
   font-weight: 700;
   font-size: 6.7708333333vw;
   line-height: 0.9;
   word-wrap: break-word;
   color: #fff;
+  margin: 0;
 }
 
 .sec-5 {
@@ -769,6 +776,640 @@
   font-size: 1.2vw;
 }
 .sec-6 .params .param .desc {
-  font-size: .8333333333vw;
+  font-size: 0.8333333333vw;
   color: #000;
+}
+
+.sec-7 {
+  position: relative;
+  padding: 5.2083333333vw 0;
+  margin-top: 12.5vw;
+}
+
+.sec-7 .icon5 {
+  width: 4.7916666667vw;
+  height: 4.7916666667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec8PcIcon2.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -41%;
+  left: 23%;
+}
+.sec-7 .icon3 {
+  width: 8.125vw;
+  height: 6.3020833333vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec8PcIcon3.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 2%;
+  left: -8%;
+}
+
+.sec-7 .pic-box {
+  position: relative;
+  width: 10.9375vw;
+  height: 23.8020833333vw;
+  transition: all 0.5s;
+}
+.sec-7 .pic-box video {
+  width: 100%;
+  height: 100%;
+  margin-top: 0.3125vw;
+  margin-left: 0.46875vw;
+  object-fit: cover;
+  border-radius: 1.25vw;
+}
+
+.pic-border {
+  position: absolute;
+  width: 12.2395833333vw;
+  height: 25vw;
+  transition: all 0.5s;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec8PcBorder2.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sec-7 .swiper {
+  width: 75%;
+  height: 40vw;
+
+  margin: 10vw auto;
+}
+
+.sec-7 .swiper-slide {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+}
+
+.sec-7 .swiper-pagination-bullet {
+  top: 2vw;
+  width: 1.71875vw;
+  height: 1.8229166667vw;
+  margin-right: 1.3541666667vw;
+  cursor: pointer;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec8PcF8.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.sec-7 .swiper-pagination-bullet-active {
+  width: 1.71875vw;
+  height: 1.8229166667vw;
+  margin-right: 1.3541666667vw;
+  cursor: pointer;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec8PcF7.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+}
+
+.bg_purple,
+.sec-8 {
+  position: relative;
+  background-color: #f964b8;
+}
+
+.sec-8 {
+  padding: 16vw 0 0;
+}
+
+.sec-8 .text {
+  padding: 5.7291666667vw 7.96875vw 7.8125vw;
+  margin: 0 auto 27.6041666667vw !important;
+  color: #fff;
+  font-weight: 700;
+  font-size: 3.5vw;
+  line-height: 1.2;
+  text-align: center;
+  background-position: center;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/png/sec9PcBg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bg_purple .bar {
+  top: -4vw;
+  width: 100%;
+  height: 4.375vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec8PcCircle.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sec-8 .icon5 {
+  width: 8.5416666667vw;
+  height: 8.5416666667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec10Icon1.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -26%;
+  left: -9%;
+}
+.sec-8 .icon3 {
+  width: 8.5416666667vw;
+  height: 8.5416666667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec10Icon4.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -9%;
+  left: 100%;
+}
+
+.content_box {
+  position: relative;
+  width: 100%;
+  height: 34.4270833333vw;
+  margin-top: 20.6770833333vw;
+  padding-top: 5.2083333333vw;
+  color: #fff;
+}
+
+.text_box {
+  position: relative;
+  width: 36vw;
+  margin-left: 59.8958333333vw;
+}
+
+.content_box .pic {
+  position: absolute;
+  top: -8.3333333333vw;
+  width: 100%;
+  height: 56.25vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/png/sec10PcF1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text_box .title {
+  font-size: 2.5vw;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.text_box .desc {
+  margin-top: 1.25vw;
+  font-size: 0.9375vw;
+  word-wrap: break-word;
+  font-weight: 400;
+}
+
+.text_box .datas {
+  margin-top: 3.90625vw;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.text_box .datas .data {
+  color: #faff00;
+  font-size: 1.3vw;
+}
+
+.sec-8 .tips {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3.6458333333vw;
+  padding-right: 5.9375vw;
+  padding-bottom: 3.28125vw;
+  text-align: start;
+  max-width: 100%;
+  color: #ffffff4d;
+}
+
+.sec-9 {
+  position: relative;
+  padding-top: 16.0416666667vw;
+}
+
+.sec-9 .icon_container {
+  position: relative;
+  width: 68.75vw;
+  margin: auto;
+  color: #fff;
+  padding: 0 0 17.5vw;
+}
+
+.sec-9 .icon_container .title {
+  text-align: start;
+  font-weight: 700;
+  font-size: 6.7708333333vw;
+  line-height: 0.9;
+  word-wrap: break-word;
+  color: #fff;
+  margin: 0;
+}
+.sec-9 .icon_container .icon5 {
+  top: 56%;
+  left: 75%;
+  width: 9.21875vw;
+  height: 6.5104166667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec11PcIcon3.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sec-9_phone {
+  position: absolute;
+  top: 42%;
+  left: 11%;
+  z-index: 8;
+  width: 21.25vw;
+  height: 45.6770833333vw;
+}
+
+.sec-9_phone video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 93%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: 1.0416666667vw;
+  transform: translate(-50%, -50%);
+}
+
+.sec-9 .pic-1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec11PcPhone.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sec-p_text {
+  position: absolute;
+  top: 73%;
+  left: 31%;
+  z-index: 5;
+  width: 15.1041666667vw;
+  height: 11.25vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec11Text.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.left-circle {
+  position: absolute;
+  top: 37%;
+  left: 9%;
+  width: 45.3645833333vw;
+  height: 45.3645833333vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec11PcLeftCircle.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.right-circle {
+  position: absolute;
+  top: 34%;
+  right: 4%;
+  z-index: 4;
+  width: 57.9166666667vw;
+  height: 57.9166666667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec11PcRightCircle.webp);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.right-circle .content_box {
+  padding-top: 5vw;
+  padding-left: 5.2083333333vw;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-circle .content_box .title {
+  margin: 0;
+  font-size: 2.5vw;
+  text-align: start;
+  width: 25vw;
+}
+.right-circle .content_box .desc {
+  margin-top: 1.25vw;
+  font-size: 0.9375vw;
+  word-wrap: break-word;
+  width: 27vw;
+}
+
+.sec-9 .products {
+  display: flex;
+  gap: 2vw;
+}
+
+.sec-9 .product .title {
+  margin: 0;
+  color: #faff00;
+  font-size: 2vw;
+  text-align: start;
+  width: 100%;
+}
+
+.sec-9 .product .desc {
+  width: 100%;
+}
+
+.sec-9 .tips {
+  text-align: start;
+  color: #00000040;
+  display: block;
+  margin-top: 57.2916666667vw;
+  padding-bottom: 2.0833333333vw;
+  padding-left: 9.6875vw;
+}
+
+.sec-10 {
+  position: relative;
+  padding: 16.0416666667vw 0 15.625vw;
+}
+
+.sec-10 .icon_container {
+  position: relative;
+  width: 70.75vw;
+  margin: auto;
+  color: #fff;
+}
+
+.sec-10 .icon_container .title {
+  text-align: start;
+  font-weight: 400;
+  font-size: 6.7708333333vw;
+  line-height: 0.9;
+  word-wrap: break-word;
+  color: #fff;
+  margin: 0;
+}
+.sec-10 .icon_container .icon5 {
+  top: 7%;
+  left: 95%;
+  width: 8.6458333333vw;
+  height: 5.5729166667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec12PcIcon1.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sec-10-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13.0208333333vw;
+  color: #fff;
+}
+.sec-10-content video {
+  position: absolute;
+  top: -8.3333333333vw;
+  width: 100%;
+  clip-path: inset(2px 0);
+}
+
+.sec-10-left {
+  position: relative;
+  width: 30vw;
+  height: 25.15625vw;
+  margin-top: 8.59375vw;
+  padding-top: 4.4791666667vw;
+  padding-left: 6.25vw;
+}
+
+.sec-10-title {
+  font-size: 2.5vw;
+  line-height: 0.9;
+}
+
+.sec-10-desc {
+  margin-top: 1.25vw;
+  font-size: 0.9375vw;
+  word-wrap: break-word;
+}
+
+.sec-10-right {
+  position: relative;
+  width: 47.5520833333vw;
+  height: 25.1041666667vw;
+  padding-top: 5.3125vw;
+  padding-left: 25.5729166667vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.sec-10-right .param .title {
+  text-align: start;
+  margin: 0;
+  color: #76ffe6;
+  font-size: 2.5vw;
+}
+.sec-10-right .param .desc {
+  font-size: 0.9375vw;
+}
+
+.sec-10 .line1 {
+  position: absolute;
+  top: 4.4270833333vw;
+  left: 22.3958333333vw;
+  width: 9.21875vw;
+  height: 8.8541666667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec12PcLine1.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.sec-10 .line2 {
+  position: absolute;
+
+  top: -4.1666666667vw;
+  left: 67.7083333333vw;
+  width: 7.5vw;
+  height: 13.4375vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec12PcLine2.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.sec-10 .line3 {
+  position: absolute;
+
+  top: 35.4166666667vw;
+  left: 57.2916666667vw;
+  width: 21.71875vw;
+  height: 4.0104166667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec12PcLine3.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sec-11 {
+  background-color: #f964b8;
+  padding-bottom: 15.625vw;
+}
+
+.sec-11 .icon_container {
+  position: relative;
+  width: 70.75vw;
+  margin: auto;
+  color: #fff;
+}
+
+.sec-11 .icon_container .title {
+  text-align: start;
+  font-weight: 400;
+  font-size: 6.7708333333vw;
+  line-height: 0.9;
+  word-wrap: break-word;
+  color: #fff;
+  margin: 0;
+}
+.sec-11 .icon_container .icon3 {
+  top: -2%;
+  left: -12%;
+  width: 9.3229166667vw;
+  height: 9.3229166667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec13PcIcon3.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sec-11-content {
+  position: relative;
+  margin-top: 18.4895833333vw;
+}
+.sec-11-left {
+  width: 83.3333333333vw;
+  padding: 3.125vw 14.4791666667vw 4.0104166667vw;
+  background-color: #6524fa;
+}
+
+.sec-11-left .text_box {
+  margin: 0;
+}
+
+.box-title {
+  font-size: 2.5vw;
+  color: #fff;
+  font-weight: 500;
+}
+
+.box-desc {
+  margin: 1.25vw 0 3.125vw;
+  font-size: 0.9375vw;
+  word-wrap: break-word;
+  color: #fff;
+}
+
+.sec-11-left .data-title {
+  font-size: 2vw;
+  color: #faff00;
+}
+.sec-11-left .data-desc {
+  font-size: 0.9375vw;
+  color: #fff;
+}
+
+.sec-11-left .pic {
+  position: absolute;
+  top: -18.2291666667vw;
+  right: 0;
+  width: 46.5625vw;
+  height: 64.0104166667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/png/sec13PcF2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.sec-11-left .pic2 {
+  position: absolute;
+  top: 7.2916666667vw;
+  right: 23.9583333333vw;
+  width: 25.3125vw;
+  height: 25.3125vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/png/sec13PcF1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sec-12 {
+    padding-top: 2.6041666667vw;
+    position: relative;
+}
+
+.sec-12 .icon_container {
+  position: relative;
+  width: 70.75vw;
+  margin: auto;
+  color: #fff;
+}
+
+.sec-12 .icon_container .title {
+  text-align: start;
+  font-weight: 400;
+  font-size: 6.7708333333vw;
+  line-height: 0.9;
+  word-wrap: break-word;
+  color: #fff;
+  margin: 0;
+}
+
+.sec-12 .icon_container .icon5 {
+  position: absolute;
+  top: 0%;
+  left: -15%;
+  width: 10.5729166667vw;
+  height: 10.5729166667vw;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/png/sec14PcIcon1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sec-12-content {
+    display: flex;
+    margin-top: 8vw;
+}
+
+.sec-12-left {
+    width: 58.90625vw;
+    height: 44.5833333333vw;
+    padding-top: 14.0625vw;
+    padding-left: 12.5vw;
+    background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec14PcLeft.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sec-12-left .text_box {
+    margin: 0;
+    display: flex;
+    gap: 2vw;
+}
+
+.text-left .title {
+    margin: 0;
+    font-size: 2.5vw;
+    line-height: 1.2;
+    color: #fff;
+    text-align: start;
+}
+.text-left .desc {
+    margin-top: 1.25vw;
+    font-size: .9375vw;
+    word-wrap: break-word;
+    color: #fff;
+}
+
+.sec-12 .data-title {
+  font-size: 2vw;
+  color: #faff00;
+}
+.sec-12 .data-desc {
+  font-size: 0.9375vw;
+  color: #fff;
+  margin-bottom: 1.25vw;
+}
+
+.sec-12-right {
+    width: 44.53125vw;
+    height: 44.6354166667vw;
+    margin-left: -13.8020833333vw;
+    background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/png/sec14PcRight.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }

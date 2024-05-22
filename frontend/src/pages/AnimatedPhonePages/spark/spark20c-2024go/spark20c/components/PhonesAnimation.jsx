@@ -8,7 +8,7 @@ const PhonesAnimation = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".sec-three-box",
-        start: "top top",
+        start: "top+=100 top",
         end: "+=2000",
         pin: true,
         scrub: true,
