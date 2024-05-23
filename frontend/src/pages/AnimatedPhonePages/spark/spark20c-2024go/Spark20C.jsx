@@ -11,6 +11,8 @@ import SectionNine from "./spark20c/SectionNine";
 import SectionTen from "./spark20c/SectionTen";
 import SectionEleven from "./spark20c/SectionEleven";
 import SectionTwelve from "./spark20c/SectionTwelve";
+import SectionThirteen from "./spark20c/SectionThirteen";
+import Footer from '../../../../components/footer/Footer'
 const Spark20C = () => {
   return (
     <div className="spark-container-2">
@@ -31,7 +33,9 @@ const Spark20C = () => {
         <SectionTen />
         <SectionEleven />
         <SectionTwelve />
+        <SectionThirteen />
       </div>
+      <Footer className={"white"}/>
     </div>
   );
 };
