@@ -36,10 +36,16 @@ const HistorSlider = () => {
             slidesPerView: 1.3
           },
           640: {
-            slidesPerView: 2.5
+            slidesPerView: 2.2
           },
-          768: {
-            slidesPerView: 4
+          789: {
+            slidesPerView: 2.7
+          },
+          967: {
+            slidesPerView: 3
+          },
+          1120: {
+            slidesPerView: 3.5
           }
         }}
         className="mySwiper"

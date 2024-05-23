@@ -40,7 +40,9 @@ const Header = () => {
             <option value="kz">KZ</option>
           </select>
         </div>
-        <LuSearch fontSize={24} />
+        <NavLink className="link" to="/search">
+          <LuSearch fontSize={24} />
+        </NavLink>
       </div>
     </div>
   );
