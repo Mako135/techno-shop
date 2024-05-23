@@ -22,7 +22,9 @@ const About = () => {
       <div className="container">
         <AboutMain />
         <Banner src={aboutBanner2} />
-        <History />
+        <div id="history-block">
+          <History />
+        </div>
       </div>
       <Footer className="white" />
     </div>

@@ -1,9 +1,47 @@
-import { NavLink } from 'react-router-dom';
-import logo from '../../assets/logo.png'
-import { LuSearch } from 'react-icons/lu';
-
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import { LuSearch } from "react-icons/lu";
+import { useEffect, useState } from "react";
+import { RiArrowDownDoubleLine } from "react-icons/ri";
 
 const Header = () => {
+  const [isLinkPresent, setIsLinkPresent] = useState(false);
+
+  const checkLink = () => {
+    const link = window.location.href;
+    console.log(link);
+    if (link === "http://localhost:5173/about") {
+      setIsLinkPresent(true);
+    } else {
+      setIsLinkPresent(false);
+    }
+  };
+
+  useEffect(() => {
+    checkLink(); 
+
+    window.addEventListener("popstate", checkLink);
+
+    const pushState = history.pushState;
+    const replaceState = history.replaceState;
+
+    history.pushState = function () {
+      pushState.apply(history, arguments);
+      checkLink();
+    };
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments);
+      checkLink();
+    };
+
+    return () => {
+      window.removeEventListener("popstate", checkLink);
+      history.pushState = pushState;
+      history.replaceState = replaceState;
+    };
+  }, []);
+
   return (
     <div className="header-container">
       <div className="header">
@@ -40,12 +78,18 @@ const Header = () => {
             <option value="kz">KZ</option>
           </select>
         </div>
-        <NavLink className="link" to="/search">
-          <LuSearch fontSize={24} />
-        </NavLink>
+        {isLinkPresent ? (
+          <a className="link" href="#history-block">
+            <RiArrowDownDoubleLine fontSize={30} />
+          </a>
+        ) : (
+          <NavLink className="link" to="/search">
+            <LuSearch fontSize={24} />
+          </NavLink>
+        )}
       </div>
     </div>
   );
-}
+};
 
-export default Header
+export default Header;

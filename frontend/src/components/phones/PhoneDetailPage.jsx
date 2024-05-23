@@ -1,22 +1,38 @@
-import { useParams } from "react-router-dom"
-import { useFetchData } from "../../requests/requests";
+import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import Footer from "../footer/Footer";
+import parse from "html-react-parser";
+import { useEffect } from "react";
+import usePhoneStore from "../../store/store";
+
 const PhoneDetailPage = () => {
   const { id } = useParams();
-  const phone = useFetchData("/phones/", id);
+  const { phone, loading, error, fetchPhoneById } = usePhoneStore();
+
+  useEffect(() => {
+    fetchPhoneById(id);
+  }, [id, fetchPhoneById]);
+
+  if (loading) return <div>Загрузка...</div>;
+  if (error) return <div>Ошибка: {error}</div>;
+
   const images = {};
 
   phone?.photos.forEach((photo) => {
-    const colorName = photo.color.name.toLowerCase(); // Convert color name to lowercase
-    images[colorName] = photo.image; // Assign the image URL to the corresponding color key
+    const colorName = photo.color.name.toLowerCase();
+    images[colorName] = photo.image;
   });
-// const parsedMainInfo = ReactHtmlParser(phone?.main_info);
-// const parsedCharacteristics = ReactHtmlParser(phone?.characteristics);
-// const parsedCameraInfo = ReactHtmlParser(phone?.camera_info);
-// const parsedKitInfo = ReactHtmlParser(phone?.kit_info);
-// const parsedSensors = ReactHtmlParser(phone?.sensors);
+
+  const safeParse = (content) =>
+    typeof content === "string" ? parse(content) : null;
+
+  const parsedMainInfo = safeParse(phone?.main_info);
+  const parsedCharacteristics = safeParse(phone?.characteristics);
+  const parsedCameraInfo = safeParse(phone?.camera_info);
+  const parsedKitInfo = safeParse(phone?.kit_info);
+  const parsedSensors = safeParse(phone?.sensors);
+
   return (
     <div>
       <div className="phone-container">
@@ -30,7 +46,7 @@ const PhoneDetailPage = () => {
           >
             {Object.entries(images).map(([color, imageUrl]) => (
               <SwiperSlide key={color}>
-                <img src={imageUrl} alt="" />
+                <img src={imageUrl} alt={color} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -39,32 +55,32 @@ const PhoneDetailPage = () => {
       <div className="divider"></div>
       <div className="phone-container">
         <p className="phone-detail-title">Основная информация</p>
-        {/* <div className="phone-detail-content">{parsedMainInfo}</div> */}
+        <div className="phone-detail-content">{parsedMainInfo}</div>
       </div>
       <div className="divider"></div>
       <div className="phone-container">
         <p className="phone-detail-title">Характеристики</p>
-        {/* <div className="phone-detail-content">{parsedCharacteristics}</div> */}
+        <div className="phone-detail-content">{parsedCharacteristics}</div>
       </div>
       <div className="divider"></div>
       <div className="phone-container">
         <p className="phone-detail-title">Камера</p>
-        {/* <div className="phone-detail-content">{parsedCameraInfo}</div> */}
+        <div className="phone-detail-content">{parsedCameraInfo}</div>
       </div>
       <div className="divider"></div>
       <div className="phone-container">
         <p className="phone-detail-title">Сенсоры</p>
-        {/* <div className="phone-detail-content">{parsedSensors}</div> */}
+        <div className="phone-detail-content">{parsedSensors}</div>
       </div>
       <div className="divider"></div>
       <div className="phone-container">
         <p className="phone-detail-title">Комплект поставки</p>
-        {/* <div className="phone-detail-content">{parsedKitInfo}</div> */}
+        <div className="phone-detail-content">{parsedKitInfo}</div>
       </div>
       <div className="divider"></div>
       <Footer />
     </div>
   );
-}
+};
 
-export default PhoneDetailPage
+export default PhoneDetailPage;

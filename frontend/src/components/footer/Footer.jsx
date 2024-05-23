@@ -6,9 +6,11 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const Footer = ({ className }) => {
   return (
-    <div className="footer" style={{backgroundColor: className? "#fff" : ""}}>
+    <div
+      className="footer"
+      style={{ backgroundColor: className ? "#fff" : "" }}
+    >
       <div className="container">
-
         <div className="footer-header">
           <div className="footer-links-group">
             {/* Footer links */}
@@ -70,16 +72,14 @@ const Footer = ({ className }) => {
                 Сервисные центры
               </Link>
             </div>
-          </div>
-
-          {/* Footer social */}
-          <div className="footer-social">
-            <Link>
-              <img src={instagram} alt="" className="instagram" />
-            </Link>
-            <Link>
-              <img src={tiktok} alt="" className="tiktok" />
-            </Link>
+            <div className="footer-social">
+              <Link>
+                <img src={instagram} alt="" className="instagram" />
+              </Link>
+              <Link>
+                <img src={tiktok} alt="" className="tiktok" />
+              </Link>
+            </div>
           </div>
         </div>
 
