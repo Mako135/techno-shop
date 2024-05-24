@@ -41,7 +41,7 @@ import SecondGameSection from "./components/SecondGameSection";
 import SearchSection from "./components/SearchSection";
 import PortSection from "./components/PortSection";
 import LastSection from "./components/LastSection";
-import Footer from "../../../components/footer/Footer";
+import Footer from "../../../../components/footer/Footer";
 
 const Pova6Pro = () => {
   const firstVideo =
