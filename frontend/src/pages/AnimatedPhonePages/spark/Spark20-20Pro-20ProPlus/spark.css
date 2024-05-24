@@ -2,6 +2,10 @@
   --font-pink: linear-gradient(90deg, #eba9d9 0%, #fdedcf 53%, #f5dbff 100%);
 }
 
+.mySlider {
+  max-height: 80vh;
+}
+
 .bg-white {
   background: linear-gradient(
       169.41deg,
@@ -149,7 +153,7 @@
 
 .section-eleven {
   background-color: #000;
-  padding-bottom: 12.5vw;
+  padding: 12.5vw;
 }
 
 .section-eleven-titles {
@@ -803,6 +807,7 @@
   position: absolute !important;
   text-align: center;
   left: 15%;
+  font-size: 2vw;
 }
 
 .right-4-title {
@@ -1294,3 +1299,5 @@ h3 {
   gap: 1.25vw;
   height: fit-content;
 }
+
+

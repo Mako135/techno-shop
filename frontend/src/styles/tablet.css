@@ -6,4 +6,17 @@
   .home-news {
     grid-template-columns: 1fr 1fr;
   }
+  .footer-links-group {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem 3rem;
+  }
+  .copyright, .copyright-links {
+    flex-direction: column;
+  }
+  .copyright p{
+    margin: 3rem 0 5rem;
+  }
+  .copyright-links {
+    gap: 1rem;
+  }
 }

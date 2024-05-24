@@ -1,8 +1,8 @@
-import { FiSearch } from 'react-icons/fi';
 import banner from '../assets/support_banner.png'
 import Footer from '../components/footer/Footer';
 import SupportTabs from '../components/support/SupportTabs';
 import Downloads from '../components/support/Downloads';
+import MoreLink from '../components/link/MoreLink';
 const Support = () => {
 
   return (
@@ -31,9 +31,7 @@ const Support = () => {
         >
           <p className="support-title">Добро пожаловать в службу поддержки!</p>
           <p className="support-subtitle">Как мы можем вам помочь?</p>
-          <div className="support-search">
-            <FiSearch />
-          </div>
+          <MoreLink link="/" text="Написать нам" color="#fff"/>
         </div>
       </div>
 

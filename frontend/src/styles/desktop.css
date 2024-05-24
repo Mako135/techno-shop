@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,7 +17,7 @@ body {
 }
 .main-container {
   max-width: 1272px;
-  margin: auto;
+  margin:0 auto;
 }
 .white {
   background-color: #fff;
@@ -24,8 +27,9 @@ body {
   background-color: #fff;
 }
 .container {
+  width: 100%;
   max-width: 1272px;
-  margin: auto;
+  margin:0 auto;
   padding: 0 10px;
 }
 /*********** HEADER ***********/
@@ -89,10 +93,12 @@ body {
 /*********** FOOTER ***********/
 
 .footer {
+  width: 100%;
   margin: auto;
 }
 
 .footer-header {
+  width: 100%;
   padding-top: 50px;
   display: flex;
   justify-content: space-between;
@@ -100,8 +106,8 @@ body {
 
 .footer-links-group {
   width: 100%;
-  max-width: 1100px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: space-between;
 }
 .footer-links {
@@ -122,6 +128,7 @@ body {
 
 .footer-social {
   display: flex;
+  justify-content: flex-end;
   height: 100%;
   gap: 20px;
 }
@@ -142,12 +149,23 @@ body {
   height: 5vw;
   color: #707071;
 }
+.footer-bottom img{
+  height: 3vw;
+  color: #707071;
+  max-height: 32px;
+  min-height: 20px;
+}
 .footer-logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 0.5rem;
 }
+
+.footer-logo p {
+  font-size: clamp(16px, 2vw, 24px);
+}
+
 .divider {
   width: 100%;
   height: 1px;
@@ -169,20 +187,19 @@ body {
   color: #707071;
 }
 
-.swiper {
+.slider-sec .swiper {
   width: 100%;
   height: 576px;
 }
 
-.swiper-slide {
+.slider-sec .swiper-slide {
   text-align: center;
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.swiper-slide img {
+.slider-sec .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -363,6 +380,7 @@ body {
 .phone-container {
   max-width: 1272px;
   margin: 40px auto;
+  padding: 10px;
   display: grid;
   grid-template-columns: 0.3fr 1fr;
   gap: 30px;
@@ -374,9 +392,15 @@ body {
 }
 
 .phone-detail-content {
+
   display: flex;
   flex-direction: column; /* Элементы будут располагаться вертикально */
   align-items: flex-start;
+}
+.phone-detail-content .swiper{
+  margin: 0;
+  max-height: 320px;
+  object-fit: contain;
 }
 
 .phone-detail-content p {
@@ -478,10 +502,7 @@ body {
 }
 .shop-cards {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: auto;
   justify-content: space-between;
 }
@@ -610,6 +631,10 @@ body {
   text-align: start;
 }
 
+.history .swiper {
+  margin-top: 1rem;
+}
+
 .navigation {
   margin: auto;
   width: 80px;
@@ -727,7 +752,6 @@ body {
 .support-subtitle {
   color: #fff;
   font-size: 20px;
-  margin-bottom: 2em;
 }
 .support-search {
   padding: 5px 20px;

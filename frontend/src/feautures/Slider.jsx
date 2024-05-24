@@ -4,7 +4,7 @@ import { SwiperSlide, Swiper } from "swiper/react";
 
 const Slider = () => {
   return (
-    <div>
+    <div className="slider-sec">
       <Swiper
         pagination={true}
         autoplay={{
