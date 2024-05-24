@@ -16,7 +16,9 @@ from phones.models import (
     Phone, 
     News, 
     CameraInfo, 
-    Memory
+    Memory,
+    City,
+    Contact,
 )
 
 # Register your models here.
@@ -124,6 +126,8 @@ admin.site.register(Photo)
 admin.site.register(Phone, PhoneAdmin) 
 admin.site.register(News, NewsAdmin)
 admin.site.register(CameraInfo)
+admin.site.register(City)
+admin.site.register(Contact)
 
 
 

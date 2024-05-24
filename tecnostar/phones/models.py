@@ -21,6 +21,17 @@ STATUS_CHOICES = (
     (PUBLISHED, 'Активен')
 )
 
+class City(models.Model):
+    title = models.CharField(_('Название'), max_length=50)
+    slug = models.SlugField(max_length=50, unique=True)
+
+    class Meta:
+        verbose_name = _('Город')
+        verbose_name_plural = _('Города')
+    
+    def __str__(self):
+        return f"{self.title}"
+    
 
 class Memory(models.Model):
     size = models.PositiveIntegerField(_("Объем памяти"), help_text=_('Введите объем памяти'))
@@ -128,8 +139,6 @@ class Phone(models.Model):
         (WVGA, 'WVGA')
     )
 
-    
-
     category = models.ForeignKey(Category, related_name='phones', on_delete=models.CASCADE)
     title = models.CharField(_('Название'), max_length=100, help_text=_('Введите название телефона'))
     slug = models.SlugField(max_length=100, unique=True) 
@@ -183,24 +192,25 @@ class Photo(models.Model):
 
 
 class News(models.Model):
-
     SLIDER = 'slider_news'
     SECOND_FORM = 'second_form_news'
 
     NEWS_TYPE_CHOICES = (
         (SLIDER, 'На слайдере'),
-        (SECOND_FORM, 'На второй форме')
+        (SECOND_FORM, 'На основной странице')
     )
-
 
     title = models.CharField(_('Название'), max_length=100)
     slug = models.SlugField(max_length=100, unique=True)
     pattern = models.CharField(_('Тип'), max_length=20, choices=NEWS_TYPE_CHOICES, default=SECOND_FORM)
     preview_image = models.ImageField(_('Превью'), upload_to='newspapers', help_text=_('Загрузите изображение'), blank=False)
-    description = models.TextField(_('Описание'), blank=True,)
-    content = RichTextField(_('Контент'), config_name='awesome_ckeditor', help_text=_('Введите контент'))
+    description = models.TextField(_('Краткое описание'), blank=True)
+    content = RichTextField(_('Основной текст'), config_name='awesome_ckeditor', help_text=_('Введите контент'))
     status = models.CharField(_('Статус'), max_length=10, choices=STATUS_CHOICES, default=DRAFT)
     created_at = models.DateTimeField(_('Дата создания'), auto_now_add=True)
+
+    inner_link = models.URLField(_('Ссылка (если имеется)'), max_length = 200, blank=True)
+    city = models.ForeignKey('City', verbose_name=_('Местоположение'), on_delete=models.CASCADE, null=True, blank=True)
 
     published = PublishedManager()
 
@@ -214,7 +224,32 @@ class News(models.Model):
 
     def get_preview_image(self):
         return f"sdfsdf{self.preview_image.url}"
-       
+    
     def save(self, *args, **kwargs):
         self.slug = self.slug or slugify(self.title)
         return super().save(*args, **kwargs)
+
+
+class Contact(models.Model):
+    city = models.ForeignKey(
+        'City', 
+        verbose_name=_('Город'), 
+        on_delete=models.CASCADE
+    )
+    title = models.CharField(_('Название'), max_length=100, help_text=_('Введите название центра'))
+    address_line = models.CharField(_('Адрес'), max_length=255, help_text=_('Введите адрес центра'))
+    phone_line = models.CharField(_('Контакты'), max_length=255, help_text=_('Введите контакты (номера для связи)'))
+    email_line = models.CharField(_('Почта'), max_length=255, help_text=_('Введите адрес электронной почты'))
+    latitude = models.FloatField(_('Широта'), help_text=_('Введите широту'))
+    longitude = models.FloatField(_('Долгота'), help_text=_('Введите долготу'))
+    
+    status = models.CharField(_('Статус сервиса'), max_length=10, choices=STATUS_CHOICES, default=DRAFT)
+
+    class Meta:
+        verbose_name = _('Сервисный центр')
+        verbose_name_plural = _('Сервисные центры')
+        ordering = ('title', )
+
+    def __str__(self):
+        return f"{self.title} - {self.address_line}"
+    

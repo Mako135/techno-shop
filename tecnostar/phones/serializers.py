@@ -10,7 +10,9 @@ from phones.models import (
     Photo, 
     News,
     Memory,
-    CameraInfo
+    CameraInfo,
+    Contact,
+    City
 )
 
 class CameraInfoSerializer(ModelSerializer):
@@ -91,3 +93,13 @@ class NewsSerializer(ModelSerializer):
         fields = ('title', 'slug', 'description', 'content', 'created_at', 'pattern', 'preview_image')
 
 
+class CitySerializer(ModelSerializer):
+    class Meta:
+        model = City
+        fields = ('__all__')
+
+class ContactListSerializer(ModelSerializer):
+    city = CitySerializer(read_only=True, many=False)
+    class Meta:
+        model = Contact
+        fields = ('__all__')

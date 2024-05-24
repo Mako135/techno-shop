@@ -174,6 +174,7 @@ CKEDITOR_CONFIGS = {
 
 
 REST_FRAMEWORK = {
+    'DATETIME_FORMAT': '%d %B, %Y',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],
