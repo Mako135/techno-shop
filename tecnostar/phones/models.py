@@ -22,7 +22,7 @@ STATUS_CHOICES = (
 )
 
 class City(models.Model):
-    title = models.CharField(_('Название'), max_length=50)
+    name = models.CharField(_('Название'), max_length=50)
     slug = models.SlugField(max_length=50, unique=True)
 
     class Meta:
@@ -154,6 +154,7 @@ class Phone(models.Model):
     back_camera = models.ForeignKey('CameraInfo', related_name='back_camera', on_delete=models.CASCADE, blank=True, null=True)
     has_touch_id = models.BooleanField(_('Есть Touch ID'), default=False)
     battery = models.FloatField(_('Батарея'), help_text=_('Введите емкость батареи'), default=3500)
+    inner_link = models.URLField(_(''), max_length = 200, blank=True)
     
     main_info = RichTextField(_('Основная информация'), config_name='awesome_ckeditor', help_text=_('Введите основную информацию о телефоне'))
     characteristics = RichTextField(_('Характеристики'), config_name='awesome_ckeditor',  help_text=_('Введите характеристики телефона'))
@@ -177,10 +178,47 @@ class Phone(models.Model):
         self.slug = self.slug or slugify(self.title)
         return super().save(*args, **kwargs)
 
+class Store(models.Model):
+    name = models.CharField(_('Название'), max_length=100)
+    slug = models.SlugField(max_length=100, unique=True) 
+    description = models.TextField(_('Описание описание'), blank=True)
+    
+    class Meta:
+        verbose_name = _('Магазин')
+        verbose_name_plural = _('Магазины')
+
+    def __str__(self):
+        return self.name
+
+class StoreURLField(models.Model):
+    store = models.ForeignKey(
+        "Store", 
+        verbose_name=_("Магазин"), 
+        on_delete=models.CASCADE
+    )
+    link = models.URLField(_('Ссылка на телефон'))
+    phone = models.ForeignKey('Phone', related_name='stores', on_delete=models.CASCADE, blank=True, null=True)
+
+    class Meta:
+        verbose_name = _('Ссылка на покупку ')
+        verbose_name_plural = _('Ссылки на покупки')
+
+    def __str__(self):
+        return self.store.name
+
 
 class Photo(models.Model):
-    color = models.ForeignKey(Color, related_name='photos', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='phones', help_text=_('Загрузите изображение'))
+    color = models.ForeignKey(
+        'Color', 
+        verbose_name=_("Цвет"), 
+        related_name='photos', 
+        on_delete=models.CASCADE
+    )
+    image = models.ImageField(
+        _("Фото"),
+        upload_to='phones', 
+        help_text=_('Загрузите изображение')
+    )
     phone = models.ForeignKey('Phone', related_name='photos', on_delete=models.CASCADE, blank=True, null=True)
 
     class Meta:

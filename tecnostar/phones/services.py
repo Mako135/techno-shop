@@ -1,5 +1,5 @@
 from phones import models
-
+from rest_framework import generics
 
 def defer_objects_decorators(func:callable):
     def defer_objects_wrapper(objects, defer=(), *args, **kwargs):
@@ -29,21 +29,23 @@ def get_all_objects(objects):
 
 
 def get_list_phones(objects):
-    return get_all_objects(
+    phones = get_all_objects(
         objects, 
         only=('category', 'title', 'slug', 'status')
     )
+    return phones.filter(status=models.PUBLISHED)
 
-def get_phone_by_slug(objects, slug):
-    return defer_objects_decorators(objects.get)(slug=slug) \
-        .defer('front_camera', )
+def get_news_list(objects):
+    return get_all_objects(objects)\
+        .defer('content')
+
+def get_news_by_slug(objects, slug):
+    return generics.get_object_or_404(
+        objects=objects, 
+        slug=slug
+    )
 
 def get_service_center_list(objects):
     objects = get_all_objects(objects)
     return objects.filter(status=models.PUBLISHED)
 
-def get_service_center_by_city(objects, city_slug):
-    return objects.filter(
-        city__slug=city_slug, 
-        status=models.PUBLISHED
-    )
