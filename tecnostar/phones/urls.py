@@ -9,8 +9,8 @@ router = DefaultRouter()
 router.register('phones', PhoneViewSet, basename='phone')
 router.register('news', NewsViewSet, basename='news')
 router.register('contacts', ServiceViewSet, basename='contacts')
-urlpatterns = router.urls
 urlpatterns = [
+    path('', include(router.urls)),
     path('memories/', memory_list),
     path('cameras/', camera_list)
 ]
