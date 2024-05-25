@@ -617,8 +617,8 @@
 }
 
 .thirteen-section {
-    height: 100vh;
-    padding: 10vw 0 0;
+  height: 100vh;
+  padding: 10vw 0 0;
   overflow: hidden;
 }
 
@@ -630,12 +630,12 @@
 }
 
 #thirteen-wallpaper {
-    object-fit: cover;
+  object-fit: cover;
   width: 75%;
   z-index: 1;
 }
 #thirteen-frame {
-    object-fit: contain;
+  object-fit: contain;
   width: 80%;
   z-index: 2;
   opacity: 0;
@@ -647,65 +647,65 @@
 }
 
 .fourteen-section {
-    width: 80%;
-    margin:5vw auto;
-    color: #333333;
-    display: grid;
-    grid-template-columns: 0.75fr 1fr;
-    gap: 3rem;
-    row-gap: 2vw;
+  width: 80%;
+  margin: 5vw auto;
+  color: #333333;
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 3rem;
+  row-gap: 2vw;
 }
 
 .fourteen-section-dots {
-    display: flex;
+  display: flex;
 }
 
 .fourteen-dot-container {
-    display: flex;
+  display: flex;
 }
-.fourteen-dot-container span{
-    display: flex;
-    flex-direction: column;
+.fourteen-dot-container span {
+  display: flex;
+  flex-direction: column;
 }
 
 .fifteen-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    background-color: #000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #000;
 }
 
 .fifteen-section video {
-    display: block;
-    height: 100%;
-    width: 70%;
-    margin: 0 0 0 auto;
+  display: block;
+  height: 100%;
+  width: 70%;
+  margin: 0 0 0 auto;
 }
 
 .fifteen-titles {
-    max-width: 600px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-    color: #fff;
-    left: 10%;
+  max-width: 600px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  color: #fff;
+  left: 10%;
 }
 
 .fifteen-section-title {
-    position: absolute;
-    font-size: 3vw;
-    font-weight: 600;
-    line-height: 1.14;
-    font-style: italic;
-    opacity: 0;
+  position: absolute;
+  font-size: 3vw;
+  font-weight: 600;
+  line-height: 1.14;
+  font-style: italic;
+  opacity: 0;
 }
 
-.fifteen-section-second h1{
-    margin-bottom: 10%;
+.fifteen-section-second h1 {
+  margin-bottom: 10%;
 }
 
 .fifteen-section-second {
-    opacity: 0;
+  opacity: 0;
 }

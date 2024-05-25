@@ -32,5 +32,4 @@ VideoPlayer.propTypes = {
   src: PropTypes.string.isRequired
 };
 
-
 export default VideoPlayer;

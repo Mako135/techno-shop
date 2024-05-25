@@ -3,9 +3,17 @@ import logo from "../../assets/logo.png";
 import { LuSearch } from "react-icons/lu";
 import { useEffect, useState } from "react";
 import { RiArrowDownDoubleLine } from "react-icons/ri";
+import useLanguageStore from "../../store/useLanguageStore";
+import translations from "../../translations/translations.js";
+
 
 const Header = () => {
   const [isLinkPresent, setIsLinkPresent] = useState(false);
+  const { language, setLanguage } = useLanguageStore();
+
+  const handleLanguageChange = (event) => {
+    setLanguage(event.target.value);
+  };
 
   const checkLink = () => {
     const link = window.location.href;
@@ -18,7 +26,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    checkLink(); 
+    checkLink();
 
     window.addEventListener("popstate", checkLink);
 
@@ -48,34 +56,34 @@ const Header = () => {
         <img src={logo} alt="" height={20} />
         <div className="header-links">
           <NavLink className="link" to="/">
-            Главная
+            {translations[language].header.main}
           </NavLink>
           <NavLink className="link" to="/phones">
-            Смартфоны
+            {translations[language].header.phones}
           </NavLink>
           <NavLink className="link" to="/accessories">
-            Аксессуары
+            {translations[language].header.accessories}
           </NavLink>
           <NavLink className="link" to="/where-to-buy">
-            Где купить
+            {translations[language].header.whereToBuy}
           </NavLink>
           <NavLink className="link" to="/about">
-            О нас
+            {translations[language].header.about}
           </NavLink>
           <NavLink className="link" to="/news">
-            Новости
+            {translations[language].header.news}
           </NavLink>
           <NavLink className="link" to="/support">
-            Поддержка
+            {translations[language].header.support}
           </NavLink>
           <NavLink className="link" to="/stocks">
-            Акции
+            {translations[language].header.stocks}
           </NavLink>
         </div>
         <div className="header-select">
-          <select>
+          <select value={language} onChange={handleLanguageChange}>
             <option value="ru">RU</option>
-            <option value="kz">KZ</option>
+            <option value="kk">KZ</option>
           </select>
         </div>
         {isLinkPresent ? (
