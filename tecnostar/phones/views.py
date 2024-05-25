@@ -17,8 +17,16 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 
 
 
-from phones.models import Phone, News, Contact
-from phones.serializers import PhoneSerializer, PhoneListSerializer, NewsSerializer, ContactListSerializer, NewsListSerializer, QuestionContactSerializer
+from phones.models import Phone, News, Contact, Memory, CameraInfo
+from phones.serializers import (
+    PhoneSerializer, 
+    PhoneListSerializer, 
+    NewsSerializer, 
+    ContactListSerializer, 
+    NewsListSerializer, 
+    QuestionContactSerializer,
+    MemeorySerializer,
+    CameraInfoSerializer)
 from phones.filters import PhoneFilter, ContactFilter
 from phones import services
 
@@ -26,6 +34,16 @@ import os
 from threading import Thread  
 
 
+class ListApiViewAbstract(generics.ListAPIView):
+    permission_classes = (permissions.AllowAny, )
+
+class MemoryList(ListApiViewAbstract):
+    queryset = services.get_all_objects(Memory.objects)
+    serializer_class = MemeorySerializer
+
+class CameraList(ListApiViewAbstract):
+    queryset = services.get_all_objects(CameraInfo.objects)
+    serializer_class = CameraInfoSerializer
 
 class PhoneViewSet(viewsets.ModelViewSet):
     queryset = services.get_list_phones(Phone.published)
@@ -88,6 +106,9 @@ class ServiceViewSet(viewsets.ModelViewSet):
         'email_line'
     ]
 
+
+
+
 # user = request.user
 #         email = request.user.email
 #         subject = "Подтверждение почты"
@@ -121,7 +142,7 @@ class QuestionContactView(APIView):
         email = EmailMessage(
             subject=email_subject,
             body=html,
-            from_email=settings.EMAIL_HOST_USER,
+            # from_email=settings.EMAIL_HOST_USER,
             to=[os.getenv('CUSTOMER_EMAIL')]
         )
         email.content_subtype = 'html'
@@ -153,7 +174,8 @@ class QuestionContactView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 
-
+memory_list = MemoryList.as_view()
+camera_list = CameraList.as_view()
 # phones_view = PhoneViewSet.as_view({'get':'list'})
 # phone_detail = PhoneViewSet.as_view({'get':'retrieve'})
 # news_view = NewsViewSet.as_view({'get':'list'})

@@ -20,7 +20,7 @@ class PhoneFilter(FilterSet):
     class Meta:
         model = Phone
         fields = (
-            'category',
+            'category__name',
             'display',
             'resolution',
             'memories',
