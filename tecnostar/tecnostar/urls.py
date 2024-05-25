@@ -23,6 +23,8 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
+from phones.views import question_form
+
 schema_view = get_schema_view(
     openapi.Info(
         title="Tecno API",
@@ -39,7 +41,7 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-
+    path('contact/', question_form)
 ]
 
 urlpatterns += i18n_patterns(

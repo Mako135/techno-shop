@@ -30,7 +30,7 @@ class City(models.Model):
         verbose_name_plural = _('Города')
     
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.name}"
     
 
 class Memory(models.Model):
@@ -146,6 +146,7 @@ class Phone(models.Model):
 
     display = models.FloatField(_('Дисплей'), choices=DISAPLAY_CHOICES, help_text=_('Выберите диагональ дисплея'), default=FIVE_INCH)
 
+    price = models.FloatField(_('Цена'), help_text=_('Введите цену телефона'), default=100000)
     memories = models.ManyToManyField(
         'Memory', related_name='phones'
     )
@@ -291,3 +292,13 @@ class Contact(models.Model):
     def __str__(self):
         return f"{self.title} - {self.address_line}"
     
+
+class Mailing(models.Model):
+    email = models.EmailField(_('Электронная почта'), max_length=100, help_text=_('Введите адрес электронной почты'))
+
+    class Meta:
+        verbose_name = _('Подписчик')
+        verbose_name_plural = _('Подписчики')
+
+    def __str__(self):
+        return self.email
