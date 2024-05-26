@@ -7,10 +7,10 @@ import RAM from "../components/filter/RAM";
 import FrontCameras from "../components/filter/FrontCameras";
 import BackCamera from "../components/filter/BackCamera";
 import Battery from "../components/filter/Battery";
-import useFilteredPhoneStore from "../store/FlteredPhoneStore";
+import useFilteredPhoneStore from "../services/store/FlteredPhoneStore";
 
 const Filter = () => {
-  const { fetchCameras } = useFilteredPhoneStore();
+  const { fetchPhones } = useFilteredPhoneStore();
   const [filters, setFilters] = useState({
     category: "",
     display: "",
@@ -25,7 +25,7 @@ const Filter = () => {
   const handleChange = (type, value) => {
     const newFilters = { ...filters, [type]: value };
     setFilters(newFilters);
-    fetchCameras(newFilters);
+    fetchPhones(newFilters);
   };
 
   const handleTouchIdChange = (event) => {

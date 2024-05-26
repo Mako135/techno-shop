@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import usePhoneStore from "../../store/usePhoneStore";
+import usePhoneStore from "../../services/store/usePhoneStore";
 import PropTypes from "prop-types";
 
 const BackCamera = ({ onBackCameraChange }) => {

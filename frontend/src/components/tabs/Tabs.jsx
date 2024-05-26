@@ -1,52 +1,43 @@
 import { useState } from "react";
 import Accordion from "../../feautures/Accordion";
+import PropTypes from "prop-types";
 
-const osData = [
-  { title: "Section 1", content: "Content for section 1" },
-  { title: "Section 2", content: "Content for section 2" },
-  { title: "Section 2", content: "Content for section 2" },
-  { title: "Section 2", content: "Content for section 2" },
-  { title: "Section 3", content: "Content for section 3" }
-];
-const phoneData = [
-  { title: "Section 1", content: "Content for section 1" },
-  { title: "Section 2", content: "Content for section 2" },
-  { title: "Section 3", content: "Content for section 3" }
-];
 
-const Tabs = () => {
+const Tabs = ({ data }) => {
   const [activeTab, setActiveTab] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
 
   const handleTabClick = (index) => {
     setActiveTab(index);
-    };
-    
-     const [openIndex, setOpenIndex] = useState(null);
+  };
 
-     const toggleAccordion = (index) => {
-       setOpenIndex(openIndex === index ? null : index);
-     };
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  // Получаем ключи для названий вкладок
+  const tabKeys = Object.keys(data);
 
   return (
     <div className="container">
       <div className="tabs">
-        <div
-          className={`tab ${activeTab === 0 ? "active" : ""}`}
-          onClick={() => handleTabClick(0)}
-        >
-          Телефоны
-        </div>
-        <div
-          className={`tab ${activeTab === 1 ? "active" : ""}`}
-          onClick={() => handleTabClick(1)}
-        >
-          HiOS
-        </div>
+        {tabKeys.map((key, index) => (
+          <div
+            key={index}
+            className={`tab ${activeTab === index ? "active" : ""}`}
+            onClick={() => handleTabClick(index)}
+          >
+            {key}
+          </div>
+        ))}
       </div>
       <div className="tab-content">
-        {activeTab === 0 && (
-          <div>
-            {phoneData.map((item, index) => (
+        {tabKeys.map((key, tabIndex) => (
+          <div
+            key={tabIndex}
+            style={{ display: activeTab === tabIndex ? "block" : "none" }}
+          >
+            {data[key].map((item, index) => (
               <Accordion
                 key={index}
                 title={item.title}
@@ -57,24 +48,14 @@ const Tabs = () => {
               </Accordion>
             ))}
           </div>
-        )}
-        {activeTab === 1 && (
-          <div>
-            {osData.map((item, index) => (
-              <Accordion
-                key={index}
-                title={item.title}
-                isOpen={openIndex === index}
-                toggleAccordion={() => toggleAccordion(index)}
-              >
-                {item.content}
-              </Accordion>
-            ))}
-          </div>
-        )}
+        ))}
       </div>
     </div>
   );
+};
+
+Tabs.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default Tabs;

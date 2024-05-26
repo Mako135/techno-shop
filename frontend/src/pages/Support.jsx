@@ -1,43 +1,22 @@
-import banner from '../assets/support_banner.png'
-import Footer from '../components/footer/Footer';
-import Downloads from '../components/support/Downloads';
-import MoreLink from '../components/link/MoreLink';
-import Tabs from '../components/tabs/Tabs';
-import Contant from '../components/support/Contant';
+import Footer from "../components/footer/Footer";
+import Downloads from "../components/support/Downloads";
+import MoreLink from "../components/link/MoreLink";
+import Tabs from "../components/tabs/Tabs";
+import Contact from "../components/support/Contact";
+import { SUPPORT } from "../services/accordion/AccordionData";
 const Support = () => {
-
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          minHeight: "70vh",
-          backgroundImage: `url(${banner})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
-      >
-        <div
-          style={{
-            textAlign: "center",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            margin: "5px"
-          }}
-        >
+      <div className="support-banner">
+        <div className="support-banner-content">
           <p className="support-title">Добро пожаловать в службу поддержки!</p>
           <p className="support-subtitle">Как мы можем вам помочь?</p>
-          <MoreLink link="/" text="Написать нам" color="#fff" />
+          <MoreLink link="#contact" text="Написать нам" color="#fff" />
         </div>
       </div>
 
       <div className="container">
-        <Tabs />
+        <Tabs data={SUPPORT} />
         <Downloads />
         <div className="service-center">
           <p className="support-title">Авторизованные сервисные центры</p>
@@ -46,12 +25,14 @@ const Support = () => {
           </p>
           <MoreLink link="/" text="Найти сервисный центр" />
         </div>
-        <Contant />
+        <div id="contact">
+          <Contact />
+        </div>
         <div className="divider"></div>
       </div>
       <Footer />
     </div>
   );
-}
+};
 
-export default Support
+export default Support;

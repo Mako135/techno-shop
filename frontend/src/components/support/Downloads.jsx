@@ -16,7 +16,7 @@ const Downloads = () => {
             img={support_img}
             text={"Загрузки"}
             linkText={"Найти свою модель телефона "}
-            link={"/"}
+            link={"/download"}
             color="white"
           />
           <DownloadCard

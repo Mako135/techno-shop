@@ -153,7 +153,7 @@
 
 .section-eleven {
   background-color: #000;
-  padding: 12.5vw;
+  padding: 12.5vw 0;
 }
 
 .section-eleven-titles {
@@ -811,11 +811,11 @@
 }
 
 .right-4-title {
-  top: 14.0625vw;
+  top: 13.0625vw;
 }
 
 .right-4-title-2 {
-  top: 32.5520833333vw;
+  top: 32vw;
 }
 
 .right-4-title h3,
@@ -829,7 +829,7 @@
   );
   -webkit-background-clip: text;
   background-clip: text;
-
+  font-size: clamp(16px, 2vw, 32px);
   color: transparent;
 }
 
@@ -890,8 +890,8 @@
 .section-eleven-fourth-block {
   color: #fff;
   display: flex;
-  padding-left: 12.5vw;
   align-items: center;
+  padding-left: 12.5vw;
   justify-content: space-between;
 }
 

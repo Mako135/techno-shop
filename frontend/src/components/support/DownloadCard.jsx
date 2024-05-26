@@ -21,7 +21,7 @@ DownloadCard.propTypes = {
   link: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   linkText: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
   img: PropTypes.string.isRequired
 };
 

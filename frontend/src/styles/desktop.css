@@ -334,7 +334,6 @@ body {
 .phones {
   width: 100%;
   display: grid;
-  gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
   height: fit-content;
 }
@@ -357,6 +356,10 @@ body {
   height: 220px;
   object-fit: contain;
   overflow: hidden;
+}
+
+.phone-card-img .swiper-slide {
+  background-color: transparent !important;
 }
 
 .phone-card-img img {
@@ -548,7 +551,7 @@ body {
   object-fit: contain;
 }
 .shop-cards {
-   display: grid;
+  display: grid;
   gap: 0.5rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
   height: fit-content;
@@ -791,6 +794,23 @@ body {
 
 /*********** SUPPORT ***********/
 
+.support-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: top;
+  background-image: url(../assets/support_banner.png);
+}
+
+.support-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .support-title {
   color: #fff;
   font-size: 32px;
@@ -813,6 +833,7 @@ body {
   justify-content: space-between;
 }
 
+/*********** DOWNLOAD ***********/
 
 .download-cards {
   display: grid;
@@ -830,7 +851,7 @@ body {
   max-width: 624px;
   height: 300px;
 }
-.download-card img{
+.download-card img {
   position: relative;
   width: 100%;
 }
@@ -865,6 +886,8 @@ body {
   color: #707071;
 }
 
+/*********** SERVICE ***********/
+
 .service-center {
   text-align: center;
   margin: 8rem 0;
@@ -875,12 +898,91 @@ body {
   font-size: 32px;
   font-weight: 600;
 }
-.support-subtitle {
+.service-center .support-subtitle {
   color: #000;
   font-size: 20px;
 }
 
+/*********** CONTACT ***********/
 
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3rem 0 7rem;
+  gap: 1rem;
+}
+
+.contact-left {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-left-content {
+  padding: 6rem 9rem 6rem 2rem;
+}
+
+.contant-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.contant-subtitle {
+  font-size: 20px;
+  color: #707071;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-right input,
+textarea {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.contact-right input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.contact-right input,
+textarea {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+.contact-right textarea {
+  height: 7rem;
+  resize: none;
+}
+
+.contact-right label {
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-button {
+  width: 8rem;
+  height: 2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #0264fa;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/*********** SEARCH ***********/
 .search-content {
   display: flex;
   flex-direction: column;
@@ -908,7 +1010,6 @@ body {
   border-bottom: 2px solid #000000;
 }
 
-
 /*********** TABS ***********/
 
 .tabs {
@@ -918,7 +1019,6 @@ body {
   width: 30%;
   margin: auto;
   margin-top: 3rem;
-
 }
 
 .tab {
@@ -928,7 +1028,7 @@ body {
 }
 
 .tab::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;

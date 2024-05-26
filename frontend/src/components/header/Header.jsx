@@ -3,9 +3,8 @@ import logo from "../../assets/logo.png";
 import { LuSearch } from "react-icons/lu";
 import { useEffect, useState } from "react";
 import { RiArrowDownDoubleLine } from "react-icons/ri";
-import useLanguageStore from "../../store/useLanguageStore";
-import translations from "../../translations/translations.js";
-
+import translations from "../../services/translations/translations.js";
+import useLanguageStore from "../../services/store/useLanguageStore.js";
 
 const Header = () => {
   const [isLinkPresent, setIsLinkPresent] = useState(false);
@@ -17,7 +16,6 @@ const Header = () => {
 
   const checkLink = () => {
     const link = window.location.href;
-    console.log(link);
     if (
       link === "http://localhost:5173/about" ||
       link === "http://localhost:5173/about#history-block"

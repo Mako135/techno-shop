@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import PhonesCard from "../components/phones/PhonesCard";
-import { API } from "../store/usePhoneStore";
+import { API } from "../services/store/usePhoneStore";
 
 const SearchPage = () => {
   const [searchText, setSearchText] = useState("");
