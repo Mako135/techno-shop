@@ -40,8 +40,9 @@ def get_news_list(objects):
         .defer('content')
 
 def get_news_by_slug(objects, slug):
+    queryset = get_news_list(objects)
     return generics.get_object_or_404(
-        objects=objects, 
+        queryset=queryset,
         slug=slug
     )
 

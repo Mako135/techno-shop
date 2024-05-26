@@ -1,10 +1,11 @@
-from email.message import EmailMessage
+from django.core.mail import EmailMessage
 from django.shortcuts import render
 from django.utils.translation import gettext as _
 # # from django_filters import rest_framework as filters
 # from rest_framework import filters
 from django_filters.rest_framework import DjangoFilterBackend
 from django.template.loader import render_to_string
+from django.conf import settings
 
 
 
@@ -17,7 +18,8 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 
 
 
-from phones.models import Phone, News, Contact, Memory, CameraInfo
+
+from phones.models import Phone, News, Contact, Memory, CameraInfo, Mailing
 from phones.serializers import (
     PhoneSerializer, 
     PhoneListSerializer, 
@@ -28,6 +30,7 @@ from phones.serializers import (
     MemeorySerializer,
     CameraInfoSerializer)
 from phones.filters import PhoneFilter, ContactFilter
+from phones.throttling import QuestionFormThrottling
 from phones import services
 
 import os
@@ -107,75 +110,56 @@ class ServiceViewSet(viewsets.ModelViewSet):
     ]
 
 
-
-
-# user = request.user
-#         email = request.user.email
-#         subject = "Подтверждение почты"
-#         message = render_to_string('users/verify_email_message.html', {
-#                 'request': request,
-#                 'user': user,
-#                 'domain': current_site.domain,
-#                 'uid':urlsafe_base64_encode(force_bytes(user.pk)),
-#                 'token':account_activation_token.make_token(user),
-#         })
-#         email = EmailMessage(
-#             subject, message, to=[email]
-#         )
-#         email.content_subtype = 'html'
-#         email.send()
-
-#         context =  {
-#             "status" : "На вашу почту была отправлена инструкция для активации аккаунта"
-#         }
-#     else:
-#         context =  {
-#             "status" : "Ваш аккаунт уже был подтвержден."
-#         }
-    
-# @method_decorator(ensure_csrf_cookie, name='dispatch')
 class QuestionContactView(APIView):
+    """
+    Отправка вопроса на почту:
+    - name: имя (str)
+    - email: почта (str)
+    - question_text: текст вопроса (str)
+    - is_followed_mailing: подписка на рассылку (bool)
+    """
     permission_classes = [permissions.AllowAny]
-    # throttle_classes = [ContactThrottling]
-
-    def send_email_async(self, html, email_subject):
-        email = EmailMessage(
-            subject=email_subject,
-            body=html,
-            # from_email=settings.EMAIL_HOST_USER,
-            to=[os.getenv('CUSTOMER_EMAIL')]
-        )
-        email.content_subtype = 'html'
-        email.send()
+    throttle_classes = [QuestionFormThrottling]
 
     def post(self, request):
-        serializer = QuestionContactSerializer(data=request.data)
-        if serializer.is_valid():
-            applicant_name = serializer.validated_data['name']
-            applicant_email = serializer.validated_data['email']
-            applicant_question_text = serializer.validated_data['question_text']
-            applicant_follow_status = serializer.validated_data['is_followed_mailing']
+        try:
+            serializer = QuestionContactSerializer(data=request.data)
+            if serializer.is_valid():
+                applicant_name = serializer.validated_data['name']
+                applicant_email = serializer.validated_data['email']
+                applicant_question_text = serializer.validated_data['question_text']
+                applicant_follow_status = serializer.validated_data ['is_followed_mailing']
 
-            html = render_to_string('question.html', {
-                'name': applicant_name,
-                'email': applicant_email,
-                'question': applicant_question_text
-            })
+                if applicant_follow_status:
+                    Mailing.objects.create(
+                        email=applicant_email
+                    )
 
-            email_subject = f"Вопрос от клиента: {applicant_email}"
 
-            
-            email_thread = Thread(target=self.send_email_async, args=(html, email_subject))
-            email_thread.start()
+                html = render_to_string('email_form.html', {
+                    'name': applicant_name,
+                    'email': applicant_email,
+                    'question': applicant_question_text
+                })
 
-            message = _('Message was sent successfully')
-            return Response({'message': message}, status=status.HTTP_200_OK)
+                email = EmailMessage(
+                    subject=_(f'Вопрос от {applicant_name} на сайте'),
+                    body=html,
+                    from_email=os.getenv('EMAIL_HOST_USER'),
+                    to=[os.getenv('CUSTOMER_SUPPORT_EMAIL')]
+                )
+                email.content_subtype = 'html'
+                email.send()
 
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
+                message = _('Сообщение успешно отправлено')
+                return Response({'message': message}, status=status.HTTP_200_OK)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 memory_list = MemoryList.as_view()
 camera_list = CameraList.as_view()
+question_form = QuestionContactView.as_view()
 # phones_view = PhoneViewSet.as_view({'get':'list'})
 # phone_detail = PhoneViewSet.as_view({'get':'retrieve'})
 # news_view = NewsViewSet.as_view({'get':'list'})

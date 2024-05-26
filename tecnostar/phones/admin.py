@@ -20,7 +20,8 @@ from phones.models import (
     City,
     Contact,
     Store,
-    StoreURLField   
+    StoreURLField,
+    Mailing
 )
 
 # Register your models here.
@@ -96,7 +97,7 @@ class PhoneAdmin(TranslationAdmin, admin.ModelAdmin):
     add_fieldsets = (
         ('Основные характеристики (ТЕХНИЧЕСКИЕ)', {
             'classes': ('wide',),
-            'fields': ('category', 'title', 'slug', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery')
+            'fields': ('category', 'title', 'slug', 'price', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery', 'has_download_url')
         }),
         ('Подробное описание (ПОДДЕРЖИВАЕТ МНОГОЯЗЫЧНОСТЬ)', {
             'classes': ('wide',),
@@ -107,7 +108,7 @@ class PhoneAdmin(TranslationAdmin, admin.ModelAdmin):
     fieldsets = (
         ('Основные характеристики (ТЕХНИЧЕСКИЕ)', {
             'classes': ('grp-collapse grp-open',),
-            'fields': ('category', 'title', 'slug', 'status', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery')
+            'fields': ('category', 'title', 'slug', 'price','status', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery','has_download_url')
         }),
         ('Подробное описание (ПОДДЕРЖИВАЕТ МНОГОЯЗЫЧНОСТЬ)', {
             'classes': ('grp-collapse grp-open',),
@@ -122,6 +123,7 @@ class PhoneAdmin(TranslationAdmin, admin.ModelAdmin):
     display_phone_url.short_description = 'Ссылка на сайте'
 
 
+# TODO: Исправить ссылку по требованям фронтенда
 
 class NewsAdmin(TranslationAdmin, admin.ModelAdmin):
     list_display = ('title', 'pattern', 'status', 'created_at', 'display_news_url')
@@ -138,7 +140,7 @@ class NewsAdmin(TranslationAdmin, admin.ModelAdmin):
 
 admin.site.register(Photo)
 admin.site.register(Contact)
-# admin.site.register(LinkAdmin)
+admin.site.register(Mailing)
 admin.site.register(CameraInfo)
 admin.site.register(Phone, PhoneAdmin) 
 admin.site.register(News, NewsAdmin)
