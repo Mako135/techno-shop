@@ -1,29 +1,42 @@
+import { useState, useEffect } from "react";
+import usePhoneStore from "../../store/usePhoneStore";
+import PropTypes from "prop-types";
 
-const BackCamera = () => {
+const BackCamera = ({ onBackCameraChange }) => {
+  const { cameras, fetchCameras } = usePhoneStore();
+  const [selectedCamera, setSelectedCamera] = useState("");
+
+  useEffect(() => {
+    fetchCameras();
+  }, [fetchCameras]);
+
+  const handleCameraChange = (event) => {
+    const { value } = event.target;
+    const newValue = selectedCamera === value ? "" : value;
+    setSelectedCamera(newValue);
+    onBackCameraChange(newValue);
+  };
+
   return (
     <div className="category">
-      <label>
-        <input type="radio" name="backCamera" id="" value={2} />
-        Phantom
-      </label>
-      <label>
-        <input type="radio" name="backCamera" id="" />
-        Spark
-      </label>
-      <label>
-        <input type="radio" name="backCamera" id="" />
-        Camon
-      </label>
-      <label>
-        <input type="radio" name="backCamera" id="" />
-        Pova
-      </label>
-      <label>
-        <input type="radio" name="backCamera" id="" />
-        Pop
-      </label>
+      {cameras?.map((camera) => (
+        <label key={camera.id}>
+          <input
+            type="radio"
+            name="backCamera"
+            value={camera.id}
+            checked={selectedCamera === camera.id.toString()}
+            onChange={handleCameraChange}
+          />
+          {camera.megapixels} MP
+        </label>
+      ))}
     </div>
   );
-}
+};
 
-export default BackCamera
+BackCamera.propTypes = {
+  onBackCameraChange: PropTypes.func.isRequired
+};
+
+export default BackCamera;

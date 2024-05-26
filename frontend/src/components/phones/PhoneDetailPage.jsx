@@ -10,6 +10,7 @@ import useLanguageStore from "../../store/useLanguageStore";
 const PhoneDetailPage = () => {
   const { id } = useParams();
   const { phone, loading, error, fetchPhoneById } = usePhoneStore();
+  
 const { language } = useLanguageStore();
   useEffect(() => {
     fetchPhoneById(id);

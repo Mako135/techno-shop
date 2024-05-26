@@ -18,7 +18,10 @@ const Header = () => {
   const checkLink = () => {
     const link = window.location.href;
     console.log(link);
-    if (link === "http://localhost:5173/about") {
+    if (
+      link === "http://localhost:5173/about" ||
+      link === "http://localhost:5173/about#history-block"
+    ) {
       setIsLinkPresent(true);
     } else {
       setIsLinkPresent(false);

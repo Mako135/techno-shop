@@ -10,14 +10,15 @@ import Support from "./pages/Support";
 import Stocks from "./pages/Stocks";
 import NewsPage from "./components/news/NewsPage";
 import PhoneDetailPage from "./components/phones/PhoneDetailPage";
-import Pova6Pro from "./pages/AnimatedPhonePages/pova/Pova6Pro";
+import Pova6Pro from "./pages/AnimatedPhonePages/pova/pova-6-6pro/Pova6Pro";
 import Common30 from "./pages/AnimatedPhonePages/common/Common30";
-import Pova6 from "./pages/AnimatedPhonePages/pova/Pova6";
+import Pova6 from "./pages/AnimatedPhonePages/pova/pova-6-6pro/Pova6";
 import Spark20 from "./pages/AnimatedPhonePages/spark/Spark20-20Pro-20ProPlus/Spark20";
 import Spark20Pro from "./pages/AnimatedPhonePages/spark/Spark20-20Pro-20ProPlus/Spark20Pro";
 import Spark20ProPlus from "./pages/AnimatedPhonePages/spark/Spark20-20Pro-20ProPlus/Spark20ProPlus";
 import Spark20C from "./pages/AnimatedPhonePages/spark/spark20c-2024go/Spark20C";
 import SearchPage from "./pages/SearchPage";
+import Fold from "./pages/AnimatedPhonePages/phantom/v-fold/Fold";
 
 function App() {
   return (
@@ -42,8 +43,11 @@ function App() {
             <Route path="/spark/spark-c" element={<Spark20C />} />
             <Route path="/spark/spark-20" element={<Spark20 />} />
             <Route path="/spark/spark-20-pro" element={<Spark20Pro />} />
-            <Route path="/spark/spark-20-pro-plus" element={<Spark20ProPlus />} />
-
+            <Route
+              path="/spark/spark-20-pro-plus"
+              element={<Spark20ProPlus />}
+            />
+            <Route path="/phantom/fold" element={<Fold />} />
           </Route>
         </Routes>
       </main>

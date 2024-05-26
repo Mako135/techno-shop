@@ -9,7 +9,6 @@ const getInitialLanguage = () => {
 const useLanguageStore = create(set => ({
   language: getInitialLanguage(),
   setLanguage: lang => {
-    console.log("language: ", lang);
     Cookies.set("language", lang);
     set({ language: lang });
   }

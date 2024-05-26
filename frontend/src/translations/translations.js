@@ -23,9 +23,6 @@ const translations = {
       stocks: "Акции"
     }
   },
-  es: {
-   
-  }
 };
 
 export default translations;

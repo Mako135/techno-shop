@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { GoArrowRight } from "react-icons/go";
 
 const MoreLink = ({ link, color, text }) => {
@@ -12,6 +13,13 @@ const MoreLink = ({ link, color, text }) => {
       </Link>
     </div>
   );
+};
+
+
+MoreLink.propTypes = {
+  link: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default MoreLink;

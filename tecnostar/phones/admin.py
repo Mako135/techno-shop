@@ -16,7 +16,11 @@ from phones.models import (
     Phone, 
     News, 
     CameraInfo, 
-    Memory
+    Memory,
+    City,
+    Contact,
+    Store,
+    StoreURLField   
 )
 
 # Register your models here.
@@ -45,6 +49,18 @@ class NetworkAdmin(AbstractAdmin):
 class CategoryAdmin(AbstractAdmin):
     pass
 
+@admin.register(Store)
+class StoreAdmin(AbstractAdmin):
+    pass
+
+@admin.register(City)
+class CityAdmin(AbstractAdmin):
+    pass
+
+class LinkAdmin(admin.TabularInline):
+    classes = ('grp-collapse grp-open',)
+    model = StoreURLField
+    extra = 0
 
 class PhotoAdmin(admin.TabularInline):
     classes = ('grp-collapse grp-open',)
@@ -65,7 +81,7 @@ class PhoneAdmin(TranslationAdmin, admin.ModelAdmin):
     readonly_fields = ('display_phone_url',)
     search_fields = ('title',)
     prepopulated_fields = {'slug': ('title',)}
-    inlines = [PhotoAdmin]
+    inlines = [PhotoAdmin, LinkAdmin]
 
     # Настройки заполнения полей
     radio_fields = {
@@ -121,9 +137,13 @@ class NewsAdmin(TranslationAdmin, admin.ModelAdmin):
 
 
 admin.site.register(Photo)
+admin.site.register(Contact)
+# admin.site.register(LinkAdmin)
+admin.site.register(CameraInfo)
 admin.site.register(Phone, PhoneAdmin) 
 admin.site.register(News, NewsAdmin)
-admin.site.register(CameraInfo)
+# admin.site.register(Store, StoreAdmin)
+# admin.site.register(City, CityAdmin)
 
 
 

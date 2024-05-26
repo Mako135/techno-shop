@@ -1,29 +1,41 @@
+import { useState, useEffect } from "react";
+import usePhoneStore from "../../store/usePhoneStore";
+import PropTypes from "prop-types";
 
-const FrontCameras = () => {
+const FrontCameras = ({ onFrontCameraChange }) => {
+  const { cameras, fetchCameras } = usePhoneStore();
+  const [selectedCamera, setSelectedCamera] = useState("");
+
+  useEffect(() => {
+    fetchCameras();
+  }, [fetchCameras]);
+
+  const handleCameraChange = (event) => {
+    const { value } = event.target;
+    setSelectedCamera(value);
+    onFrontCameraChange(value); // Передаем новое значение фронтальной камеры в родительский компонент
+  };
+
   return (
     <div className="category">
-      <label>
-        <input type="radio" name="frontCamera" id="" value={2} />
-        Phantom
-      </label>
-      <label>
-        <input type="radio" name="frontCamera" id="" />
-        Spark
-      </label>
-      <label>
-        <input type="radio" name="frontCamera" id="" />
-        Camon
-      </label>
-      <label>
-        <input type="radio" name="frontCamera" id="" />
-        Pova
-      </label>
-      <label>
-        <input type="radio" name="frontCamera" id="" />
-        Pop
-      </label>
+      {cameras?.map((camera) => (
+        <label key={camera.id}>
+          <input
+            type="radio"
+            name="frontCamera"
+            value={camera.id}
+            checked={selectedCamera === camera.id.toString()}
+            onChange={handleCameraChange}
+          />
+          {camera.megapixels} MP
+        </label>
+      ))}
     </div>
   );
-}
+};
 
-export default FrontCameras
+FrontCameras.propTypes = {
+  onFrontCameraChange: PropTypes.func.isRequired
+};
+
+export default FrontCameras;
