@@ -155,7 +155,8 @@ class Phone(models.Model):
     back_camera = models.ForeignKey('CameraInfo', related_name='back_camera', on_delete=models.CASCADE, blank=True, null=True)
     has_touch_id = models.BooleanField(_('Есть Touch ID'), default=False)
     battery = models.FloatField(_('Батарея'), help_text=_('Введите емкость батареи'), default=3500)
-    inner_link = models.URLField(_(''), max_length = 200, blank=True)
+    inner_link = models.URLField(_('Внутренняя ссылка'), max_length = 200, blank=True)
+    has_download_url = models.BooleanField(_('Есть ссылка на скачивание'), default=False)
     
     main_info = RichTextField(_('Основная информация'), config_name='awesome_ckeditor', help_text=_('Введите основную информацию о телефоне'))
     characteristics = RichTextField(_('Характеристики'), config_name='awesome_ckeditor',  help_text=_('Введите характеристики телефона'))
@@ -165,6 +166,7 @@ class Phone(models.Model):
     camera_info = RichTextField(_('Камера'), config_name='awesome_ckeditor', help_text=_('Введите информацию о камере'))
     sensors = RichTextField(_('Датчики'), config_name='awesome_ckeditor', help_text=_('Введите информацию о датчиках'))
     kit_info = RichTextField(_('Комплект поставки'), config_name='awesome_ckeditor', help_text=_('Введите информацию о комплекте поставки'))
+    
 
     published = PublishedManager()
 

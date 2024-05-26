@@ -73,7 +73,7 @@ class PhoneListSerializer(ModelSerializer):
 
     class Meta:
         model = Phone
-        fields = ('id', 'category', 'slug', 'title', 'photos', 'price')
+        fields = ('id', 'category', 'slug', 'title', 'photos', 'price', 'has_download_url')
 
 
 class PhoneSerializer(ModelSerializer):
@@ -103,7 +103,8 @@ class PhoneSerializer(ModelSerializer):
             'sensors', 
             'kit_info', 
             'photos',
-            'stores'
+            'stores',
+            'has_download_url'
         )
         
 

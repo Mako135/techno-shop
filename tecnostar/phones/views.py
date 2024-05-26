@@ -111,6 +111,13 @@ class ServiceViewSet(viewsets.ModelViewSet):
 
 
 class QuestionContactView(APIView):
+    """
+    Отправка вопроса на почту:
+    - name: имя (str)
+    - email: почта (str)
+    - question_text: текст вопроса (str)
+    - is_followed_mailing: подписка на рассылку (bool)
+    """
     permission_classes = [permissions.AllowAny]
     throttle_classes = [QuestionFormThrottling]
 
