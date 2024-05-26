@@ -25,10 +25,10 @@ const SectionSeven = () => {
         <Swiper
           modules={[Autoplay, Pagination]}
           pagination={{ clickable: true }}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false
-          }}
+          // autoplay={{
+          //   delay: 1000,
+          //   disableOnInteraction: false
+          // }}
           slidesPerView={5}
           centeredSlides={true}
           loop={true}
@@ -69,7 +69,7 @@ const SectionSeven = () => {
             <div className="pic-box">
               <div className="pic-border"></div>
               <div className="pic">
-                <video src={video_5} muted autoPlay loop></video>
+                <video src={video_4} muted autoPlay loop></video>
               </div>
             </div>
           </SwiperSlide>
