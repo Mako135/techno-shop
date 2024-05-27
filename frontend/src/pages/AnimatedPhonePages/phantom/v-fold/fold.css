@@ -259,7 +259,7 @@
 .fold-eight-content {
   height: 100vh;
   display: flex;
-  width: 200vw;
+  width: 300vw;
 }
 
 .fold-eight-content .datas {
@@ -284,17 +284,15 @@
   height: 100%;
   display: flex;
   align-items: end;
-  width: 100%;
 }
 
 .fold-eight-img img {
   height: 95%;
   object-fit: cover;
-  width: 110%;
 }
 
 .fold-left {
-  width: 20%;
+  width: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -302,3 +300,97 @@
   gap: 2vw;
   margin: 0 10vw 0 15vw;
 }
+.left-12 {
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  margin: 0 100px 0 100px;
+}
+
+.fold-slider {
+  width: 200vw;
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.fold-slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.fold-slider-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.fold-slider-container img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.slide_1 {
+  height: 80%;
+}
+.slide_2 {
+  height: 60%;
+}
+.slide_4 {
+  height: 70%;
+}
+.slide_5 {
+  height: 80%;
+}
+
+.fold-nine {
+  width: 100VW;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.fold-nine-text {
+  color: #fff;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 5;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fold-nine-text .title {
+  font-size: 1.5vw;
+  margin: auto;
+  text-align: center;
+}
+
+.fold-nine-content {
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  overflow: hidden;
+}
+
+.fold-nine-content img,
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
