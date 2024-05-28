@@ -19,7 +19,12 @@ const FoldSecEight = () => {
     });
 
     tl.to(".fold-eight-content", {
-      xPercent: -100
+      xPercent: -100,
+    }).to("#text-2", {
+        duration: 2,
+        yPercent: -100,
+        opacity: 0.5
+  
     });
   }, []);
   const figure =
@@ -61,7 +66,7 @@ const FoldSecEight = () => {
         <div className="fold-eight-img">
           <img src={figure} alt="" />
         </div>
-        <div className="fold-left">
+        <div className="fold-left" id="text-2">
           <h1>Основной блок камер</h1>
 
           <div className="datas">
