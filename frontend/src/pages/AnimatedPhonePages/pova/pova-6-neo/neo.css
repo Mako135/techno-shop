@@ -16,7 +16,7 @@
 }
 
 .neo-3 {
-  height: 100vh;
+  margin-bottom: 5vw;
   display: flex;
 }
 
@@ -86,8 +86,8 @@
 }
 
 .neo-5-content-inner img {
-  width: 12.6041666667vw;
-  height: 30.0520833333vw;
+  width: 20.8854166667vw;
+  height: 24.1145833333vw;
   margin: 0;
 }
 
@@ -238,7 +238,7 @@
   position: relative;
 }
 .neo-right-card video::after {
-    position: absolute;
+  position: absolute;
   background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-neo/ru/assets/images/chapter2/chapter2-6securebattery-border.webp);
 }
 
@@ -283,7 +283,7 @@
 
 .neo-9 {
   position: relative;
-  height: 170vh;
+  margin-bottom: 40vw;
 }
 
 .neo-9 .neo_back {
@@ -366,7 +366,7 @@
 .neo-14 {
   position: relative;
 }
-.neo-14 img{
+.neo-14 img {
   width: 100%;
 }
 
@@ -401,14 +401,14 @@
 }
 
 .neo-14-content footer .neo-title {
-    font-size: 4.5vw;
+  font-size: 4.5vw;
   line-height: 0.8;
   text-align: left;
   font-weight: 500;
   color: #7593bc;
 }
 .neo-14-content footer .neo-desc {
-    font-size: 1.5vw;
+  font-size: 1.5vw;
 }
 
 .neo-15 {
@@ -451,14 +451,14 @@
   font-size: 3vw;
 }
 
-.neo-16 .neo-text{
+.neo-16 .neo-text {
   width: auto;
-  align-items:  flex-start;
+  align-items: flex-start;
   padding-left: 5vw;
   color: #fff;
-  margin-bottom: 5vw;
+  margin: 5vw 0;
 }
-.neo-16 .neo-text .neo-title{
+.neo-16 .neo-text .neo-title {
   text-align: left;
   margin: 0;
   font-size: 4vw;
@@ -500,4 +500,177 @@
   transform: translate(-50%, 0);
   color: #fff;
   text-align: center;
+}
+
+.neo-20 {
+  position: relative;
+  display: flex;
+}
+
+.neo-20 img {
+  width: 70%;
+  margin: auto;
+}
+
+.neo-20-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(200, 200, 200, 0) 40%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.neo-20-content ul {
+  width: 75vw;
+  display: flex;
+  margin: 20.8333333333vw auto 0;
+  justify-content: space-between;
+}
+
+.neo-20-content ul li {
+  position: relative;
+  list-style: none;
+  width: 36.875vw;
+  height: 14.84375vw;
+}
+
+.neo-20-content ul li img {
+  width: 100%;
+}
+
+.neo-20-content ul li .neo-9-card-content {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.neo-23 {
+  margin-top: 21vw;
+  display: flex;
+  flex-direction: column;
+  gap: 21vw;
+}
+
+.left-text2 {
+  position: relative;
+  margin-top: 21%;
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+
+.left-text2 .neo-23-bg {
+  width: 100%;
+}
+.left-text2 .neo-23-phone {
+  width: 52.96875vw;
+  height: 30.9375vw;
+  right: -5.4166666667vw;
+  bottom: 2%;
+  position: absolute;
+}
+
+.left-text2-content {
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: #fff;
+}
+
+.left-text2-content .neo-text {
+  align-items: start;
+  max-width: 35.4166666667vw;
+}
+
+.left-text2-content h1 {
+  color: #7593bc;
+  font-size: 2.5vw;
+}
+
+.left-text2-content p {
+  margin: 0;
+}
+
+.right-text2 {
+  position: relative;
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+
+.right-text2 .neo-23-bg {
+  width: 100%;
+}
+.right-text2 .neo-23-phone {
+          width: 29.6354166667vw;
+        height: 23.90625vw;
+        left: -4.5833333333vw;
+  bottom: 2%;
+  position: absolute;
+}
+
+.right-text2-content {
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  color: #fff;
+}
+
+.right-text2-content .neo-text {
+  align-items: start;
+  max-width: 45.4166666667vw;
+}
+
+.right-text2-content h1 {
+  color: #7593bc;
+  font-size: 2.5vw;
+}
+
+.right-text2-content p {
+  margin: 0;
+}
+.right-text2-content span {
+  font-size: 0.8vw;
+}
+
+.neo-24-swiper {
+  width: 75vw;
+  margin: 10vw auto;
+}
+.neo-24-swiper img{
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .neo-5-content-inner {
+    width: 80%;
+    flex-direction: column;
+  }
+  .neo-5-content-titles h1 {
+    font-size: 32px;
+  }
 }
