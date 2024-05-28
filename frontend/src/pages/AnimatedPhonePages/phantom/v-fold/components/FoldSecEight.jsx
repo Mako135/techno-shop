@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect } from "react";
+import FoldSlider from "../feautures/FoldSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,8 +11,8 @@ const FoldSecEight = () => {
       scrollTrigger: {
         trigger: ".fold-eight-content",
         start: "top top",
-        end: "bottom top",
-        scrub: 2,
+        end: "+=2000",
+        scrub: 1,
         pin: true,
         markers: true,
         ease: "back.out"
@@ -19,12 +20,7 @@ const FoldSecEight = () => {
     });
 
     tl.to(".fold-eight-content", {
-      xPercent: -100,
-    }).to("#text-2", {
-        duration: 2,
-        yPercent: -100,
-        opacity: 0.5
-  
+      xPercent: -70
     });
   }, []);
   const figure =
@@ -66,7 +62,7 @@ const FoldSecEight = () => {
         <div className="fold-eight-img">
           <img src={figure} alt="" />
         </div>
-        <div className="fold-left" id="text-2">
+        <div className="left-12">
           <h1>Основной блок камер</h1>
 
           <div className="datas">
@@ -88,6 +84,7 @@ const FoldSecEight = () => {
             </div>
           </div>
         </div>
+        <FoldSlider />
       </div>
     </div>
   );

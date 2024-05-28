@@ -1,0 +1,503 @@
+.neo-container {
+  background-color: #000;
+}
+
+.neo-1 img {
+  display: block;
+  width: 100%;
+}
+
+.neo-2 {
+  padding: 2vw 0;
+}
+.neo-2 img {
+  display: block;
+  width: 100%;
+}
+
+.neo-3 {
+  height: 100vh;
+  display: flex;
+}
+
+.neo-3 .neo-fade-swiper {
+  width: 60vw;
+  max-width: 1272px;
+  margin: auto;
+}
+
+.neo-3 .swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.neo-3 .swiper-slide span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2vw;
+}
+
+.neo-3 .swiper-slide .corner-image {
+  width: 90%;
+  height: 90%;
+}
+
+.neo-3 .swiper-slide .corner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.neo-5 {
+  position: relative;
+  margin-top: 14.84375vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.neo-5 img {
+  display: block;
+  width: 90%;
+  object-fit: contain;
+  margin: auto;
+}
+
+.neo-5-content {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.neo-5-content-inner {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.neo-5-content-inner img {
+  width: 12.6041666667vw;
+  height: 30.0520833333vw;
+  margin: 0;
+}
+
+.neo-5-subtitle {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin-bottom: -3vw;
+  font-size: 1.375vw;
+}
+.neo-5-content-titles h1 {
+  font-size: 3.5416666667vw;
+  line-height: 1.15;
+  color: #7593bc;
+  font-weight: 800;
+}
+.neo-5-content-titles p {
+  font-size: 1.5416666667vw;
+  line-height: 1.15;
+  font-weight: 500;
+  margin-top: 5.9375vw;
+}
+
+.neo-6 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.neo-6 img {
+  width: 100%;
+  display: block;
+}
+
+.neo-6-content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.neo-6-content .neo-title {
+  text-align: center;
+}
+
+.neo-title {
+  font-size: 3vw;
+  color: #7593bc;
+  margin: 2vw auto;
+}
+
+.neo-subtitle {
+  text-align: center;
+}
+
+.neo-6-content ul {
+  width: 75vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.neo-6-content ul li {
+  list-style: none;
+}
+
+.neo-6-content ul li h2 {
+  color: #7593bc;
+  font-size: 4vw;
+}
+
+.neo-6-content footer .tips {
+  margin: 0;
+  width: 100%;
+  color: #909090;
+  text-align: left;
+  opacity: 0.6;
+}
+
+.neo-left-card {
+  margin: 5vw 0 5vw auto;
+  display: flex;
+  gap: 3rem;
+  height: 40vw;
+  width: 90vw;
+  color: #fff;
+}
+.neo-left-card img {
+  height: 100%;
+}
+.left-text1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.left-text1 h1 {
+  color: #7593bc;
+  font-size: 3.5vw;
+}
+
+.left-text1 p {
+  font-size: 1.25vw;
+}
+
+.neo-left-card footer ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.neo-left-card footer ul li {
+  list-style: none;
+}
+
+.neo-left-card ul li h2 {
+  color: #7593bc;
+  font-size: 2.5vw;
+}
+
+.neo-left-card footer .tips {
+  margin: 0;
+  color: #909090;
+  text-align: left;
+}
+
+.neo-right-card {
+  margin: 5vw 0 5vw 0;
+  display: flex;
+  gap: 3rem;
+  height: 40vw;
+  width: 90vw;
+  color: #fff;
+}
+
+.neo-right-card img,
+.neo-right-card video {
+  height: 100%;
+  position: relative;
+}
+.neo-right-card video::after {
+    position: absolute;
+  background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-neo/ru/assets/images/chapter2/chapter2-6securebattery-border.webp);
+}
+
+.right-text1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.right-text1 h1 {
+  color: #7593bc;
+  font-size: 3.5vw;
+}
+
+.right-text1 p {
+  font-size: 1.25vw;
+}
+
+.neo-right-card footer ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.neo-right-card footer ul li {
+  list-style: none;
+}
+
+.neo-right-card ul li h2 {
+  color: #7593bc;
+  font-size: 2.5vw;
+}
+
+.neo-right-card footer .tips {
+  margin: 2rem 0 0;
+  color: #909090;
+  text-align: left;
+}
+
+.neo-9 {
+  position: relative;
+  height: 170vh;
+}
+
+.neo-9 .neo_back {
+  width: 100%;
+  object-fit: cover;
+}
+.neo-9-content {
+  color: #fff;
+  top: 20%;
+  left: 10%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.neo-9-content .neo-title {
+  font-weight: 700;
+}
+
+.neo-9-content ul {
+  display: grid;
+  margin-top: 20.8333333333vw;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+
+.neo-9-content ul li {
+  position: relative;
+  list-style: none;
+  width: 36.875vw;
+  height: 14.84375vw;
+}
+
+.neo-9-content ul li img {
+  width: 100%;
+}
+
+.neo-9-content ul li .neo-9-card-content {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.neo-9-card-content h1 {
+  font-size: 2.5416666667vw;
+  line-height: 1.15;
+  color: #7593bc;
+}
+
+.neo-9-second-card {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.neo-9-third-card {
+  grid-row-start: 3;
+  grid-column-start: 1;
+}
+
+.neo-10 .title {
+  color: #bfd5f4;
+  font-size: 5vw;
+  width: 75vw;
+}
+
+.neo-10 .title span {
+  color: #64a3ff;
+}
+
+.neo-10 img {
+  width: 100%;
+}
+
+.neo-14 {
+  position: relative;
+}
+.neo-14 img{
+  width: 100%;
+}
+
+.neo-14-content {
+  position: absolute;
+  top: 0;
+  padding-top: 15vw;
+  width: 100%;
+}
+
+.neo-14-content .neo-title {
+  font-size: 10vw;
+  line-height: 0.8;
+  text-align: center;
+  font-weight: 700;
+  color: #bfd5f4;
+  margin: 0;
+}
+
+.neo-14-content-inner {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.neo-14-content footer {
+  margin-top: 2.25vw;
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  align-items: center;
+  color: #fff;
+  gap: 2vw;
+}
+
+.neo-14-content footer .neo-title {
+    font-size: 4.5vw;
+  line-height: 0.8;
+  text-align: left;
+  font-weight: 500;
+  color: #7593bc;
+}
+.neo-14-content footer .neo-desc {
+    font-size: 1.5vw;
+}
+
+.neo-15 {
+  position: relative;
+  height: 100vh;
+}
+
+.neo-15 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.neo-15-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.neo-text {
+  width: 75vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.neo-text .neo-title {
+  text-align: center;
+  font-size: 5vw;
+}
+.neo-text .neo-subtitle {
+  text-align: center;
+  font-size: 3vw;
+}
+
+.neo-16 .neo-text{
+  width: auto;
+  align-items:  flex-start;
+  padding-left: 5vw;
+  color: #fff;
+  margin-bottom: 5vw;
+}
+.neo-16 .neo-text .neo-title{
+  text-align: left;
+  margin: 0;
+  font-size: 4vw;
+}
+
+.neo-video-card {
+  position: relative;
+  width: 80%;
+  height: 35vw;
+}
+
+.neo-video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.neo-video-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sec-17 {
+  margin-top: 12.5vw;
+  position: relative;
+}
+
+.sec-17 img {
+  width: 100%;
+}
+
+.sec-17 .neo-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  text-align: center;
+}
