@@ -791,6 +791,100 @@
 .sec-23-second {
   background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/link-booming-5ed82307.jpg)
     no-repeat center bottom;
-    background-size: 100% 100%;
+  background-size: 100% 100%;
   height: 54.6875vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+.pova-23-second-img {
+  width: 34.140625vw;
+  height: 21.7578125vw;
+}
+
+.sec-23-second .pova-text {
+  color: #fff;
+  width: 40.15625vw;
+}
+
+.sec-23-second .pova-text h1 {
+  font-size: 3vw;
+}
+
+.sec-23-second .pova-text h3 {
+  font-size: 1.875vw;
+  margin: 1.25vw 0;
+  color: #c8af6d;
+}
+
+.sec-23-second .pova-text p {
+  font-size: 1.25vw;
+}
+
+.sec-23-second ul {
+  display: flex;
+  width: 42.96875vw;
+  height: 7.8125vw;
+  margin-top: 5vw;
+  gap: 2vw;
+}
+
+.sec-23-second ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  width: 25%;
+}
+
+.sec-23-second ul li img {
+  width: 4vw;
+  height: 4vw;
+}
+.sec-23-second ul li span {
+  color: #c8af6d;
+  font-size: 1.875vw;
+  line-height: 1.2;
+}
+
+.sec-23-second ul li p {
+  font-size: 0.9375vw;
+}
+
+.sec-24 video {
+  width: 70.3125vw;
+  height: 40.3125vw;
+  object-fit: cover;
+}
+
+.sec-24 .pova-text{
+  position: relative;
+  margin: 0 -10vw 0 10vw;
+  z-index: 2;
+}
+
+.sec-25 .pova-text{
+  width: 50vw;
+  text-align: center;
+  color: #fff;
+  margin: auto;
+}
+.sec-25 .pova-text h1{
+  font-size: 2.875vw;
+  line-height: 1.15;
+}
+.sec-25 .pova-text h3{
+  font-size: 1.875vw;
+  margin: 1.25vw 0;
+  color: #c8af6d;
+}
+.sec-25 .pova-text p{
+  font-size: 1.25vw;
+}
+
+.sec-25 video {
+  margin-top: 5vw;
+  width: 100%;
 }
