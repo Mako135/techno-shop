@@ -1,5 +1,8 @@
 import arrow from "../assets/arrow.png";
 const Pova5SecTwentyThree = () => {
+
+    const figure =
+      "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/wifi-4g-1a580fb2.png";
   return (
     <div className="sec-23">
       <div className="sec-23-first">
@@ -38,7 +41,7 @@ const Pova5SecTwentyThree = () => {
         </div>
       </div>
       <div className="sec-23-second">
-        <img src="" alt="" />
+        <img src={figure} alt="" className="pova-23-second-img" />
         <div className="pova-text">
           <h1>LINKBOOMING 1.0</h1>
           <h3>

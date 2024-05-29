@@ -22,6 +22,10 @@ import Pova5SecTwenty from "./components/Pova5SecTwenty";
 import Pova5SecTwentyOne from "./components/Pova5SecTwentyOne";
 import Pova5SecTwentyTwo from "./components/Pova5SecTwentyTwo";
 import Pova5SecTwentyThree from "./components/Pova5SecTwentyThree";
+import Pova5SecTwentyFour from "./components/Pova5SecTwentyFour";
+import Pova5SecTwentyFive from "./components/Pova5SecTwentyFive";
+import Footer from '../../../../components/footer/Footer'
+
 const PovaFive = () => {
   return (
     <div className="pova-5-container">
@@ -48,6 +52,9 @@ const PovaFive = () => {
       <Pova5SecTwentyOne />
       <Pova5SecTwentyTwo />
       <Pova5SecTwentyThree />
+      <Pova5SecTwentyFour />
+      <Pova5SecTwentyFive />
+      <Footer className={"#fff"}/>
     </div>
   );
 };
