@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import reverse
 from django.utils.html import format_html
 from djangoql.admin import DjangoQLSearchMixin
+from django.conf import settings
 
 from mptt.admin import MPTTModelAdmin
 from modeltranslation.admin import TranslationAdmin
@@ -117,8 +118,9 @@ class PhoneAdmin(TranslationAdmin, admin.ModelAdmin):
     )
 
     def display_phone_url(self, obj):
-        link = reverse('phone-detail', args=[obj.slug])
-        return format_html('<a href="{}">Смотреть на сайте</a>', link, obj.slug)
+        return f"{settings.DOMAIN}/phones/{obj.slug}"
+        # link = reverse('phone-detail', args=[obj.slug])
+        # return format_html('<a href="{}">Смотреть на сайте</a>', link, obj.slug)
     
     display_phone_url.short_description = 'Ссылка на сайте'
 

@@ -30,6 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost:5173']
+DOMAIN = os.getenv('DOMAIN')
 
 # CORS and CSRF Settings
 CSRF_TRUSTED_ORIGINS = ['http://localhost:5173']
@@ -57,6 +58,7 @@ INSTALLED_APPS = [
     'rosetta',
     'django_filters',
     'djangoql',
+    'admin_reorder',
 
     # Local apps
     'phones',
@@ -74,6 +76,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'admin_reorder.middleware.ModelAdminReorder',
 
 ]
 
@@ -220,3 +223,33 @@ EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
 # Grappelli settings
 GRAPPELLI_ADMIN_TITLE = os.getenv('GRAPPELLI_ADMIN_TITLE')
 GRAPPELLI_CLEAN_INPUT_TYPES = os.getenv('GRAPPELLI_CLEAN_INPUT_TYPES')
+
+ADMIN_REORDER = (
+    'sites',
+    
+    {'app': 'phones', 
+    'label': 'Основные модели',
+    'models': (
+        'phones.City',
+        'phones.Phone',
+        'phones.Contact',
+        'phones.News',
+        'phones.Store'
+    )},
+
+    {'app': 'phones', 
+    'label': 'Дополнительные модели',
+    'models': (
+        'phones.Memory',
+        'phones.Category',
+        'phones.CameraInfo',
+        'phones.Color',
+        'phones.Network',
+        'phones.Photo',
+        'phones.Mailing',
+        'phones.StoreURLField',
+    )},
+
+
+    {'app': 'auth', 'label': 'Авторизация'},
+)
