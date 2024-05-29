@@ -20,7 +20,6 @@ const NeoSecTwentyFour = () => {
       "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-neo/ru/assets/images/mb/chapter5-4sky-pic1-mb.webp";
   return (
     <div>
-      {" "}
       <Swiper
         className="neo-24-swiper"
         slidesPerView={1}

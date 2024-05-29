@@ -12,6 +12,16 @@ import "./pova5.css";
 import Pova5SecTwelve from "./components/Pova5SecTwelve";
 import Pova5SecEleven from "./components/Pova5SecEleven";
 import Pova5SecThirteen from "./components/Pova5SecThirteen";
+import Pova5SecFourteen from "./components/Pova5SecFourteen";
+import Pova5SecFifteen from "./components/Pova5SecFifteen";
+import Pova5SecSixteen from "./components/Pova5SecSixteen";
+import Pova5SecSeventeen from "./components/Pova5SecSeventeen";
+import Pov5SecEighteen from "./components/Pov5SecEighteen";
+import Pova5SecNineteen from "./components/Pova5SecNineteen";
+import Pova5SecTwenty from "./components/Pova5SecTwenty";
+import Pova5SecTwentyOne from "./components/Pova5SecTwentyOne";
+import Pova5SecTwentyTwo from "./components/Pova5SecTwentyTwo";
+import Pova5SecTwentyThree from "./components/Pova5SecTwentyThree";
 const PovaFive = () => {
   return (
     <div className="pova-5-container">
@@ -28,6 +38,16 @@ const PovaFive = () => {
       <Pova5SecEleven />
       <Pova5SecTwelve />
       <Pova5SecThirteen />
+      <Pova5SecFourteen />
+      <Pova5SecFifteen />
+      <Pova5SecSixteen />
+      <Pova5SecSeventeen />
+      <Pov5SecEighteen />
+      <Pova5SecNineteen />
+      <Pova5SecTwenty />
+      <Pova5SecTwentyOne />
+      <Pova5SecTwentyTwo />
+      <Pova5SecTwentyThree />
     </div>
   );
 };
