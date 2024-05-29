@@ -23,11 +23,11 @@ const PhonesCard = ({ spec }) => {
           slidesPerView={1}
           className="phone-slider"
         >
-          {/* {Object.entries(images).map(([color, imageUrl]) => (
+          {Object.entries(images).map(([color, imageUrl]) => (
             <SwiperSlide key={color}>
               <img src={imageUrl} alt="" />
             </SwiperSlide>
-          ))} */}
+          ))}
           <SwiperSlide>
             <img src={spark} alt="" />
           </SwiperSlide>
@@ -43,7 +43,7 @@ const PhonesCard = ({ spec }) => {
           <Link className="recommended-link" to="/">
             <button className="buy-btn">Купить</button>
           </Link>
-          <Link className="recommended-link" to={spec?.slug}>
+          <Link className="recommended-link" to={`/phones/${spec?.slug}`}>
             <div className="about-phone">
               <p>Подробнее</p>
               <img src={arrow} alt="" height={12} />

@@ -1,0 +1,796 @@
+.pova-5-container {
+  background-color: black;
+}
+
+.pova5-one {
+  display: flex;
+  padding: 11.71875vw 0;
+  flex-direction: row;
+  gap: 7.8125vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.pova5-one :nth-child(1) {
+  width: 32.421875vw;
+  height: 13.203125vw;
+}
+.pova5-one :nth-child(2) {
+  width: 44.765625vw;
+  height: 34.53125vw;
+}
+
+.pova-2 {
+  position: relative;
+  background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/highlights-bg-65dd0055.png)
+    no-repeat center top;
+  background-size: cover;
+  height: 74.21875vw;
+}
+
+.pova-2-content {
+  position: absolute;
+  width: 83.0859375vw;
+  left: 50%;
+  top: 11.71875vw;
+  transform: translate(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.pova-2-content img {
+  width: 100%;
+}
+
+.pova-2-bottom {
+  width: 100%;
+
+  bottom: 0;
+  position: absolute;
+  height: 17.03125vw;
+  background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/line-decoration-56e0cc81.png)
+    no-repeat center center;
+  background-size: cover;
+}
+
+.pova-3 {
+  background-color: #1c1c1c;
+  padding-bottom: 18vw;
+}
+
+.pova-3-content {
+  position: relative;
+  width: 100vw;
+  height: 52.34375vw;
+  display: flex;
+}
+
+.pova-3 img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+}
+.pova-3 video {
+  width: 100%;
+}
+
+.pova-4 {
+  position: relative;
+  margin-top: -8.59375vw;
+}
+
+.pova-4-content {
+  position: absolute;
+  height: 85.7421875vw;
+  padding-top: 14.84375vw;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.pova-4-content img {
+  position: absolute;
+  top: -11.71875vw;
+  left: 30%;
+  margin-left: 15.625vw;
+  width: 58.6328125vw;
+  height: 49.765625vw;
+}
+
+.pova-4-content h1 {
+  text-align: left;
+  padding-left: 7.8125vw;
+  color: #c8af6d;
+  font-size: 4.6875vw;
+}
+
+.pova-4 .bg-plan {
+  width: 100%;
+}
+
+.pova-5 {
+  position: relative;
+  margin-top: -19.53125vw;
+  height: 93.75vw;
+}
+
+.pova-5-content {
+  width: 100%;
+  height: 101.015625vw;
+  background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/common-card2-8b0eb869.png)
+    no-repeat center top;
+  background-size: contain;
+}
+
+.pova-5-text {
+  position: absolute;
+  top: 11.71875vw;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+.pova-5-text h1 {
+  font-size: 2.8125vw;
+}
+
+.pova-5-text p {
+  font-size: 1.25vw;
+}
+
+.pova-5 ul {
+  position: absolute;
+  height: 43.359375vw;
+  top: 33.0625vw;
+  width: 100%;
+}
+
+.pova-5 .pova-5-list {
+  position: relative;
+  overflow: hidden;
+  height: 34.21875vw;
+  padding-top: 4.296875vw;
+}
+.pova-5 ul :nth-child(1) img {
+  position: relative;
+  width: 91.7578125vw;
+  height: 18.203125vw;
+}
+.pova-5 ul :nth-child(1) h1 {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  z-index: 2;
+  color: #fff;
+  font-size: 3vw;
+}
+
+.pova-5-figure {
+  position: absolute;
+  width: 34.3359375vw;
+  height: 33.4765625vw;
+  left: 50%;
+  top: 0;
+  margin-left: -7.8125vw;
+  background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/phone-3af2bd34.png)
+    no-repeat left center;
+  background-size: contain;
+}
+
+.pova-5-list-2 {
+  position: absolute;
+  overflow: hidden;
+  height: 34.21875vw;
+  right: 0;
+  margin-top: -7.03125vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pova-5-list-2 img {
+  width: 100%;
+}
+
+.pova-5-list-2 h1 {
+  position: absolute;
+  text-align: left;
+  top: 20%;
+  color: #fff;
+  left: 60.640625vw;
+  font-size: 3vw;
+}
+
+.pova-8 {
+  position: relative;
+  margin-top: -17.59375vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pova-8-content {
+  width: 100%;
+  height: 100%;
+  top: 20%;
+  position: absolute;
+}
+.pova-8-content-inner {
+  position: relative;
+}
+
+.pova-8-content-inner img,
+.pova-8-content-inner video {
+  width: 50.78125vw;
+  height: 50.78125vw;
+}
+
+.pova-8-block {
+  position: absolute;
+  top: 0;
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+
+.pova-8-block h1 {
+  font-size: 2.8125vw;
+  line-height: 1.15;
+}
+.pova-8-block p {
+  font-size: 1.25vw;
+  margin-top: 1.25vw;
+}
+
+.pova-datas {
+  display: flex;
+  margin-top: 2vw;
+  gap: 2vw;
+}
+
+.pova-datas p {
+  font-size: 2.5vw;
+  color: #c8af6d;
+}
+
+.block_2 {
+  opacity: 0;
+}
+
+.block_3 {
+  opacity: 0;
+}
+
+.pova-9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.pova-9 img {
+  width: 27.265625vw;
+  height: 36.953125vw;
+}
+
+.pova-9 .pova-text {
+  width: 39.0625vw;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.pova-9 .pova-text h1 {
+  font-size: 2.875vw;
+}
+.pova-9 .pova-text p {
+  font-size: 1.25vw;
+}
+
+.sec-10 .pova-4 {
+  margin: 0;
+}
+.sec-10 .pova-4 .pova-4-content img {
+  width: 58.0078125vw;
+  height: 51.6015625vw;
+  top: 2.9296875vw;
+  margin-left: 14.453125vw;
+}
+
+.pova-11 {
+  position: relative;
+  margin-top: -19.53125vw;
+  width: 100%;
+  height: 81.015625vw;
+  background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/battery-a80d3eb6.png)
+    no-repeat center top;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+}
+
+.pova-11 .pova-text {
+  position: absolute;
+  width: 100%;
+  padding-top: 11vw;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.pova-11 .pova-text h1 {
+  font-size: 2.875vw;
+}
+.pova-11 .pova-text p {
+  font-size: 1.25vw;
+}
+
+.pova-11 ul {
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+  margin: 2vw auto;
+}
+.pova-11 ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+.pova-11 .pova-text ul li span {
+  font-size: 1.25vw;
+}
+.pova-11 .pova-text ul li p {
+  font-size: 2.875vw;
+  color: #c8af6d;
+}
+
+.pova-11 video {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  bottom: 0;
+  z-index: 1;
+}
+
+.pova-sec-12 {
+  position: relative;
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+  background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/section-aurora-engine-bg-b883f1d5.png)
+    no-repeat center top;
+  background-size: cover;
+  height: 70.3125vw;
+  margin-top: -9.375vw;
+  z-index: 2;
+}
+
+.pova-sec-12 .pova-text {
+  color: hsl(0, 0%, 100%);
+  width: 40.15625vw;
+}
+.pova-sec-12 .pova-text p {
+  font-size: 1.25vw;
+}
+
+.pova-sec-12 .pova-text ul {
+  margin-top: 5vw;
+  display: flex;
+  gap: 2vw;
+}
+.pova-sec-12 .pova-text ul li {
+  display: flex;
+  gap: 1rem;
+}
+.pova-sec-12 .pova-text ul li p {
+  color: #c8af6d;
+  font-size: 1.875vw;
+}
+
+.pova-sec-12 .pova-text img {
+  width: 3.03125vw;
+  height: 3.0703125vw;
+}
+
+.pova-sec-12 .right-video-card {
+  position: relative;
+  width: 50.78125vw;
+  height: 35.3515625vw;
+  overflow: hidden;
+}
+
+.pova-sec-12 .right-video-card img,
+.pova-sec-12 .right-video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pova-sec-12 .right-video-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pova-sec-13 {
+  position: relative;
+  display: flex;
+}
+
+.pova-sec-13 .pova-text {
+  position: absolute;
+  top: 0;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.pova-sec-13 .pova-text ul {
+  justify-content: center;
+  margin-top: 5vw;
+  display: flex;
+  gap: 2vw;
+}
+.pova-sec-13 .pova-text ul li {
+  list-style: none;
+  text-align: left;
+}
+.pova-sec-13 .pova-text ul li p {
+  color: #c8af6d;
+  font-size: 1.875vw;
+}
+
+.pova-sec-13 video {
+  width: 70.3125vw;
+  height: 70.3125vw;
+  margin: auto;
+  margin-top: 10.7421875vw;
+}
+
+.pova-14 {
+  position: relative;
+  width: 100%;
+  height: 61.015625vw;
+  background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/battery-a80d3eb6.png)
+    no-repeat center top;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pova-14 .pova-text {
+  color: hsl(0, 0%, 100%);
+  width: 40.15625vw;
+}
+.pova-14 .pova-text h1 {
+  font-size: 1.875vw;
+}
+.pova-14 .pova-text p {
+  font-size: 1.25vw;
+}
+
+.pova-14 img,
+.pova-14 video {
+  width: 50.78125vw;
+  height: 28.828125vw;
+}
+
+.pova-14 .right-video-card {
+  position: relative;
+}
+.pova-14 .right-video-card img {
+  position: absolute;
+}
+
+.sec-15 {
+  position: relative;
+  height: 58.59375vw;
+}
+
+.sec-15 img {
+  width: 100%;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sec-15 .pova-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sec-15 .pova-text h1 {
+  font-size: 2.875vw;
+  margin-bottom: 1.5vw;
+}
+
+.sec-15 .pova-bottom-line {
+  height: 5.859375vw;
+  background: url(./assets/line.png) no-repeat center center;
+  background-size: cover;
+}
+
+.sec-16 {
+  position: relative;
+  height: 46.875vw;
+}
+
+.sec-16 .pova-text {
+  position: absolute;
+  width: 46.875vw;
+  top: 7.8125vw;
+  left: 7.8125vw;
+  text-align: left;
+  color: #fff;
+  z-index: 2;
+}
+
+.sec-16-icons {
+  width: 18.75vw;
+  height: 3.515625vw;
+  margin: 3.125vw 0 0;
+}
+
+.sec-16 video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 42.96875vw;
+  height: 35.15625vw;
+  margin-left: 19.53125vw;
+  top: 7.8125vw;
+}
+
+.sec-17 .pova-4 .pova-4-content img {
+  top: 2.34375vw;
+  width: 33.8671875vw;
+  height: 46.3671875vw;
+  margin-left: 21.484375vw;
+}
+
+.sec-18 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  gap: 5vw;
+  align-items: center;
+  justify-content: center;
+  width: 125vw;
+  overflow: hidden;
+}
+
+.sec-18-card {
+  height: 40vw;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  font-size: 1.25vw;
+}
+.sec-18-card p {
+  margin-top: 1.5625vw;
+}
+
+.sec-18-card header {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 70%;
+}
+
+.sec-18-card header img,
+.sec-18-card header video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sec-18-card header .frame-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sec-19 .pova-text {
+  text-align: center;
+  color: #fff;
+}
+
+.sec-19 .pova-text h1 {
+  font-size: 2.875vw;
+  margin-bottom: 1vw;
+}
+.sec-19 .pova-text h3 {
+  font-size: 1.875vw;
+  margin-bottom: 2vw;
+  color: #c8af6d;
+}
+
+.sec-19-swiper {
+  margin-top: 3vw;
+  width: 60vw;
+  height: 40vw !important;
+}
+
+.sec-19-swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sec-20 {
+  display: flex;
+  gap: 5vw;
+  align-items: center;
+  height: 54.6875vw;
+  justify-content: center;
+}
+
+.sec-20 .pova-text {
+  width: 40.15625vw;
+  color: #fff;
+}
+
+.sec-20 .pova-text h1 {
+  font-size: 3vw;
+}
+
+.sec-20 .pova-text h3 {
+  font-size: 1.875vw;
+  margin: 1.25vw 0;
+  color: #c8af6d;
+}
+
+.sec-20 .pova-text p {
+  font-size: 1.25vw;
+}
+
+.sec-20 video {
+  width: 16.015625vw;
+  height: 35.15625vw;
+  margin-top: 0;
+}
+
+.sec-21 .pova-4 .pova-4-content img {
+  top: 10.546875vw;
+  width: 12.2265625vw;
+  height: 15.9765625vw;
+  margin-top: 0;
+  margin-left: 24.609375vw;
+}
+
+.sec-22 {
+  position: relative;
+  width: 100%;
+  height: 81.015625vw;
+  background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/battery-a80d3eb6.png)
+    no-repeat center top;
+  background-size: contain;
+  margin-top: -19.53125vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.sec-22 .pova-text {
+  width: 50.15625vw;
+  color: #fff;
+  margin: 10vw auto 0;
+  text-align: center;
+}
+
+.sec-22 .pova-text h1 {
+  font-size: 3vw;
+}
+
+.sec-22 .pova-text h3 {
+  font-size: 1.875vw;
+  margin: 1.25vw 0;
+  color: #c8af6d;
+}
+
+.sec-22 .pova-text p {
+  font-size: 1.25vw;
+}
+
+.sec-22-phones {
+  width: 74.21875vw;
+  height: 59.5703125vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5vw auto;
+}
+.sec-22-phones img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14.21875vw;
+  height: 31.1328125vw;
+}
+
+.sec-22-phones :nth-child(3) {
+  margin-top: 1vw;
+  width: 39.0625vw;
+  height: 42.96875vw;
+}
+
+.sec-23-first {
+  background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/ups-ultra-power-signal-3ab7948b.png)
+    no-repeat center center;
+  background-size: cover;
+  height: 18.203125vw;
+  position: relative;
+}
+
+.sec-23-first-content {
+  left: 8.3333333333vw;
+  top: 4.6296296296vw;
+  text-align: left;
+  position: absolute;
+  color: #fff;
+  display: flex;
+}
+
+.sec-23-first-content h1 {
+  font-size: 2.875vw;
+  line-height: 1.15;
+}
+.sec-23-first-content p {
+  font-size: 1.25vw;
+  line-height: 1.15;
+}
+
+.sec-23-first-content ul {
+  display: flex;
+  width: 42.96875vw;
+  height: 7.8125vw;
+  margin-left: 19.53125vw;
+  margin-top: 0.390625vw;
+  gap: 2vw;
+}
+
+.sec-23-first-content ul li {
+  text-align: center;
+  list-style: none;
+  display: flex;
+  width: 25%;
+}
+
+.sec-23-first-content ul li img {
+  width: 2vw;
+  height: 2vw;
+}
+.sec-23-first-content ul li span {
+  color: #c8af6d;
+  font-size: 1.875vw;
+  line-height: 1.2;
+}
+
+.sec-23-first-content ul li p {
+  font-size: 0.9375vw;
+}
+
+.sec-23-second {
+  background: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/link-booming-5ed82307.jpg)
+    no-repeat center bottom;
+    background-size: 100% 100%;
+  height: 54.6875vw;
+}

@@ -13,14 +13,14 @@ const FoldSecThree = () => {
         start: "top top",
         end: "+=3000",
         pin: true,
-        scrub: true,
+        scrub: 2,
         markers: true
       }
     });
 
     tl.from("#fold-phone-1", {
-      scale: 10,
-      xPercent: 50
+      xPercent: 50,
+      z: 50
     })
       .fromTo(
         "#fold-phone-2",
@@ -36,9 +36,9 @@ const FoldSecThree = () => {
       )
       .from(wrapperRef.current.children, {
         y: 100,
-        opacity: 0, // Добавляем начальное состояние прозрачности
+        opacity: 0, 
         stagger: 0.4,
-        duration: 1 // Добавляем длительность для анимации
+        duration: 1
       });
   }, []);
 

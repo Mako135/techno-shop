@@ -4,15 +4,17 @@ import { Pagination } from "swiper/modules";
 import Footer from "../footer/Footer";
 import parse from "html-react-parser";
 import { useEffect } from "react";
-import usePhoneStore from "../../store/store";
+import usePhoneStore from "../../services/store/usePhoneStore";
+import useLanguageStore from "../../services/store/useLanguageStore";
 
 const PhoneDetailPage = () => {
   const { id } = useParams();
   const { phone, loading, error, fetchPhoneById } = usePhoneStore();
-
+  
+const { language } = useLanguageStore();
   useEffect(() => {
     fetchPhoneById(id);
-  }, [id, fetchPhoneById]);
+  }, [id, fetchPhoneById, language]);
 
   if (loading) return <div>Загрузка...</div>;
   if (error) return <div>Ошибка: {error}</div>;

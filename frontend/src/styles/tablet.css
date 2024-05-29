@@ -1,7 +1,6 @@
 @media (max-width: 1024px) {
-  .phones {
-    gap: 10px;
-    grid-template-columns: 0.5fr 0.5fr;
+  .filter {
+    display: none;
   }
   .home-news {
     grid-template-columns: 1fr 1fr;
@@ -10,10 +9,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem 3rem;
   }
-  .copyright, .copyright-links {
+  .copyright,
+  .copyright-links {
     flex-direction: column;
   }
-  .copyright p{
+  .copyright p {
     margin: 3rem 0 5rem;
   }
   .copyright-links {

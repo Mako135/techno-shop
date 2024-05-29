@@ -19,6 +19,9 @@ import Spark20ProPlus from "./pages/AnimatedPhonePages/spark/Spark20-20Pro-20Pro
 import Spark20C from "./pages/AnimatedPhonePages/spark/spark20c-2024go/Spark20C";
 import SearchPage from "./pages/SearchPage";
 import Fold from "./pages/AnimatedPhonePages/phantom/v-fold/Fold";
+import DownloadPage from "./pages/DownloadPage";
+import PovaNeo from "./pages/AnimatedPhonePages/pova/pova-6-neo/PovaNeo";
+import PovaFive from "./pages/AnimatedPhonePages/pova/pova-5/PovaFive";
 
 function App() {
   return (
@@ -37,12 +40,16 @@ function App() {
             <Route path="/support" element={<Support />} />
             <Route path="/stocks" element={<Stocks />} />
             <Route path="/search" element={<SearchPage />} />
-            <Route path="/pova/pova-6" element={<Pova6 />} />
-            <Route path="/pova/pova-6-pro" element={<Pova6Pro />} />
-            <Route path="/camon/camon-30" element={<Common30 />} />
-            <Route path="/spark/spark-c" element={<Spark20C />} />
-            <Route path="/spark/spark-20" element={<Spark20 />} />
-            <Route path="/spark/spark-20-pro" element={<Spark20Pro />} />
+            <Route path="/download" element={<DownloadPage />} />
+
+            <Route path="/pova/5" element={<PovaFive />} />
+            <Route path="/pova/6" element={<Pova6 />} />
+            <Route path="/pova/neo" element={<PovaNeo />} />
+            <Route path="/pova/6-pro" element={<Pova6Pro />} />
+            <Route path="/camon/30" element={<Common30 />} />
+            <Route path="/spark/c" element={<Spark20C />} />
+            <Route path="/spark/20" element={<Spark20 />} />
+            <Route path="/spark/20-pro" element={<Spark20Pro />} />
             <Route
               path="/spark/spark-20-pro-plus"
               element={<Spark20ProPlus />}

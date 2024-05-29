@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +9,41 @@
 }
 
 body {
+  accent-color: #0264fa;
   overflow-x: hidden;
   background-color: #f8f8f8;
   height: 100%;
 }
 .main-container {
   max-width: 1272px;
-  margin:0 auto;
+  margin: 0 auto;
 }
+
+.accordion {
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.accordion-title {
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-content {
+  height: fit-content;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.accordion-content-text {
+  padding: 10px;
+}
+
 .white {
   background-color: #fff;
 }
@@ -29,7 +54,7 @@ body {
 .container {
   width: 100%;
   max-width: 1272px;
-  margin:0 auto;
+  margin: 0 auto;
   padding: 0 10px;
 }
 /*********** HEADER ***********/
@@ -41,17 +66,19 @@ body {
 .header {
   max-width: 1272px;
   margin: auto;
-  height: 112px;
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
 }
 
 .header-links {
   width: 100%;
-  max-width: 845px;
+  max-width: fit-content;
+  justify-content: center;
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
 }
 
 .link {
@@ -149,11 +176,10 @@ body {
   height: 5vw;
   color: #707071;
 }
-.footer-bottom img{
+.footer-bottom img {
   height: 3vw;
   color: #707071;
-  max-height: 32px;
-  min-height: 20px;
+  max-height: 20px;
 }
 .footer-logo {
   display: flex;
@@ -163,7 +189,7 @@ body {
 }
 
 .footer-logo p {
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: clamp(12px, 2vw, 14px);
 }
 
 .divider {
@@ -306,20 +332,20 @@ body {
 }
 
 .phones {
-  max-width: fit-content;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  height: fit-content;
 }
 
 .phone-card {
   border-radius: 8px;
-  height: 480px;
-  width: 300px;
+  height: 28rem;
+  width: 18rem;
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0 10px;
   align-items: center;
   justify-content: center;
 }
@@ -330,6 +356,10 @@ body {
   height: 220px;
   object-fit: contain;
   overflow: hidden;
+}
+
+.phone-card-img .swiper-slide {
+  background-color: transparent !important;
 }
 
 .phone-card-img img {
@@ -392,14 +422,17 @@ body {
 }
 
 .phone-detail-content {
-
   display: flex;
   flex-direction: column; /* Элементы будут располагаться вертикально */
   align-items: flex-start;
 }
-.phone-detail-content .swiper{
+.phone-detail-content .swiper {
   margin: 0;
   max-height: 320px;
+  object-fit: contain;
+}
+.phone-detail-content .swiper img {
+  height: 100%;
   object-fit: contain;
 }
 
@@ -415,7 +448,12 @@ body {
   min-width: 260px;
   max-width: 290px;
   margin: 0 20px 0 0;
-  overflow-y: scroll;
+  border-right: 2px solid #dddddd;
+  max-height: min-content;
+}
+
+.filter .accordion-title {
+  border-bottom: none;
 }
 
 .filter-title {
@@ -423,12 +461,23 @@ body {
   font-weight: 600;
 }
 
+.category {
+  display: flex;
+  flex-direction: column;
+}
+.category label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
 /*********** NEWS ***********/
 .home-news {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 100px;
-  gap: 10px;
+  gap: 1rem;
   background-color: #fff;
 }
 
@@ -447,6 +496,7 @@ body {
   width: 100%;
   max-width: 400px;
   max-height: 559px;
+  margin: auto;
 }
 
 .news-card-img {
@@ -502,9 +552,9 @@ body {
 }
 .shop-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: auto;
-  justify-content: space-between;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  height: fit-content;
 }
 .shop-card {
   width: 300px;
@@ -744,6 +794,23 @@ body {
 
 /*********** SUPPORT ***********/
 
+.support-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: top;
+  background-image: url(../assets/support_banner.png);
+}
+
+.support-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .support-title {
   color: #fff;
   font-size: 32px;
@@ -765,11 +832,44 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.support-search input {
-  height: 100%;
-  font-size: 20px;
+
+/*********** DOWNLOAD ***********/
+
+.download-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 3rem 0;
 }
+
+.download-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 624px;
+  height: 300px;
+}
+.download-card img {
+  position: relative;
+  width: 100%;
+}
+
+.download-card-content {
+  left: 3rem;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.download-card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .download-content {
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -784,4 +884,165 @@ body {
 .download-subtitle {
   font-size: 20px;
   color: #707071;
+}
+
+/*********** SERVICE ***********/
+
+.service-center {
+  text-align: center;
+  margin: 8rem 0;
+}
+
+.service-center .support-title {
+  color: #000;
+  font-size: 32px;
+  font-weight: 600;
+}
+.service-center .support-subtitle {
+  color: #000;
+  font-size: 20px;
+}
+
+/*********** CONTACT ***********/
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3rem 0 7rem;
+  gap: 1rem;
+}
+
+.contact-left {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-left-content {
+  padding: 6rem 9rem 6rem 2rem;
+}
+
+.contant-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.contant-subtitle {
+  font-size: 20px;
+  color: #707071;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-right input,
+textarea {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.contact-right input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.contact-right input,
+textarea {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+.contact-right textarea {
+  height: 7rem;
+  resize: none;
+}
+
+.contact-right label {
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-button {
+  width: 8rem;
+  height: 2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #0264fa;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/*********** SEARCH ***********/
+.search-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+.search-content h3 {
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 700;
+}
+
+.search-content input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 90%;
+  max-width: 30rem;
+  border: none;
+  border-bottom: 2px solid #e2e2e2;
+  background-color: transparent;
+}
+.search-content input:focus {
+  outline: none;
+  border-bottom: 2px solid #000000;
+}
+
+/*********** TABS ***********/
+
+.tabs {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 30%;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: blue;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.tab.active::after {
+  transform: scaleX(1);
+}
+
+.tab-content {
+  padding: 20px;
 }
