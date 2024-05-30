@@ -518,3 +518,204 @@
 .flip-13 .flip-text ul li .dot {
   background: #b9b9ff;
 }
+
+.flip-14 {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.flip-14 .mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(188, 193, 255, 0.63),
+    rgba(212, 214, 255, 0.13)
+  );
+  z-index: 1;
+}
+
+.flip-14-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.flip-14-loop {
+  position: absolute;
+  bottom: 0;
+  left: -12.15625em;
+  display: flex;
+  flex-direction: column;
+  transform-origin: 50% 50%;
+  transform: rotate(13deg);
+}
+
+.flip-banner {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.flip-banner-content {
+  height: 100%;
+  display: flex;
+  width: 200%;
+  animation: scroll 10s linear infinite;
+}
+
+.flip-banner-content-2 {
+  height: 100%;
+
+  display: flex;
+  width: 200%;
+  animation: scroll-2 10s linear infinite;
+}
+
+.flip-banner-content img,
+.flip-banner-content-2 img {
+  object-fit: contain;
+  width: 50%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scroll-2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.flip-15 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flip-15 .flip-text {
+  position: absolute;
+  bottom: 65%;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.flip-15 .flip-text h1 {
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+
+.flip-15 .flip-text p {
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-top: 1.25vw;
+}
+.flip-15 video {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.flip-16 {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #cdd2ff, #fff8f2);
+}
+
+.flip-16 .flip-text {
+  position: absolute;
+  top: calc(50% + 30px);
+  right: 10.43%;
+  transform: translateY(-50%);
+  text-align: right;
+  width: 20vw;
+}
+
+.flip-16 .flip-text h1 {
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+
+.flip-16 .flip-text p {
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-top: 1.25vw;
+}
+
+.flip-16 img {
+  position: absolute;
+  top: calc(50% + 30px);
+  left: 13.43%;
+  height: 25vw;
+  transform: translateY(-50%);
+}
+
+.flip-17 {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #f9f9ff;
+}
+
+.flip-17 .flip-text {
+  position: absolute;
+  top: calc(50% + 30px);
+  left: 10.43%;
+  width: 1.82292em;
+  transform: translateY(-50%);
+}
+
+.flip-17 .flip-text h1{
+  font-size: 2.5vw;
+}
+.flip-17 .flip-text p{
+  font-size: 1.5vw;
+}
+
+.flip-17-phone {
+  position: absolute;
+  top: calc(50% + 30px);
+  right: 10.43%;
+  height: 30vw;
+  transform: translateY(-50%);
+}
+
+.flip-17-chat {
+  position: absolute;
+  left: 33%;
+  bottom: 35%;
+  width: 20vw;
+  z-index: 2;
+}
+
+.flip-17-video {
+  position: absolute;
+  right: 12%;
+  bottom: 45%;
+  width: 30vw;
+  z-index: 2;
+}

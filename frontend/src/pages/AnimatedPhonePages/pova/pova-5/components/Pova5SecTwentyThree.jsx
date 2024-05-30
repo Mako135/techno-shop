@@ -1,8 +1,7 @@
 import arrow from "../assets/arrow.png";
 const Pova5SecTwentyThree = () => {
-
-    const figure =
-      "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/wifi-4g-1a580fb2.png";
+  const figure =
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/wifi-4g-1a580fb2.png";
   return (
     <div className="sec-23">
       <div className="sec-23-first">
