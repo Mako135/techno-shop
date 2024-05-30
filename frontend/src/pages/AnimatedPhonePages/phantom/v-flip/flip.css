@@ -1,0 +1,520 @@
+.flip-container {
+  background-color: #fff;
+}
+
+.flip-1 {
+  width: 100vw;
+  height: 100vh;
+}
+.flip-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-2 {
+  margin: 15vw auto;
+  display: grid;
+  max-width: 60%;
+  max-height: calc(80% - 48px);
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1.35fr 1.68fr 1fr;
+  grid-template-areas:
+    "design performance performance"
+    "design experience camera";
+  gap: 2vw;
+}
+
+.flip-2 .flip-card-1 img,
+.flip-2 .flip-card-2 img,
+.flip-2 .flip-card-3 img,
+.flip-2 .flip-card-4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.flip-2 .flip-card-1 img:hover,
+.flip-2 .flip-card-2 img:hover,
+.flip-2 .flip-card-3 img:hover,
+.flip-2 .flip-card-4 img:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.flip-2 .flip-card-1 p,
+.flip-2 .flip-card-2 p,
+.flip-2 .flip-card-3 p,
+.flip-2 .flip-card-4 p {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-size: 2vw;
+  font-weight: 600;
+  color: #fff;
+}
+
+.flip-2 .flip-card-2 p {
+  top: unset;
+  bottom: 10%;
+}
+.flip-2 .flip-card-3 p {
+  top: 5%;
+  color: #000;
+}
+
+.flip-2 .flip-card-1 {
+  position: relative;
+  grid-area: performance;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.flip-2 .flip-card-2 {
+  position: relative;
+  grid-area: design;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.flip-2 .flip-card-3 {
+  position: relative;
+  grid-area: experience;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.flip-2 .flip-card-4 {
+  position: relative;
+  grid-area: camera;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.flip-titles {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-titles h1 {
+  font-size: 8vw;
+  font-weight: 600;
+  margin-right: 2em;
+}
+.flip-titles h2 {
+  font-size: 8vw;
+  font-weight: 600;
+  margin-left: 2.04167em;
+  text-align: right;
+  color: #b9b9ff;
+}
+
+.flip-4 {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.flip-4-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 30px));
+  width: calc(100% - 2.54167em);
+  height: calc(100% - 1.58333em);
+  max-width: 75vw;
+  max-height: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+.flip-4-content video {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.flip-4-content .flip-text {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+.flip-4-content .flip-text .vl {
+  display: flex;
+  align-items: center;
+  height: 70%;
+  width: 2px;
+}
+.flip-4-content .flip-text h1 {
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+.flip-4-content .flip-text p {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.flip-5 {
+  position: relative;
+  height: 100vh;
+  background: #f5f5f7;
+}
+
+.flip-5-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  width: 70%;
+  aspect-ratio: 1373 / 652;
+  max-width: 90%;
+  max-height: 80%;
+  background-color: #fff;
+  border-radius: 1.15625em;
+  transform: translate(-50%, -50%);
+}
+
+.flip-5 .flip-text {
+  height: 100%;
+  position: relative;
+  padding: 3%;
+}
+.flip-5 .flip-text h1 {
+  font-size: 2.5vw;
+  font-weight: 600;
+  opacity: 1;
+}
+.flip-5 .flip-text p {
+  position: absolute;
+  font-size: 1.5vw;
+  font-weight: 500;
+  bottom: 5%;
+}
+
+.flip-5 video,
+.flip-5 img {
+  position: absolute;
+  width: 60%;
+  height: 90%;
+  object-fit: contain;
+  bottom: 0;
+  right: 0;
+}
+
+.flip-5 img {
+  opacity: 0;
+}
+
+#flip-text-2 {
+  opacity: 0;
+}
+
+.flip-6 {
+  height: 100vh;
+  position: relative;
+}
+
+.flip-6-content {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flip-6-content h1 {
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+
+.flip-6-content video {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.flip-6-content ul {
+  height: 20%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+
+.flip-6-content ul li {
+  display: flex;
+  gap: 1rem;
+}
+.flip-6-content ul li .dot {
+  background: #b9b9ff;
+}
+
+.flip-6-content ul li p {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.flip-7 {
+  height: 100vh;
+  position: relative;
+}
+
+.flip-7-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60vw;
+  height: 40vw;
+
+  transform: translate(-50%, calc(-50% + 30px));
+}
+
+.flip-7 .flip-slide-1 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 1rem;
+}
+
+.flip-7 .flip-slide-left {
+  display: grid;
+  grid-template-rows: 40% 60%;
+  gap: 1rem;
+}
+
+.flip-7 .box-1 {
+  background-color: #f5f5f7;
+  border-radius: 1rem;
+}
+.flip-7 .box-2 {
+  all: unset;
+  background-color: #f5f5f7;
+  border-radius: 1rem;
+}
+.flip-7 .box-3 {
+  background-color: #f5f5f7;
+  border-radius: 1rem;
+}
+
+.flip-8 {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f7;
+}
+
+.flip-8-content {
+  width: 75vw;
+  display: flex;
+  height: 30vw;
+  align-items: center;
+  gap: 5vw;
+  margin: auto;
+}
+
+.flip-8-content .flip-text {
+  width: 40%;
+}
+
+.flip-8-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.flip-8-content h1 {
+  font-size: 2.5vw;
+  font-weight: 600;
+  margin-bottom: 3vw;
+}
+.flip-8-content p {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.flip-10 {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  padding: 5vw;
+  width: 80vw;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.flip-10 .flip-text {
+  width: 40%;
+}
+
+.flip-10 p {
+  font-size: 1.5vw;
+  font-weight: 400;
+  color: #020202;
+  line-height: 1.23;
+  letter-spacing: 0.2px;
+}
+.flip-10 h1 {
+  font-size: 3.5vw;
+  font-weight: 600;
+  margin-bottom: 3vw;
+}
+
+.flip-10 h1 > span {
+  color: #b9b9ff;
+}
+
+.flip-10 .flip-10-slider-first img,
+.flip-10 .flip-10-slider-first video {
+  transform: scale(0.8);
+  transition: 0.3s;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.flip-10 .flip-10-slider-first .swiper-slide-active img,
+.flip-10 .flip-10-slider-first .swiper-slide-active video {
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.flip-10-slider {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.flip-10-slider-first {
+  height: 100vh;
+  width: 60vw;
+  margin: 0;
+}
+
+.thumbs-swiper {
+  width: 4rem;
+  height: 40vw;
+  margin: 0 0 0 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.thumbs-swiper .swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thumbs-swiper img,
+.thumbs-swiper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.thumbs-swiper .swiper-slide {
+  position: relative;
+}
+
+.thumbs-swiper .swiper-slide .overlay {
+  padding: 0;
+  border-radius: 2rem;
+}
+
+.thumbs-swiper .swiper-slide-active .overlay {
+  width: 0;
+}
+
+.flip-12 {
+  text-align: center;
+  overflow: hidden;
+}
+
+.flip-12 .flip-6-content {
+  height: 100%;
+  justify-content: space-around;
+}
+
+.flip-12 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.flip-12 ul li {
+  padding-left: 10vw;
+}
+.flip-12 video {
+  height: 50%;
+}
+
+.flip-13 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.flip-13 .flip-text {
+  position: absolute;
+  z-index: 4;
+  padding: 20vw 10vw;
+}
+
+.flip-13 video {
+  position: absolute;
+}
+
+.flip-13-video {
+  right: 0;
+  width: 70%;
+  bottom: 0;
+  height: 90%;
+  object-fit: cover;
+  object-position: 15% 15%;
+}
+
+.flip-13-video-1 {
+  height: 100%;
+  width: 80%;
+  object-fit: contain;
+  opacity: 0;
+  left: -10%;
+  top: 0;
+  object-position: 85% 70%;
+}
+
+.flip-13 .text-2 {
+  right: 0 !important;
+  opacity: 0;
+}
+
+.flip-13 .flip-text h1 {
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+
+.flip-13 .flip-text h3 {
+  font-size: 1.5vw;
+  font-weight: 600;
+  color: #000;
+  margin-top: 2vw;
+}
+.flip-13 .flip-text ul {
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin-top: 5vw;
+}
+.flip-13 .flip-text ul li {
+  list-style: none;
+  display: flex;
+}
+.flip-13 .flip-text ul li .dot {
+  background: #b9b9ff;
+}

@@ -19,6 +19,7 @@ import Spark20ProPlus from "./pages/AnimatedPhonePages/spark/Spark20-20Pro-20Pro
 import Spark20C from "./pages/AnimatedPhonePages/spark/spark20c-2024go/Spark20C";
 import SearchPage from "./pages/SearchPage";
 import Fold from "./pages/AnimatedPhonePages/phantom/v-fold/Fold";
+import Flip from "./pages/AnimatedPhonePages/phantom/v-flip/Flip";
 import DownloadPage from "./pages/DownloadPage";
 import PovaNeo from "./pages/AnimatedPhonePages/pova/pova-6-neo/PovaNeo";
 import PovaFive from "./pages/AnimatedPhonePages/pova/pova-5/PovaFive";
@@ -55,6 +56,7 @@ function App() {
               element={<Spark20ProPlus />}
             />
             <Route path="/phantom/fold" element={<Fold />} />
+            <Route path="/phantom/flip" element={<Flip />} />
           </Route>
         </Routes>
       </main>
