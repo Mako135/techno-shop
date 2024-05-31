@@ -15,7 +15,7 @@ const Resolution = ({ onResolutionChange }) => {
     <div className="category">
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="resolution"
           value="HD"
           checked={selectedResolution === "HD"}
@@ -25,7 +25,7 @@ const Resolution = ({ onResolutionChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="resolution"
           value="FHD"
           checked={selectedResolution === "FHD"}
@@ -35,7 +35,7 @@ const Resolution = ({ onResolutionChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="resolution"
           value="FWVGA"
           checked={selectedResolution === "FWVGA"}
@@ -45,7 +45,7 @@ const Resolution = ({ onResolutionChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="resolution"
           value="WVGA"
           checked={selectedResolution === "WVGA"}

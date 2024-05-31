@@ -8,7 +8,7 @@ const Accordion = ({ title, children, isOpen, toggleAccordion }) => {
   return (
     <div className="accordion">
       <div className="accordion-title" onClick={toggleAccordion}>
-        {title}
+        <div className="bold">{title}</div>
         {isOpen ? (
           <RiArrowUpSLine fontSize={24} />
         ) : (

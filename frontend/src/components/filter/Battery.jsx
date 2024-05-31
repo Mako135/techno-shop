@@ -6,8 +6,6 @@ const Battery = ({ onBatteryChange }) => {
 
   const handleBatteryChange = (event) => {
     const { value } = event.target;
-    console.log(value);
-
     const newValue = selectedBattery === value ? "" : value;
     setSelectedBattery(newValue);
     onBatteryChange(newValue);
@@ -17,7 +15,7 @@ const Battery = ({ onBatteryChange }) => {
     <div className="category">
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="battery"
           value="0-3000"
           checked={selectedBattery === "0-3000"}
@@ -27,7 +25,7 @@ const Battery = ({ onBatteryChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="battery"
           value="3000-5000"
           checked={selectedBattery === "3000-5000"}
@@ -37,7 +35,7 @@ const Battery = ({ onBatteryChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="battery"
           value="5000-"
           checked={selectedBattery === "5000-"}

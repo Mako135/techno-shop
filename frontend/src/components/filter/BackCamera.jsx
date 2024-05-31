@@ -12,9 +12,9 @@ const BackCamera = ({ onBackCameraChange }) => {
 
   const handleCameraChange = (event) => {
     const { value } = event.target;
-    const newValue = selectedCamera === value ? "" : value;
-    setSelectedCamera(newValue);
-    onBackCameraChange(newValue);
+    const newSelectedCamera = selectedCamera === value ? "" : value;
+    setSelectedCamera(newSelectedCamera);
+    onBackCameraChange(newSelectedCamera); 
   };
 
   return (
@@ -22,9 +22,9 @@ const BackCamera = ({ onBackCameraChange }) => {
       {cameras?.map((camera) => (
         <label key={camera.id}>
           <input
-            type="radio"
-            name="backCamera"
-            value={camera.id}
+            type="checkbox"
+            name="frontCamera"
+            value={camera.id.toString()}
             checked={selectedCamera === camera.id.toString()}
             onChange={handleCameraChange}
           />

@@ -6,15 +6,20 @@ const Category = ({ onCategoryChange }) => {
 
   const handleCategoryChange = (event) => {
     const { value } = event.target;
-    setSelectedCategory(value);
-    onCategoryChange(value); // Передаем выбранное значение категории в родительский компонент
+    if (selectedCategory === value) {
+      setSelectedCategory(""); // Снимаем выбор, если кликнули по уже выбранному чекбоксу
+      onCategoryChange("");
+    } else {
+      setSelectedCategory(value);
+      onCategoryChange(value);
+    }
   };
 
   return (
     <div className="category">
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="category"
           value="Phantom"
           checked={selectedCategory === "Phantom"}
@@ -24,7 +29,7 @@ const Category = ({ onCategoryChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="category"
           value="Spark"
           checked={selectedCategory === "Spark"}
@@ -34,7 +39,7 @@ const Category = ({ onCategoryChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="category"
           value="Camon"
           checked={selectedCategory === "Camon"}
@@ -44,7 +49,7 @@ const Category = ({ onCategoryChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="category"
           value="Pova"
           checked={selectedCategory === "Pova"}

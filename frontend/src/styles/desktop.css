@@ -10,7 +10,6 @@
 
 body {
   accent-color: #0264fa;
-  overflow-x: hidden;
   background-color: #f8f8f8;
   height: 100%;
 }
@@ -117,6 +116,87 @@ body {
   color: #fff;
 }
 
+/*********** BURGER MENU ***********/
+.mobile-menu {
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+}
+.mobile-menu img {
+  height: 20px;
+}
+
+.burger-button {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.burger-button div {
+  width: 30px;
+  height: 3px;
+  background: #0264FA;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.burger-button.open .line1 {
+
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-button.open .line2 {
+  opacity: 0;
+}
+
+.burger-button.open .line3 {
+  transform: rotate(-45deg) translate(9px, -9px);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index:19;
+  padding:0 2rem;
+}
+
+.menu a {
+  font-size: 2em;
+  text-decoration: none;
+}
+.menu p {
+  margin-top: 4rem;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu .mobile-menu {
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+
+
 /*********** FOOTER ***********/
 
 .footer {
@@ -195,7 +275,7 @@ body {
 .divider {
   width: 100%;
   height: 1px;
-  background-color: #e0dfe7;
+  background-color: #ccc;
 }
 .copyright {
   display: flex;
@@ -313,8 +393,9 @@ body {
   width: 100%;
   margin: 50px 0;
   max-width: 1272px;
-  max-height: 576px;
+  height: 576px;
   border-radius: 16px;
+  object-fit: cover;
 }
 /*********** PHONES ***********/
 .smartphones {
@@ -329,6 +410,16 @@ body {
 .phone-slider {
   max-width: 220px;
   height: 100%;
+}
+
+.smartphone-title {
+  position: relative;
+}
+
+.smartphone-title-link {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .phones {
@@ -452,13 +543,24 @@ body {
   max-height: min-content;
 }
 
+.filter .divider {
+  margin: 10px;
+}
+
 .filter .accordion-title {
   border-bottom: none;
 }
 
 .filter-title {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 24px;
   font-weight: 600;
+}
+
+.mobile-filter {
+  display: none;
 }
 
 .category {
@@ -476,7 +578,7 @@ body {
 .home-news {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
   gap: 1rem;
   background-color: #fff;
 }
@@ -494,6 +596,7 @@ body {
   border-radius: 8px;
   background-color: #f8f8f8;
   width: 100%;
+  min-width: 300px;
   max-width: 400px;
   max-height: 559px;
   margin: auto;
@@ -846,10 +949,9 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 20px;
   border-radius: 8px;
   max-width: 624px;
-  height: 300px;
+  max-height: 300px;
 }
 .download-card img {
   position: relative;
@@ -857,8 +959,8 @@ body {
 }
 
 .download-card-content {
-  left: 3rem;
-  top: 0;
+  left: 2%;
+  top: 2%;
   position: absolute;
   z-index: 2;
 }
