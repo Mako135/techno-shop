@@ -23,6 +23,7 @@ import Flip from "./pages/AnimatedPhonePages/phantom/v-flip/Flip";
 import DownloadPage from "./pages/DownloadPage";
 import PovaNeo from "./pages/AnimatedPhonePages/pova/pova-6-neo/PovaNeo";
 import PovaFive from "./pages/AnimatedPhonePages/pova/pova-5/PovaFive";
+import ServicePage from "./pages/ServicePage";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <Route path="/stocks" element={<Stocks />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/download" element={<DownloadPage />} />
+            <Route path="/services" element={<ServicePage />} />
 
             <Route path="/pova/5" element={<PovaFive />} />
             <Route path="/pova/6" element={<Pova6 />} />

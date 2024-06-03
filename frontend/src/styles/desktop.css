@@ -129,7 +129,6 @@ body {
 }
 
 .burger-button {
- 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -141,13 +140,12 @@ body {
 .burger-button div {
   width: 30px;
   height: 3px;
-  background: #0264FA;
+  background: #0264fa;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 .burger-button.open .line1 {
-
   transform: rotate(45deg) translate(5px, 5px);
 }
 
@@ -165,14 +163,14 @@ body {
   left: 0;
   width: 100vw;
   height: 100%;
-  background: #F8F8F8;
+  background: #f8f8f8;
   display: flex;
   flex-direction: column;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index:19;
-  padding:0 2rem;
+  z-index: 19;
+  padding: 0 2rem;
 }
 
 .menu a {
@@ -194,8 +192,6 @@ body {
   padding: 0;
   margin-bottom: 2rem;
 }
-
-
 
 /*********** FOOTER ***********/
 
@@ -1147,4 +1143,124 @@ textarea {
 
 .tab-content {
   padding: 20px;
+}
+
+/**************** Service ****************/
+
+.service-container {
+  background-color: #fff;
+}
+
+.service-container .container {
+  margin-bottom: 7rem;
+}
+
+.service-container .service-center {
+  margin: 0;
+  padding-top: 2rem;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 45rem;
+  margin: auto;
+}
+
+.service-list input {
+  padding: 10px;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+}
+
+.service-input-container {
+  position: relative;
+  font-size: 1rem;
+}
+
+.service-list select {
+  padding-right: 30px; /* Добавляем паддинг справа для места под стрелку */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none; /* Убираем стандартную стрелку */
+  -webkit-appearance: none; /* Убираем стандартную стрелку в Webkit */
+  -moz-appearance: none; /* Убираем стандартную стрелку в Firefox */
+  background: url('https://www.svgrepo.com/show/521469/arrow-down.svg') no-repeat right 10px center;
+  background-size: 2rem;
+}
+
+.service-list select option {
+  padding: 10px !important;
+}
+
+.service-input-container .service-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.service-input-container input {
+  width: 100%;
+  padding-left: 2rem;
+}
+
+.service-input-container input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.service-map-card {
+  display: grid;
+  grid-template-columns: 30% 68%;
+  justify-content: space-between;
+}
+
+.service-map-card img {
+  width: 100%;
+  height: 100%;
+  max-height: 352px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.service-left h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222222;
+}
+
+.service-left p {
+  color: #0264FA;
+  font-size: 14px;
+}
+.service-left span {
+  color: #707071;
+  font-size: 14px;
+}
+
+.service-left .service-left-icon {
+  color: #707071;
+  margin-right: 0.5rem;
+  width: 12px;
+  height: 12px;
+}
+
+.service-left ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-left ul li {
+  display: flex;
+  gap: 0.5rem;
 }

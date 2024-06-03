@@ -29,7 +29,7 @@ const Support = () => {
           <p className="support-subtitle">
             Список официальных поставщиков сервисных услуг Tecno
           </p>
-          <MoreLink link="/" text="Найти сервисный центр" />
+          <MoreLink link="/services" text="Найти сервисный центр" />
         </div>
         <div id="contact">
           <Contact />
