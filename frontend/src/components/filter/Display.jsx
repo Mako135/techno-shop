@@ -6,15 +6,20 @@ const Display = ({ onDisplayChange }) => {
 
   const handleDisplayChange = (event) => {
     const { value } = event.target;
-    setSelectedDisplay(value);
-    onDisplayChange(value); // Передаем выбранное значение дисплея в родительский компонент
+    if (selectedDisplay === value) {
+      setSelectedDisplay(""); // Снимаем выбор, если кликнули по уже выбранному чекбоксу
+      onDisplayChange("");
+    } else {
+      setSelectedDisplay(value);
+      onDisplayChange(value); // Передаем выбранное значение дисплея в родительский компонент
+    }
   };
 
   return (
     <div className="category">
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="display"
           value="5.0"
           checked={selectedDisplay === "5.0"}
@@ -24,7 +29,7 @@ const Display = ({ onDisplayChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="display"
           value="5.5"
           checked={selectedDisplay === "5.5"}
@@ -34,7 +39,7 @@ const Display = ({ onDisplayChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="display"
           value="5.65"
           checked={selectedDisplay === "5.65"}
@@ -44,7 +49,7 @@ const Display = ({ onDisplayChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="display"
           value="5.7"
           checked={selectedDisplay === "5.7"}
@@ -54,7 +59,7 @@ const Display = ({ onDisplayChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="display"
           value="6.0"
           checked={selectedDisplay === "6.0"}
@@ -64,7 +69,7 @@ const Display = ({ onDisplayChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="display"
           value="6.1"
           checked={selectedDisplay === "6.1"}
@@ -74,7 +79,7 @@ const Display = ({ onDisplayChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="display"
           value="6.2"
           checked={selectedDisplay === "6.2"}
@@ -84,7 +89,7 @@ const Display = ({ onDisplayChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="display"
           value="6.35"
           checked={selectedDisplay === "6.35"}
@@ -94,7 +99,7 @@ const Display = ({ onDisplayChange }) => {
       </label>
       <label>
         <input
-          type="radio"
+          type="checkbox"
           name="display"
           value="6.4"
           checked={selectedDisplay === "6.4"}

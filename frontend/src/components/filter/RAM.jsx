@@ -11,13 +11,8 @@ const RAM = ({ onRAMChange }) => {
   }, [fetchMemories]);
 
   const handleRAMChange = (event) => {
-    const { value, checked } = event.target;
-    let newSelectedRAM = [];
-    if (checked) {
-      newSelectedRAM = [...selectedRAM, value];
-    } else {
-      newSelectedRAM = selectedRAM.filter((ram) => ram !== value);
-    }
+    const { value } = event.target;
+    const newSelectedRAM = selectedRAM === value ? "" : value;
     setSelectedRAM(newSelectedRAM);
     onRAMChange(newSelectedRAM);
   };
@@ -29,8 +24,8 @@ const RAM = ({ onRAMChange }) => {
           <input
             type="checkbox"
             name="ram"
-            value={memory.id}
-            checked={selectedRAM.includes(memory.id.toString())}
+            value={memory.id.toString()}
+            checked={selectedRAM === memory.id.toString()}
             onChange={handleRAMChange}
           />
           {memory.size} GB

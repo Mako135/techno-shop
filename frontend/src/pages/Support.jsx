@@ -4,6 +4,7 @@ import MoreLink from "../components/link/MoreLink";
 import Tabs from "../components/tabs/Tabs";
 import Contact from "../components/support/Contact";
 import { SUPPORT } from "../services/accordion/AccordionData";
+import { GoArrowRight } from "react-icons/go";
 const Support = () => {
   return (
     <div>
@@ -11,7 +12,12 @@ const Support = () => {
         <div className="support-banner-content">
           <p className="support-title">Добро пожаловать в службу поддержки!</p>
           <p className="support-subtitle">Как мы можем вам помочь?</p>
-          <MoreLink link="#contact" text="Написать нам" color="#fff" />
+          <a className="more-links" href="#contact">
+            <div className="more-link">
+              <p style={{ color: "#fff" }}>Написать нам</p>
+              <GoArrowRight style={{ color: "#fff" }} fontSize={20} />
+            </div>
+          </a>
         </div>
       </div>
 
@@ -23,7 +29,7 @@ const Support = () => {
           <p className="support-subtitle">
             Список официальных поставщиков сервисных услуг Tecno
           </p>
-          <MoreLink link="/" text="Найти сервисный центр" />
+          <MoreLink link="/services" text="Найти сервисный центр" />
         </div>
         <div id="contact">
           <Contact />

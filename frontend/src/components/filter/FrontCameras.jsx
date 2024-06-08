@@ -12,8 +12,9 @@ const FrontCameras = ({ onFrontCameraChange }) => {
 
   const handleCameraChange = (event) => {
     const { value } = event.target;
-    setSelectedCamera(value);
-    onFrontCameraChange(value); // Передаем новое значение фронтальной камеры в родительский компонент
+    const newSelectedCamera = selectedCamera === value ? "" : value;
+    setSelectedCamera(newSelectedCamera);
+    onFrontCameraChange(newSelectedCamera); // Передаем новое значение фронтальной камеры в родительский компонент
   };
 
   return (
@@ -21,9 +22,9 @@ const FrontCameras = ({ onFrontCameraChange }) => {
       {cameras?.map((camera) => (
         <label key={camera.id}>
           <input
-            type="radio"
+            type="checkbox"
             name="frontCamera"
-            value={camera.id}
+            value={camera.id.toString()}
             checked={selectedCamera === camera.id.toString()}
             onChange={handleCameraChange}
           />
@@ -33,7 +34,6 @@ const FrontCameras = ({ onFrontCameraChange }) => {
     </div>
   );
 };
-
 FrontCameras.propTypes = {
   onFrontCameraChange: PropTypes.func.isRequired
 };

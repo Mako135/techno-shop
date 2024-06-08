@@ -8,6 +8,7 @@ import FrontCameras from "../components/filter/FrontCameras";
 import BackCamera from "../components/filter/BackCamera";
 import Battery from "../components/filter/Battery";
 import useFilteredPhoneStore from "../services/store/FlteredPhoneStore";
+import { LuSettings2 } from "react-icons/lu";
 
 const Filter = () => {
   const { fetchPhones } = useFilteredPhoneStore();
@@ -21,6 +22,8 @@ const Filter = () => {
     touchId: false,
     battery: ""
   });
+
+  console.log(123);
 
   const handleChange = (type, value) => {
     const newFilters = { ...filters, [type]: value };
@@ -100,10 +103,10 @@ const Filter = () => {
 
   return (
     <div className="filter">
-      <p className="filter-title">Фильтры</p>
-      <div style={{ padding: 10 }}>
+      <p className="filter-title">
+        Фильтры <LuSettings2 />
+      </p>
         <div className="divider"></div>
-      </div>
       <div className="category">
         <label htmlFor="touchId" style={{ padding: 10 }}>
           <input
