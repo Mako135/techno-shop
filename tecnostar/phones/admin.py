@@ -2,7 +2,6 @@ from django.contrib import admin
 from django.urls import reverse
 from django.utils.html import format_html
 from djangoql.admin import DjangoQLSearchMixin
-from django.conf import settings
 
 from mptt.admin import MPTTModelAdmin
 from modeltranslation.admin import TranslationAdmin
@@ -36,7 +35,6 @@ class AbstractAdmin(admin.ModelAdmin):
 
     class Meta:
         abstract = True
-
 
 @admin.register(Color)
 class ColorAdmin(AbstractAdmin):
@@ -98,29 +96,61 @@ class PhoneAdmin(TranslationAdmin, admin.ModelAdmin):
     add_fieldsets = (
         ('Основные характеристики (ТЕХНИЧЕСКИЕ)', {
             'classes': ('wide',),
-            'fields': ('category', 'title', 'slug', 'price', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery', 'has_download_url')
+            'fields': ('category', 'title', 'slug', 'price', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery', )
         }),
         ('Подробное описание (ПОДДЕРЖИВАЕТ МНОГОЯЗЫЧНОСТЬ)', {
             'classes': ('wide',),
-            'fields': ('main_info', 'characteristics', 'camera_info', 'sensors', 'kit_info')
+            'fields':  ('operating_system', 
+            'cpu_info',
+            'size',
+            'display_info',
+            'resolution_info',
+            'camera_info',
+            'connection',
+            'sensors',
+            'battery_info',
+            'sound_info',
+            'cellurral_info',
+            'audio_video_info',
+            'complete_set',
+            'biometric_info',
+            'parameters_info',
+            'record_video',
+            'possible_connection',)
         })
     )
 
     fieldsets = (
         ('Основные характеристики (ТЕХНИЧЕСКИЕ)', {
             'classes': ('grp-collapse grp-open',),
-            'fields': ('category', 'title', 'slug', 'price','status', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery','has_download_url')
+            'fields': ('category', 'title', 'slug', 'price','status', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery')
         }),
         ('Подробное описание (ПОДДЕРЖИВАЕТ МНОГОЯЗЫЧНОСТЬ)', {
             'classes': ('grp-collapse grp-open',),
-            'fields': ('main_info', 'characteristics', 'camera_info', 'sensors', 'kit_info')
+            'fields': ('operating_system', 
+            'cpu_info',
+            'size',
+ 
+            'resolution_info',
+            'camera_info',
+            'connection',
+            'sensors',
+            'battery_info',
+            'display_info',
+            'sound_info',
+            'cellurral_info',
+            'audio_video_info',
+            'complete_set',
+            'biometric_info',
+            'parameters_info',
+            'record_video',
+            'possible_connection',)
         })
     )
 
     def display_phone_url(self, obj):
-        return f"{settings.DOMAIN}/phones/{obj.slug}"
-        # link = reverse('phone-detail', args=[obj.slug])
-        # return format_html('<a href="{}">Смотреть на сайте</a>', link, obj.slug)
+        link = reverse('phone-detail', args=[obj.slug])
+        return format_html('<a href="{}">Смотреть на сайте</a>', link, obj.slug)
     
     display_phone_url.short_description = 'Ссылка на сайте'
 
@@ -146,8 +176,3 @@ admin.site.register(Mailing)
 admin.site.register(CameraInfo)
 admin.site.register(Phone, PhoneAdmin) 
 admin.site.register(News, NewsAdmin)
-# admin.site.register(Store, StoreAdmin)
-# admin.site.register(City, CityAdmin)
-
-
-

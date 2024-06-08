@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'django_filters',
     'djangoql',
     'admin_reorder',
+    'colorfield',
 
     # Local apps
     'phones',
@@ -109,23 +110,23 @@ WEBSITE_URL = os.getenv('WEBSITE_URL')
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv('DB_NAME'),
+#         'USER': os.getenv('DB_USER'),
+#         'PASSWORD': os.getenv('DB_PASSWORD'),
+#         'HOST': os.getenv('DB_HOST'),
+#         'PORT': os.getenv('DB_PORT'),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -237,16 +238,6 @@ GRAPPELLI_CLEAN_INPUT_TYPES = os.getenv('GRAPPELLI_CLEAN_INPUT_TYPES')
 
 ADMIN_REORDER = (
     'sites',
-    
-    {'app': 'phones', 
-    'label': 'Основные модели',
-    'models': (
-        'phones.City',
-        'phones.Phone',
-        'phones.Contact',
-        'phones.News',
-        'phones.Store'
-    )},
 
     {'app': 'phones', 
     'label': 'Дополнительные модели',
@@ -260,7 +251,19 @@ ADMIN_REORDER = (
         'phones.Mailing',
         'phones.StoreURLField',
     )},
+    
+    {'app': 'phones', 
+    'label': 'Основные модели',
+    'models': (
+        'phones.City',
+        'phones.Phone',
+        'phones.Contact',
+        'phones.News',
+        'phones.Store'
+    )},
 
 
     {'app': 'auth', 'label': 'Авторизация'},
+
+    
 )
