@@ -13,7 +13,7 @@ const FourthSection = () => {
       scrollTrigger: {
         trigger: ".fourth-section",
         start: "top top",
-        end: "+=800% center",
+        end: "+=300% center",
         scrub: true,
         pin: true,
         markers: true // Optional, for debugging
@@ -21,27 +21,21 @@ const FourthSection = () => {
     });
 
     tl.to(".slide-1", { xPercent: -100, opacity: 0.5, duration: 2 })
-      
+
       .fromTo(
         ".slide-2",
         { xPercent: 100, opacity: 0 },
         { xPercent: 0, opacity: 1, duration: 1 }
       )
-      .add(
-        gsap.to(".progress-bar", { xPercent: 100, duration: 1 }),
-        "-=1" // Запуск анимации прогресс-бара одновременно с анимацией слайда
-      )
+      .to(".progress-bar", { xPercent: 100, duration: 1 }, "<") // синхронизация с началом предыдущей анимации
       .to(".slide-2", { xPercent: -100, opacity: 0.5, duration: 2 })
-      
+
       .fromTo(
         ".slide-3",
         { xPercent: 100, opacity: 0 },
         { xPercent: 0, opacity: 1, duration: 1 }
       )
-      .add(
-        gsap.to(".progress-bar", { xPercent: 200, duration: 1 }),
-        "-=1" // Запуск анимации прогресс-бара одновременно с анимацией слайда
-      );
+      .to(".progress-bar", { xPercent: 200, duration: 1 }, "<"); // синхронизация с началом предыдущей анимации
   }, []);
 
   return (

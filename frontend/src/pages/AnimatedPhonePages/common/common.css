@@ -413,10 +413,6 @@
   margin: 10vw 2vw;
 }
 
-.ninth-section img {
-  width: 100%;
-  object-fit: contain;
-}
 
 .section-title {
   width: 100%;
@@ -432,6 +428,7 @@
 
 .section-banner {
   margin: 5vw 0 2vw;
+  width: 100%;
 }
 
 .banner-footer {
