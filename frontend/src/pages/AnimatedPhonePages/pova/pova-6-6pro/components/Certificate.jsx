@@ -22,8 +22,8 @@ const Certificate = () => {
       opacity: 0,
       duration: 1,
     });
-      tl.from(".certificate-title", { opacity: 0, y: 50, duration: 1 })
-        .from(".certificate-subtitle", { opacity: 0, y: 50, duration: 1 })
+      tl.from(".certificate .pova-title", { opacity: 0, y: 50, duration: 1 })
+        .from(".certificate .pova-subtitle", { opacity: 0, y: 50, duration: 1 })
         .from(".overlay img", { opacity: 0, y: 50, duration: 1 });
   }, []);
 

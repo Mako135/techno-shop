@@ -53,7 +53,7 @@ const Design = ({backImg, frontImg, children, width}) => {
 Design.propTypes = {
   backImg: PropTypes.string.isRequired,
   frontImg: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
+  width: PropTypes.string,
   children: PropTypes.any.isRequired
 };
 

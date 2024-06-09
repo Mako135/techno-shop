@@ -21,6 +21,8 @@
 
 .pova-container {
   background-color: #000;
+  overflow-x: hidden;
+
 }
 
 .pova-banner {

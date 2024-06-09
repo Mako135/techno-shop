@@ -18,7 +18,7 @@ const ContentSection = ({ children, backImg, backPos }) => {
 ContentSection.propTypes = {
   children: PropTypes.any.isRequired,
   backImg: PropTypes.string.isRequired,
-  backPos: PropTypes.string.isRequired
+  backPos: PropTypes.string
 };
 
 export default ContentSection;

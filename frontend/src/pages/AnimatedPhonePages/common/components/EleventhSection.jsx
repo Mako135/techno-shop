@@ -14,7 +14,9 @@ const EleventhSection = () => {
         return -150;
       } else if (window.innerWidth > 768) {
         return -125;
-      } 
+      } else {
+        return -100;
+      }
     };
     const yValue2 = yValue() + 100;
     const tl = gsap.timeline({

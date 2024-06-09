@@ -18,7 +18,7 @@ import Footer from '../../../components/footer/Footer'
 const Common30 = () => {
 
   return (
-    <div>
+    <div className="camon-main">
       <FirstSection />
       <SecondSection />
       <ThirdSection />

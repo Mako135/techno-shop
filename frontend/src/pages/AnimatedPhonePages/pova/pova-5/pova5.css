@@ -1,5 +1,6 @@
 .pova-5-container {
   background-color: black;
+  overflow-x: hidden;
 }
 
 .pova5-one {
