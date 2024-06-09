@@ -2,11 +2,12 @@ from django.db import models
 from django.utils.translation import gettext as _
 from django.conf import settings
 from django.utils.text import slugify
-
-from ckeditor.fields import RichTextField
 from django.urls import reverse
 from django.conf import settings
 from django.urls import reverse
+
+from ckeditor.fields import RichTextField
+from colorfield.fields import ColorField
 
 from phones.managers import PublishedManager
 
@@ -75,6 +76,7 @@ class Category(models.Model):
 class Color(models.Model):
     name = models.CharField(_('Название цвета'), max_length=100, help_text=_('Введите название цвета'))
     slug = models.SlugField(max_length=100, unique=True)
+    color = ColorField(format="hexa", default='#FF0000')
 
     class Meta:
         verbose_name = _('Цвет')
@@ -144,8 +146,8 @@ class Phone(models.Model):
     slug = models.SlugField(max_length=100, unique=True) 
     status = models.CharField(_('Статус на сайте'), max_length=10, choices=STATUS_CHOICES, default=DRAFT)
 
+    # Для филтрации и поиска
     display = models.FloatField(_('Дисплей'), choices=DISAPLAY_CHOICES, help_text=_('Выберите диагональ дисплея'), default=FIVE_INCH)
-
     price = models.FloatField(_('Цена'), help_text=_('Введите цену телефона'), default=100000)
     memories = models.ManyToManyField(
         'Memory', related_name='phones'
@@ -156,17 +158,29 @@ class Phone(models.Model):
     has_touch_id = models.BooleanField(_('Есть Touch ID'), default=False)
     battery = models.FloatField(_('Батарея'), help_text=_('Введите емкость батареи'), default=3500)
     inner_link = models.URLField(_('Внутренняя ссылка'), max_length = 200, blank=True)
-    has_download_url = models.BooleanField(_('Есть ссылка на скачивание'), default=False)
     
-    main_info = RichTextField(_('Основная информация'), config_name='awesome_ckeditor', help_text=_('Введите основную информацию о телефоне'))
-    characteristics = RichTextField(_('Характеристики'), config_name='awesome_ckeditor',  help_text=_('Введите характеристики телефона'))
+    operating_system = RichTextField(_('Операционная система'), config_name='awesome_ckeditor', help_text=_('Введите информацию об операционной системе'))
+    cpu_info = RichTextField(_('Процессор'), config_name='awesome_ckeditor', help_text=_('Введите информацию о процессоре'))
+
     network = models.ManyToManyField(
         'Network', related_name='phones'
     )
+   
+    size = RichTextField(_('Размеры'), config_name='awesome_ckeditor', help_text=_('Введите информацию о размерах'))
+    display_info = RichTextField(_('Дисплей'), config_name='awesome_ckeditor', help_text=_('Введите информацию о дисплее'))
+    resolution_info = RichTextField(_('Разрешение'), config_name='awesome_ckeditor', help_text=_('Введите информацию о разрешении'))
     camera_info = RichTextField(_('Камера'), config_name='awesome_ckeditor', help_text=_('Введите информацию о камере'))
+    connection = RichTextField(_('Подключения'), config_name='awesome_ckeditor', help_text=_('Введите информацию о подключениях'))
     sensors = RichTextField(_('Датчики'), config_name='awesome_ckeditor', help_text=_('Введите информацию о датчиках'))
-    kit_info = RichTextField(_('Комплект поставки'), config_name='awesome_ckeditor', help_text=_('Введите информацию о комплекте поставки'))
-    
+    battery_info = RichTextField(_('Батарея'), config_name='awesome_ckeditor', help_text=_('Введите информацию о батарее'))
+    sound_info = RichTextField(_('Динамики'), config_name='awesome_ckeditor', help_text=_('Введите информацию о динамике'))
+    cellurral_info = RichTextField(_('Сотовая связь'), config_name='awesome_ckeditor', help_text=_('Введите информацию о сотовой связи'))
+    audio_video_info = RichTextField(_('Аудио и видео'), config_name='awesome_ckeditor', help_text=_('Введите информацию об аудио и видео'))
+    complete_set = RichTextField(_('Комплектация'), config_name='awesome_ckeditor', help_text=_('Введите информацию о комплектации'))
+    biometric_info = RichTextField(_('Биометрия'), config_name='awesome_ckeditor', help_text=_('Введите информацию о биометрии'))
+    parameters_info = RichTextField(_('Параметры'), config_name='awesome_ckeditor', help_text=_('Введите информацию о параметрах'))
+    record_video = RichTextField(_('Запись видео'), config_name='awesome_ckeditor', help_text=_('Введите информацию о записи видео'))
+    possible_connection = RichTextField(_('Возможные подключения'), config_name='awesome_ckeditor', help_text=_('Введите информацию о возможных подключениях'))
 
     published = PublishedManager()
 
@@ -280,7 +294,7 @@ class Contact(models.Model):
     title = models.CharField(_('Название'), max_length=100, help_text=_('Введите название центра'))
     address_line = models.CharField(_('Адрес'), max_length=255, help_text=_('Введите адрес центра'))
     phone_line = models.CharField(_('Контакты'), max_length=255, help_text=_('Введите контакты (номера для связи)'))
-    email_line = models.CharField(_('Почта'), max_length=255, help_text=_('Введите адрес электронной почты'))
+    work_time = models.CharField(_('Время работы'), max_length=255, help_text=_('Введите время работы'))
     latitude = models.FloatField(_('Широта'), help_text=_('Введите широту'))
     longitude = models.FloatField(_('Долгота'), help_text=_('Введите долготу'))
     

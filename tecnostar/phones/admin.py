@@ -36,7 +36,6 @@ class AbstractAdmin(admin.ModelAdmin):
     class Meta:
         abstract = True
 
-
 @admin.register(Color)
 class ColorAdmin(AbstractAdmin):
     pass
@@ -97,22 +96,55 @@ class PhoneAdmin(TranslationAdmin, admin.ModelAdmin):
     add_fieldsets = (
         ('Основные характеристики (ТЕХНИЧЕСКИЕ)', {
             'classes': ('wide',),
-            'fields': ('category', 'title', 'slug', 'price', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery', 'has_download_url')
+            'fields': ('category', 'title', 'slug', 'price', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery', )
         }),
         ('Подробное описание (ПОДДЕРЖИВАЕТ МНОГОЯЗЫЧНОСТЬ)', {
             'classes': ('wide',),
-            'fields': ('main_info', 'characteristics', 'camera_info', 'sensors', 'kit_info')
+            'fields':  ('operating_system', 
+            'cpu_info',
+            'size',
+            'display_info',
+            'resolution_info',
+            'camera_info',
+            'connection',
+            'sensors',
+            'battery_info',
+            'sound_info',
+            'cellurral_info',
+            'audio_video_info',
+            'complete_set',
+            'biometric_info',
+            'parameters_info',
+            'record_video',
+            'possible_connection',)
         })
     )
 
     fieldsets = (
         ('Основные характеристики (ТЕХНИЧЕСКИЕ)', {
             'classes': ('grp-collapse grp-open',),
-            'fields': ('category', 'title', 'slug', 'price','status', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery','has_download_url')
+            'fields': ('category', 'title', 'slug', 'price','status', 'display', 'memories', 'resolution', 'network', 'front_camera', 'back_camera', 'has_touch_id', 'battery')
         }),
         ('Подробное описание (ПОДДЕРЖИВАЕТ МНОГОЯЗЫЧНОСТЬ)', {
             'classes': ('grp-collapse grp-open',),
-            'fields': ('main_info', 'characteristics', 'camera_info', 'sensors', 'kit_info')
+            'fields': ('operating_system', 
+            'cpu_info',
+            'size',
+ 
+            'resolution_info',
+            'camera_info',
+            'connection',
+            'sensors',
+            'battery_info',
+            'display_info',
+            'sound_info',
+            'cellurral_info',
+            'audio_video_info',
+            'complete_set',
+            'biometric_info',
+            'parameters_info',
+            'record_video',
+            'possible_connection',)
         })
     )
 
@@ -144,8 +176,3 @@ admin.site.register(Mailing)
 admin.site.register(CameraInfo)
 admin.site.register(Phone, PhoneAdmin) 
 admin.site.register(News, NewsAdmin)
-# admin.site.register(Store, StoreAdmin)
-# admin.site.register(City, CityAdmin)
-
-
-

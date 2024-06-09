@@ -47,7 +47,7 @@ function App() {
             <Route path="/services" element={<ServicePage />} />
 
             <Route path="/pova/5" element={<PovaFive />} />
-            <Route path="/pova/6" element={<Pova6 />} />
+            <Route path="ф" element={<Pova6 />} />
             <Route path="/pova/neo" element={<PovaNeo />} />
             <Route path="/pova/6-pro" element={<Pova6Pro />} />
             <Route path="/camon/30" element={<Common30 />} />
