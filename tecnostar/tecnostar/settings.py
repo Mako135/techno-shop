@@ -29,13 +29,14 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost:5173']
+ALLOWED_HOSTS = ['*']
 DOMAIN = os.getenv('DOMAIN')
 
 # CORS and CSRF Settings
-CSRF_TRUSTED_ORIGINS = ['http://localhost:5173']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', 'http://192.168.1.83:5173']
 CSRF_COOKIE_SECURE = os.getenv('CSRF_COOKIE_SECURE')
-CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+# CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 SESSION_COOKIE_SECURE = os.getenv('SESSION_COOKIE_SECURE')
 

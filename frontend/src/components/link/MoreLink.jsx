@@ -17,7 +17,7 @@ const MoreLink = ({ link, color, text }) => {
 
 
 MoreLink.propTypes = {
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
   text: PropTypes.string.isRequired,
   color: PropTypes.string,
 };

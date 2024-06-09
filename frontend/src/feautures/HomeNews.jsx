@@ -2,6 +2,7 @@ import NewsCard from "../components/news/NewsCard";
 import img from "../assets/news.png";
 
 const News = () => {
+  
   return (
     <div className="home-news">
       <NewsCard

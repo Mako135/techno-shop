@@ -1,5 +1,5 @@
 
-export const fetchPhones = async url => {
+export const fetchData = async url => {
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error("Ошибка при получении данных");

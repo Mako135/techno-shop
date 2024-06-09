@@ -50,10 +50,10 @@ const MobileMenu = () => {
           </NavLink>
           <div className="divider"></div>
 
-          <NavLink className="link" to="/accessories" onClick={toggleMenu}>
+          {/* <NavLink className="link" to="/accessories" onClick={toggleMenu}>
             {translations[language].header.accessories}
           </NavLink>
-          <div className="divider"></div>
+          <div className="divider"></div> */}
 
           <NavLink className="link" to="/where-to-buy" onClick={toggleMenu}>
             {translations[language].header.whereToBuy}
@@ -80,11 +80,10 @@ const MobileMenu = () => {
           </NavLink>
         </div>
 
-        <p onClick={handleLanguageChange}>
+        <div onClick={handleLanguageChange} className="">
           <div className="divider" style={{ marginBottom: "1rem" }}></div>
-
           {language === "ru" ? "Kazakhstan (русский)" : "Kazakhstan (қазақша)"}
-        </p>
+        </div>
       </div>
     </>
   );

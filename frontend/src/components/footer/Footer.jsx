@@ -19,7 +19,7 @@ const Footer = ({ className }) => {
   return screenWidth > 1024 ? (
     <DesktopFooter className={className} />
   ) : (
-    <MobileFooter />
+    <MobileFooter className={className} />
   );
 };
 

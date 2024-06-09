@@ -23,9 +23,8 @@ const Filter = () => {
     battery: ""
   });
 
-  console.log(123);
-
   const handleChange = (type, value) => {
+    console.log(`Updating filter ${type} to ${value}`);
     const newFilters = { ...filters, [type]: value };
     setFilters(newFilters);
     fetchPhones(newFilters);
@@ -33,6 +32,7 @@ const Filter = () => {
 
   const handleTouchIdChange = (event) => {
     const { checked } = event.target;
+    console.log(`Touch ID changed to ${checked}`);
     handleChange("touchId", checked);
   };
 
@@ -106,7 +106,7 @@ const Filter = () => {
       <p className="filter-title">
         Фильтры <LuSettings2 />
       </p>
-        <div className="divider"></div>
+      <div className="divider"></div>
       <div className="category">
         <label htmlFor="touchId" style={{ padding: 10 }}>
           <input

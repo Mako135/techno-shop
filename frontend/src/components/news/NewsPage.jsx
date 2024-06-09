@@ -1,61 +1,40 @@
 import { Link } from "react-router-dom";
-import img from "../../assets/news.png";
 import arrow from "../../assets/arrow.png";
 import Footer from "../footer/Footer";
+import { useParams } from "react-router-dom";
+import useNewsStore from "../../services/store/NewsStore";
+import useLanguageStore from "../../services/store/useLanguageStore";
+import { useEffect } from "react";
+import parse from "html-react-parser";
 
 const NewsPage = () => {
+  const { newsId } = useParams();
+  const { newsDetail, fetchNewsById } = useNewsStore();
+  const { language } = useLanguageStore();
+  const safeParse = (content) =>
+    typeof content === "string" ? parse(content) : null;
+  useEffect(() => {
+    fetchNewsById(newsId);
+  }, [newsId, fetchNewsById, language]);
+
   return (
     <div>
       <div className="container">
         <div className="news-header-content">
           <div className="news-header-date">
-            <p>14 апреля</p>
+            <p>{newsDetail?.created_at}</p>
             <div className="vl"></div>
-            <p>Москва</p>
+            <p>{newsDetail?.city?.name}</p>
           </div>
           <div className="news-header-title">
-            <p>
-              Заяви о Себе: инновационный проект TECNO Mobile и Manchester City
-              претендует на звание лучшей коллаборации бренда c футбольным
-              клубом на FBA 2022
-            </p>
+            <p>{newsDetail?.title}</p>
           </div>
           <div className="divider"></div>
-          <div className="news-header-subtitle">
-            Совместный проект TECNO Mobile и Manchester City #AnnounceYourself
-            включен в шорт–лист конкурса «Лучшая коллаборация бренда 2022 года с
-            футбольным клубом».
-          </div>
+          <div className="news-header-subtitle">{newsDetail?.description}</div>
         </div>
         <div className="news-main-content">
-          <img src={img} alt="" />
-          <p className="news-main-content-title">
-            Создателям проекта удалось создать целый мир, который позволил
-            болельщикам взаимодействовать с клубом Manchester City.
-          </p>
-          <p className="news-main-content-subtitle">
-            Ведущая премия отрасли Football Business Awards включила совместный
-            проект TECNO Mobile и Manchester City #AnnounceYourself в шорт–лист
-            конкурса «Лучшая коллаборация бренда 2022 года с футбольным клубом».
-            Проект #AnnounceYourself объединил в себе передовые технологии
-            дополненной реальности, вселенную легендарного клуба и мечты
-            футбольных фанатов со всего мира. Проект получил ошеломительный
-            успех, чем привлек внимание лидеров футбольной индустрии. Участники
-            смогли погрузиться в путешествие по тренировочной клубной базе,
-            посетить легендарный стадион Etihad и прогуляться по городку
-            футбольной академии, а также подписать виртуальный контракт и
-            выбрать игровой номер в команде. Проект #AnnounceYourself
-            предоставил футбольным болельщикам уникальную возможность воплотить
-            в жизнь мечты, поддерживая любимый клуб. С помощью дополнительной
-            реальности бренд TECNO продемонстрировал уникальную технологию
-            спортивного маркетинга и укрепил присутствие бренда на мировой
-            арене. Инновационный опыт TECNO целиком отражает миссию бренда, как
-            передовой технологической компании.
-          </p>
-          <p className="news-main-content-ps">
-            Пришло время отправиться туда, где Вы никогда не были! <br />
-            Приготовьтесь #AnnounceYourself!
-          </p>
+          <img src={newsDetail?.preview_image} alt="" />
+          <p>{safeParse(newsDetail?.content)}</p>
         </div>
 
         <div className="news-main-navigation">

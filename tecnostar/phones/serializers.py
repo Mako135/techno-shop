@@ -122,21 +122,26 @@ class PhoneSerializer(ModelSerializer):
         
 
 
-class NewsSerializer(ModelSerializer):
-    class Meta:
-        model = News
-        fields = ('title', 'slug', 'description', 'content', 'created_at', 'pattern', 'preview_image')
 
-class NewsListSerializer(ModelSerializer):
-    class Meta:
-        model = News
-        fields = ('title', 'slug', 'description', 'created_at', 'pattern', 'preview_image')
 
 
 class CitySerializer(ModelSerializer):
     class Meta:
         model = City
         fields = ('__all__')
+
+class NewsSerializer(ModelSerializer):
+    city = CitySerializer(read_only=True, many=False)
+    class Meta:
+        model = News
+        fields = ('title', 'slug', 'description', 'content', 'created_at', 'pattern', 'preview_image', 'city')
+        
+
+class NewsListSerializer(ModelSerializer):
+    city = CitySerializer(read_only=True, many=False)
+    class Meta:
+        model = News
+        fields = ('title', 'slug', 'description', 'created_at', 'pattern', 'preview_image', 'city')
 
 class ContactListSerializer(ModelSerializer):
     city = CitySerializer(read_only=True, many=False)

@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import useLanguageStore from "./useLanguageStore";
 import { constructUrl } from "../url/urlCollector";
-import { fetchPhones } from "../requests/requests";
+import { fetchData } from "../requests/requests";
 
 const useFilteredPhoneStore = create(set => ({
   phones: [],
@@ -14,7 +14,7 @@ const useFilteredPhoneStore = create(set => ({
 
     try {
       const url = constructUrl(params, language);
-      const data = await fetchPhones(url);
+      const data = await fetchData(url);
 
       const phones = data;
 

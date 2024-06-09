@@ -7,49 +7,49 @@ import { useEffect, useState } from "react";
 import useLanguageStore from "../../services/store/useLanguageStore.js";
 
 const DesktopMenu = () => {
-    const [isLinkPresent, setIsLinkPresent] = useState(false);
-    const { language, setLanguage } = useLanguageStore();
+  const [isLinkPresent, setIsLinkPresent] = useState(false);
+  const { language, setLanguage } = useLanguageStore();
 
-    const handleLanguageChange = (event) => {
-      setLanguage(event.target.value);
+  const handleLanguageChange = (event) => {
+    setLanguage(event.target.value);
+  };
+
+  const checkLink = () => {
+    const link = window.location.href;
+    if (
+      link === "http://localhost:5173/about" ||
+      link === "http://localhost:5173/about#history-block"
+    ) {
+      setIsLinkPresent(true);
+    } else {
+      setIsLinkPresent(false);
+    }
+  };
+
+  useEffect(() => {
+    checkLink();
+
+    window.addEventListener("popstate", checkLink);
+
+    const pushState = history.pushState;
+    const replaceState = history.replaceState;
+
+    history.pushState = function () {
+      pushState.apply(history, arguments);
+      checkLink();
     };
 
-    const checkLink = () => {
-      const link = window.location.href;
-      if (
-        link === "http://localhost:5173/about" ||
-        link === "http://localhost:5173/about#history-block"
-      ) {
-        setIsLinkPresent(true);
-      } else {
-        setIsLinkPresent(false);
-      }
+    history.replaceState = function () {
+      replaceState.apply(history, arguments);
+      checkLink();
     };
 
-     useEffect(() => {
-       checkLink();
-
-       window.addEventListener("popstate", checkLink);
-
-       const pushState = history.pushState;
-       const replaceState = history.replaceState;
-
-       history.pushState = function () {
-         pushState.apply(history, arguments);
-         checkLink();
-       };
-
-       history.replaceState = function () {
-         replaceState.apply(history, arguments);
-         checkLink();
-       };
-
-       return () => {
-         window.removeEventListener("popstate", checkLink);
-         history.pushState = pushState;
-         history.replaceState = replaceState;
-       };
-     }, []);
+    return () => {
+      window.removeEventListener("popstate", checkLink);
+      history.pushState = pushState;
+      history.replaceState = replaceState;
+    };
+  }, []);
   return (
     <div className="header-container">
       <div className="header">
@@ -61,9 +61,9 @@ const DesktopMenu = () => {
           <NavLink className="link" to="/phones">
             {translations[language].header.phones}
           </NavLink>
-          <NavLink className="link" to="/accessories">
+          {/* <NavLink className="link" to="/accessories">
             {translations[language].header.accessories}
-          </NavLink>
+          </NavLink> */}
           <NavLink className="link" to="/where-to-buy">
             {translations[language].header.whereToBuy}
           </NavLink>
@@ -98,6 +98,6 @@ const DesktopMenu = () => {
       </div>
     </div>
   );
-}
+};
 
-export default DesktopMenu
+export default DesktopMenu;
