@@ -654,6 +654,7 @@ body {
   gap: 0.5rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
   height: fit-content;
+  justify-content: center;
 }
 .shop-card {
   width: 300px;

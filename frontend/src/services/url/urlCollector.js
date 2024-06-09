@@ -1,5 +1,4 @@
-import { API } from "../store/usePhoneStore";
-
+import { API } from "./../store/usePhoneStore";
 const getBatteryRange = battery => {
   let minBattery;
   let maxBattery;

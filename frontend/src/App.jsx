@@ -26,6 +26,7 @@ import PovaFive from "./pages/AnimatedPhonePages/pova/pova-5/PovaFive";
 import ServicePage from "./pages/ServicePage";
 
 function App() {
+
   return (
     <>
       <main>
