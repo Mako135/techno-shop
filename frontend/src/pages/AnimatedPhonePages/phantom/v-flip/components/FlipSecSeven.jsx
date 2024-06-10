@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FlipSecSeven = () => {
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#flip-7",

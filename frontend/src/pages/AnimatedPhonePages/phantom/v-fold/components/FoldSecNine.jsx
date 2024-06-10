@@ -1,11 +1,11 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FoldSecNine = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".fold-nine",

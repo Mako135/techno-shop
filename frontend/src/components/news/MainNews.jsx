@@ -13,9 +13,9 @@ const MainNews = ({ date, title, img }) => {
 };
 
 MainNews.propTypes = {
-  date: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired
+  date: PropTypes.string,
+  title: PropTypes.string,
+  img: PropTypes.string
 };
 
 export default MainNews;

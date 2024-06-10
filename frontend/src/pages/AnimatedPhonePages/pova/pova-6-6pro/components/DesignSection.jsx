@@ -2,13 +2,13 @@ import arrow from "../assets/arrow_left.png";
 import first from "../assets/1.png";
 import second from "../assets/2.png";
 import ContentSection from "./ContentSection";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 const DesignSection = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".design-inner",

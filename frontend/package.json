@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vis.gl/react-google-maps": "^1.0.0",
+    "@vis.gl/react-google-maps": "^1.0.2",
     "gsap": "^3.12.5",
     "html-react-parser": "^5.1.10",
     "js-cookie": "^3.0.5",

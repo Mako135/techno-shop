@@ -610,7 +610,6 @@ body {
   border-radius: 8px;
   background-color: #f8f8f8;
   width: 100%;
-  min-width: 300px;
   max-width: 400px;
   max-height: 559px;
   margin: auto;
@@ -638,6 +637,10 @@ body {
 .news-card-text {
   font-size: 12px;
   color: #707071;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .news-card-title {
@@ -1245,14 +1248,9 @@ textarea {
   justify-content: space-between;
 }
 
-.service-map-card img {
-  width: 100%;
-  height: 100%;
-  max-height: 352px;
-  object-fit: cover;
-  border-radius: 8px;
+.google-map {
+  height: 400px;
 }
-
 .service-left {
   display: flex;
   flex-direction: column;
@@ -1289,4 +1287,35 @@ textarea {
 .service-left ul li {
   display: flex;
   gap: 0.5rem;
+}
+
+.dropdown-select {
+  width: 300px;
+  border: 1px solid #ddd;
+  margin: 5px;
+  position: relative;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  background: #f9f9f9;
+}
+
+.dropdown-content {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ddd;
+  background: #fff;
+  z-index: 1;
+}
+
+/*********** COMPARE PHONES ***********/
+
+.selected-phones {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

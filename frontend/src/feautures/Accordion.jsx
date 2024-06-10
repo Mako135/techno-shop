@@ -30,7 +30,7 @@ const Accordion = ({ title, children, isOpen, toggleAccordion }) => {
 
 Accordion.propTypes = {
   title: PropTypes.string.isRequired,
-  isOpen: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool,
   children: PropTypes.any.isRequired,
   toggleAccordion: PropTypes.func.isRequired
 };

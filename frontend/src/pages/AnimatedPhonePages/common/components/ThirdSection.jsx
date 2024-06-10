@@ -1,13 +1,13 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ThirdSection = () => {
   const background =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon30/30pro5g/images/cameraSection/background.jpg";
-  useLayoutEffect(() => {
+  useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".third-section",
@@ -31,12 +31,14 @@ const ThirdSection = () => {
       <img src={background} alt="" />
       <div className="third-section-content">
         <div className="third-section-first">
-          <h1>Сохраните яркие <br /> воспоминания в <br /> лучшем качестве</h1>
+          <h1>
+            Сохраните яркие <br /> воспоминания в <br /> лучшем качестве
+          </h1>
         </div>
         <div className="third-section-second">
           <h1>
-            Основная камера 50 Мп
-            с оптической стабилизацией. Сверхчеткая ночная съемка
+            Основная камера 50 Мп с оптической стабилизацией. Сверхчеткая ночная
+            съемка
           </h1>
           <p>
             Ночная съемка стала еще ярче и эффектнее. Широкая диафрагма и

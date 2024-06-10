@@ -7,6 +7,6 @@
     justify-content: center;
   }
   .news {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }

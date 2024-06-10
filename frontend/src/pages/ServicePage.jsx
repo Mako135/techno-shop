@@ -3,8 +3,14 @@ import { MdLocationOn } from "react-icons/md";
 import { RiPhoneFill } from "react-icons/ri";
 import { HiMail } from "react-icons/hi";
 import Footer from "../components/footer/Footer";
-import map from '../assets/map.png'
+import { AdvancedMarker, Map } from "@vis.gl/react-google-maps";
+import { APIProvider } from "@vis.gl/react-google-maps";
+
 const ServicePage = () => {
+ 
+  
+  const almaty = { lat: 43.2567, lng: 76.9286 };
+  const mapKey = "AIzaSyD-jzRZNgmIlm7btquVgHPDPOV7Za9NJ_0";
   return (
     <div className="service-container">
       <div className="container">
@@ -45,7 +51,18 @@ const ServicePage = () => {
               </li>
             </ul>
           </div>
-          <img src={map} alt="" />
+          <APIProvider apiKey={mapKey}>
+            <div className="google-map">
+              <Map
+                defaultZoom={12}
+                defaultCenter={almaty}
+                mapId={"11aa37e13eb20142"}
+                gestureHandling={"greedy"}
+              >
+                <AdvancedMarker position={almaty} />
+              </Map>
+            </div>
+          </APIProvider>
         </div>
       </div>
       <Footer />

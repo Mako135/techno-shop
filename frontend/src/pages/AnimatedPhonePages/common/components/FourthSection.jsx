@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import Slide_1 from "./sliders/Slide_1";
 import Slide_2 from "./sliders/Slide_2";
 import Slide_3 from "./sliders/Slide_3";
@@ -8,7 +8,7 @@ import Slide_3 from "./sliders/Slide_3";
 gsap.registerPlugin(ScrollTrigger);
 
 const FourthSection = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".fourth-section",

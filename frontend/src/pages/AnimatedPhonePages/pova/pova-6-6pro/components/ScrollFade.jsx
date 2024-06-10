@@ -4,11 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 import '../pova.css';
-import { useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 
 const SliderFade = () => {
   
-    useLayoutEffect(() => {
+    useEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".fade-slider",

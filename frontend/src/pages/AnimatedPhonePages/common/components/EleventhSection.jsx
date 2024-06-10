@@ -1,11 +1,11 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const EleventhSection = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     const yValue = () => (window.innerWidth > 768 ? -500 : -1200);
     const yValuePhone = () => {
       if (window.innerWidth > 1400) {

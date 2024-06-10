@@ -1,12 +1,12 @@
 import ContentSection from "./ContentSection";
 import gsap from "gsap";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const BodySection = () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".body-container",

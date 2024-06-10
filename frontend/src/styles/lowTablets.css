@@ -50,7 +50,7 @@
     overflow-x: scroll;
   }
   .news {
-    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
   }
   .support-search {
     width: 100%;
@@ -70,6 +70,6 @@
   .main-news img {
     width: 100%;
     border-radius: 1rem;
-    height: 40rem;
+    height: 30rem;
   }
 }

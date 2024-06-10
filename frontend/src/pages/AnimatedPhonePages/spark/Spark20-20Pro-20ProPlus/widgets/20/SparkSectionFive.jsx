@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionFiveFirstCard from "../../components/SectionFiveFirstCard";
@@ -9,7 +9,7 @@ import SectionFiveThirdCard from "../../components/SectionFiveThirdCard";
 gsap.registerPlugin(ScrollTrigger);
 
 const SparkSectionFive = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-five",

@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage";
-import Smartphones from "./pages/Smartphones";
 import Accessories from "./pages/Accessories";
 import WhereToBuy from "./pages/WhereToBuy";
 import About from "./pages/About";
@@ -24,6 +23,8 @@ import DownloadPage from "./pages/DownloadPage";
 import PovaNeo from "./pages/AnimatedPhonePages/pova/pova-6-neo/PovaNeo";
 import PovaFive from "./pages/AnimatedPhonePages/pova/pova-5/PovaFive";
 import ServicePage from "./pages/ServicePage";
+import Smartphones from "./pages/phone/Smartphones";
+import ComparePhones from "./pages/phone/ComparePhones";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="/phones" element={<Smartphones />} />
             <Route path="/phones/:phoneId" element={<PhoneDetailPage />} />
+            <Route path="/phones/compare" element={<ComparePhones />} />
             <Route path="/accessories" element={<Accessories />} />
             <Route path="/where-to-buy" element={<WhereToBuy />} />
             <Route path="/about" element={<About />} />

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,7 +9,7 @@ const ResponsivePictures = ({ large, medium, small, animate, padding,color }) =>
   const imageRef = useRef(null);
   const pictureRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (animate) {
       const tl = gsap.timeline({
         scrollTrigger: {
