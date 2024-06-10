@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import Footer from "../footer/Footer";
+import Footer from "../../components/footer/Footer";
 import { useEffect } from "react";
 import usePhoneStore from "../../services/store/usePhoneStore";
 import useLanguageStore from "../../services/store/useLanguageStore";
-import { createSections } from "./Sections";
-import PhoneDetailSection from "./ParsedDetailSection";
+import { createSections } from "../../components/phones/Sections";
+import PhoneDetailSection from "../../components/phones/ParsedDetailSection";
+
 const PhoneDetailPage = () => {
   const { phoneId } = useParams();
   const { phone, loading, error, fetchPhoneById } = usePhoneStore();
@@ -24,7 +25,7 @@ const PhoneDetailPage = () => {
     const colorName = photo.color.color.toLowerCase();
     images[colorName] = photo.image;
   });
-  console.log(images);
+
   const sections = createSections(phone);
 
   return (
@@ -58,11 +59,11 @@ const PhoneDetailPage = () => {
       </div>
       <div className="divider"></div>
 
-      {sections.map(({ title, content }) => (
-        <>
-          <PhoneDetailSection key={title} title={title} content={content} />
-          <div className="divider"></div>
-        </>
+      {sections.map(({ title, content }, index) => (
+        <div key={title}>
+          <PhoneDetailSection title={title} content={content} />
+          <div className="divider" key={`divider-${index}`}></div>
+        </div>
       ))}
 
       <Footer />

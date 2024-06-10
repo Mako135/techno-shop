@@ -8,7 +8,7 @@ import News from "./pages/News/News";
 import Support from "./pages/Support";
 import Stocks from "./pages/Stocks";
 import NewsPage from "./components/news/NewsPage";
-import PhoneDetailPage from "./components/phones/PhoneDetailPage";
+import PhoneDetailPage from "./pages/phone/PhoneDetailPage";
 import Pova6Pro from "./pages/AnimatedPhonePages/pova/pova-6-6pro/Pova6Pro";
 import Common30 from "./pages/AnimatedPhonePages/common/Common30";
 import Pova6 from "./pages/AnimatedPhonePages/pova/pova-6-6pro/Pova6";
@@ -27,45 +27,39 @@ import Smartphones from "./pages/phone/Smartphones";
 import ComparePhones from "./pages/phone/ComparePhones";
 
 function App() {
-
   return (
-    <>
-      <main>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="/phones" element={<Smartphones />} />
-            <Route path="/phones/:phoneId" element={<PhoneDetailPage />} />
-            <Route path="/phones/compare" element={<ComparePhones />} />
-            <Route path="/accessories" element={<Accessories />} />
-            <Route path="/where-to-buy" element={<WhereToBuy />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/news/:newsId" element={<NewsPage />} />
-            <Route path="/support" element={<Support />} />
-            <Route path="/stocks" element={<Stocks />} />
-            <Route path="/search" element={<SearchPage />} />
-            <Route path="/download" element={<DownloadPage />} />
-            <Route path="/services" element={<ServicePage />} />
+    <main>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/phones" element={<Smartphones />} />
+          <Route path="/phones/:phoneId" element={<PhoneDetailPage />} />
+          <Route path="/phones/compare" element={<ComparePhones />} />
+          <Route path="/accessories" element={<Accessories />} />
+          <Route path="/where-to-buy" element={<WhereToBuy />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/:newsId" element={<NewsPage />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/stocks" element={<Stocks />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/download" element={<DownloadPage />} />
+          <Route path="/services" element={<ServicePage />} />
 
-            <Route path="/pova/5" element={<PovaFive />} />
-            <Route path="/pova/6" element={<Pova6 />} />
-            <Route path="/pova/neo" element={<PovaNeo />} />
-            <Route path="/pova/6-pro" element={<Pova6Pro />} />
-            <Route path="/camon/30" element={<Common30 />} />
-            <Route path="/spark/c" element={<Spark20C />} />
-            <Route path="/spark/20" element={<Spark20 />} />
-            <Route path="/spark/20-pro" element={<Spark20Pro />} />
-            <Route
-              path="/spark/spark-20-pro-plus"
-              element={<Spark20ProPlus />}
-            />
-            <Route path="/phantom/fold" element={<Fold />} />
-            <Route path="/phantom/flip" element={<Flip />} />
-          </Route>
-        </Routes>
-      </main>
-    </>
+          <Route path="/pova/5" element={<PovaFive />} />
+          <Route path="/pova/6" element={<Pova6 />} />
+          <Route path="/pova/neo" element={<PovaNeo />} />
+          <Route path="/pova/6-pro" element={<Pova6Pro />} />
+          <Route path="/camon/30" element={<Common30 />} />
+          <Route path="/spark/c" element={<Spark20C />} />
+          <Route path="/spark/20" element={<Spark20 />} />
+          <Route path="/spark/20-pro" element={<Spark20Pro />} />
+          <Route path="/spark/spark-20-pro-plus" element={<Spark20ProPlus />} />
+          <Route path="/phantom/fold" element={<Fold />} />
+          <Route path="/phantom/flip" element={<Flip />} />
+        </Route>
+      </Routes>
+    </main>
   );
 }
 

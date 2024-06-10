@@ -1,8 +1,10 @@
-
+import PropTypes from "prop-types";
 const Title = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const { text } = props; // Destructure text prop
-  return <p className="title">{text}</p>;
+  return <p className="title">{props.props}</p>;
 };
 
-export default Title
+Title.propTypes = {
+  props: PropTypes.string.isRequired
+};
+
+export default Title;

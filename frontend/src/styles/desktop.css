@@ -1318,4 +1318,23 @@ textarea {
 .selected-phones {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  overflow-x: scroll;
+}
+
+.comparison-table {
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+}
+
+
+.comparison-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comparison-cell {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
 }

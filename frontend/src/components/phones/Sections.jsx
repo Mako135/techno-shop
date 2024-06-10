@@ -1,35 +1,34 @@
 import parse from "html-react-parser";
 
 export const createSections = (phone) => {
-  const safeParse = (content) => (typeof content === "string" ? parse(content) : null);
+  const safeParse = (content) =>
+    typeof content === "string" ? parse(content) : null;
 
   return [
     { title: "Название", content: safeParse(phone?.title) },
-    { title: "Операционная система", content: safeParse(phone?.operating_system) },
+    {
+      title: "Операционная система",
+      content: safeParse(phone?.operating_system)
+    },
     { title: "Процессор", content: safeParse(phone?.cpu_info) },
     {
       title: "Сети",
       content: phone?.network?.map((network) => (
         <p key={network.id}>{network?.name}</p>
-      )),
+      ))
     },
     { title: "Размеры", content: safeParse(phone?.size) },
     {
       title: "Экран",
-      content: (
-        <>
-          {phone?.display}
-          {safeParse(phone?.display_info)}
-        </>
-      ),
+      content: safeParse(phone?.display_info)
     },
     { title: "Разрешение", content: safeParse(phone?.resolution_info) },
     { title: "Камера", content: safeParse(phone?.camera_info) },
     {
       title: "Память",
       content: phone?.memories?.map((memory) => (
-        <p key={memory.id}>{memory.name}</p>
-      )),
+        <p key={memory.id}>{memory.size} GB</p>
+      ))
     },
     { title: "Подключения", content: safeParse(phone?.connection) },
     { title: "Сенсоры", content: safeParse(phone?.sensors) },
@@ -43,7 +42,7 @@ export const createSections = (phone) => {
     { title: "Запись видео", content: safeParse(phone?.record_video) },
     {
       title: "Возможность подключения",
-      content: safeParse(phone?.possible_connection),
-    },
+      content: safeParse(phone?.possible_connection)
+    }
   ];
 };

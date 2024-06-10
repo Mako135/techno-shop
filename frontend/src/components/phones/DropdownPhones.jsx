@@ -1,29 +1,38 @@
 import { useState, useEffect } from "react";
 import Accordion from "../../feautures/Accordion";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
-import PropTypes from 'prop-types'
-const phoneData = {
-  CAMON: [
-    "CAMON 20 Premier 5G",
-    "CAMON 20 Pro 5G",
-    "CAMON 20 Pro",
-    "CAMON 20",
-    "CAMON 19 Pro"
-  ],
-  POVA: [],
-  SPARK: [],
-  POP: [],
-  Phantom: []
-};
+import PropTypes from "prop-types";
+import { fetchData } from "../../services/requests/requests";
+import { API } from "../../services/store/usePhoneStore";
 
-const DropdownPhones = ({ initialItem, onSelect }) => {
+const DropdownPhones = ({ onSelect }) => {
+  const [phonesData, setPhonesData] = useState([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [openAccordions, setOpenAccordions] = useState({});
-  const [selectedItem, setSelectedItem] = useState(initialItem);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
-    setSelectedItem(initialItem);
-  }, [initialItem]);
+    const fetchPhones = async () => {
+      try {
+        const response = await fetchData(`${API}/api/phones/`);
+        const data = await response;
+        setPhonesData(data);
+      } catch (error) {
+        console.error("Error fetching phone data:", error);
+      }
+    };
+
+    fetchPhones();
+  }, []);
+
+  const categorizedPhones = phonesData.reduce((acc, phone) => {
+    const categoryName = phone.category.name;
+    if (!acc[categoryName]) {
+      acc[categoryName] = [];
+    }
+    acc[categoryName].push(phone);
+    return acc;
+  }, {});
 
   const toggleAccordion = (key) => {
     setOpenAccordions((prev) => ({
@@ -35,7 +44,7 @@ const DropdownPhones = ({ initialItem, onSelect }) => {
   const handleItemClick = (item) => {
     setSelectedItem(item);
     setIsDropdownOpen(false);
-    onSelect(item); // Передаем выбранный элемент в родительский компонент
+    onSelect(item.slug);
   };
 
   return (
@@ -44,7 +53,7 @@ const DropdownPhones = ({ initialItem, onSelect }) => {
         className="dropdown-header"
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
       >
-        {selectedItem || "Select an item"}
+        {selectedItem ? selectedItem.title : "Выберите телефон"}
         {isDropdownOpen ? (
           <RiArrowUpSLine fontSize={24} />
         ) : (
@@ -53,18 +62,18 @@ const DropdownPhones = ({ initialItem, onSelect }) => {
       </div>
       {isDropdownOpen && (
         <div className="dropdown-content">
-          {Object.keys(phoneData).map((category) => (
+          {Object.keys(categorizedPhones).map((category) => (
             <Accordion
               key={category}
               title={category}
               isOpen={openAccordions[category]}
               toggleAccordion={() => toggleAccordion(category)}
             >
-              {phoneData[category].length > 0 ? (
+              {categorizedPhones[category].length > 0 ? (
                 <ul>
-                  {phoneData[category].map((item) => (
-                    <li key={item} onClick={() => handleItemClick(item)}>
-                      {item}
+                  {categorizedPhones[category].map((item) => (
+                    <li key={item.id} onClick={() => handleItemClick(item)}>
+                      {item.title}
                     </li>
                   ))}
                 </ul>
@@ -79,11 +88,8 @@ const DropdownPhones = ({ initialItem, onSelect }) => {
   );
 };
 
-
 DropdownPhones.propTypes = {
-  onSelect: PropTypes.func.isRequired,
-  initialItem: PropTypes.string
+  onSelect: PropTypes.func.isRequired
 };
-
 
 export default DropdownPhones;

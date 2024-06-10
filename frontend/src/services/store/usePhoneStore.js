@@ -2,7 +2,7 @@ import { create } from "zustand";
 import useLanguageStore from "./useLanguageStore";
 import { fetchData } from "../requests/requests";
 
-export const API = "http://127.0.0.1:8000";
+export const API = "https://api.tecno-mobile.kz";
 
 const usePhoneStore = create(set => ({
   phone: null,
