@@ -4,12 +4,15 @@ import Title from "../../components/text/Title";
 import { fetchData } from "../../services/requests/requests";
 import { API } from "../../services/store/usePhoneStore";
 import parse from "html-react-parser";
+import Footer from "../../components/footer/Footer";
 
 const ComparePhones = () => {
   const [selectedPhones, setSelectedPhones] = useState([null, null, null]);
   const [phoneDetails, setPhoneDetails] = useState([null, null, null]);
+
   const safeParse = (content) =>
     typeof content === "string" ? parse(content) : null;
+
   useEffect(() => {
     const fetchPhoneDetails = async (slug, index) => {
       try {
@@ -38,122 +41,131 @@ const ComparePhones = () => {
     setSelectedPhones(newSelectedPhones);
   };
 
-  return (
-    <div className="container">
-      <Title props="Сравнить модели телефонов Tecno" />
-      <div className="selected-phones">
-        {[0, 1, 2].map((_, index) => (
-          <DropdownPhones
-            key={index}
-            onSelect={(selectedSlug) => handleSelect(index, selectedSlug)}
+  const renderDetails = (details, section) => {
+    if (!details) return "Не выбрано";
+
+    switch (section) {
+      case "Photos":
+        return details.photos.map((photo) => (
+          <img
+            key={photo.id}
+            src={photo.image}
+            alt={photo.color.name}
+            style={{ width: "50px" }}
           />
-        ))}
-      </div>
-      <div >
-        <h2>Phone Details</h2>
-        <div className="comparison-table">
-          {phoneDetails.some((details) => details) && (
-            <>
-              {[
-                "Network",
-                "Category",
-                "Memories",
-                "Front Camera",
-                "Back Camera",
-                "Price",
-                "Operating System",
-                "CPU Info",
-                "Display",
-                "Display Info",
-                "Resolution Info",
-                "Camera Info",
-                "Connection",
-                "Sensors",
-                "Battery Info",
-                "Sound Info",
-                "Cellular Info",
-                "Audio Video Info",
-                "Complete Set",
-                "Biometric Info",
-                "Parameters Info",
-                "Record Video",
-                "Possible Connection",
-                "Photos"
-              ].map((section) => (
-                <div className="comparison-section" key={section}>
-                  <Title props={section} />
-                  <div className="comparison-row">
-                    {phoneDetails.map((details, index) => (
-                      <div key={index} className="comparison-cell">
-                        {details
-                          ? section === "Network"
-                            ? details.network.map((n) => n.name).join(", ")
-                            : section === "Category"
-                            ? details.category.name
-                            : section === "Memories"
-                            ? safeParse(
-                                details.memories.map((m) => m.size).join(", ")
-                              )
-                            : section === "Front Camera"
-                            ? `${details.front_camera.megapixels} MP`
-                            : section === "Back Camera"
-                            ? `${details.back_camera.megapixels} MP`
-                            : section === "Price"
-                            ? details.price
-                            : section === "Operating System"
-                            ? safeParse(details.operating_system)
-                            : section === "CPU Info"
-                            ? safeParse(details.cpu_info)
-                            : section === "Display"
-                            ? `${details.display} inches`
-                            : section === "Display Info"
-                            ? safeParse(details.display_info)
-                            : section === "Resolution Info"
-                            ? safeParse(details.resolution_info)
-                            : section === "Camera Info"
-                            ? safeParse(details.camera_info)
-                            : section === "Connection"
-                            ? safeParse(details.connection)
-                            : section === "Sensors"
-                            ? safeParse(details.sensors)
-                            : section === "Battery Info"
-                            ? safeParse(details.battery_info)
-                            : section === "Sound Info"
-                            ? safeParse(details.sound_info)
-                            : section === "Cellular Info"
-                            ? safeParse(details.cellurral_info)
-                            : section === "Audio Video Info"
-                            ? safeParse(details.audio_video_info)
-                            : section === "Complete Set"
-                            ? safeParse(details.complete_set)
-                            : section === "Biometric Info"
-                            ? safeParse(details.biometric_info)
-                            : section === "Parameters Info"
-                            ? safeParse(details.parameters_info)
-                            : section === "Record Video"
-                            ? safeParse(details.record_video)
-                            : section === "Possible Connection"
-                            ? safeParse(details.possible_connection)
-                            : section === "Photos"
-                            ? details.photos.map((photo) => (
-                                <img
-                                  key={photo.id}
-                                  src={photo.image}
-                                  alt={photo.color.name}
-                                  style={{ width: "50px" }}
-                                />
-                              ))
-                            : "Not available"
-                          : "Not selected"}
+        ));
+      case "Network":
+        return details.network.map((n) => n.name).join(", ");
+      case "Category":
+        return details.category.name;
+      case "Memories":
+        return safeParse(details.memories.map((m) => m.size).join(", "));
+      case "Front Camera":
+        return `${details.front_camera.megapixels} MP`;
+      case "Back Camera":
+        return `${details.back_camera.megapixels} MP`;
+      case "Price":
+        return details.price;
+      case "Operating System":
+        return safeParse(details.operating_system);
+      case "CPU Info":
+        return safeParse(details.cpu_info);
+      case "Display":
+        return `${details.display} inches`;
+      case "Display Info":
+        return safeParse(details.display_info);
+      case "Resolution Info":
+        return safeParse(details.resolution_info);
+      case "Camera Info":
+        return safeParse(details.camera_info);
+      case "Connection":
+        return safeParse(details.connection);
+      case "Sensors":
+        return safeParse(details.sensors);
+      case "Battery Info":
+        return safeParse(details.battery_info);
+      case "Sound Info":
+        return safeParse(details.sound_info);
+      case "Cellular Info":
+        return safeParse(details.cellular_info);
+      case "Audio Video Info":
+        return safeParse(details.audio_video_info);
+      case "Complete Set":
+        return safeParse(details.complete_set);
+      case "Biometric Info":
+        return safeParse(details.biometric_info);
+      case "Parameters Info":
+        return safeParse(details.parameters_info);
+      case "Record Video":
+        return safeParse(details.record_video);
+      case "Possible Connection":
+        return safeParse(details.possible_connection);
+      default:
+        return "Неизвестная секция";
+    }
+  };
+
+  return (
+    <div>
+      <div className="comparison-container">
+        <div className="container">
+          <Title props="Сравнить модели телефонов Tecno" />
+          <div className="selected-phones">
+            {[0, 1, 2].map((_, index) => (
+              <DropdownPhones
+                key={index}
+                onSelect={(selectedSlug) => handleSelect(index, selectedSlug)}
+              />
+            ))}
+          </div>
+          <div>
+            <div className="comparison-table">
+              {phoneDetails.some((details) => details) && (
+                <>
+                  {[
+                    "Photos",
+                    "Network",
+                    "Category",
+                    "Memories",
+                    "Front Camera",
+                    "Back Camera",
+                    "Price",
+                    "Operating System",
+                    "CPU Info",
+                    "Display",
+                    "Display Info",
+                    "Resolution Info",
+                    "Camera Info",
+                    "Connection",
+                    "Sensors",
+                    "Battery Info",
+                    "Sound Info",
+                    "Cellular Info",
+                    "Audio Video Info",
+                    "Complete Set",
+                    "Biometric Info",
+                    "Parameters Info",
+                    "Record Video",
+                    "Possible Connection"
+                  ].map((section) => (
+                    <div className="comparison-section" key={section}>
+                      <Title props={section} />
+                      <div className="comparison-row">
+                        {phoneDetails.map((details, index) => (
+                          <div key={index} className="comparison-cell">
+                            {renderDetails(details, section)}
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </>
-          )}
+                    </div>
+                  ))}
+                </>
+              )}
+            </div>
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

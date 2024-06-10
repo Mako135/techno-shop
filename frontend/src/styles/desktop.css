@@ -1315,22 +1315,27 @@ textarea {
 
 /*********** COMPARE PHONES ***********/
 
-.selected-phones {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.comparison-container{
+  min-height: 500px;
+  height: 100%;
   overflow-x: scroll;
 }
 
+.selected-phones {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .comparison-table {
-  display: flex;
-  flex-direction: column;
-  overflow-x: scroll;
+  min-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 
 .comparison-row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .comparison-cell {
