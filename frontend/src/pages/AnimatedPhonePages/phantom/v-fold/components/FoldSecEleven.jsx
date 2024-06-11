@@ -1,14 +1,16 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FoldSecEleven = () => {
-  useEffect(() => {
+  const foldRef = useRef();
+  
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".fold-eleven",
+        trigger: foldRef.current,
         start: "top top",
         end: "+=2000",
         scrub: 1,
@@ -31,7 +33,7 @@ const FoldSecEleven = () => {
       {
         opacity: 1,
         y: 0,
-          duration: 1,
+        duration: 1,
         stagger: 0.3
       }
     );
@@ -40,7 +42,7 @@ const FoldSecEleven = () => {
   const figure =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/phantom-v-fold/ru/images/performanceMemorySection/memory.jpg";
   return (
-    <div className="fold-eleven">
+    <div className="fold-eleven" ref={foldRef}>
       <div className="fold-circle"></div>
       <div className="fold-eleven-content">
         <div className="fold-left-2">

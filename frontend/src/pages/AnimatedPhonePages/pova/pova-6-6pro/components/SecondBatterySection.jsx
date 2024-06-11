@@ -3,13 +3,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 const SecondBatterySection = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".second-battery-container",
+        trigger: povaRef.current,
         start: "top top",
         end: "+=2000 center",
         scrub: true,
@@ -22,13 +24,12 @@ const SecondBatterySection = () => {
       .to(".first", { opacity: 0, y: 0, duration: 2 })
       .from(".second", { opacity: 0, y: 0, duration: 2 })
       .to(".second", { opacity: 1, duration: 2 });
-    
   }, []);
 
   const backVideo =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6/pova6-5g/v-electric.mp4";
   return (
-    <div className="second-battery-container">
+    <div className="second-battery-container" ref={povaRef}>
       <video autoPlay muted loop className="background-video">
         <source src={backVideo} type="video/mp4" />
         Your browser does not support the video tag.

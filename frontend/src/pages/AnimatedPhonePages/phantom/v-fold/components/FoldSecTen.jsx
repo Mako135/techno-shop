@@ -1,15 +1,16 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FoldSecTen = () => {
+  const foldRef = useRef();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".fold-ten-content",
+          trigger: foldRef.current,
           start: "top top",
           end: "+=2000",
           scrub: 1,
@@ -54,7 +55,7 @@ const FoldSecTen = () => {
           Большой экран для масимальной многозадачности.
         </div>
       </header>
-      <div className="fold-ten-content">
+      <div className="fold-ten-content" ref={foldRef}>
         <div className="fold-ten-video">
           <video autoPlay loop muted id="fold-ten-video">
             <source src={video} type="video/mp4" />

@@ -1,14 +1,15 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FifteenthSection = () => {
-  useEffect(() => {
+  const  fifteenRef  = useRef();
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".fifteen-section",
+        trigger: fifteenRef.current,
         start: "top top",
         end: "+=2000",
         scrub: true,
@@ -28,31 +29,30 @@ const FifteenthSection = () => {
         y: 0,
         duration: 2
       }
-    ).to(
-      ".fifteen-section-title",
-      {
+    )
+      .to(".fifteen-section-title", {
         opacity: 0,
         y: -50,
         duration: 2
-      }
-    ).fromTo(
-      ".fifteen-section-second ",
-      {
-        opacity: 0,
-        y: 50
-      },
-      {
-        opacity: 1,
-        y: -50,
-        duration: 2,
-        stagger: 0.2
-      },
-      ">"
-    );
+      })
+      .fromTo(
+        ".fifteen-section-second ",
+        {
+          opacity: 0,
+          y: 50
+        },
+        {
+          opacity: 1,
+          y: -50,
+          duration: 2,
+          stagger: 0.2
+        },
+        ">"
+      );
   }, []);
 
   return (
-    <div className="fifteen-section">
+    <div className="fifteen-section" ref={fifteenRef}>
       <div className="fifteen-titles">
         <h1 className="fifteen-section-title">
           Заряжается быстро. <br />

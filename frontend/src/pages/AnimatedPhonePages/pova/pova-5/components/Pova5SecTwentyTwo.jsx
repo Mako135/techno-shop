@@ -1,23 +1,25 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Pova5SecTwentyTwo = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".sec-22",
+        trigger: povaRef.current,
         start: "top top",
         markers: true
       }
     });
 
-     tl.to("#phone_1", { xPercent: 157 }, 0)
-       .to("#phone_2", { xPercent: 55 }, 0)
-       .to("#phone_3", { xPercent: -155 }, 0)
-       .to("#phone_4", { xPercent: -257 }, 0);
+    tl.to("#phone_1", { xPercent: 157 }, 0)
+      .to("#phone_2", { xPercent: 55 }, 0)
+      .to("#phone_3", { xPercent: -155 }, 0)
+      .to("#phone_4", { xPercent: -257 }, 0);
   }, []);
   const phone_1 =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/phone-red-ca7e46db.png";
@@ -31,7 +33,7 @@ const Pova5SecTwentyTwo = () => {
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/phone-right-2-9e3387ff.png";
 
   return (
-    <div className="sec-22">
+    <div className="sec-22" ref={povaRef}>
       <div className="pova-text">
         <h1>ЯРКИЕ ОБОИ</h1>
         <h3>Больше цвета и красоты</h3>

@@ -1,14 +1,15 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FifthSection = () => {
-  useEffect(() => {
+  const fifthRef = useRef();
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".fifth-section",
+        trigger: fifthRef.current,
         start: "top top",
         end: "+=800% center",
         scrub: true,
@@ -17,24 +18,23 @@ const FifthSection = () => {
       }
     });
 
-    tl      .to(
-        ".fifth-section-first-content h1, .fifth-section-first-content p, .fifth-section-first-content .dot-container, .fifth-section-first-content video ",
-        {
-          y: -150,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.3
-        }
-      )
-      .from(
-        ".fifth-section-second-content h1, .fifth-section-second-content p, .fifth-section-second-content .dot-container, .fifth-section-second-content img",
-        {
-          y: 100,
-          opacity: 0,
-          duration: 2,
-          stagger: 0.3
-        }
-      );
+    tl.to(
+      ".fifth-section-first-content h1, .fifth-section-first-content p, .fifth-section-first-content .dot-container, .fifth-section-first-content video ",
+      {
+        y: -150,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3
+      }
+    ).from(
+      ".fifth-section-second-content h1, .fifth-section-second-content p, .fifth-section-second-content .dot-container, .fifth-section-second-content img",
+      {
+        y: 100,
+        opacity: 0,
+        duration: 2,
+        stagger: 0.3
+      }
+    );
   }, []);
 
   const video =
@@ -42,7 +42,7 @@ const FifthSection = () => {
   const image =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon30/30pro5g/images/focus-section/picture.jpg";
   return (
-    <div className="fifth-section">
+    <div className="fifth-section" ref={fifthRef}>
       <div className="fifth-section-first-content">
         <section>
           <h1>

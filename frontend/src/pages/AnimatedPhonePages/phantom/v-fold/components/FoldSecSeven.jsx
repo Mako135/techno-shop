@@ -1,14 +1,16 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FoldSecSeven = () => {
-  useEffect(() => {
+  const foldRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".fold-seven",
+        trigger: foldRef.current,
         start: "top top",
         end: "+=4000",
         scrub: 1,
@@ -33,7 +35,7 @@ const FoldSecSeven = () => {
   const figure_2 =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/phantom-v-fold/ru/images/designErgonomicsSection/04.jpg";
   return (
-    <div className="fold-seven">
+    <div className="fold-seven" ref={foldRef}>
       <div className="title">
         Корпус изготовлен из переработанных материалов <br />С заботой о природе
         и вашем здоровье

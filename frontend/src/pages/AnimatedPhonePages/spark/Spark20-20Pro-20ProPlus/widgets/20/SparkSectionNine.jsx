@@ -1,17 +1,18 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SparkSectionNine = () => {
-  useEffect(() => {
+  const sparkRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".section-nine",
+        trigger: sparkRef.current,
         start: "bottom center",
         end: "+=400",
-        scrub: true,
-        markers: true
+        scrub: true
       }
     });
 
@@ -31,7 +32,7 @@ const SparkSectionNine = () => {
   const phone_4 =
     "https://d3fyizz0b46qgr.cloudfront.net/global/SPARK_20/en/new_1209/dist/png/sec9PcWhite.png";
   return (
-    <div className="section-nine">
+    <div className="section-nine" ref={sparkRef}>
       <header>
         <div className="left-images">
           <img src={phone_1} alt="" />

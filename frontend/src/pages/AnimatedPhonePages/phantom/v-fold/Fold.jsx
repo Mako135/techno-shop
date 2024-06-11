@@ -17,7 +17,7 @@ import "./fold.css";
 import Footer from '../../../../components/footer/Footer'
 const Fold = () => {
   return (
-    <div>
+    <div className="fold-container">
       <FoldSecOne />
       <FoldSecTwo />
       <FoldSecThree />

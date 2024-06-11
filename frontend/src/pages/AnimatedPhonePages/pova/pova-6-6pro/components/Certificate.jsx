@@ -3,13 +3,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 const Certificate = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".certificate-container",
+        trigger: povaRef.current,
         start: "center center",
         end: "+=2000 center",
         scrub: true,
@@ -20,11 +22,11 @@ const Certificate = () => {
 
     tl.from(".overlay", {
       opacity: 0,
-      duration: 1,
+      duration: 1
     });
-      tl.from(".certificate .pova-title", { opacity: 0, y: 50, duration: 1 })
-        .from(".certificate .pova-subtitle", { opacity: 0, y: 50, duration: 1 })
-        .from(".overlay img", { opacity: 0, y: 50, duration: 1 });
+    tl.from(".certificate .pova-title", { opacity: 0, y: 50, duration: 1 })
+      .from(".certificate .pova-subtitle", { opacity: 0, y: 50, duration: 1 })
+      .from(".overlay img", { opacity: 0, y: 50, duration: 1 });
   }, []);
 
   const background =
@@ -33,7 +35,7 @@ const Certificate = () => {
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6/assets-ru/chapter3-light-tuv-5ab1e66c.png";
   return (
     <div className="certificate">
-      <div className="certificate-container">
+      <div className="certificate-container" ref={povaRef}>
         <img src={background} alt="" />
         <div className="overlay">
           <h1 className="pova-title">

@@ -1,11 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SparkDownloads from "../components/download/SparkDownloads";
 import PhantomDownloads from "../components/download/PhantomDownloads";
 import PovaDownloads from "../components/download/PovaDownloads";
 import CamonDownloads from "../components/download/CamonDownloads";
+import { fetchData } from "../services/requests/requests";
+import { API } from "../services/store/usePhoneStore";
 
 const DownloadPage = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [phonesData, setPhonesData] = useState([]);
+  useEffect(() => {
+    const fetchPhones = async () => {
+      try {
+        const response = await fetchData(`${API}/api/phones/`);
+        const data = await response;
+        setPhonesData(data);
+      } catch (error) {
+        console.error("Error fetching phone data:", error);
+      }
+    };
+
+    fetchPhones();
+  }, []);
+
+
+  const categorizedPhones = phonesData.reduce((acc, phone) => {
+    const categoryName = phone.category.name;
+    if (!acc[categoryName]) {
+      acc[categoryName] = [];
+    }
+    acc[categoryName].push(phone);
+    return acc;
+  }, {});
+  console.log(categorizedPhones);
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -42,7 +69,7 @@ const DownloadPage = () => {
       <div className="tab-content">
         {activeTab === 0 && (
           <div>
-            <PhantomDownloads />
+            <PhantomDownloads data={categorizedPhones.Phantom} />
           </div>
         )}
         {activeTab === 1 && (

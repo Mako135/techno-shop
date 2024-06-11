@@ -1,13 +1,15 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const WonderfulWorld = () => {
-  useEffect(() => {
+  const sparkRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".text-boxes",
+        trigger: sparkRef.current,
         start: "center center",
         end: "+=2000",
         pin: true,
@@ -40,7 +42,7 @@ const WonderfulWorld = () => {
         <div className="icon icon3"></div>
       </div>
 
-      <div className="text-boxes">
+      <div className="text-boxes" ref={sparkRef}>
         <div className="left-text">
           <div className="text_wrapper">
             <h2>

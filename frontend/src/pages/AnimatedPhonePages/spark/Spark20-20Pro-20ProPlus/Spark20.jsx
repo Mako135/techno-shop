@@ -14,8 +14,15 @@ import SparkSectionEleven from './widgets/20/SparkSectionEleven';
 import SparkSectionTwelve from "./widgets/20/SparkSectionTwelve";
 import SparkSectionThirteen from "./widgets/20/SparkSectionThirteen";
 import SparkSectionFourteen from "./widgets/20/SparkSectionFourteen";
+import { useEffect } from 'react';
 
 const Spark20 = () => {
+  useEffect(() => {
+    if (!sessionStorage.getItem("pageReloaded")) {
+      sessionStorage.setItem("pageReloaded", "true");
+      location.reload();
+    }
+  }, []);
   const figure_1 =
     "https://d3fyizz0b46qgr.cloudfront.net/global/SPARK_20/en/new_1209/dist/jpg/sec8PcF1.jpg";
   const figure_2 =

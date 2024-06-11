@@ -1,16 +1,17 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ThirdSection = () => {
+  const thirdRef = useRef();
   const background =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon30/30pro5g/images/cameraSection/background.jpg";
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".third-section",
+        trigger: thirdRef.current,
         start: "top top",
         end: "+=2000 center",
         scrub: true,
@@ -27,7 +28,7 @@ const ThirdSection = () => {
   }, []);
 
   return (
-    <div className="third-section">
+    <div className="third-section" ref={thirdRef}>
       <img src={background} alt="" />
       <div className="third-section-content">
         <div className="third-section-first">

@@ -1,7 +1,7 @@
 import SectionFiveFirstCard from "../components/SectionFiveFirstCard";
 import SectionFiveSecondCard from "../components/SectionFiveSecondCard";
 import SectionFiveThirdCard from "../components/SectionFiveThirdCard";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PropTypes from "prop-types";
@@ -9,15 +9,16 @@ import PropTypes from "prop-types";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SectionFive = ({className}) => {
-  useEffect(() => {
+const SectionFive = ({ className }) => {
+  const sparkRef = useRef();
+  
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".section-five",
+        trigger: sparkRef.current,
         start: "bottom center",
         end: "+=400",
         scrub: true,
-        markers: true
       }
     });
 
@@ -32,7 +33,7 @@ const SectionFive = ({className}) => {
   const video =
     "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/video/sec5PcSelfie.mp4";
   return (
-    <div className="section-five">
+    <div className="section-five" ref={sparkRef}>
       <div className={`section-titles ${className}`}>
         <p>
           <span>Удивительно ярко.</span>

@@ -1,14 +1,15 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SecondSection = () => {
-  useEffect(() => {
+  const secondRef = useRef();
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".common-second-section",
+        trigger: secondRef.current,
         start: "-=300 center",
         end: "+=800",
         scrub: true,
@@ -36,7 +37,7 @@ const SecondSection = () => {
   const phone =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon30/30pro5g/images/titleSection/trendy_image_cl6.png";
   return (
-    <div className="common-second-section">
+    <div className="common-second-section" ref={secondRef}>
       <img src={figure} alt="" className="slide-figure" />
       <div className="second-inner">
         <div className="second-titles">

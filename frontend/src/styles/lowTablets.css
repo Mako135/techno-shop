@@ -49,6 +49,10 @@
     display: flex;
     overflow-x: scroll;
   }
+
+  .home-news .news-card {
+    min-width: 300px;
+  }
   .news {
     grid-template-columns: 1fr 1fr;
   }
@@ -71,5 +75,9 @@
     width: 100%;
     border-radius: 1rem;
     height: 30rem;
+  }
+  .service-map-card {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -1,14 +1,16 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Pov5SecEighteen = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".sec-18",
+        trigger: povaRef.current,
         start: "top top",
         end: "bottom center",
         scrub: 1,
@@ -26,7 +28,7 @@ const Pov5SecEighteen = () => {
   const frame =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/hdr-a84624a4.png";
   return (
-    <div className="sec-18">
+    <div className="sec-18" ref={povaRef}>
       <div className="sec-18-card">
         <header>
           <video src={video}></video>

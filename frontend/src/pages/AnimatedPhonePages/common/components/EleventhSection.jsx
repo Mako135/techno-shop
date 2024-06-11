@@ -1,11 +1,12 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const EleventhSection = () => {
-  useEffect(() => {
+  const eleventhRef  = useRef();
+  useLayoutEffect(() => {
     const yValue = () => (window.innerWidth > 768 ? -500 : -1200);
     const yValuePhone = () => {
       if (window.innerWidth > 1400) {
@@ -21,7 +22,7 @@ const EleventhSection = () => {
     const yValue2 = yValue() + 100;
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".eleven-section",
+        trigger: eleventhRef.current,
         start: "top top",
         end: "+=6000",
         scrub: true,
@@ -91,7 +92,7 @@ const EleventhSection = () => {
   }, []);
 
   return (
-    <div className="eleven-section">
+    <div className="eleven-section" ref={eleventhRef}>
       <img
         src="https://d3fyizz0b46qgr.cloudfront.net/global/phones/camon30/30pro5g/images/titleSection/bar_play.png"
         alt=""

@@ -1,14 +1,16 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FlipSecSix = () => {
-  useEffect(() => {
+  const flipRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#flip-6",
+        trigger: flipRef.current,
         start: "top top",
         end: "+=3000",
         pin: true,
@@ -29,7 +31,7 @@ const FlipSecSix = () => {
   const video =
     "https://d3fyizz0b46qgr.cloudfront.net/global/ru/phones/phantom-v-flip-5g/videos/hinge/hinge.mp4";
   return (
-    <div className="flip-6" id="flip-6">
+    <div className="flip-6" id="flip-6" ref={flipRef}>
       <div className="flip-6-content">
         <h1>
           Экран без складок. Легкое открытие. <br />

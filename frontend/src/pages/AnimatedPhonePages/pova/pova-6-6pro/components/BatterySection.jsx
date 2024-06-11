@@ -1,15 +1,17 @@
 import ContentSection from "./ContentSection";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BatterySection = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".battery-container",
+        trigger: povaRef.current,
         start: "top center",
         end: "+=300",
         markers: true
@@ -28,7 +30,7 @@ const BatterySection = () => {
   return (
     <div>
       <ContentSection backImg={background} backPos="top">
-        <div className="battery-container">
+        <div className="battery-container" ref={povaRef}>
           <div className="battery-header">
             <p>Кто сказал, что тонкий корпус и большая батарея несовместимы?</p>
             <h2>7.88 мм корпус, 6000 мАч аккумулятор</h2>

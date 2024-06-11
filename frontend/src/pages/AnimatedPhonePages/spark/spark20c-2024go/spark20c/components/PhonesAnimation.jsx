@@ -1,13 +1,15 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const PhonesAnimation = () => {
-  useEffect(() => {
+  const sparkRef = useRef();
+  
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".sec-three-box",
+        trigger: sparkRef.current,
         start: "top+=100 top",
         end: "+=2000",
         pin: true,
@@ -32,7 +34,7 @@ const PhonesAnimation = () => {
   }, []);
 
   return (
-    <div className="sec-three-box">
+    <div className="sec-three-box" ref={sparkRef}>
       <div className="box">
         <div className="circle">
           <div className="sec-img img1"></div>

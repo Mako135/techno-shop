@@ -1,17 +1,19 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FlipSecFour = () => {
+  const flipRef = useRef();
+
   const video =
     "https://d3fyizz0b46qgr.cloudfront.net/global/ru/phones/phantom-v-flip-5g/videos/perfectDesign/perfectDesignRU.mp4";
-
-  useEffect(() => {
+  
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".flip-4",
+        trigger: flipRef.current,
         start: "top top",
         end: "+=3000",
         pin: true,
@@ -23,14 +25,14 @@ const FlipSecFour = () => {
     tl.from("#flip-video-1", {
       scale: 2
     }).from(".flip-text h1, .flip-text .vl, .flip-text p", {
-        y: 50,
-        opacity: 0,
-        stagger: 0.2
+      y: 50,
+      opacity: 0,
+      stagger: 0.2
     });
   }, []);
 
   return (
-    <div className="flip-4">
+    <div className="flip-4" ref={flipRef}>
       <div className="flip-4-content">
         <video autoPlay loop muted id="flip-video-1">
           <source src={video} type="video/mp4" />

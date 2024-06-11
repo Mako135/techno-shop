@@ -54,7 +54,7 @@ function App() {
           <Route path="/spark/c" element={<Spark20C />} />
           <Route path="/spark/20" element={<Spark20 />} />
           <Route path="/spark/20-pro" element={<Spark20Pro />} />
-          <Route path="/spark/spark-20-pro-plus" element={<Spark20ProPlus />} />
+          <Route path="/spark/20-pro-plus" element={<Spark20ProPlus />} />
           <Route path="/phantom/fold" element={<Fold />} />
           <Route path="/phantom/flip" element={<Flip />} />
         </Route>

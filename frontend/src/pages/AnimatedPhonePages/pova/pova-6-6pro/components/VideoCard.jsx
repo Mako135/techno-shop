@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import playButtonImage from "../assets/play.png";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PropTypes from "prop-types";
@@ -13,7 +13,7 @@ const VideoCard = ({ src }) => {
   const playButtonRef = useRef(null);
   const containerRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,

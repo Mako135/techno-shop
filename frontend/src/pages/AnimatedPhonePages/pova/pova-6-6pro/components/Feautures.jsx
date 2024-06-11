@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Card from "./Card";
@@ -6,11 +6,13 @@ import Card from "./Card";
 gsap.registerPlugin(ScrollTrigger);
 
 const Features = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const onLoad = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#features",
+          trigger: povaRef.current,
           start: "-=200px center",
           end: "+=200",
           markers: true
@@ -34,6 +36,7 @@ const Features = () => {
 
   return (
     <div
+      ref={povaRef}
       id="features"
       style={{
         display: "grid",

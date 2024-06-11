@@ -1,15 +1,17 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FoldSecThree = () => {
-    const wrapperRef = useRef(null);
-  useEffect(() => {
+  const wrapperRef = useRef(null);
+  const foldRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".fold-three",
+        trigger: foldRef.current,
         start: "top top",
         end: "+=3000",
         pin: true,
@@ -36,7 +38,7 @@ const FoldSecThree = () => {
       )
       .from(wrapperRef.current.children, {
         y: 100,
-        opacity: 0, 
+        opacity: 0,
         stagger: 0.4,
         duration: 1
       });
@@ -48,7 +50,7 @@ const FoldSecThree = () => {
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/phantom-v-fold/ru/images/screenTotalSection/phoneClose.png";
 
   return (
-    <div className="fold-three">
+    <div className="fold-three" ref={foldRef}>
       <header>
         <img src={figure_1} alt="" id="fold-phone-1" />
         <img src={figure_2} alt="" id="fold-phone-2" />

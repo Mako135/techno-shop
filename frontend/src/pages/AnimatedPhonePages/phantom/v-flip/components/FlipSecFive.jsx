@@ -1,14 +1,16 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FlipSecFive = () => {
-  useEffect(() => {
+  const flipRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".flip-5",
+        trigger: flipRef.current,
         start: "top top",
         end: "+=3000",
         scrub: 1,
@@ -37,9 +39,8 @@ const FlipSecFive = () => {
       )
       .to(".flip-5-content video, #flip-text-1", {
         opacity: 0,
-          duration: 2,
-          y: -50,
-        
+        duration: 2,
+        y: -50
       })
       .fromTo(
         ".flip-5-content img, #flip-text-2",
@@ -60,7 +61,7 @@ const FlipSecFive = () => {
   const figure =
     "https://d3fyizz0b46qgr.cloudfront.net/global/ru/phones/phantom-v-flip-5g/images/camera/camera.png";
   return (
-    <div className="flip-5">
+    <div className="flip-5" ref={flipRef}>
       <div className="flip-5-content">
         <div className="flip-text">
           <h1 className="flip-text-title">

@@ -26,7 +26,7 @@ const Common30 = () => {
       <FifthSection />
       <SixthSection />
       <SeventhSection />
-    
+  
       <NinthSection />
       <TenthSection />
       <EleventhSection />

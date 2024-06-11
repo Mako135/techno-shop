@@ -1,27 +1,33 @@
 import PropTypes from "prop-types";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ResponsivePictures = ({ large, medium, small, animate, padding,color }) => {
-  const imageRef = useRef(null);
+const ResponsivePictures = ({
+  large,
+  medium,
+  small,
+  animate,
+  padding,
+  color
+}) => {
+  const containerRef = useRef(null);
   const pictureRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (animate) {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: pictureRef.current,
+          trigger: containerRef.current,
           start: "bottom center",
           end: "+=400",
-          scrub: true,
-          markers: true
+          scrub: true
         }
       });
 
-      tl.to(imageRef.current, {
+      tl.to(containerRef.current, {
         duration: 2,
         scale: 0.9,
         opacity: 0.7
@@ -30,7 +36,7 @@ const ResponsivePictures = ({ large, medium, small, animate, padding,color }) =>
   }, [animate]);
 
   return (
-    <div>
+    <div ref={containerRef}>
       <picture ref={pictureRef}>
         <source srcSet={large} media="(min-width: 1200px)" />
         <source srcSet={medium} media="(min-width: 768px)" />
@@ -43,7 +49,6 @@ const ResponsivePictures = ({ large, medium, small, animate, padding,color }) =>
             padding: `${padding}`,
             backgroundColor: `${color}`
           }}
-          ref={imageRef}
         />
       </picture>
     </div>

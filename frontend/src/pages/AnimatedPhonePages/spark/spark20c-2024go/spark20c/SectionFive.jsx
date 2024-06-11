@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionFive = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const video = videoRef.current;
 
     ScrollTrigger.create({

@@ -15,9 +15,16 @@ import SectionThirteen from "./widgets/SectionThirteen";
 import SectionFourteen from "./widgets/SectionFourteen";
 import SectionFifteen from "./widgets/SectionFifteen";
 import Footer from '../../../../components/footer/Footer'
+import { useEffect } from "react";
 
 
 const Spark20Pro = () => {
+  useEffect(() => {
+    if (!sessionStorage.getItem("pageReloaded")) {
+      sessionStorage.setItem("pageReloaded", "true");
+      location.reload();
+    }
+  }, []);
   const figure_1 =
     "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/jpg/sec8PcF1.jpg";
   const figure_2 =

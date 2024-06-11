@@ -1,14 +1,16 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FlipSecNine = () => {
-  useEffect(() => {
+  const flipRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#flip-9",
+        trigger: flipRef.current,
         start: "top center",
         end: "bottom center",
         scrub: 1,
@@ -42,7 +44,7 @@ const FlipSecNine = () => {
       );
   }, []);
   return (
-    <div className="flip-3" id="flip-9">
+    <div className="flip-3" id="flip-9" ref={flipRef}>
       <div className="flip-titles">
         <h1 id="flip-9-title">Новые</h1>
         <h2 id="flip-9-subtitle"> возможности</h2>

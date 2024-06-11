@@ -1,14 +1,16 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FoldSecNine = () => {
-  useEffect(() => {
+  const foldRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".fold-nine",
+        trigger: foldRef.current,
         start: "top top",
         end: "+=3000",
         scrub: 1,
@@ -21,9 +23,9 @@ const FoldSecNine = () => {
     tl.to("#fold-slide-2", {
       yPercent: -101
     }),
-    tl.to("#fold-slide-3", {
-      yPercent: -201
-    });
+      tl.to("#fold-slide-3", {
+        yPercent: -201
+      });
   }, []);
 
   const figure_1 =
@@ -33,7 +35,7 @@ const FoldSecNine = () => {
   const video =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/phantom-v-fold/ru/videos/cameraNight4K.mp4";
   return (
-    <div className="fold-nine">
+    <div className="fold-nine" ref={foldRef}>
       <div className="fold-nine-text">
         <div>
           <div className="title">

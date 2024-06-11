@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import Slide_1 from "./sliders/Slide_1";
 import Slide_2 from "./sliders/Slide_2";
 import Slide_3 from "./sliders/Slide_3";
@@ -8,10 +8,11 @@ import Slide_3 from "./sliders/Slide_3";
 gsap.registerPlugin(ScrollTrigger);
 
 const FourthSection = () => {
-  useEffect(() => {
+  const fourthRef = useRef();
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".fourth-section",
+        trigger: fourthRef.current,
         start: "top top",
         end: "+=300% center",
         scrub: true,
@@ -39,7 +40,7 @@ const FourthSection = () => {
   }, []);
 
   return (
-    <div className="fourth-section">
+    <div className="fourth-section" ref={fourthRef}>
       <div className="fourth-section-inner">
         <div className="fourth-slider">
           <div className="slider-absolute slide-1">

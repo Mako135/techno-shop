@@ -1,14 +1,16 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const NeoSecFifteen = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".neo-15",
+        trigger: povaRef.current,
         start: "top top",
         end: "+=2000 center",
         scrub: true,
@@ -35,7 +37,7 @@ const NeoSecFifteen = () => {
   const figure =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-neo/ru/assets/images/chapter3-atmos-icons.webp";
   return (
-    <div className="neo-15">
+    <div className="neo-15" ref={povaRef}>
       <video autoPlay muted loop>
         <source
           src={small_v}

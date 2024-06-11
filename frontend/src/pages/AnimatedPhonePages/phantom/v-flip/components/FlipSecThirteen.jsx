@@ -1,14 +1,16 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FlipSecThirteen = () => {
-  useEffect(() => {
+  const flipRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".flip-13",
+        trigger: flipRef.current,
         start: "top top",
         end: "+=3000",
         pin: true,
@@ -50,7 +52,7 @@ const FlipSecThirteen = () => {
   const video_2 =
     "https://d3fyizz0b46qgr.cloudfront.net/global/ru/phones/phantom-v-flip-5g/videos/chargeSection/charge3.mp4";
   return (
-    <div className="flip-13">
+    <div className="flip-13" ref={flipRef}>
       <div className="flip-text text-1">
         <h1 style={{ marginBottom: "4rem" }}>
           Новое пространство <br /> для творчества, <br />

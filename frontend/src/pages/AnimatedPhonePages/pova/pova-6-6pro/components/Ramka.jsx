@@ -3,28 +3,34 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 const Ramka = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".ramka",
+        trigger: povaRef.current,
         start: "top center",
         end: "center center",
         markers: true // Optional, for debugging
       }
     });
 
-    tl.from("#front-image", { y: "-14%", x: "-12%", duration: 1, borderRadius: "30px" });
-      
+    tl.from("#front-image", {
+      y: "-14%",
+      x: "-12%",
+      duration: 1,
+      borderRadius: "30px"
+    });
   }, []);
   const back =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/chapter3-beze-image-0741a5a1.jpg";
   const front =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/chapter3-beze-size-81c42abf.jpg";
   return (
-    <div className="ramka">
+    <div className="ramka" ref={povaRef}>
       <h1 className="pova-title">1.3 мм сверхтонкая рамка экрана</h1>
       <h2 className="pova-subtitle">полный визуальный охват</h2>
       <p className="pova-desc">

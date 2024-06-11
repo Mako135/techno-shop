@@ -673,12 +673,11 @@ body {
 .shop-cards {
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   height: fit-content;
   justify-content: center;
 }
 .shop-card {
-  width: 300px;
   margin: auto;
 }
 
@@ -689,8 +688,8 @@ body {
 .shop-box {
   background-color: #fff;
   border-radius: 8px;
-  height: 300px;
-  width: 300px;
+  height: 19rem;
+  width: 19rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1330,6 +1329,10 @@ textarea {
   min-width: 900px;
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.comparison-table img {
+  width: 220px;
 }
 
 

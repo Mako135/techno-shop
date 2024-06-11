@@ -2,16 +2,18 @@ import arrow from "../assets/arrow_left.png";
 import first from "../assets/1.png";
 import second from "../assets/2.png";
 import ContentSection from "./ContentSection";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 const DesignSection = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".design-inner",
+        trigger: povaRef.current,
         start: "top center",
         end: "+=300",
         markers: true
@@ -21,8 +23,7 @@ const DesignSection = () => {
     tl.from(".content-card", {
       y: 100,
       stagger: 0.2
-    })
-      
+    });
   }, []);
 
   const background =
@@ -35,7 +36,7 @@ const DesignSection = () => {
   return (
     <div>
       <ContentSection backImg={background} backPos="bottom">
-        <div className="design-inner">
+        <div className="design-inner" ref={povaRef}>
           <div className="content-card">
             <div className="design-content-header">
               <div className="design-title">

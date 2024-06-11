@@ -3,13 +3,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 const AudioSection = () => {
-  useEffect(() => {
+  const povaRef  = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".audio-container",
+        trigger: povaRef.current,
         start: "center center",
         end: "+=2000 center",
         scrub: true,
@@ -34,7 +36,7 @@ const AudioSection = () => {
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6/assets-ru/chapter3-atmos-icons-beaafc9d.png";
   return (
     <div className="audio">
-      <div className="audio-container">
+      <div className="audio-container" ref={povaRef}>
         <video height="100%" muted autoPlay loop width="100%">
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.

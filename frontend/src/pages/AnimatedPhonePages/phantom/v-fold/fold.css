@@ -1,3 +1,7 @@
+.fold-container {
+  overflow: hidden;
+}
+
 .fold-one {
   background-color: #fff;
   height: 100vh;

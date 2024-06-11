@@ -1,15 +1,16 @@
 import ContentSection from "./ContentSection";
 import gsap from "gsap";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const BodySection = () => {
   gsap.registerPlugin(ScrollTrigger);
+  const povaRef = useRef();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".body-container",
+        trigger: povaRef.current,
         start: "top center",
         end: "+=300",
         markers: true
@@ -20,22 +21,20 @@ const BodySection = () => {
       y: 100,
       opacity: 0.5,
       stagger: 0.2
-    })
-      .to(".body-header", {
-        y: 0,
-        opacity: 1,
-        duration: 0.2
-      })
-      tl.from(".body-footer", {
-        y: 100,
-        opacity: 0.5,
-        stagger: 0.2
-      })
-      .to(".body-header", {
-        y: 0,
-        opacity: 1,
-        duration: 0.2
-      });
+    }).to(".body-header", {
+      y: 0,
+      opacity: 1,
+      duration: 0.2
+    });
+    tl.from(".body-footer", {
+      y: 100,
+      opacity: 0.5,
+      stagger: 0.2
+    }).to(".body-header", {
+      y: 0,
+      opacity: 1,
+      duration: 0.2
+    });
   }, []);
   const background =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/chapter1-section2-light-146b13f9.jpg";
@@ -48,7 +47,7 @@ const BodySection = () => {
   return (
     <div>
       <ContentSection backImg={background} backPos="center">
-        <div className="body-container">
+        <div className="body-container" ref={povaRef}>
           <div className="body-header">
             <h2 className="body-title">Светодиодная подсветка корпуса</h2>
             <p className="body-subtitle">Создайте свой сценарий</p>

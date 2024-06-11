@@ -51,7 +51,6 @@ const ComparePhones = () => {
             key={photo.id}
             src={photo.image}
             alt={photo.color.name}
-            style={{ width: "50px" }}
           />
         ));
       case "Network":

@@ -1,14 +1,16 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Pova5SecEight = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".pova-8",
+        trigger: povaRef.current,
         start: "top top",
         end: "+=4000 center",
         scrub: 1,
@@ -18,12 +20,9 @@ const Pova5SecEight = () => {
     });
 
     tl.to(".block_1", { opacity: 0, y: 0, duration: 2 })
-      .to(
-        ".block_2",
-        {
-          opacity: 1
-        }
-      )
+      .to(".block_2", {
+        opacity: 1
+      })
       .to(".block_2", { opacity: 0, y: 0, duration: 2 })
       .fromTo(
         ".block_3",
@@ -43,7 +42,7 @@ const Pova5SecEight = () => {
   const figure_2 =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova5/assets-ru/battery-3-b035a7b1.jpg";
   return (
-    <div className="pova-8">
+    <div className="pova-8" ref={povaRef}>
       <picture className="pova-8-bg">
         <source
           media="(min-width: 768px)"

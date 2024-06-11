@@ -1,15 +1,17 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 const NeoSecFour = () => {
-  useEffect(() => {
+  const povaRef = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".fade-slider",
+        trigger: povaRef.current,
         start: "top top",
         end: "+=6000 center",
         scrub: true,
@@ -46,7 +48,7 @@ const NeoSecFour = () => {
     const large_4 =
       "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-neo/ru/assets/images/photo/photo-4.webp";
   return (
-    <div className="fade-slider">
+    <div className="fade-slider" ref={povaRef}>
       <div className="slide" id="slide_1">
         <picture>
           <source srcSet={large_1} media="(min-width: 768px)" />

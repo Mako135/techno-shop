@@ -1,23 +1,24 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionNine = () => {
-  useEffect(() => {
+  const { sparkRef } = useRef();
+
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".section-nine",
+        trigger: sparkRef.current,
         start: "bottom center",
         end: "+=400",
-        scrub: true,
-        markers: true
+        scrub: true
       }
     });
 
     tl.to(".bg-green", {
       duration: 2,
-        scale: 0.9,
+      scale: 0.9,
       opacity: 0.7
     });
   }, []);
@@ -31,7 +32,7 @@ const SectionNine = () => {
   const phone_4 =
     "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/png/sec9PcMagicSkin.png";
   return (
-    <div className="section-nine">
+    <div className="section-nine" ref={sparkRef}>
       <header>
         <div className="left-images">
           <img src={phone_1} alt="" />

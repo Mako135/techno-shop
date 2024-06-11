@@ -1,15 +1,17 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import FoldSlider from "../feautures/FoldSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FoldSecEight = () => {
-  useEffect(() => {
+  const foldRef = useRef();
+  
+  useLayoutEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".fold-eight-content",
+        trigger: foldRef.current,
         start: "top top",
         end: "+=2000",
         scrub: 1,
@@ -36,7 +38,7 @@ const FoldSecEight = () => {
         и дополнительном экране подарят невероятное удовольствие от съемки.
         Создай свои лучшие фотографии!
       </div>
-      <div className="fold-eight-content">
+      <div className="fold-eight-content" ref={foldRef}>
         <div className="fold-left">
           <h1>Основной блок камер</h1>
 
