@@ -12,16 +12,34 @@ const Shops = () => {
         <ShopCard
           img={kaspi}
           title="Каспи Магазин"
-          link={"https://kaspi.kz/"}
+          link={
+            "https://kaspi.kz/shop/p/tecno-phantom-v-flip-5g-8-gb-256-gb-sirenevyi-115769335/?c=750000000&m=30027663&sr=23&ref=shared_link"
+          }
         />
         <ShopCard
           img={technodom}
           title="Technodom"
-          link={"https://technodom.kz/"}
+          link={
+            "https://www.technodom.kz/catalog/smartfony-i-gadzhety/smartfony-i-telefony/smartfony/f/brands/tecno"
+          }
         />
-        <ShopCard img={veter} title="Белый Ветер" link={"https://veter.kz/"} />
-        <ShopCard img={fora} title="Fora" link={"https://fora.kz/"} />
-        <ShopCard img={beeline} title="Beeline" link={"https://beeline.kz/"} />
+        <ShopCard
+          img={veter}
+          title="Белый Ветер"
+          link={
+            "https://shop.kz/offers/smartfony/filter/fltr_brand-is-tecno_mobile/apply/"
+          }
+        />
+        <ShopCard
+          img={fora}
+          title="Fora"
+          link={"https://fora.kz/collection/smartfony"}
+        />
+        <ShopCard
+          img={beeline}
+          title="Beeline"
+          link={"https://shop.beeline.kz/ru/almaty/c/smartphones"}
+        />
       </div>
     </div>
   );

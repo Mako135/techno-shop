@@ -11,9 +11,13 @@ const Smartphones = () => {
       <div className="container">
         <Slider />
         <div className="smartphone-title">
-          <Title text="Наши смартфоны" />
+          <Title props="Наши смартфоны" />
           <div className="smartphone-title-link">
-            <MoreLink text="Сравнить модели" color={"#0264FA"} link={'compare'} />
+            <MoreLink
+              text="Сравнить модели"
+              color={"#0264FA"}
+              link={"compare"}
+            />
           </div>
         </div>
         <MobileFilter />

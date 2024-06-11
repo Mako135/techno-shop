@@ -1,15 +1,15 @@
 import { useState } from "react";
-import useLanguageStore from "../../services/store/useLanguageStore";
+// import useLanguageStore from "../../services/store/useLanguageStore";
 import { NavLink } from "react-router-dom";
-import translations from "../../services/translations/translations.js";
+// import translations from "../../services/translations/translations.js";
 import logo from "../../assets/logo.png";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { language, setLanguage } = useLanguageStore();
-  const handleLanguageChange = () => {
-    language === "ru" ? setLanguage("kk") : setLanguage("ru");
-  };
+  // const { language, setLanguage } = useLanguageStore();
+  // const handleLanguageChange = () => {
+  //   language === "ru" ? setLanguage("kk") : setLanguage("ru");
+  // };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -42,11 +42,11 @@ const MobileMenu = () => {
         </div>
         <div className="header-links-mobile">
           <NavLink className="link" to="/" onClick={toggleMenu}>
-            {translations[language].header.main}
+            Главная
           </NavLink>
           <div className="divider"></div>
           <NavLink className="link" to="/phones" onClick={toggleMenu}>
-            {translations[language].header.phones}
+            Смартфоны
           </NavLink>
           <div className="divider"></div>
 
@@ -56,34 +56,34 @@ const MobileMenu = () => {
           <div className="divider"></div> */}
 
           <NavLink className="link" to="/where-to-buy" onClick={toggleMenu}>
-            {translations[language].header.whereToBuy}
+            Где купить
           </NavLink>
           <div className="divider"></div>
 
           <NavLink className="link" to="/about" onClick={toggleMenu}>
-            {translations[language].header.about}
+            О нас
           </NavLink>
           <div className="divider"></div>
 
           <NavLink className="link" to="/news" onClick={toggleMenu}>
-            {translations[language].header.news}
+            Новости
           </NavLink>
           <div className="divider"></div>
 
           <NavLink className="link" to="/support" onClick={toggleMenu}>
-            {translations[language].header.support}
+            Поддержка
           </NavLink>
           <div className="divider"></div>
 
           <NavLink className="link" to="/stocks" onClick={toggleMenu}>
-            {translations[language].header.stocks}
+            Акции
           </NavLink>
         </div>
 
-        <div onClick={handleLanguageChange} className="">
+        {/* <div onClick={handleLanguageChange} className="">
           <div className="divider" style={{ marginBottom: "1rem" }}></div>
           {language === "ru" ? "Kazakhstan (русский)" : "Kazakhstan (қазақша)"}
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -14,7 +14,7 @@ const HomePage = () => {
     <div className="home">
       <div className="container">
         <Slider />
-        <Title text="Рекомендованные товары" />
+        <Title props="Рекомендованные товары" />
         <HomePhones />
         <Banner src={banner2} />
         <p className="title">Последние новости</p>

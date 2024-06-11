@@ -43,7 +43,7 @@ const PhoneDetailPage = () => {
                   clickable: true,
                   renderBullet: (index, className) => {
                     const colors = Object.keys(images);
-                    return `<span class="${className}" style="background-color: ${colors[index]}; width: 1.5rem; height: 1.5rem; float:left"></span>`;
+                    return `<span class="${className}" style="background-color: ${colors[index]}; width: 1rem; height: 1rem;top: 2rem;"></span>`;
                   }
                 }}
               >

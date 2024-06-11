@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import useLanguageStore from "./useLanguageStore";
 import { fetchData } from "../requests/requests";
 
 export const API = "https://api.tecno-mobile.kz";
@@ -32,10 +31,9 @@ const usePhoneStore = create(set => ({
   },
 
   fetchPhoneById: async id => {
-    const { language } = useLanguageStore.getState();
     set({ loading: true, error: null });
     try {
-      const data = await fetchData(`${API}/${language}/api/phones/${id}`);
+      const data = await fetchData(`${API}/api/phones/${id}`);
       set({ phone: data, loading: false });
     } catch (error) {
       set({ error: error.message, loading: false });

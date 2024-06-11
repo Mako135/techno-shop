@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Accordion from "../../feautures/Accordion";
-import useLanguageStore from "../../services/store/useLanguageStore";
-import translations from "../../services/translations/translations.js";
+// import useLanguageStore from "../../services/store/useLanguageStore";
+// import translations from "../../services/translations/translations.js";
 import instagram from "../../assets/instagram.svg";
 import tiktok from "../../assets/tiktok.svg";
 import logo from "../../assets/logo.png";
@@ -11,12 +11,12 @@ import PropTypes from "prop-types";
 
 
 const MobileFooter = ({ className }) => {
-  const { language, setLanguage } = useLanguageStore();
+  // const { language, setLanguage } = useLanguageStore();
   const [openIndex, setOpenIndex] = useState(null);
 
-   const handleLanguageChange = () => {
-     language === "ru" ? setLanguage("kk") : setLanguage("ru");
-   };
+  //  const handleLanguageChange = () => {
+  //    language === "ru" ? setLanguage("kk") : setLanguage("ru");
+  //  };
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -29,7 +29,7 @@ const MobileFooter = ({ className }) => {
       >
         <img src={logo} alt="Logo" className="logo" />
         <Accordion
-          title={translations[language].header.phones}
+          title="Смартфоны"
           toggleAccordion={() => toggleAccordion(0)}
           isOpen={openIndex === 0}
         >
@@ -51,7 +51,7 @@ const MobileFooter = ({ className }) => {
             </Link>
           </div>
         </Accordion>
-        <Accordion
+        {/* <Accordion
           title={translations[language].header.accessories}
           toggleAccordion={() => toggleAccordion(1)}
           isOpen={openIndex === 1}
@@ -59,9 +59,9 @@ const MobileFooter = ({ className }) => {
           <Link className="footer-link" to="/accessories">
             Аксессуары
           </Link>
-        </Accordion>
+        </Accordion> */}
         <Accordion
-          title={translations[language].header.whereToBuy}
+          title="Где купить"
           toggleAccordion={() => toggleAccordion(2)}
           isOpen={openIndex === 2}
         >
@@ -70,7 +70,7 @@ const MobileFooter = ({ className }) => {
           </Link>
         </Accordion>
         <Accordion
-          title={translations[language].header.about}
+          title="О нас"
           toggleAccordion={() => toggleAccordion(3)}
           isOpen={openIndex === 3}
         >
@@ -87,7 +87,7 @@ const MobileFooter = ({ className }) => {
           </div>
         </Accordion>
         <Accordion
-          title={translations[language].header.support}
+          title="Поддержка"
           toggleAccordion={() => toggleAccordion(4)}
           isOpen={openIndex === 4}
         >
@@ -112,19 +112,25 @@ const MobileFooter = ({ className }) => {
               <img src={tiktok} alt="" className="tiktok" />
             </Link>
           </div>
-          <p onClick={handleLanguageChange}>
+          {/* <p onClick={handleLanguageChange}>
             {language === "ru"
               ? "Kazakhstan (русский)"
               : "Kazakhstan (қазақша)"}
-          </p>
+          </p> */}
         </div>
         <div className="divider"></div>
         <div className="copyright">
           <div className="copyright-links">
-            <Link className="footer-link-copyright" to="/">
+            <Link
+              className="footer-link-copyright"
+              to="https://ru.tecno-mobile.com/privacy-policy/"
+            >
               Политика конфиденциальности
             </Link>
-            <Link className="footer-link-copyright" to="/">
+            <Link
+              className="footer-link-copyright"
+              to="https://ru.tecno-mobile.com/terms-of-use/"
+            >
               Условия использования
             </Link>
             <Link className="footer-link-copyright" to="/">

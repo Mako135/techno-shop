@@ -2,15 +2,14 @@ import instagram from "../../assets/instagram.svg";
 import tiktok from "../../assets/tiktok.svg";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
-import useLanguageStore from "../../services/store/useLanguageStore";
+// import useLanguageStore from "../../services/store/useLanguageStore";
 import PropTypes from "prop-types";
 
-
 const DesktopFooter = ({ className }) => {
-    const { language, setLanguage } = useLanguageStore();
-     const handleLanguageChange = () => {
-       language === "ru" ? setLanguage("kk") : setLanguage("ru");
-     };
+  // const { language, setLanguage } = useLanguageStore();
+  //  const handleLanguageChange = () => {
+  //    language === "ru" ? setLanguage("kk") : setLanguage("ru");
+  //  };
 
   return (
     <div
@@ -41,11 +40,11 @@ const DesktopFooter = ({ className }) => {
                 POP
               </Link>
             </div>
-            <div className="footer-links">
+            {/* <div className="footer-links">
               <Link className="footer-link bold" to="/">
                 Аксессуары
               </Link>
-            </div>
+            </div> */}
             <div className="footer-links">
               <Link className="footer-link bold" to="/">
                 Где купить
@@ -80,10 +79,13 @@ const DesktopFooter = ({ className }) => {
               </Link>
             </div>
             <div className="footer-social">
-              <Link>
+              <Link
+                to="https://www.instagram.com/tecnomobile.kz"
+                target="blank"
+              >
                 <img src={instagram} alt="" className="instagram" />
               </Link>
-              <Link>
+              <Link to="https://www.tiktok.com/@tecnomobile.kz" target="blank">
                 <img src={tiktok} alt="" className="tiktok" />
               </Link>
             </div>
@@ -93,11 +95,11 @@ const DesktopFooter = ({ className }) => {
         {/* Footer bottom */}
         <div className="footer-bottom">
           <div className="footer-logo">
-            <p onClick={handleLanguageChange}>
+            {/* <p onClick={handleLanguageChange}>
               {language === "ru"
                 ? "Kazakhstan (русский)"
                 : "Kazakhstan (қазақша)"}
-            </p>
+            </p> */}
             <img src={logo} alt="" height={32} />
           </div>
 
@@ -105,10 +107,16 @@ const DesktopFooter = ({ className }) => {
 
           <div className="copyright">
             <div className="copyright-links">
-              <Link className="footer-link-copyright" to="/">
+              <Link
+                className="footer-link-copyright"
+                to="https://ru.tecno-mobile.com/privacy-policy/"
+              >
                 Политика конфиденциальности
               </Link>
-              <Link className="footer-link-copyright" to="/">
+              <Link
+                className="footer-link-copyright"
+                to="https://ru.tecno-mobile.com/terms-of-use/"
+              >
                 Условия использования
               </Link>
               <Link className="footer-link-copyright" to="/">
@@ -124,7 +132,7 @@ const DesktopFooter = ({ className }) => {
 };
 
 DesktopFooter.propTypes = {
-    className: PropTypes.string
+  className: PropTypes.string
 };
 
 export default DesktopFooter;

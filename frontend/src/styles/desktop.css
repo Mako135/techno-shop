@@ -205,7 +205,7 @@ body {
 .footer-links-group {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: space-between;
 }
 .footer-links {
@@ -534,6 +534,8 @@ body {
 }
 
 .phone-detail-content .swiper .swiper-slide img {
+  width: 100%;
+  object-fit: contain;
   height: 100%;
   max-height: 280px;
 }
@@ -1189,18 +1191,12 @@ textarea {
 
 .service-list {
   display: grid;
-  grid-template-columns: 40% 60%;
   gap: 1rem;
   padding: 2rem;
-  max-width: 45rem;
+  max-width: 30rem;
   margin: auto;
 }
 
-.service-list input {
-  padding: 10px;
-  border: 1px solid #e2e2e2;
-  border-radius: 4px;
-}
 
 .service-input-container {
   position: relative;
@@ -1208,16 +1204,16 @@ textarea {
 }
 
 .service-list select {
-  padding-right: 30px; /* Добавляем паддинг справа для места под стрелку */
+  padding-right: 30px; 
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  appearance: none; /* Убираем стандартную стрелку */
-  -webkit-appearance: none; /* Убираем стандартную стрелку в Webkit */
-  -moz-appearance: none; /* Убираем стандартную стрелку в Firefox */
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background: url("https://www.svgrepo.com/show/521469/arrow-down.svg")
     no-repeat right 10px center;
-  background-size: 2rem;
+  background-size: 1.5rem;
 }
 
 .service-list select option {

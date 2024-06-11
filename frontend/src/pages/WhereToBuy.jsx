@@ -9,7 +9,7 @@ const WhereToBuy = () => {
     <div>
       <div className="container">
         <Banner src={banner2} />
-        <Title text="Онлайн магазины" />
+        <Title props="Онлайн магазины" />
         <Shops />
         <div className="divider"></div>
       </div>

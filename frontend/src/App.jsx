@@ -25,6 +25,7 @@ import PovaFive from "./pages/AnimatedPhonePages/pova/pova-5/PovaFive";
 import ServicePage from "./pages/ServicePage";
 import Smartphones from "./pages/phone/Smartphones";
 import ComparePhones from "./pages/phone/ComparePhones";
+import SparkGo from "./pages/AnimatedPhonePages/spark/spark20c-2024go/SparkGo";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
           <Route path="/pova/6-pro" element={<Pova6Pro />} />
           <Route path="/camon/30" element={<Common30 />} />
           <Route path="/spark/c" element={<Spark20C />} />
+          <Route path="/spark/go" element={<SparkGo />} />
           <Route path="/spark/20" element={<Spark20 />} />
           <Route path="/spark/20-pro" element={<Spark20Pro />} />
           <Route path="/spark/20-pro-plus" element={<Spark20ProPlus />} />

@@ -25,7 +25,7 @@ const getBatteryRange = battery => {
 };
 
 // Функция для формирования URL с параметрами
-export const constructUrl = (params, language) => {
+export const constructUrl = (params) => {
   const {
     category = "",
     display = "",
@@ -40,5 +40,5 @@ export const constructUrl = (params, language) => {
   const { minBattery, maxBattery } = getBatteryRange(battery);
   const memoriesParam =
     ram.length > 0 ? `&memories=${ram.join("&memories=")}` : "";
-  return `${API}/${language}/api/phones/?category__name=${category}&display=${display}&resolution=${resolution}&front_camera=${frontCamera}&back_camera=${backCamera}&has_touch_id=${touchId}&min_battery=${minBattery}&max_battery=${maxBattery}${memoriesParam}`;
+  return `${API}/api/phones/?category__name=${category}&display=${display}&resolution=${resolution}&front_camera=${frontCamera}&back_camera=${backCamera}&has_touch_id=${touchId}&min_battery=${minBattery}&max_battery=${maxBattery}${memoriesParam}`;
 };

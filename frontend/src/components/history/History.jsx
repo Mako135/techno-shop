@@ -4,9 +4,8 @@ import HistorSlider from "./HistorySlider";
 const History = () => {
   return (
     <div className="history">
-      <Title text="История Компании" />
+      <Title props="История Компании" />
       <HistorSlider />
-     
     </div>
   );
 };

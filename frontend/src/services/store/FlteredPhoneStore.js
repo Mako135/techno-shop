@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import useLanguageStore from "./useLanguageStore";
 import { constructUrl } from "../url/urlCollector";
 import { fetchData } from "../requests/requests";
 
@@ -9,11 +8,10 @@ const useFilteredPhoneStore = create(set => ({
   loading: false,
   error: null,
   fetchPhones: async (params = {}) => {
-    const { language } = useLanguageStore.getState();
     set({ loading: true, error: null });
 
     try {
-      const url = constructUrl(params, language);
+      const url = constructUrl(params);
       const data = await fetchData(url);
 
       const phones = data;

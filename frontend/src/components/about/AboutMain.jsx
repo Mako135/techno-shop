@@ -3,7 +3,7 @@ import Title from "../text/Title";
 const AboutMain = () => {
   return (
     <div>
-      <Title text="О Tecno" />
+      <Title props="О Tecno" />
       <p>
         Tecno — бренд смартфонов премиального качества и устройств, объединяющих
         Интернет вещей с ИИ, принадлежащий компании Transsion Holdings.
