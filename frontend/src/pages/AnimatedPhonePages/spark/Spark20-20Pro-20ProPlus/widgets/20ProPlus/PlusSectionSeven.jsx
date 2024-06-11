@@ -19,7 +19,7 @@ const PlusSectionSeven = () => {
               media="(min-width: 1024px)"
             />
             <img
-              src="hhttps://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20_Pro_Plus/SPARK_20_Pro_Plus/dist/images/sec7PcPhone.webp"
+              src="https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20_Pro_Plus/SPARK_20_Pro_Plus/dist/images/sec7PcPhone.webp"
               alt="phone"
             />
           </picture>
