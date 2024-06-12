@@ -5,7 +5,11 @@ import Filter from "../../feautures/Filter";
 import Footer from "../../components/footer/Footer";
 import MoreLink from "../../components/link/MoreLink";
 import MobileFilter from "../../components/filter/MobileFilter";
+import { useEffect } from "react";
 const Smartphones = () => {
+  useEffect(() => {
+    document.title = "Смартфоны | Tecno";
+  }, []);
   return (
     <div className="smartphones">
       <div className="container">

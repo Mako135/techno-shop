@@ -3,7 +3,7 @@ import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage";
 import Accessories from "./pages/Accessories";
 import WhereToBuy from "./pages/WhereToBuy";
-import About from "./pages/About";
+import About from "./pages/about/About";
 import News from "./pages/News/News";
 import Support from "./pages/Support";
 import Stocks from "./pages/Stocks";
@@ -47,18 +47,18 @@ function App() {
           <Route path="/download" element={<DownloadPage />} />
           <Route path="/services" element={<ServicePage />} />
 
-          <Route path="/pova/5" element={<PovaFive />} />
-          <Route path="/pova/6" element={<Pova6 />} />
-          <Route path="/pova/neo" element={<PovaNeo />} />
-          <Route path="/pova/6-pro" element={<Pova6Pro />} />
-          <Route path="/camon/30" element={<Common30 />} />
-          <Route path="/spark/c" element={<Spark20C />} />
-          <Route path="/spark/go" element={<SparkGo />} />
-          <Route path="/spark/20" element={<Spark20 />} />
-          <Route path="/spark/20-pro" element={<Spark20Pro />} />
-          <Route path="/spark/20-pro-plus" element={<Spark20ProPlus />} />
-          <Route path="/phantom/fold" element={<Fold />} />
-          <Route path="/phantom/flip" element={<Flip />} />
+          <Route path="/pova-5" element={<PovaFive />} />
+          <Route path="/pova-6" element={<Pova6 />} />
+          <Route path="/pova-6-neo" element={<PovaNeo />} />
+          <Route path="/pova-6-pro" element={<Pova6Pro />} />
+          <Route path="/camon-30" element={<Common30 />} />
+          <Route path="/spark-c" element={<Spark20C />} />
+          <Route path="/spark-go" element={<SparkGo />} />
+          <Route path="/spark-20" element={<Spark20 />} />
+          <Route path="/spark-20-pro" element={<Spark20Pro />} />
+          <Route path="/spark-20-pro-plus" element={<Spark20ProPlus />} />
+          <Route path="/phantom-fold" element={<Fold />} />
+          <Route path="/phantom-flip" element={<Flip />} />
         </Route>
       </Routes>
     </main>

@@ -8,8 +8,12 @@ import HomeNews from "../feautures/HomeNews";
 import Banner from "../components/banner/Banner";
 import Title from "../components/text/Title";
 import HomePhones from "../components/home/HomePhones";
+import { useEffect } from "react";
 
 const HomePage = () => {
+  useEffect(() => {
+    document.title = "Главная | Tecno";
+  }, []);
   return (
     <div className="home">
       <div className="container">

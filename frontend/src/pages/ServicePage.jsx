@@ -10,16 +10,17 @@ import { API } from "../services/store/usePhoneStore";
 
 const ServicePage = () => {
   const [serviceData, setServiceData] = useState([]);
-  const [selectedCity, setSelectedCity] = useState(null); // Initialize with null
+  const [selectedCity, setSelectedCity] = useState(null);
   const [mapKey, setMapKey] = useState(0);
 
   useEffect(() => {
+    document.title = "Сервисные Центры | Tecno";
     const fetchServices = async () => {
       try {
         const response = await fetchData(`${API}/api/contacts`);
         const data = await response;
         setServiceData(data);
-        setSelectedCity(data[0]); // Set initial selected city
+        setSelectedCity(data[0]); 
       } catch (error) {
         console.error("Error fetching service data:", error);
       }
@@ -33,7 +34,7 @@ const ServicePage = () => {
       (center) => center.city.name === event.target.value
     );
     setSelectedCity(selectedCity);
-    setMapKey((prevKey) => prevKey + 1); // Update key to re-render map
+    setMapKey((prevKey) => prevKey + 1);
   };
 
   const apiKey = "AIzaSyD-jzRZNgmIlm7btquVgHPDPOV7Za9NJ_0";

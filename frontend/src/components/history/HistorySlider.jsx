@@ -6,7 +6,10 @@ import HistoryCard from "./HistoryCard";
 import history from "../../assets/history.png";
 import { Navigation } from "swiper/modules";
 import { useRef, useState } from "react";
-import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
+import {
+  MdKeyboardDoubleArrowLeft,
+  MdKeyboardDoubleArrowRight
+} from "react-icons/md";
 
 const HistorSlider = () => {
   // eslint-disable-next-line no-unused-vars
@@ -33,19 +36,31 @@ const HistorSlider = () => {
         }}
         breakpoints={{
           0: {
-            slidesPerView: 1.3
+            slidesPerView: 1.15
           },
-          640: {
-            slidesPerView: 2.2
+          480: {
+            slidesPerView: 1.8
+          },
+          624: {
+            slidesPerView: 2
+          },
+          650: {
+            slidesPerView: 2
+          },
+          739: {
+            slidesPerView: 2.5
           },
           789: {
-            slidesPerView: 2.7
+            slidesPerView: 2.5
           },
           967: {
             slidesPerView: 3
           },
           1120: {
             slidesPerView: 3.5
+          },
+          1220: {
+            slidesPerView: 3.9
           }
         }}
         className="mySwiper"

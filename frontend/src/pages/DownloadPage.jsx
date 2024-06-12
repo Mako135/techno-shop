@@ -9,6 +9,7 @@ import { API } from "../services/store/usePhoneStore";
 const DownloadPage = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [phonesData, setPhonesData] = useState([]);
+  
   useEffect(() => {
     const fetchPhones = async () => {
       try {
@@ -19,10 +20,8 @@ const DownloadPage = () => {
         console.error("Error fetching phone data:", error);
       }
     };
-
     fetchPhones();
   }, []);
-
 
   const categorizedPhones = phonesData.reduce((acc, phone) => {
     const categoryName = phone.category.name;
@@ -32,7 +31,6 @@ const DownloadPage = () => {
     acc[categoryName].push(phone);
     return acc;
   }, {});
-  console.log(categorizedPhones);
 
   const handleTabClick = (index) => {
     setActiveTab(index);

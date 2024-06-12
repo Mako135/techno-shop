@@ -8,11 +8,16 @@ import { Link } from "react-router-dom";
 const News = () => {
   const { news, fetchNews } = useNewsStore();
   useEffect(() => {
+    document.title = "Новости | Tecno";
     fetchNews();
   }, [fetchNews]);
-  const mainNews = news[0];
-  const updatedNews = news.slice(1);
-  console.log(news);
+  const filteredNews = news.filter(
+    (item) => item.pattern === "second_form_news"
+  );
+
+  const mainNews = filteredNews[0];
+  const updatedNews = filteredNews.slice(1);
+
   return (
     <div style={{ backgroundColor: "#fff" }}>
       <div className="container">

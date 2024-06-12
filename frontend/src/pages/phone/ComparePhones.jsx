@@ -5,6 +5,8 @@ import { fetchData } from "../../services/requests/requests";
 import { API } from "../../services/store/usePhoneStore";
 import parse from "html-react-parser";
 import Footer from "../../components/footer/Footer";
+import { Pagination } from "swiper/modules";
+import { SwiperSlide, Swiper } from "swiper/react";
 
 const ComparePhones = () => {
   const [selectedPhones, setSelectedPhones] = useState([null, null, null]);
@@ -45,14 +47,34 @@ const ComparePhones = () => {
     if (!details) return "Не выбрано";
 
     switch (section) {
-      case "Photos":
-        return details.photos.map((photo) => (
-          <img
-            key={photo.id}
-            src={photo.image}
-            alt={photo.color.name}
-          />
-        ));
+      case "Photos": {
+        const images = {};
+        details.photos.forEach((photo) => {
+          const colorName = photo.color.color;
+          images[colorName] = photo.image;
+        });
+        console.log(images);
+        return (
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            pagination={{
+              clickable: true,
+              renderBullet: (index, className) => {
+                const colors = Object.keys(images);
+                return `<span class="${className}" style="background-color: ${colors[index]}; width: 1rem; height: 1rem; top: 2rem;"></span>`;
+              }
+            }}
+          >
+            {Object.entries(images).map(([color, imageUrl]) => (
+              <SwiperSlide key={color}>
+                <img src={imageUrl} alt={color} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        );
+      }
       case "Network":
         return details.network.map((n) => n.name).join(", ");
       case "Category":
@@ -103,6 +125,7 @@ const ComparePhones = () => {
         return "Неизвестная секция";
     }
   };
+
 
   return (
     <div>
