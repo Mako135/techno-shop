@@ -38,9 +38,9 @@ export const constructUrl = params => {
     ram = [],
     minRes = ""
   } = params;
-  
+
   const { minBattery, maxBattery } = getBatteryRange(battery);
   const memoriesParam =
-    ram.length > 0 ? `&memories=${ram.join("&memories=")}` : "";
+    ram.length > 0 ? `&memories=${ram}` : "";
   return `${API}/api/phones/?category__name=${category}&display=${display}&resolution=${resolution}&front_camera=${frontCamera}&back_camera=${backCamera}&has_touch_id=${touchId}&min_battery=${minBattery}&max_battery=${maxBattery}${memoriesParam}&min_resolution=${minRes}`;
 };

@@ -12,7 +12,6 @@ const useFilteredPhoneStore = create(set => ({
 
     try {
       const url = constructUrl(params);
-      console.log(url);
       const data = await fetchData(url);
 
       const phones = data;
