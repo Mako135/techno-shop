@@ -7,12 +7,17 @@ const useNewsStore = create(set => ({
   loading: false,
   error: null,
   newsDetail: null,
+  stocks: [],
 
   fetchNews: async () => {
     set({ loading: true, error: null });
     try {
       const data = await fetchData(`${API}/api/news`);
-      set({ news: data, loading: false });
+      set({
+        news: data.filter(item => item.pattern === "second_form_news"),
+        stocks: data.filter(item => item.pattern === "slider_news"),
+        loading: false
+      });
     } catch (error) {
       set({ error: error.message, loading: false });
     }

@@ -7,6 +7,7 @@ const SearchPage = () => {
   const [phones, setPhones] = useState([]);
 
   useEffect(() => {
+    document.title = "Поиск | Tecno";
     const fetchPhones = async () => {
       if (searchText.trim() === "") {
         setPhones([]);

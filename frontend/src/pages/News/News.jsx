@@ -12,7 +12,6 @@ const News = () => {
   }, [fetchNews]);
   const mainNews = news[0];
   const updatedNews = news.slice(1);
-  console.log(news);
   return (
     <div style={{ backgroundColor: "#fff" }}>
       <div className="container">

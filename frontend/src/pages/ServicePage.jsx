@@ -14,6 +14,7 @@ const ServicePage = () => {
   const [mapKey, setMapKey] = useState(0);
 
   useEffect(() => {
+    document.title = "Поддержка | Tecno";
     const fetchServices = async () => {
       try {
         const response = await fetchData(`${API}/api/contacts`);

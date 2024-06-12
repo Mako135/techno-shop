@@ -6,8 +6,6 @@ import WhereToBuy from "./pages/WhereToBuy";
 import About from "./pages/About";
 import News from "./pages/News/News";
 import Support from "./pages/Support";
-import Stocks from "./pages/Stocks";
-import NewsPage from "./components/news/NewsPage";
 import PhoneDetailPage from "./pages/phone/PhoneDetailPage";
 import Pova6Pro from "./pages/AnimatedPhonePages/pova/pova-6-6pro/Pova6Pro";
 import Common30 from "./pages/AnimatedPhonePages/common/Common30";
@@ -26,6 +24,9 @@ import ServicePage from "./pages/ServicePage";
 import Smartphones from "./pages/phone/Smartphones";
 import ComparePhones from "./pages/phone/ComparePhones";
 import SparkGo from "./pages/AnimatedPhonePages/spark/spark20c-2024go/SparkGo";
+import NewsPage from "./pages/News/NewsPage";
+import Stocks from "./pages/stocks/Stocks";
+import StocksDetailPage from "./pages/stocks/StocksDetailPage";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="/news/:newsId" element={<NewsPage />} />
           <Route path="/support" element={<Support />} />
           <Route path="/stocks" element={<Stocks />} />
+          <Route path="/stocks/:stockId" element={<StocksDetailPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/download" element={<DownloadPage />} />
           <Route path="/services" element={<ServicePage />} />

@@ -6,8 +6,12 @@ import aboutBanner2 from '../assets/aboutBanner2.jpg'
 import AboutMain from '../components/about/AboutMain';
 import History from '../components/history/History';
 import Footer from '../components/footer/Footer';
+import { useEffect } from 'react';
 
 const About = () => {
+  useEffect(() => {
+    document.title = "О нас | Tecno";
+  }, []);
   return (
     <div className="about-page">
       <div

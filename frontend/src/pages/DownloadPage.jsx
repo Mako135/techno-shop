@@ -10,6 +10,7 @@ const DownloadPage = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [phonesData, setPhonesData] = useState([]);
   useEffect(() => {
+    document.title = "Сервисные Центры | Tecno";
     const fetchPhones = async () => {
       try {
         const response = await fetchData(`${API}/api/phones/`);
@@ -22,7 +23,6 @@ const DownloadPage = () => {
 
     fetchPhones();
   }, []);
-
 
   const categorizedPhones = phonesData.reduce((acc, phone) => {
     const categoryName = phone.category.name;

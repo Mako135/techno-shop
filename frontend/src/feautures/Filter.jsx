@@ -86,7 +86,7 @@ const Filter = () => {
       )
     },
     {
-      title: "Battery",
+      title: "Батарея",
       content: (
         <Battery onBatteryChange={(value) => handleChange("battery", value)} />
       )
@@ -129,7 +129,7 @@ const Filter = () => {
         <Accordion
           key={index}
           title={item.title}
-          isOpen={!!openAccordions[index]}
+          isOpen={!openAccordions[index]}
           toggleAccordion={() => toggleAccordion(index)}
         >
           <div>{item.content}</div>

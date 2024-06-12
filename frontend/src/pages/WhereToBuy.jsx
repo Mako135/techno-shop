@@ -3,8 +3,12 @@ import banner2 from "../assets/banner2.png";
 import Title from "../components/text/Title";
 import Shops from "../feautures/Shops";
 import Footer from "../components/footer/Footer";
+import { useEffect } from "react";
 
 const WhereToBuy = () => {
+  useEffect(() => {
+    document.title = "Где купить | Tecno";
+  }, []);
   return (
     <div>
       <div className="container">

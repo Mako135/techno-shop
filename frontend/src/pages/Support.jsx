@@ -5,7 +5,11 @@ import Tabs from "../components/tabs/Tabs";
 import Contact from "../components/support/Contact";
 import { SUPPORT } from "../services/accordion/AccordionData";
 import { GoArrowRight } from "react-icons/go";
+import { useEffect } from "react";
 const Support = () => {
+  useEffect(() => {
+    document.title = "Поддержка | Tecno";
+  }, []);
   return (
     <div>
       <div className="support-banner">
