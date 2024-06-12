@@ -105,7 +105,7 @@ const Display = ({ onDisplayChange }) => {
           checked={selectedDisplay === "6.4"}
           onChange={handleDisplayChange}
         />
-        6.4”
+        6.4” и более
       </label>
     </div>
   );

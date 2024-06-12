@@ -19,13 +19,19 @@ const Filter = () => {
     ram: [],
     frontCamera: "",
     backCamera: "",
-    touchId: false,
-    battery: ""
+    touchId: "",
+    battery: "",
+    minRes: ""
   });
 
   const handleChange = (type, value) => {
-    console.log(`Updating filter ${type} to ${value}`);
-    const newFilters = { ...filters, [type]: value };
+    let newFilters = { ...filters };
+    if (type === "display" && value === "6.4") {
+      newFilters = { ...filters, display: "", minRes: value };
+    } else {
+      newFilters = { ...filters, [type]: value };
+    }
+    console.log(newFilters);
     setFilters(newFilters);
     fetchPhones(newFilters);
   };
