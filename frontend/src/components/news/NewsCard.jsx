@@ -28,7 +28,7 @@ const NewsCard = ({ news }) => {
 };
 
 NewsCard.propTypes = {
-  news: PropTypes.any,
+  news: PropTypes.any
 };
 
-export default NewsCard
+export default NewsCard;

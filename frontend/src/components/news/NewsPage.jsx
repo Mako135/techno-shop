@@ -3,19 +3,38 @@ import arrow from "../../assets/arrow.png";
 import Footer from "../footer/Footer";
 import { useParams } from "react-router-dom";
 import useNewsStore from "../../services/store/NewsStore";
-import useLanguageStore from "../../services/store/useLanguageStore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import parse from "html-react-parser";
+import { fetchData } from "../../services/requests/requests";
+import { API } from "../../services/store/usePhoneStore";
 
 const NewsPage = () => {
   const { newsId } = useParams();
+  const [news, setNews] = useState();
   const { newsDetail, fetchNewsById } = useNewsStore();
-  const { language } = useLanguageStore();
+  const [newsIndex, setNewsIndex] = useState();
   const safeParse = (content) =>
     typeof content === "string" ? parse(content) : null;
   useEffect(() => {
-    fetchNewsById(newsId);
-  }, [newsId, fetchNewsById, language]);
+    const fetchNews = async () => {
+      try {
+        const data = await fetchData(`${API}/api/news`);
+        setNews(data);
+
+        fetchNewsById(newsId);
+
+        if (data) {
+          let index = data.findIndex((newsItem) => newsItem.slug === newsId);
+          setNewsIndex(index);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchNews();
+  }, [newsId, fetchNewsById]);
+  console.log(news, newsIndex);
 
   return (
     <div>
@@ -34,14 +53,13 @@ const NewsPage = () => {
         </div>
         <div className="news-main-content">
           <img src={newsDetail?.preview_image} alt="" />
-          <p>{safeParse(newsDetail?.content)}</p>
+          <div>{safeParse(newsDetail?.content)}</div>
         </div>
 
         <div className="news-main-navigation">
           <Link className="news-link-left" to="/news/1">
             <div className="news-link">
               <img src={arrow} alt="" height={12} />
-
               <p>Предыдущая новость</p>
             </div>
           </Link>

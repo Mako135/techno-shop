@@ -31,8 +31,8 @@ const Filter = () => {
   };
 
   const handleTouchIdChange = (event) => {
-    const { checked } = event.target;
-    console.log(`Touch ID changed to ${checked}`);
+    let { checked } = event.target;
+    if (checked === false) checked = "";
     handleChange("touchId", checked);
   };
 

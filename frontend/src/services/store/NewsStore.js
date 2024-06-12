@@ -9,7 +9,6 @@ const useNewsStore = create(set => ({
   newsDetail: null,
 
   fetchNews: async () => {
-
     set({ loading: true, error: null });
     try {
       const data = await fetchData(`${API}/api/news`);

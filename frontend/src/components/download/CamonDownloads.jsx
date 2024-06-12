@@ -1,8 +1,20 @@
+import PropTypes from "prop-types";
 
-const CamonDownloads = () => {
+const CamonDownloads = ({data}) => {
   return (
-    <div>CamonDownloads</div>
-  )
-}
+    <div>
+      {data?.map((phone) => (
+        <div key={phone.id} className="download-phone-card">
+          <img src={phone.photos[0].image} alt="" />
+          <p>{phone.title}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-export default CamonDownloads
+CamonDownloads.propTypes = {
+  data: PropTypes.array
+};
+
+export default CamonDownloads;

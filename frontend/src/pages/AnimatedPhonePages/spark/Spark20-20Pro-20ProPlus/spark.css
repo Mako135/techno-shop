@@ -1196,7 +1196,7 @@
 }
 
 .blue-text h2,
-h3 {
+.blue-text h3 {
   font-weight: 400;
   background: linear-gradient(90deg, #a8ccff 0%, #f0c6e5 100%) !important;
   -webkit-background-clip: text !important;
@@ -1299,5 +1299,3 @@ h3 {
   gap: 1.25vw;
   height: fit-content;
 }
-
-
