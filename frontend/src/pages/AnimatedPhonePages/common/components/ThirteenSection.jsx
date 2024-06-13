@@ -14,7 +14,6 @@ const ThirteenSection = () => {
         end: "+=3000",
         scrub: true,
         pin: true,
-        markers: true
       }
     });
 

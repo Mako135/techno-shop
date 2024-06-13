@@ -13,7 +13,6 @@ const BodySection = () => {
         trigger: povaRef.current,
         start: "top center",
         end: "+=300",
-        markers: true
       }
     });
 

@@ -17,7 +17,6 @@ const FourthSection = () => {
         end: "+=300% center",
         scrub: true,
         pin: true,
-        markers: true // Optional, for debugging
       }
     });
 

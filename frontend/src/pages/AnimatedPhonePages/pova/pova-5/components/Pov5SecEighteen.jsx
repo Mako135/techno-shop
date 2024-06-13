@@ -15,7 +15,6 @@ const Pov5SecEighteen = () => {
         end: "bottom center",
         scrub: 1,
         pin: true,
-        markers: true
       }
     });
 

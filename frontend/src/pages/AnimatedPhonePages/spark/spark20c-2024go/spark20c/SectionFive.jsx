@@ -16,7 +16,6 @@ const SectionFive = () => {
       onLeave: () => video.pause(),
       onEnterBack: () => video.play(),
       onLeaveBack: () => video.pause(),
-      markers: true
     });
 
   }, []);

@@ -15,7 +15,6 @@ const FoldSecNine = () => {
         end: "+=3000",
         scrub: 1,
         pin: true,
-        markers: true,
         ease: "back.out"
       }
     });

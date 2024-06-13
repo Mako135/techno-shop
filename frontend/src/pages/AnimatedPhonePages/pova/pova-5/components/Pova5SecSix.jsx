@@ -15,7 +15,6 @@ const Pova5SecSix = () => {
         end: "+=6000 center",
         scrub: 1,
         pin: true,
-        markers: true // Optional, for debugging
       }
     });
 

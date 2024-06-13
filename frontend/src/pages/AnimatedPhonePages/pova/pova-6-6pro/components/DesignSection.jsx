@@ -16,7 +16,6 @@ const DesignSection = () => {
         trigger: povaRef.current,
         start: "top center",
         end: "+=300",
-        markers: true
       }
     });
 

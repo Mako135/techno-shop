@@ -15,7 +15,6 @@ const FlipSecTwelve = () => {
         end: "+=3000",
         pin: true,
         scrub: 1,
-        markers: true
       }
     });
 

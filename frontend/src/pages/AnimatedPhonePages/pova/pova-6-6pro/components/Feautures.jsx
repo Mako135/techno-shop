@@ -15,7 +15,6 @@ const Features = () => {
           trigger: povaRef.current,
           start: "-=200px center",
           end: "+=200",
-          markers: true
         }
       });
 

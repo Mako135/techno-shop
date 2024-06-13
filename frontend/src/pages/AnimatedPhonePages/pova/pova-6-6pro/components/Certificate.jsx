@@ -16,7 +16,6 @@ const Certificate = () => {
         end: "+=2000 center",
         scrub: true,
         pin: true,
-        markers: true
       }
     });
 

@@ -14,7 +14,6 @@ const FlipSecThree = () => {
         start: "top center",
         end: "bottom center",
         scrub: 1,
-        markers: true
       }
     });
 

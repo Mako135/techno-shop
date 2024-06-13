@@ -14,7 +14,6 @@ const FifthSection = () => {
         end: "+=800% center",
         scrub: true,
         pin: true,
-        markers: true // Optional, for debugging
       }
     });
 

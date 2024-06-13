@@ -19,7 +19,6 @@ const VideoCard = ({ src }) => {
         trigger: containerRef.current,
         start: "top center",
         end: "+=300",
-        markers: true
       }
     });
 

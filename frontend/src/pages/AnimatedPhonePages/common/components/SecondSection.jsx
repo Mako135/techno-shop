@@ -13,7 +13,6 @@ const SecondSection = () => {
         start: "-=300 center",
         end: "+=800",
         scrub: true,
-        markers: true // Optional, for debugging
       }
     });
 

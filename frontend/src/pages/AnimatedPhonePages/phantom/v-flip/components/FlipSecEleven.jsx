@@ -13,7 +13,6 @@ const FlipSecEleven = () => {
         start: "top center",
         end: "center center",
         scrub: 1,
-        markers: true
       }
     });
 

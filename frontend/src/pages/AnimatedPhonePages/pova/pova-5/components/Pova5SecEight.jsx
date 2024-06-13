@@ -15,7 +15,6 @@ const Pova5SecEight = () => {
         end: "+=4000 center",
         scrub: 1,
         pin: true,
-        markers: true // Optional, for debugging
       }
     });
 

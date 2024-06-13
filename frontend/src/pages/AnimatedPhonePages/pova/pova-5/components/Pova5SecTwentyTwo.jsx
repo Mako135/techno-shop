@@ -12,7 +12,6 @@ const Pova5SecTwentyTwo = () => {
       scrollTrigger: {
         trigger: povaRef.current,
         start: "top top",
-        markers: true
       }
     });
 

@@ -29,7 +29,6 @@ const Design = ({ backImg, mobImg, frontImg, children, width }) => {
         trigger: povaRef.current,
         start: "+=200 center",
         end: "+=300",
-        markers: true
       }
     });
 

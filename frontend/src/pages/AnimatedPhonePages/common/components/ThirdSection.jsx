@@ -16,7 +16,6 @@ const ThirdSection = () => {
         end: "+=2000 center",
         scrub: true,
         pin: true,
-        markers: true // Optional, for debugging
       }
     });
 

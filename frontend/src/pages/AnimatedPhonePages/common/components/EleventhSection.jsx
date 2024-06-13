@@ -27,7 +27,6 @@ const EleventhSection = () => {
         end: "+=6000",
         scrub: true,
         pin: true,
-        markers: true
       }
     });
 

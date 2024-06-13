@@ -15,7 +15,6 @@ const FlipSecFive = () => {
         end: "+=3000",
         scrub: 1,
         pin: true,
-        markers: true
       }
     });
 

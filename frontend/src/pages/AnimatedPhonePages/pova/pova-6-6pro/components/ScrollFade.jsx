@@ -17,7 +17,6 @@ const SliderFade = () => {
         end: "+=6000 center",
         scrub: true,
         pin: true,
-        markers: true // Optional, for debugging
       }
     });
 

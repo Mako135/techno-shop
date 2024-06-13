@@ -16,7 +16,6 @@ const FoldSecEight = () => {
         end: "+=2000",
         scrub: 1,
         pin: true,
-        markers: true,
         ease: "back.out"
       }
     });

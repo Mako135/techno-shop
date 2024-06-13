@@ -14,7 +14,6 @@ const FifteenthSection = () => {
         end: "+=2000",
         scrub: true,
         pin: true,
-        markers: true
       }
     });
 

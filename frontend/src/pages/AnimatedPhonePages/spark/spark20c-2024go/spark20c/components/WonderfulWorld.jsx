@@ -14,7 +14,6 @@ const WonderfulWorld = () => {
         end: "+=2000",
         pin: true,
         scrub: true,
-        markers: true
       }
     });
 

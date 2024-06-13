@@ -16,7 +16,6 @@ const NeoSecFour = () => {
         end: "+=6000 center",
         scrub: true,
         pin: true,
-        markers: true
       }
     });
 

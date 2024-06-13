@@ -16,7 +16,6 @@ const FoldSecThree = () => {
         end: "+=3000",
         pin: true,
         scrub: 2,
-        markers: true
       }
     });
 
