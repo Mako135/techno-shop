@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import spark from "../../assets/spark.png";
 import arrow from "../../assets/arrow.png";
 import PropTypes from "prop-types";
 
-const RecommendedPhones = ({ spec1, spec2, spec3, img }) => {
+const RecommendedPhones = ({ spec1, spec2, spec3, img, title, link }) => {
   return (
     <div className="recommended-phone-card">
-      <img src={spark} alt="" height={32} className="recommended-logo" />
+      <h1>{title}</h1>
       <div className="recommended-phone-specs">
         <p>{spec1}</p>
         <div className="vl"></div>
@@ -18,7 +17,7 @@ const RecommendedPhones = ({ spec1, spec2, spec3, img }) => {
         <Link className="recommended-link" to="/">
           <button className="buy-btn">Купить</button>
         </Link>
-        <Link className="recommended-link" to="/">
+        <Link className="recommended-link" to={`/phones/${link}`}>
           <div className="about-phone">
             <p>Подробнее</p>
             <img src={arrow} alt="" height={12} />
@@ -34,7 +33,9 @@ RecommendedPhones.propTypes = {
   spec1: PropTypes.string.isRequired,
   spec2: PropTypes.string.isRequired,
   spec3: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired
+  img: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default RecommendedPhones;

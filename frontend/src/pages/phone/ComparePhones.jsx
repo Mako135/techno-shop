@@ -48,12 +48,12 @@ const ComparePhones = () => {
 
     switch (section) {
       case "Photos": {
+        if (!details.photos || details.photos.length === 0) return "Не выбрано";
         const images = {};
         details.photos.forEach((photo) => {
           const colorName = photo.color.color;
           images[colorName] = photo.image;
         });
-        console.log(images);
         return (
           <Swiper
             modules={[Pagination]}
@@ -76,56 +76,119 @@ const ComparePhones = () => {
         );
       }
       case "Network":
-        return details.network.map((n) => n.name).join(", ");
+        return details.network && details.network.length > 0
+          ? details.network.map((n) => n.name).join(", ")
+          : "Нет данных";
       case "Category":
-        return details.category.name;
+        return details.category ? details.category.name : "Нет данных";
       case "Memories":
-        return safeParse(details.memories.map((m) => m.size).join(", "));
+        return details.memories && details.memories.length > 0
+          ? safeParse(details.memories.map((m) => m.size).join(", "))
+          : "Нет данных";
       case "Front Camera":
-        return `${details.front_camera.megapixels} MP`;
+        return details.front_camera && details.front_camera.megapixels
+          ? `${details.front_camera.megapixels} MP`
+          : "Нет данных";
       case "Back Camera":
-        return `${details.back_camera.megapixels} MP`;
+        return details.back_camera && details.back_camera.megapixels
+          ? `${details.back_camera.megapixels} MP`
+          : "Нет данных";
       case "Price":
-        return details.price;
+        return details.price ? details.price : "Нет данных";
       case "Operating System":
-        return safeParse(details.operating_system);
+        return details.operating_system
+          ? safeParse(details.operating_system)
+          : "Нет данных";
       case "CPU Info":
-        return safeParse(details.cpu_info);
+        return details.cpu_info ? safeParse(details.cpu_info) : "Нет данных";
       case "Display":
-        return `${details.display} inches`;
+        return details.display ? `${details.display} inches` : "Нет данных";
       case "Display Info":
-        return safeParse(details.display_info);
+        return details.display_info
+          ? safeParse(details.display_info)
+          : "Нет данных";
       case "Resolution Info":
-        return safeParse(details.resolution_info);
+        return details.resolution_info
+          ? safeParse(details.resolution_info)
+          : "Нет данных";
       case "Camera Info":
-        return safeParse(details.camera_info);
+        return details.camera_info
+          ? safeParse(details.camera_info)
+          : "Нет данных";
       case "Connection":
-        return safeParse(details.connection);
+        return details.connection
+          ? safeParse(details.connection)
+          : "Нет данных";
       case "Sensors":
-        return safeParse(details.sensors);
+        return details.sensors ? safeParse(details.sensors) : "Нет данных";
       case "Battery Info":
-        return safeParse(details.battery_info);
+        return details.battery_info
+          ? safeParse(details.battery_info)
+          : "Нет данных";
       case "Sound Info":
-        return safeParse(details.sound_info);
+        return details.sound_info
+          ? safeParse(details.sound_info)
+          : "Нет данных";
       case "Cellular Info":
-        return safeParse(details.cellular_info);
+        return details.cellular_info
+          ? safeParse(details.cellular_info)
+          : "Нет данных";
       case "Audio Video Info":
-        return safeParse(details.audio_video_info);
+        return details.audio_video_info
+          ? safeParse(details.audio_video_info)
+          : "Нет данных";
       case "Complete Set":
-        return safeParse(details.complete_set);
+        return details.complete_set
+          ? safeParse(details.complete_set)
+          : "Нет данных";
       case "Biometric Info":
-        return safeParse(details.biometric_info);
+        return details.biometric_info
+          ? safeParse(details.biometric_info)
+          : "Нет данных";
       case "Parameters Info":
-        return safeParse(details.parameters_info);
+        return details.parameters_info
+          ? safeParse(details.parameters_info)
+          : "Нет данных";
       case "Record Video":
-        return safeParse(details.record_video);
+        return details.record_video
+          ? safeParse(details.record_video)
+          : "Нет данных";
       case "Possible Connection":
-        return safeParse(details.possible_connection);
+        return details.possible_connection
+          ? safeParse(details.possible_connection)
+          : "Нет данных";
       default:
         return "Неизвестная секция";
     }
   };
 
+
+  const sections = [
+    "Photos",
+    "Network",
+    "Category",
+    "Memories",
+    "Front Camera",
+    "Back Camera",
+    "Price",
+    "Operating System",
+    "CPU Info",
+    "Display",
+    "Display Info",
+    "Resolution Info",
+    "Camera Info",
+    "Connection",
+    "Sensors",
+    "Battery Info",
+    "Sound Info",
+    "Cellular Info",
+    "Audio Video Info",
+    "Complete Set",
+    "Biometric Info",
+    "Parameters Info",
+    "Record Video",
+    "Possible Connection"
+  ];
 
   return (
     <div>
@@ -137,6 +200,7 @@ const ComparePhones = () => {
               <DropdownPhones
                 key={index}
                 onSelect={(selectedSlug) => handleSelect(index, selectedSlug)}
+                selectedPhones={selectedPhones}
               />
             ))}
           </div>
@@ -144,43 +208,26 @@ const ComparePhones = () => {
             <div className="comparison-table">
               {phoneDetails.some((details) => details) && (
                 <>
-                  {[
-                    "Photos",
-                    "Network",
-                    "Category",
-                    "Memories",
-                    "Front Camera",
-                    "Back Camera",
-                    "Price",
-                    "Operating System",
-                    "CPU Info",
-                    "Display",
-                    "Display Info",
-                    "Resolution Info",
-                    "Camera Info",
-                    "Connection",
-                    "Sensors",
-                    "Battery Info",
-                    "Sound Info",
-                    "Cellular Info",
-                    "Audio Video Info",
-                    "Complete Set",
-                    "Biometric Info",
-                    "Parameters Info",
-                    "Record Video",
-                    "Possible Connection"
-                  ].map((section) => (
-                    <div className="comparison-section" key={section}>
-                      <Title props={section} />
-                      <div className="comparison-row">
-                        {phoneDetails.map((details, index) => (
-                          <div key={index} className="comparison-cell">
-                            {renderDetails(details, section)}
-                          </div>
-                        ))}
+                  {sections
+                    .filter((section) =>
+                      phoneDetails.some((details) =>
+                        details
+                          ? renderDetails(details, section) !== "Не выбрано"
+                          : false
+                      )
+                    )
+                    .map((section) => (
+                      <div className="comparison-section" key={section}>
+                        <Title props={section} />
+                        <div className="comparison-row">
+                          {phoneDetails.map((details, index) => (
+                            <div key={index} className="comparison-cell">
+                              {renderDetails(details, section)}
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </>
               )}
             </div>

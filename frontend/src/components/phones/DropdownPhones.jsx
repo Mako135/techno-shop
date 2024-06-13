@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { fetchData } from "../../services/requests/requests";
 import { API } from "../../services/store/usePhoneStore";
 
-const DropdownPhones = ({ onSelect }) => {
+const DropdownPhones = ({ onSelect, selectedPhones }) => {
   const [phonesData, setPhonesData] = useState([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [openAccordions, setOpenAccordions] = useState({});
@@ -47,6 +47,9 @@ const DropdownPhones = ({ onSelect }) => {
     onSelect(item.slug);
   };
 
+  const filteredPhones = (phones) =>
+    phones.filter((phone) => !selectedPhones.includes(phone.slug));
+
   return (
     <div className="dropdown-select">
       <div
@@ -71,7 +74,7 @@ const DropdownPhones = ({ onSelect }) => {
             >
               {categorizedPhones[category].length > 0 ? (
                 <ul>
-                  {categorizedPhones[category].map((item) => (
+                  {filteredPhones(categorizedPhones[category]).map((item) => (
                     <li key={item.id} onClick={() => handleItemClick(item)}>
                       {item.title}
                     </li>
@@ -89,7 +92,8 @@ const DropdownPhones = ({ onSelect }) => {
 };
 
 DropdownPhones.propTypes = {
-  onSelect: PropTypes.func.isRequired
+  onSelect: PropTypes.func.isRequired,
+  selectedPhones: PropTypes.array.isRequired
 };
 
 export default DropdownPhones;

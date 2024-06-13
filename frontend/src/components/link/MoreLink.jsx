@@ -5,7 +5,7 @@ import { GoArrowRight } from "react-icons/go";
 const MoreLink = ({ link, color, text }) => {
   return (
     <div>
-      <Link className="more-links" to={link}>
+      <Link className="more-links" to={link} target="blank">
         <div className="more-link">
           <p style={{ color }}>{text}</p>
           <GoArrowRight style={{ color }} fontSize={20}/>

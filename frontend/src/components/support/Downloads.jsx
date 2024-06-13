@@ -23,7 +23,7 @@ const Downloads = () => {
             img={support_img2}
             text={"Загрузить приложения"}
             linkText={"Посмотреть каталог приложений "}
-            link={"/"}
+            link={"https://play.google.com/store/apps?hl=ru"}
           />
         </div>
       </div>

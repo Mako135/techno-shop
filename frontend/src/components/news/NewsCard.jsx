@@ -16,7 +16,7 @@ const NewsCard = ({ news }) => {
         <div className="news-card-text">
           <p>{news?.description}</p>
         </div>
-        <Link className="news-links" to={news?.slug}>
+        <Link className="news-links" to={`/news/${news?.slug}`}>
           <div className="news-link">
             <p>Читать</p>
             <img src={arrow} alt="" height={12} />

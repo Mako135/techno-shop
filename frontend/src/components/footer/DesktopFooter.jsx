@@ -21,23 +21,20 @@ const DesktopFooter = ({ className }) => {
           <div className="footer-links-group">
             {/* Footer links */}
             <div className="footer-links">
-              <Link className="footer-link bold" to="/">
+              <Link className="footer-link bold" to="/phones">
                 Смартфоны
               </Link>
-              <Link className="footer-link" to="/">
+              <Link className="footer-link" to="/phones">
                 PHANTOM
               </Link>
-              <Link className="footer-link" to="/">
+              <Link className="footer-link" to="/phones">
                 CAMON
               </Link>
-              <Link className="footer-link" to="/">
+              <Link className="footer-link" to="/phones">
                 SPARK
               </Link>
-              <Link className="footer-link" to="/">
+              <Link className="footer-link" to="/phones">
                 POVA
-              </Link>
-              <Link className="footer-link" to="/">
-                POP
               </Link>
             </div>
             {/* <div className="footer-links">
@@ -46,35 +43,35 @@ const DesktopFooter = ({ className }) => {
               </Link>
             </div> */}
             <div className="footer-links">
-              <Link className="footer-link bold" to="/">
+              <Link className="footer-link bold" to="/where-to-buy">
                 Где купить
               </Link>
             </div>
             <div className="footer-links">
-              <Link className="footer-link bold" to="/">
+              <Link className="footer-link bold" to="/about">
                 О нас
               </Link>
-              <Link className="footer-link" to="/">
+              <Link className="footer-link" to="/about">
                 О Tecno
               </Link>
-              <Link className="footer-link" to="/">
+              <Link className="footer-link" to="/news">
                 Новости
               </Link>
-              <Link className="footer-link" to="/">
+              <Link className="footer-link" to="/stocks">
                 Акции
               </Link>
             </div>
             <div className="footer-links">
-              <Link className="footer-link bold" to="/">
+              <Link className="footer-link bold" to="/support">
                 Поддержка
               </Link>
-              <Link className="footer-link" to="/">
+              <Link className="footer-link" to="/support">
                 FAQ
               </Link>
-              <Link className="footer-link" to="/">
+              <Link className="footer-link" to="/support">
                 Документация
               </Link>
-              <Link className="footer-link" to="/">
+              <Link className="footer-link" to="/services">
                 Сервисные центры
               </Link>
             </div>

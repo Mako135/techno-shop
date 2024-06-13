@@ -67,6 +67,7 @@
 }
 .fold-three .desc {
   margin-top: 3vw;
+  max-width: none;
 }
 
 .fold-four-content {

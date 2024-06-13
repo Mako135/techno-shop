@@ -73,7 +73,7 @@ const DownloadPage = () => {
         )}
         {activeTab === 1 && (
           <div>
-            <SparkDownloads data={categorizedPhones.Camon} />
+            <SparkDownloads data={categorizedPhones.Spark} />
           </div>
         )}
         {activeTab === 2 && (

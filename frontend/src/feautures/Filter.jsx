@@ -19,23 +19,24 @@ const Filter = () => {
     ram: [],
     frontCamera: "",
     backCamera: "",
-    touchId: false,
+    touchId: "",
     battery: "",
     minRes: ""
   });
 
   const handleChange = (type, value) => {
+    console.log("Received value:", value, "Type of value:", typeof value);
+
     let newFilters = { ...filters };
-    if (type === "display" && value === "6.4") {
-      newFilters = { ...filters, display: "", minRes: value };
+
+    if (type === "display" && value == 6.4) {
+      newFilters = { ...newFilters, display: "", minRes: value };
+    } else if (type === "touchId" && value === false) {
+      newFilters = { ...newFilters, touchId: "" };
     } else {
-      newFilters = { ...filters, [type]: value };
+      newFilters = { ...newFilters, [type]: value };
     }
-    if (type === "touchId" && value === false) {
-      newFilters = { ...filters, touchId: "" };
-    } else {
-      newFilters = { ...filters, [type]: value };
-    }
+
     console.log(newFilters);
     setFilters(newFilters);
     fetchPhones(newFilters);
@@ -118,6 +119,17 @@ const Filter = () => {
         Фильтры <LuSettings2 />
       </p>
       <div className="divider"></div>
+
+      {accordionData.map((item, index) => (
+        <Accordion
+          key={index}
+          title={item.title}
+          isOpen={!openAccordions[index]}
+          toggleAccordion={() => toggleAccordion(index)}
+        >
+          <div>{item.content}</div>
+        </Accordion>
+      ))}
       <div className="category">
         <label htmlFor="touchId" style={{ padding: 10 }}>
           <input
@@ -130,16 +142,6 @@ const Filter = () => {
           Отпечаток пальцев
         </label>
       </div>
-      {accordionData.map((item, index) => (
-        <Accordion
-          key={index}
-          title={item.title}
-          isOpen={!openAccordions[index]}
-          toggleAccordion={() => toggleAccordion(index)}
-        >
-          <div>{item.content}</div>
-        </Accordion>
-      ))}
     </div>
   );
 };

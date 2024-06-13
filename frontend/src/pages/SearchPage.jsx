@@ -34,7 +34,7 @@ const SearchPage = () => {
       <div className="search-content">
         <h3>Поиск по смартфонам</h3>
         <input type="text" placeholder="ищите здесь" value={searchText} onChange={handleChange} />
-        <div className="phones">
+        <div className="search-phones">
           {phones.map((phone) => (
             <PhonesCard key={phone.id} spec={phone} />
           ))}

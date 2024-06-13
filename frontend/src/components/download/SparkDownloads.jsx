@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import DownloadApps from "./DownloadApps";
 
 const SparkDownloads = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,7 @@ const SparkDownloads = ({ data }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div>
+    <div className="download-phone-cards">
       {data?.map((phone) => (
         <div
           key={phone.id}
@@ -36,7 +37,9 @@ const SparkDownloads = ({ data }) => {
             <div className="line3"></div>
           </div>
         </div>
-        <div className="mobile-filter-content">wefwefwef</div>
+        <div className="download-popup-content">
+          <DownloadApps />
+        </div>
       </div>
     </div>
   );

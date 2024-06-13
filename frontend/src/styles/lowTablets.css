@@ -1,4 +1,7 @@
 @media (max-width: 767px) {
+  .download-card-content {
+    top: 3rem;
+  }
   .phone-container {
     width: 100%;
   }
@@ -97,5 +100,4 @@
     flex-direction: column;
     gap: 2rem;
   }
-  
 }
