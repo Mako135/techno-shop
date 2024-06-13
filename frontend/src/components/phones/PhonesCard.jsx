@@ -40,7 +40,7 @@ const PhonesCard = ({ spec }) => {
         <p className="phone-title">{spec.title}</p>
         <p className="phone-price">{spec.price}₸</p>
         <div className="recommended-links">
-          <Link className="recommended-link" to={spec?.stores[0]?.link} target="blank">
+          <Link className="recommended-link" to={spec?.stores[0]?.link} target="_blank">
             <button className="buy-btn">Купить</button>
           </Link>
           <Link className="recommended-link" to={`/phones/${spec?.slug}`}>

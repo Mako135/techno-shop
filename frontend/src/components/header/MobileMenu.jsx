@@ -18,7 +18,9 @@ const MobileMenu = () => {
   return (
     <>
       <div className="mobile-menu">
-        <img src={logo} alt="" />
+        <NavLink to="/">
+          <img src={logo} alt="" />
+        </NavLink>
         <div
           className={`burger-button ${isOpen ? "open" : ""}`}
           onClick={toggleMenu}

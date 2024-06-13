@@ -53,7 +53,9 @@ const DesktopMenu = () => {
   return (
     <div className="header-container">
       <div className="header">
-        <img src={logo} alt="" height={20} />
+        <NavLink to="/">
+          <img src={logo} alt="" height={20} />
+        </NavLink>
         <div className="header-links">
           <NavLink className="link" to="/">
             Главная

@@ -78,11 +78,11 @@ const DesktopFooter = ({ className }) => {
             <div className="footer-social">
               <Link
                 to="https://www.instagram.com/tecnomobile.kz"
-                target="blank"
+                target="_blank"
               >
                 <img src={instagram} alt="" className="instagram" />
               </Link>
-              <Link to="https://www.tiktok.com/@tecnomobile.kz" target="blank">
+              <Link to="https://www.tiktok.com/@tecnomobile.kz" target="_blank">
                 <img src={tiktok} alt="" className="tiktok" />
               </Link>
             </div>

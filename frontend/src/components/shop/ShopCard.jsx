@@ -9,7 +9,7 @@ const ShopCard = ({ img, title, link }) => {
         <img src={img} alt="" height={52} className="shop-img"/>
       </div>
       <p className="shop-title">{title}</p>
-      <Link className="shop-links" to={link} target="blank">
+      <Link className="shop-links" to={link} target="_blank">
         <div className="shop-link">
           <p>В магазин</p>
           <img src={arrow} alt="" height={12} />

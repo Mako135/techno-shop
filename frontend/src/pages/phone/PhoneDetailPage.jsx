@@ -35,7 +35,7 @@ const PhoneDetailPage = () => {
         {AnimatedPhonesData.includes(phoneId) && (
           <div className="animated-page-link">
             <button className="contact-button">
-              <Link to={`/${phoneId}`} target="blank">
+              <Link to={`/${phoneId}`} target="_blank">
                 Узнать больше о дизайне
               </Link>
             </button>

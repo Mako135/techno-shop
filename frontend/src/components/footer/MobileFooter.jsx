@@ -59,9 +59,11 @@ const MobileFooter = ({ className }) => {
         toggleAccordion={() => toggleAccordion(2)}
         isOpen={openIndex === 2}
       >
-        <Link className="footer-link" to="/where-to-buy">
-          Где купить
-        </Link>
+        <div className="footer-links">
+          <Link className="footer-link" to="/where-to-buy">
+            Где купить
+          </Link>
+        </div>
       </Accordion>
       <Accordion
         title="О нас"
@@ -99,10 +101,10 @@ const MobileFooter = ({ className }) => {
       </Accordion>
       <div className="footer-social-translate">
         <div className="footer-social">
-          <Link to="https://www.instagram.com/tecnomobile.kz" target="blank">
+          <Link to="https://www.instagram.com/tecnomobile.kz" target="_blank">
             <img src={instagram} alt="" className="instagram" />
           </Link>
-          <Link to="https://www.tiktok.com/@tecnomobile.kz" target="blank">
+          <Link to="https://www.tiktok.com/@tecnomobile.kz" target="_blank">
             <img src={tiktok} alt="" className="tiktok" />
           </Link>
         </div>
