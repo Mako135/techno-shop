@@ -1,30 +1,38 @@
 import { Link } from "react-router-dom";
 import arrow from "../../assets/arrow.png";
-import Footer from "../footer/Footer";
+import Footer from "../../components/footer/Footer";
 import { useParams } from "react-router-dom";
 import useNewsStore from "../../services/store/NewsStore";
 import { useEffect, useState } from "react";
 import parse from "html-react-parser";
-import { fetchData } from "../../services/requests/requests";
-import { API } from "../../services/store/usePhoneStore";
 
 const NewsPage = () => {
   const { newsId } = useParams();
-  const [news, setNews] = useState();
-  const { newsDetail, fetchNewsById } = useNewsStore();
-  const [newsIndex, setNewsIndex] = useState();
+  const { newsDetail, fetchNewsById, fetchNews, news } = useNewsStore();
+  const [newsIndex, setNewsIndex] = useState(null);
+
   const safeParse = (content) =>
     typeof content === "string" ? parse(content) : null;
+
   useEffect(() => {
-    const fetchNews = async () => {
+    const fetchData = async () => {
       try {
-        const data = await fetchData(`${API}/api/news`);
-        setNews(data);
+        await fetchNews();
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-        fetchNewsById(newsId);
+    fetchData();
+  }, [fetchNews]);
 
-        if (data) {
-          let index = data.findIndex((newsItem) => newsItem.slug === newsId);
+  useEffect(() => {
+    const fetchNewsDetail = async () => {
+      try {
+        await fetchNewsById(newsId);
+
+        if (news.length > 0) {
+          let index = news.findIndex((newsItem) => newsItem.slug === newsId);
           setNewsIndex(index);
         }
       } catch (error) {
@@ -32,9 +40,10 @@ const NewsPage = () => {
       }
     };
 
-    fetchNews();
-  }, [newsId, fetchNewsById]);
-  console.log(news, newsIndex);
+    if (news.length > 0) {
+      fetchNewsDetail();
+    }
+  }, [newsId, fetchNewsById, news]);
 
   return (
     <div>
@@ -57,13 +66,23 @@ const NewsPage = () => {
         </div>
 
         <div className="news-main-navigation">
-          <Link className="news-link-left" to="/news/1">
+          <Link
+            className="news-link-left"
+            to={newsIndex > 0 ? `/news/${news[newsIndex - 1]?.slug}` : "#"}
+          >
             <div className="news-link">
               <img src={arrow} alt="" height={12} />
               <p>Предыдущая новость</p>
             </div>
           </Link>
-          <Link className="news-link-right" to="/news/1">
+          <Link
+            className="news-link-right"
+            to={
+              newsIndex < news.length - 1
+                ? `/news/${news[newsIndex + 1]?.slug}`
+                : "#"
+            }
+          >
             <div className="news-link">
               <p>Следующая новость</p>
               <img src={arrow} alt="" height={12} />

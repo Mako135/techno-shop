@@ -13,16 +13,11 @@ const useNewsStore = create(set => ({
     set({ loading: true, error: null });
     try {
       const data = await fetchData(`${API}/api/news`);
-      set(
-        {
-          news: data.filter(item => item.pattern === "second_form_news"),
-          loading: false
-        },
-        {
-          stocks: data.filter(item => item.pattern === "first_form_news"),
-          loading: false
-        }
-      );
+      set({
+        news: data.filter(item => item.pattern === "second_form_news"),
+        stocks: data.filter(item => item.pattern === "slider_news"),
+        loading: false
+      });
     } catch (error) {
       set({ error: error.message, loading: false });
     }

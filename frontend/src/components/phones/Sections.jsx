@@ -6,6 +6,14 @@ export const createSections = (phone) => {
 
   return [
     phone?.title
+      ? {
+          title: "Цвета",
+          content: phone.photos.map((color) => (
+            <p key={color.id}>{color?.color.name}</p>
+          ))
+        }
+      : null,
+    phone?.title
       ? { title: "Название", content: safeParse(phone?.title) }
       : null,
     phone?.operating_system

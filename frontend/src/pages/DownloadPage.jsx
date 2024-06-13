@@ -11,6 +11,7 @@ const DownloadPage = () => {
   const [phonesData, setPhonesData] = useState([]);
   
   useEffect(() => {
+    document.title = "Сервисные Центры | Tecno";
     const fetchPhones = async () => {
       try {
         const response = await fetchData(`${API}/api/phones/`);

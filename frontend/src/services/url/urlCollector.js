@@ -1,4 +1,5 @@
 import { API } from "./../store/usePhoneStore";
+
 const getBatteryRange = battery => {
   let minBattery;
   let maxBattery;
@@ -25,8 +26,8 @@ const getBatteryRange = battery => {
 };
 
 // Функция для формирования URL с параметрами
-export const constructUrl = (params) => {
-  const {
+export const constructUrl = params => {
+  let {
     category = "",
     display = "",
     resolution = "",
@@ -34,11 +35,12 @@ export const constructUrl = (params) => {
     backCamera = "",
     touchId = "",
     battery,
-    ram = []
+    ram = [],
+    minRes = ""
   } = params;
 
   const { minBattery, maxBattery } = getBatteryRange(battery);
   const memoriesParam =
-    ram.length > 0 ? `&memories=${ram.join("&memories=")}` : "";
-  return `${API}/api/phones/?category__name=${category}&display=${display}&resolution=${resolution}&front_camera=${frontCamera}&back_camera=${backCamera}&has_touch_id=${touchId}&min_battery=${minBattery}&max_battery=${maxBattery}${memoriesParam}`;
+    ram.length > 0 ? `&memories=${ram}` : "";
+  return `${API}/api/phones/?category__name=${category}&display=${display}&resolution=${resolution}&front_camera=${frontCamera}&back_camera=${backCamera}&has_touch_id=${touchId}&min_battery=${minBattery}&max_battery=${maxBattery}${memoriesParam}&min_resolution=${minRes}`;
 };
