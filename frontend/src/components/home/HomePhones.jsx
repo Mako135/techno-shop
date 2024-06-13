@@ -55,6 +55,7 @@ const HomePhones = () => {
         spec3="5000 мАч и 18 Вт быстрая зарядка"
         title="SPARK 20"
         img={spark_20}
+        link="spark-20"
       />
     </div>
   );
