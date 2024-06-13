@@ -131,7 +131,7 @@ const Filter = () => {
         </Accordion>
       ))}
       <div className="category">
-        <label htmlFor="touchId" style={{ padding: 10 }}>
+        <label style={{ padding: 10 }}>
           <input
             type="checkbox"
             name="touchId"
