@@ -22,7 +22,7 @@
   grid-template-columns: 1.35fr 1.68fr 1fr;
   grid-template-areas:
     "design performance performance"
-    "design experience camera";
+    "design experience camera" !important;
   gap: 2vw;
 }
 

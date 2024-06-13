@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionNine = () => {
-  const { sparkRef } = useRef();
+  const sparkRef = useRef();
 
   useLayoutEffect(() => {
     const tl = gsap.timeline({

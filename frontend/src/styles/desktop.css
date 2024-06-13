@@ -428,7 +428,7 @@ body {
 .phones {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 290px));
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   height: fit-content;
   gap: 1rem;
 }
@@ -443,6 +443,7 @@ body {
   padding: 0 10px;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .phone-card-img {
@@ -572,7 +573,7 @@ body {
   max-width: 290px;
   margin: 0 20px 0 0;
   border-right: 2px solid #dddddd;
-  max-height: min-content;
+  height: auto;
 }
 
 .filter .divider {

@@ -5,10 +5,10 @@ export const AnimatedPhonesData = [
   "pova-6-neo",
   "camon-30",
   "spark-c",
-  "spark-go",
+  "spark-go-2024",
   "spark-20",
   "spark-20-pro",
   "spark-20-pro-plus",
-  "phantom-flip",
+  "phantom-v-flip-5g",
   "phantom-fold"
 ];

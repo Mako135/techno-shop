@@ -55,12 +55,12 @@ function App() {
           <Route path="/pova-6-pro" element={<Pova6Pro />} />
           <Route path="/camon-30" element={<Common30 />} />
           <Route path="/spark-c" element={<Spark20C />} />
-          <Route path="/spark-go" element={<SparkGo />} />
+          <Route path="/spark-go-2024" element={<SparkGo />} />
           <Route path="/spark-20" element={<Spark20 />} />
           <Route path="/spark-20-pro" element={<Spark20Pro />} />
           <Route path="/spark-20-pro-plus" element={<Spark20ProPlus />} />
           <Route path="/phantom-fold" element={<Fold />} />
-          <Route path="/phantom-flip" element={<Flip />} />
+          <Route path="/phantom-v-flip-5g" element={<Flip />} />
         </Route>
       </Routes>
     </main>
