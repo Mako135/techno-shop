@@ -22,7 +22,6 @@
 .pova-container {
   background-color: #000;
   overflow-x: hidden;
-
 }
 
 .pova-banner {
@@ -95,6 +94,15 @@
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.pova-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 80vw;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .section-inner {
@@ -617,7 +625,7 @@
 .speed-container {
   position: relative;
   margin-top: 11.71875vw;
-  height: 70vw;
+  height: 70vh;
 }
 .speed-bacground {
   position: absolute;
@@ -642,6 +650,7 @@
 
 .speed-title {
   color: #b4e2cb;
+  font-size: 3.5vw;
 }
 
 .speed-frame img {
@@ -658,6 +667,7 @@
   background: linear-gradient(to right, #b4e2cb, #4d8c6c, #4d8c6c);
   -webkit-background-clip: text; /* Для Safari */
   color: transparent;
+  font-size: 3.5vw;
 }
 
 .speed-frame-overlay p {
@@ -961,4 +971,13 @@
   padding-top: 13vw;
   width: 75vw;
   margin: auto;
+}
+
+.videocard-video {
+  height: 100%;
+  width: 80%;
+}
+
+.color-slider {
+  position: relative;
 }

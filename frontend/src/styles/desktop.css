@@ -55,6 +55,7 @@ body {
   max-width: 1272px;
   margin: 0 auto;
   padding: 0 10px;
+  overflow-x: hidden;
 }
 /*********** HEADER ***********/
 
@@ -612,17 +613,17 @@ body {
 .home-news {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  overflow-x: scroll;
   margin-bottom: 100px;
   gap: 1rem;
   background-color: #fff;
+  height: 550px;
 }
 
 .news {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding:20px 0 100px;
+  padding: 20px 0 100px;
   background-color: #fff;
   gap: 20px;
 }
@@ -965,6 +966,7 @@ body {
   color: #fff;
   font-size: 32px;
   font-weight: 600;
+  text-align: center;
 }
 .support-subtitle {
   color: #fff;
@@ -1281,7 +1283,9 @@ textarea {
 .service-left p {
   color: #0264fa;
   font-size: 14px;
+  margin-top: 4px;
 }
+
 .service-left span {
   color: #707071;
   font-size: 14px;
@@ -1290,14 +1294,15 @@ textarea {
 .service-left .service-left-icon {
   color: #707071;
   margin-right: 0.5rem;
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
 }
 
 .service-left ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .service-left ul li {
@@ -1350,7 +1355,7 @@ textarea {
 
 .comparison-table img {
   width: 220px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .comparison-row {
@@ -1363,7 +1368,7 @@ textarea {
   padding: 10px;
   min-width: 200px;
 }
-.comparison-cell .swiper{
+.comparison-cell .swiper {
   width: 300px;
   height: 260px;
 }

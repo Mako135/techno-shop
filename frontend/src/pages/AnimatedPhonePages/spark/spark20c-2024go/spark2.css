@@ -485,12 +485,13 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  width: 44.1666666667vw;
-  height: 25.1041666667vw;
-  padding-left: 23.4375vw;
+  width: 54.1666666667vw;
+  height: 30.1041666667vw;
+  padding-left: 13.4375vw;
   background-image: url(https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/dist/webp/sec4PcRight.webp);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: right;
 }
 
 .right-text .param {
@@ -503,8 +504,8 @@
   color: #76ffe6;
   font-size: 2.5vw;
 }
-.right-text .param .desc {
-  font-size: 0.9375vw;
+.right-text .param .desx {
+  font-size: 2.9375vw;
 }
 
 .sec-three-2 footer {
@@ -1475,6 +1476,12 @@
 }
 
 .sec-13 .text-box .title {
+  font-size: 3vw;
+  text-align: start;
+  margin: 0;
+}
+.sec-13 .text-box .desc {
+  font-size: 1.25vw;
   text-align: start;
   margin: 0;
 }

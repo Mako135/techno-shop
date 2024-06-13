@@ -39,7 +39,7 @@ const ColorSection = () => {
   let swiperRef;
 
   return (
-    <div style={{ position: "relative" }}>
+    <div className="color-slider">
       <div className="color-slogan">
         <h1>Здесь ваш слоган!</h1>
       </div>

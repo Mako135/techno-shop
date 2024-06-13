@@ -4,7 +4,7 @@ import Footer from "../components/footer/Footer";
 
 import banner2 from "../assets/banner2.png";
 import Slider from "../feautures/Slider";
-import HomeNews from "../feautures/HomeNews";
+import HomeNews from "../components/home/HomeNews";
 import Banner from "../components/banner/Banner";
 import Title from "../components/text/Title";
 import HomePhones from "../components/home/HomePhones";

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { MdLocationOn } from "react-icons/md";
+import {  MdLocationOn } from "react-icons/md";
 import { RiPhoneFill } from "react-icons/ri";
-import { HiMail } from "react-icons/hi";
 import Footer from "../components/footer/Footer";
 import { AdvancedMarker, Map } from "@vis.gl/react-google-maps";
 import { APIProvider } from "@vis.gl/react-google-maps";
 import { fetchData } from "../services/requests/requests";
 import { API } from "../services/store/usePhoneStore";
+import email from '../assets/email.svg'
 
 const ServicePage = () => {
   const [serviceData, setServiceData] = useState([]);
@@ -20,7 +20,7 @@ const ServicePage = () => {
         const response = await fetchData(`${API}/api/contacts`);
         const data = await response;
         setServiceData(data);
-        setSelectedCity(data[0]); 
+        setSelectedCity(data[0]);
       } catch (error) {
         console.error("Error fetching service data:", error);
       }
@@ -71,7 +71,7 @@ const ServicePage = () => {
                 <span>{selectedCity?.phone_line}</span>
               </li>
               <li>
-                <HiMail className="service-left-icon" />
+                <img src={email} className="service-left-icon" />
                 <span>{selectedCity?.work_time}</span>
               </li>
             </ul>

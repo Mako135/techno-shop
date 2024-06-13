@@ -19,7 +19,7 @@ const Filter = () => {
     ram: [],
     frontCamera: "",
     backCamera: "",
-    touchId: "",
+    touchId: false,
     battery: "",
     minRes: ""
   });
@@ -28,6 +28,11 @@ const Filter = () => {
     let newFilters = { ...filters };
     if (type === "display" && value === "6.4") {
       newFilters = { ...filters, display: "", minRes: value };
+    } else {
+      newFilters = { ...filters, [type]: value };
+    }
+    if (type === "touchId" && value === false) {
+      newFilters = { ...filters, touchId: "" };
     } else {
       newFilters = { ...filters, [type]: value };
     }

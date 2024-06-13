@@ -720,3 +720,24 @@
   width: 30vw;
   z-index: 2;
 }
+
+
+@media (max-width: 768px) {
+  .flip-10 {
+    flex-direction: column;
+  }
+
+  .flip-10 .swiper-thumbs {
+    display: none;
+  }
+
+  .flip-15 {
+    height: 60vh;
+  }
+  .flip-text {
+    top: 15%;
+  }
+  .flip-16, .flip-17 {
+    height: 70vh;
+  }
+}

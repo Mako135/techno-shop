@@ -22,7 +22,6 @@ const MobileFooter = ({ className }) => {
   };
 
   return (
-    <div className="container">
       <div
         className="mobile-footer"
         style={{ backgroundColor: className ? "#fff" : "" }}
@@ -140,7 +139,6 @@ const MobileFooter = ({ className }) => {
           <p>Copyright © 2021-2025 Tecno. Все права защищены.</p>
         </div>
       </div>
-    </div>
   );
 };
 

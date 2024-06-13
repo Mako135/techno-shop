@@ -1,12 +1,14 @@
 import Design from "./Design";
 
 const FirstContent = () => {
-    const Background =
-      "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/section-02-bg-cdd40d2e.jpg";
-    const Front =
-      "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/chapter1-cover-c1f9f06b.png";
+  const Background =
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/section-02-bg-cdd40d2e.jpg";
+  const Front =
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/chapter1-cover-c1f9f06b.png";
+  const mobBack =
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/section-02-bg-m-ef013716.jpg";
   return (
-    <Design backImg={Background} frontImg={Front} width="600">
+    <Design backImg={Background} frontImg={Front} mobImg={mobBack} width="600">
       <div>
         <h1 id="title">
           Технологичный <br /> дизайн
@@ -23,6 +25,6 @@ const FirstContent = () => {
       </p>
     </Design>
   );
-}
+};
 
-export default FirstContent
+export default FirstContent;

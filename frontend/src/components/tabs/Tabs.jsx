@@ -44,7 +44,15 @@ const Tabs = ({ data }) => {
                 isOpen={openIndex === index}
                 toggleAccordion={() => toggleAccordion(index)}
               >
-                {item.content}
+                {Array.isArray(item.content)
+                  ? item.content.map((contentItem, contentIndex) => (
+                      <p key={contentIndex}>
+                        {contentItem}
+                        <br />
+                        <br />
+                      </p>
+                    ))
+                  : item.content}
               </Accordion>
             ))}
           </div>

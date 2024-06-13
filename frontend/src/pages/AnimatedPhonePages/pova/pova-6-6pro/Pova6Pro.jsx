@@ -1,6 +1,6 @@
-import pova_pro from "./assets/pova_pro.png";
 import pova_second from "./assets/pova_second.png";
 import "./pova.css";
+import "./mobilePova.css";
 import Feautures from "./components/Feautures";
 import VideoCard from "./components/VideoCard";
 import DesignSection from "./components/DesignSection";
@@ -43,16 +43,27 @@ import PortSection from "./components/PortSection";
 import LastSection from "./components/LastSection";
 import Footer from "../../../../components/footer/Footer";
 
-const Pova6Pro = () => {
+const Pova6 = () => {
+  const first_banner =
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/cover-bg-1a315782.jpg";
+  const first_banner_mobile =
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/cover-bg-m-8c7c6d10.jpg";
+  const second_banner_mobile =
+    "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6-normal/assets-ru/sec2_m_bg-8c7618fc.png";
   const firstVideo =
     "https://d3fyizz0b46qgr.cloudfront.net/global/POVA-60S/POVA-60S.mp4";
   const secondVideo =
     "https://d3fyizz0b46qgr.cloudfront.net/global/phones/pova6/pova6-5g/powg-4k-li7-v2.mp4";
-  
   return (
     <div className="pova-container">
-      <img src={pova_pro} alt="" className="pova-banner" />
-      <img src={pova_second} alt="" className="pova-banner" />
+      <picture>
+        <source media="(min-width: 768px)" srcSet={first_banner}></source>
+        <img src={first_banner_mobile} className="pova-banner" />
+      </picture>
+      <picture>
+        <source media="(min-width: 768px)" srcSet={pova_second}></source>
+        <img src={second_banner_mobile} className="pova-banner" />
+      </picture>
       <Feautures />
       <FirstContent />
       <VideoCard src={firstVideo} />
@@ -99,9 +110,9 @@ const Pova6Pro = () => {
       <SearchSection />
       <PortSection />
       <LastSection />
-      <Footer className={"white"}/>
+      <Footer className={"white"} />
     </div>
   );
 };
 
-export default Pova6Pro;
+export default Pova6;

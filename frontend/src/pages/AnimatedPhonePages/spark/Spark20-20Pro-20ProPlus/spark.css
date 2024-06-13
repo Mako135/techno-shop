@@ -829,7 +829,7 @@
   );
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: clamp(16px, 2vw, 32px);
+  font-size: 2vw;
   color: transparent;
 }
 
@@ -885,6 +885,10 @@
   );
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.right-5 p {
+  font-size: 2vw;
 }
 
 .section-eleven-fourth-block {
@@ -1160,6 +1164,10 @@
   );
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.right-data span {
+  font-size: 2vw;
 }
 
 .section-fifteen {

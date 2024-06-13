@@ -38,14 +38,7 @@ const Features = () => {
     <div
       ref={povaRef}
       id="features"
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr 1fr",
-        width: "80vw",
-        margin: "0 auto",
-        overflow: "hidden",
-        position: "relative"
-      }}
+      className="pova-features"
     >
       <div className="card" style={{ position: "relative", zIndex: 1 }}>
         <Card

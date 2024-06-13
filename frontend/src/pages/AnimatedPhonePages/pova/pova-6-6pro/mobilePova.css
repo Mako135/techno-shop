@@ -1,0 +1,235 @@
+@media (max-width: 768px) {
+  .overlay img {
+    width: 45.6015625vw;
+    height: 45.6015625vw;
+  }
+  .overlay .pova-title {
+    font-size: 32px;
+  }
+  .overlay p {
+    font-size: 20px;
+  }
+
+  .image-container {
+    height: 185.6481481481vw;
+  }
+  .image-container .content {
+    justify-content: flex-start;
+  }
+  .image-container .content h1 {
+    font-size: 32px;
+  }
+  .image-container .content h2 {
+    font-size: 5.1851851852vw;
+    margin-top: 7.4074074074vw;
+    line-height: 1.3;
+  }
+  .image-container .content p {
+    font-size: 2.7777777778vw;
+    margin-top: 7.4074074074vw;
+    line-height: 1.6;
+  }
+  .image-container img {
+    position: absolute;
+    right: 20.3703703704vw;
+    top: 80vw;
+    width: 62.962962963vw;
+    height: 93.4259259259vw;
+  }
+
+  .videocard-video {
+    width: 100vw;
+    height: 177.7777777778vw;
+    object-fit: cover;
+  }
+  .content-inner .design-inner {
+    flex-direction: column;
+    padding-top: 23.1481481481vw;
+    padding-bottom: 27.7777777778vw;
+  }
+  .content-card img {
+    height: 54.6296296296vw;
+    width: 100%;
+    margin-top: 14.8148148148vw;
+  }
+
+  .design-content-header img {
+    height: 10vw;
+    width: 10vw;
+    object-fit: contain;
+  }
+
+  .color-slogan {
+    top: 88vw;
+    left: 5vw;
+  }
+  .color-slogan h1 {
+    font-size: 24px;
+  }
+
+  .color-slider {
+    height: 70vh;
+  }
+  .color-slider .swiper {
+    height: 100% !important;
+  }
+  .color-slider img {
+    height: 100% !important;
+    object-fit: cover;
+  }
+  .custom-pagination {
+    top: 95vw;
+  }
+  .content-inner-2 {
+    color: #fff;
+    position: relative;
+    display: flex;
+    height: 100vh;
+    margin: auto;
+    width: 80vw;
+    flex-direction: flex;
+    justify-content: space-between;
+    gap: 5vw;
+  }
+  .first h1 {
+    font-size: 10vw;
+    margin-top: 10vw;
+  }
+  .first h3 {
+    font-size: 6vw;
+    text-align: center;
+  }
+  .first p {
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  .first ul {
+    margin-top: 10vw;
+  }
+  .first ul li {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first ul li strong {
+    font-size: 4.6875vw;
+  }
+  .first ul li strong sup {
+    font-size: 3.5625vw;
+  }
+  .first ul li span {
+    font-size: 3.5625vw;
+  }
+
+  .second {
+    width: 100%;
+    padding: 3vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .second h1 {
+    margin-top: 10vw;
+    font-size: 6.125vw;
+  }
+  .second h2 {
+    font-size: 5.5625vw;
+    text-align: center;
+    margin-top: 3.171875vw;
+    font-weight: 400 !important;
+  }
+
+  .second p {
+    font-size: 3.25vw;
+    text-align: center;
+    margin-top: 5.34375vw;
+  }
+  .ramka {
+    padding-bottom: 27.7777777778vw;
+  }
+  .ramka img {
+    width: 72.2222222222vw;
+  }
+  .ramka .pova-title {
+    font-size: 8vw;
+  }
+  .ramka .pova-subtitle {
+    font-size: 6vw;
+  }
+  .ramka .pova-desc {
+    font-size: 4vw;
+  }
+  .audio-title {
+    font-size: 8vw;
+    margin-top: 10vw;
+  }
+  .audio-subtitle {
+    font-size: 6vw;
+  }
+
+  .audio-desc {
+    font-size: 4vw;
+  }
+
+  .audio-overlay img {
+    margin-top: 6.34375vw;
+    width: 36.4921875vw;
+    height: 16.6015625vw;
+    object-fit: contain;
+  }
+  .audio {
+    height: 100%;
+  }
+  .audio-container video {
+    object-fit: cover;
+  }
+
+  .video-container .pova-title {
+    font-size: 6vw;
+  }
+  .video-container .pova-subtitle {
+    font-size: 4vw;
+  }
+  .video-container .pova-desc {
+    font-size: 3vw;
+  }
+  .video-container ul {
+    flex-direction: column;
+  }
+  .video-footer {
+    padding-bottom: 22vw;
+  }
+  .video-section .pova-title {
+    font-size: 6vw;
+  }
+  .video-section .pova-subtitle {
+    font-size: 4vw;
+  }
+  .video-section .pova-desc {
+    font-size: 2vw;
+  }
+
+  .scroll-slider-footer p {
+    font-size: 3vw;
+  }
+
+  .double-video {
+    margin: 30vw 0 30vw;
+    height: 100vw;
+  }
+.double-video video {
+  height: 90vw;
+  width: auto;
+}
+  
+
+  .double-video h1 {
+    display: none;
+  }
+}

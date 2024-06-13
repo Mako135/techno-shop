@@ -54,10 +54,9 @@ const VideoCard = ({ src }) => {
     >
       <video
         ref={videoRef}
-        width="80%"
-        height="100%"
         onClick={handleImageClick}
         onLoadedMetadata={handleLoadedMetadata}
+        className="videocard-video"
       >
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag.
@@ -71,6 +70,7 @@ const VideoCard = ({ src }) => {
             position: "absolute",
             top: "50%",
             left: "50%",
+            width: "10vw",
             transform: "translate(-50%, -50%)",
             cursor: "pointer"
           }}
