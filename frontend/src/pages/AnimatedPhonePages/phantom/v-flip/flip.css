@@ -16,7 +16,7 @@
 .flip-2 {
   margin: 15vw auto;
   display: grid;
-  width: 80vw;
+  width: 70vw;
   height: calc(60vh - 48px);
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1.35fr 1.68fr 1fr;

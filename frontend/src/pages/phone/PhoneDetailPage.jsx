@@ -34,11 +34,11 @@ const PhoneDetailPage = () => {
       <div className="container">
         {AnimatedPhonesData.includes(phoneId) && (
           <div className="animated-page-link">
-            <button className="contact-button">
-              <a href={`/${phoneId}`} target="_blank">
+            <a href={`/${phoneId}`} target="_blank">
+              <button className="contact-button">
                 Узнать больше о дизайне
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
         )}
         <div className="phone-container">
