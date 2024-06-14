@@ -1,5 +1,5 @@
 import FirstSection from "./components/FirstSection";
-import './common.css'
+import "./common.css";
 import SecondSection from "./components/SecondSection";
 import ThirdSection from "./components/ThirdSection";
 import FourthSection from "./components/FourthSection";
@@ -13,10 +13,9 @@ import TwelveSection from "./components/TwelveSection";
 import ThirteenSection from "./components/ThirteenSection";
 import FourteenthSection from "./components/FourteenthSection";
 import FifteenthSection from "./components/FifteenthSection";
-import Footer from '../../../components/footer/Footer'
+import Footer from "../../../components/footer/Footer";
 
 const Common30 = () => {
-
   return (
     <div className="camon-main">
       <FirstSection />
@@ -26,7 +25,7 @@ const Common30 = () => {
       <FifthSection />
       <SixthSection />
       <SeventhSection />
-  
+
       <NinthSection />
       <TenthSection />
       <EleventhSection />
@@ -37,6 +36,6 @@ const Common30 = () => {
       <Footer />
     </div>
   );
-}
+};
 
-export default Common30
+export default Common30;

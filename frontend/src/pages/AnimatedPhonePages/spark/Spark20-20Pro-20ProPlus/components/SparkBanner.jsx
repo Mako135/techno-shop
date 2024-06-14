@@ -48,7 +48,7 @@ const SparkBanner = ({ color, title, subtitle, fontColor, small, medium }) => {
 
 SparkBanner.propTypes = {
   color: PropTypes.string.isRequired,
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any,
   title: PropTypes.any.isRequired,
   subtitle: PropTypes.any.isRequired,
   fontColor: PropTypes.any.isRequired,

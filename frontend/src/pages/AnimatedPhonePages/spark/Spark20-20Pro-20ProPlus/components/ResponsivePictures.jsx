@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -15,9 +15,9 @@ const ResponsivePictures = ({
 }) => {
   const containerRef = useRef(null);
   const pictureRef = useRef(null);
-
-  useLayoutEffect(() => {
-    if (animate) {
+  console.log(containerRef.current);
+  useEffect(() => {
+    if (animate && containerRef.current) {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
@@ -33,7 +33,7 @@ const ResponsivePictures = ({
         opacity: 0.7
       });
     }
-  }, [animate]);
+  }, [animate, containerRef]);
 
   return (
     <div ref={containerRef}>
@@ -46,8 +46,8 @@ const ResponsivePictures = ({
           style={{
             width: "100%",
             height: "auto",
-            padding: `${padding}`,
-            backgroundColor: `${color}`
+            padding: padding,
+            backgroundColor: color
           }}
         />
       </picture>
@@ -59,8 +59,8 @@ ResponsivePictures.propTypes = {
   small: PropTypes.string.isRequired,
   medium: PropTypes.string.isRequired,
   large: PropTypes.string.isRequired,
-  padding: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  padding: PropTypes.string,
+  color: PropTypes.string,
   animate: PropTypes.bool
 };
 

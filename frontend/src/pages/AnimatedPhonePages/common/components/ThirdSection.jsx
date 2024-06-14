@@ -15,7 +15,7 @@ const ThirdSection = () => {
         start: "top top",
         end: "+=2000 center",
         scrub: true,
-        pin: true,
+        pin: true
       }
     });
 

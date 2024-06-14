@@ -12,7 +12,7 @@ const SecondSection = () => {
         trigger: secondRef.current,
         start: "-=300 center",
         end: "+=800",
-        scrub: true,
+        scrub: true
       }
     });
 
@@ -27,7 +27,7 @@ const SecondSection = () => {
           animation: "tween"
         },
         "<"
-      ) // Start this animation at the same time as the previous one
+      )
       .from(".second-inner-figure", { y: 300, duration: 10 }, "<");
   }, []);
 

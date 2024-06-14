@@ -2,13 +2,13 @@ import ResponsivePictures from "../../components/ResponsivePictures";
 
 const SecondBanner = () => {
   const large =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/ru/spark20pro/sec2_pc.jpg";
+    "https://d3fyizz0b46qgr.cloudfront.net/global/ru/phones/spark-20-proplus/2_pc.png";
   const medium =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/ru/spark20pro/sec2_pc.jpg";
+    "https://d3fyizz0b46qgr.cloudfront.net/global/ru/phones/spark-20-proplus/2_m.jpg";
   const small =
-    "https://d3fyizz0b46qgr.cloudfront.net/global/ru/spark20pro/sec2_m.png";
+    "https://d3fyizz0b46qgr.cloudfront.net/global/ru/phones/spark-20-proplus/2_m.jpg";
   return (
-    <section className="sec-two">
+    <div className="sec-two">
       <div className="mask"></div>
       <ResponsivePictures
         large={large}
@@ -18,8 +18,9 @@ const SecondBanner = () => {
         color="#fff"
         padding="12.5vw 0"
       />
-    </section>
+    </div>
   );
 };
+
 
 export default SecondBanner;

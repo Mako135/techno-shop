@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import Footer from "../../components/footer/Footer";
@@ -35,9 +35,9 @@ const PhoneDetailPage = () => {
         {AnimatedPhonesData.includes(phoneId) && (
           <div className="animated-page-link">
             <button className="contact-button">
-              <Link to={`/${phoneId}`} target="_blank">
+              <a href={`/${phoneId}`} target="_blank">
                 Узнать больше о дизайне
-              </Link>
+              </a>
             </button>
           </div>
         )}
