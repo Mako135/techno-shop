@@ -1,20 +1,19 @@
 import { useState } from "react";
 import Accordion from "../../feautures/Accordion";
-// import useLanguageStore from "../../services/store/useLanguageStore";
-// import translations from "../../services/translations/translations.js";
 import instagram from "../../assets/instagram.svg";
 import tiktok from "../../assets/tiktok.svg";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import CountriesMobile from "./CountriesMobile";
 
 const MobileFooter = ({ className }) => {
-  // const { language, setLanguage } = useLanguageStore();
   const [openIndex, setOpenIndex] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-  //  const handleLanguageChange = () => {
-  //    language === "ru" ? setLanguage("kk") : setLanguage("ru");
-  //  };
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -45,15 +44,6 @@ const MobileFooter = ({ className }) => {
           </Link>
         </div>
       </Accordion>
-      {/* <Accordion
-          title={translations[language].header.accessories}
-          toggleAccordion={() => toggleAccordion(1)}
-          isOpen={openIndex === 1}
-        >
-          <Link className="footer-link" to="/accessories">
-            Аксессуары
-          </Link>
-        </Accordion> */}
       <Accordion
         title="Где купить"
         toggleAccordion={() => toggleAccordion(2)}
@@ -108,11 +98,7 @@ const MobileFooter = ({ className }) => {
             <img src={tiktok} alt="" className="tiktok" />
           </Link>
         </div>
-        {/* <p onClick={handleLanguageChange}>
-            {language === "ru"
-              ? "Kazakhstan (русский)"
-              : "Kazakhstan (қазақша)"}
-          </p> */}
+        <p onClick={toggleMenu}>Kazakhstan (русский)</p>
       </div>
       <div className="divider"></div>
       <div className="copyright">
@@ -135,12 +121,34 @@ const MobileFooter = ({ className }) => {
         </div>
         <p>Copyright © 2021-2025 Tecno. Все права защищены.</p>
       </div>
+      <div className={`menu ${isOpen ? "open" : ""}`}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "2rem",
+          }}
+        >
+          <div className="space"></div>
+          <div
+            className={`burger-button ${isOpen ? "open" : ""}`}
+            onClick={toggleMenu}
+          >
+            <div className="line1"></div>
+            <div className="line2"></div>
+            <div className="line3"></div>
+          </div>
+        </div>
+        <div className="download-popup-content">
+          <CountriesMobile />
+        </div>
+      </div>
     </div>
   );
 };
 
 MobileFooter.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default MobileFooter;

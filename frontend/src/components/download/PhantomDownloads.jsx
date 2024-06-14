@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import DownloadApps from "./DownloadApps";
 const PhantomDownloads = ({ data }) => {
-   const [isOpen, setIsOpen] = useState(false);
-   const toggleMenu = () => {
-     setIsOpen(!isOpen);
-   };
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className="download-phone-cards">
       {data?.map((phone) => (
@@ -23,7 +23,7 @@ const PhantomDownloads = ({ data }) => {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            marginTop: "2rem"
+            marginTop: "2rem",
           }}
         >
           <div className="space"></div>
@@ -45,7 +45,7 @@ const PhantomDownloads = ({ data }) => {
 };
 
 PhantomDownloads.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.array,
 };
 
 export default PhantomDownloads;
