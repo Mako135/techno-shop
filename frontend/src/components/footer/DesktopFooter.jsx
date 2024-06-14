@@ -96,7 +96,10 @@ const DesktopFooter = ({ className }) => {
           {/* Footer bottom */}
           <div className="footer-bottom">
             <div className="footer-logo">
-              <p onClick={toggleMenu}>Kazakhstan (русский)</p>
+              <div className="flag" onClick={toggleMenu}>
+                <img src="https://d3fyizz0b46qgr.cloudfront.net/static/img/svg/kz.e84b974.svg" alt="" height={20} />
+                <p>Kazakhstan (русский)</p>
+              </div>
               <img src={logo} alt="" height={32} />
             </div>
 

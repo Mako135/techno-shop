@@ -98,7 +98,10 @@ const MobileFooter = ({ className }) => {
             <img src={tiktok} alt="" className="tiktok" />
           </Link>
         </div>
-        <p onClick={toggleMenu}>Kazakhstan (русский)</p>
+        <div className="flag" onClick={toggleMenu}>
+          <img src="https://d3fyizz0b46qgr.cloudfront.net/static/img/svg/kz.e84b974.svg" alt="" height={20} />
+          <p >Kazakhstan (русский)</p>
+        </div>
       </div>
       <div className="divider"></div>
       <div className="copyright">

@@ -260,6 +260,11 @@ body {
   color: #707071;
   max-height: 20px;
 }
+.footer-bottom .flag {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+}
 .footer-logo {
   display: flex;
   align-items: center;
@@ -1519,3 +1524,15 @@ textarea {
   height: 90vh;
   overflow-y: scroll;
 }
+
+.mobile-countries li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-countries li span{
+  color: #000;
+  font-size: 1.25rem;
+}
+
