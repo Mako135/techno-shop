@@ -12,6 +12,7 @@ const DownloadApps = () => {
             target="_blank"
           >
             <img
+              loading="lazy"
               src="https://d3fyizz0b46qgr.cloudfront.net/global/APPS/Boom-Player.png"
               alt=""
             />
@@ -23,6 +24,7 @@ const DownloadApps = () => {
             target="_blank"
           >
             <img
+              loading="lazy"
               src="https://d3fyizz0b46qgr.cloudfront.net/global/APPS/plamstore.png"
               alt=""
             />
@@ -34,6 +36,7 @@ const DownloadApps = () => {
             target="_blank"
           >
             <img
+              loading="lazy"
               src="https://d3fyizz0b46qgr.cloudfront.net/global/APPS/tecno1-spot.png"
               alt=""
             />

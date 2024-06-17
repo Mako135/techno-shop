@@ -5,9 +5,12 @@ import "./styles/tablet.css";
 import "./styles/lowTablets.css";
 import "./styles/mobile.css";
 import { BrowserRouter } from "react-router-dom";
+import { StrictMode } from "react";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
+    <StrictMode>
       <App />
+    </StrictMode>
   </BrowserRouter>
 );

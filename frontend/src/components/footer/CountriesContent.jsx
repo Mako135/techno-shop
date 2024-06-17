@@ -6,7 +6,7 @@ const CountriesContent = ({ data }) => {
       {data.map((counry) => (
         <Link key={counry.name} to={counry.link} target="_blank">
           <li>
-            <img src={counry.img} alt="" />
+            <img src={counry.img} alt="" loading="lazy" />
             <span>{counry.name}</span>
           </li>
         </Link>

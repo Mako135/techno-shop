@@ -24,7 +24,7 @@ const RecommendedPhones = ({ spec1, spec2, spec3, img, title, link }) => {
           </div>
         </Link>
       </div>
-      <img src={img} alt="" className="recommended-phone-img" />
+      <img src={img} alt="" loading="lazy" className="recommended-phone-img" />
     </div>
   );
 };
@@ -35,7 +35,7 @@ RecommendedPhones.propTypes = {
   spec3: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default RecommendedPhones;

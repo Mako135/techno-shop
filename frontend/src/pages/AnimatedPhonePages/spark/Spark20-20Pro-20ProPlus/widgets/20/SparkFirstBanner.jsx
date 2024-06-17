@@ -13,7 +13,6 @@ const SparkFirstBanner = () => {
         large={large}
         medium={medium}
         small={small}
-        animate={false}
       />
     </div>
   );

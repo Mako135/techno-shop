@@ -11,20 +11,20 @@ const Slider = () => {
         pagination={true}
         autoplay={{
           delay: 1500,
-          disableOnInteraction: false
+          disableOnInteraction: false,
         }}
         loop={true}
         modules={[Autoplay, Pagination]}
         className="mySlider"
       >
         <SwiperSlide>
-          <img src={banner1} alt="" />
+          <img src={banner1} alt="" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={banner2} alt="" />
+          <img src={banner2} alt="" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={banner3} alt="" />
+          <img src={banner3} alt="" loading="lazy" />
         </SwiperSlide>
       </Swiper>
     </div>

@@ -5,7 +5,12 @@ import PropTypes from "prop-types";
 const NewsCard = ({ news }) => {
   return (
     <div className="news-card">
-      <img src={news?.preview_image} alt="" className="news-card-img" />
+      <img
+        src={news?.preview_image}
+        alt=""
+        className="news-card-img"
+        loading="lazy"
+      />
       <div className="news-card-content">
         <div className="news-data">
           <p>{news?.created_at}</p>
@@ -28,7 +33,7 @@ const NewsCard = ({ news }) => {
 };
 
 NewsCard.propTypes = {
-  news: PropTypes.any
+  news: PropTypes.any,
 };
 
 export default NewsCard;

@@ -13,7 +13,6 @@ const FirstBanner = () => {
         large={large}
         medium={medium}
         small={small}
-        animate={false}
       />
     </div>
   );

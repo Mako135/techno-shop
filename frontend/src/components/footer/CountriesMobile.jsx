@@ -21,7 +21,7 @@ const CountriesMobile = () => {
             <ul key={country.name}>
               <Link to={country.link}>
                 <li>
-                  <img src={country.img} alt="" />
+                  <img src={country.img} alt="" loading="lazy" />
                   <span>{country.name}</span>
                 </li>
               </Link>

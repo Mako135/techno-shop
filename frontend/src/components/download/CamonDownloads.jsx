@@ -15,7 +15,7 @@ const CamonDownloads = ({ data }) => {
           className="download-phone-card"
           onClick={toggleMenu}
         >
-          <img src={phone.photos[0].image} alt="" />
+          <img  src={phone.photos[0].image} alt="" />
           <p>{phone.title}</p>
         </div>
       ))}

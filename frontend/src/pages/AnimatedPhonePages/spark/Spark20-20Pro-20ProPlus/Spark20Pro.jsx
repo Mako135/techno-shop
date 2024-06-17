@@ -16,7 +16,6 @@ import SectionFourteen from "./widgets/SectionFourteen";
 import SectionFifteen from "./widgets/SectionFifteen";
 import Footer from '../../../../components/footer/Footer'
 
-
 const Spark20Pro = () => {
   const figure_1 =
     "https://d3fyizz0b46qgr.cloudfront.net/global/spark-20-pro/en/dist/jpg/sec8PcF1.jpg";
