@@ -1,15 +1,9 @@
 import { useState } from "react";
-// import useLanguageStore from "../../services/store/useLanguageStore";
 import { NavLink } from "react-router-dom";
-// import translations from "../../services/translations/translations.js";
 import logo from "../../assets/logo.png";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const { language, setLanguage } = useLanguageStore();
-  // const handleLanguageChange = () => {
-  //   language === "ru" ? setLanguage("kk") : setLanguage("ru");
-  // };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -80,12 +74,12 @@ const MobileMenu = () => {
           <NavLink className="link" to="/stocks" onClick={toggleMenu}>
             Акции
           </NavLink>
-        </div>
+          <div className="divider"></div>
 
-        {/* <div onClick={handleLanguageChange} className="">
-          <div className="divider" style={{ marginBottom: "1rem" }}></div>
-          {language === "ru" ? "Kazakhstan (русский)" : "Kazakhstan (қазақша)"}
-        </div> */}
+          <NavLink className="link" to="/search" onClick={toggleMenu}>
+            Поиск
+          </NavLink>
+        </div>
       </div>
     </>
   );
