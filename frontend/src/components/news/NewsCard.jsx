@@ -33,7 +33,13 @@ const NewsCard = ({ news }) => {
 };
 
 NewsCard.propTypes = {
-  news: PropTypes.any,
+  news: PropTypes.shape({
+    preview_image: PropTypes.string,
+    created_at: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    slug: PropTypes.string,
+  }).isRequired,
 };
 
 export default NewsCard;

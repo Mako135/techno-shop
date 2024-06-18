@@ -27,6 +27,8 @@ import SparkGo from "./pages/AnimatedPhonePages/spark/spark20c-2024go/SparkGo";
 import NewsPage from "./pages/News/NewsPage";
 import Stocks from "./pages/stocks/Stocks";
 import StocksDetailPage from "./pages/stocks/StocksDetailPage";
+import TermsOfUse from "./pages/TermsOfUse";
+import PolicyPage from "./pages/PolicyPage";
 
 function App() {
   return (
@@ -48,6 +50,9 @@ function App() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/download" element={<DownloadPage />} />
           <Route path="/services" element={<ServicePage />} />
+
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
+          <Route path="/policy" element={<PolicyPage />} />
 
           <Route path="/pova-5" element={<PovaFive />} />
           <Route path="/pova-6" element={<Pova6 />} />

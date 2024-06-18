@@ -12,33 +12,27 @@ const Shops = () => {
         <ShopCard
           img={kaspi}
           title="Каспи Магазин"
-          link={
-            "https://kaspi.kz/shop/p/tecno-phantom-v-flip-5g-8-gb-256-gb-sirenevyi-115769335/?c=750000000&m=30027663&sr=23&ref=shared_link"
-          }
+          link="https://kaspi.kz/shop/p/tecno-phantom-v-flip-5g-8-gb-256-gb-sirenevyi-115769335/?c=750000000&m=30027663&sr=23&ref=shared_link"
         />
         <ShopCard
           img={technodom}
           title="Technodom"
-          link={
-            "https://www.technodom.kz/catalog/smartfony-i-gadzhety/smartfony-i-telefony/smartfony/f/brands/tecno"
-          }
+          link="https://www.technodom.kz/catalog/smartfony-i-gadzhety/smartfony-i-telefony/smartfony/f/brands/tecno"
         />
         <ShopCard
           img={veter}
           title="Белый Ветер"
-          link={
-            "https://shop.kz/offers/smartfony/filter/fltr_brand-is-tecno_mobile/apply/"
-          }
+          link="https://shop.kz/offers/smartfony/filter/fltr_brand-is-tecno_mobile/apply/"
         />
         <ShopCard
           img={fora}
           title="Fora"
-          link={"https://fora.kz/collection/smartfony"}
+          link="https://fora.kz/collection/smartfony"
         />
         <ShopCard
           img={beeline}
           title="Beeline"
-          link={"https://shop.beeline.kz/ru/almaty/c/smartphones"}
+          link="https://shop.beeline.kz/ru/almaty/c/smartphones"
         />
       </div>
     </div>

@@ -327,8 +327,8 @@ body {
 
 .title {
   text-align: center;
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 32px !important;
+  font-weight: 600 !important;
   margin: 50px auto 40px;
 }
 
@@ -1531,8 +1531,39 @@ textarea {
   margin-bottom: 1rem;
 }
 
-.mobile-countries li span{
+.mobile-countries li span {
   color: #000;
   font-size: 1.25rem;
 }
 
+/************* TERMS *************/
+.terms .container {
+  max-width: 1000px;
+}
+.terms-banner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.terms p {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.terms h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #666666;
+}
+
+.terms .divider {
+  margin: 3rem 0 1.5rem;
+}
+
+.terms-date {
+  text-align: right;
+  font-size: 1.25rem;
+  color: #666666;
+  margin-bottom: 2rem;
+}

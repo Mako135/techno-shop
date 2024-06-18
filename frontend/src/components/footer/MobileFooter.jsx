@@ -50,8 +50,35 @@ const MobileFooter = ({ className }) => {
         isOpen={openIndex === 2}
       >
         <div className="footer-links">
-          <Link className="footer-link" to="/where-to-buy">
-            Где купить
+          <Link
+            className="footer-link"
+            to="https://kaspi.kz/shop/p/tecno-phantom-v-flip-5g-8-gb-256-gb-sirenevyi-115769335/?c=750000000&m=30027663&sr=23&ref=shared_link"
+          >
+            Каспи Магазин
+          </Link>
+          <Link
+            className="footer-link"
+            to="https://www.technodom.kz/catalog/smartfony-i-gadzhety/smartfony-i-telefony/smartfony/f/brands/tecno"
+          >
+            Technodom
+          </Link>
+          <Link
+            className="footer-link"
+            to="https://shop.kz/offers/smartfony/filter/fltr_brand-is-tecno_mobile/apply/"
+          >
+            Белый Ветер
+          </Link>
+          <Link
+            className="footer-link"
+            to="https://fora.kz/collection/smartfony"
+          >
+            Fora
+          </Link>
+          <Link
+            className="footer-link"
+            to="https://shop.beeline.kz/ru/almaty/c/smartphones"
+          >
+            Beeline
           </Link>
         </div>
       </Accordion>
@@ -99,27 +126,22 @@ const MobileFooter = ({ className }) => {
           </Link>
         </div>
         <div className="flag" onClick={toggleMenu}>
-          <img src="https://d3fyizz0b46qgr.cloudfront.net/static/img/svg/kz.e84b974.svg" alt="" height={20} />
-          <p >Kazakhstan (русский)</p>
+          <img
+            src="https://d3fyizz0b46qgr.cloudfront.net/static/img/svg/kz.e84b974.svg"
+            alt=""
+            height={20}
+          />
+          <p>Kazakhstan (русский)</p>
         </div>
       </div>
       <div className="divider"></div>
       <div className="copyright">
         <div className="copyright-links">
-          <Link
-            className="footer-link-copyright"
-            to="https://ru.tecno-mobile.com/privacy-policy/"
-          >
+          <Link className="footer-link-copyright" to="/policy">
             Политика конфиденциальности
           </Link>
-          <Link
-            className="footer-link-copyright"
-            to="https://ru.tecno-mobile.com/terms-of-use/"
-          >
+          <Link className="footer-link-copyright" to="/terms-of-use">
             Условия использования
-          </Link>
-          <Link className="footer-link-copyright" to="/">
-            Карта сайта
           </Link>
         </div>
         <p>Copyright © 2021-2025 Tecno. Все права защищены.</p>

@@ -7,11 +7,11 @@ const News = () => {
   useEffect(() => {
     fetchNews();
   }, [fetchNews]);
-  const homeNews = news.slice(0,3)
+  const homeNews = news.slice(0, 3);
   return (
     <div className="home-news">
       {homeNews?.map((news) => (
-        <NewsCard key={news.id} news={news} />
+        <NewsCard key={news.title} news={news} />
       ))}
     </div>
   );

@@ -4,7 +4,6 @@ import aboutBanner2 from "../../assets/aboutBanner2.jpg";
 import AboutMain from "../../components/about/AboutMain";
 import History from "../../components/history/History";
 import Footer from "../../components/footer/Footer";
-import MoreLink from "../../components/link/MoreLink";
 import Banner from "../../components/banner/Banner";
 import AboutSlogan from "../../components/about/AboutSlogan";
 import { useEffect } from "react";
@@ -21,7 +20,6 @@ const About = () => {
       >
         <div className="centered-content">
           <img src={slogan} alt="Small Image" className="slogan-image" />
-          <MoreLink link="/shop" color="white" text="Посмотреть" />
         </div>
       </div>
       <div className="container">
@@ -37,6 +35,6 @@ const About = () => {
       <Footer className="white" />
     </div>
   );
-}
+};
 
-export default About
+export default About;

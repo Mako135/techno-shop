@@ -22,19 +22,19 @@ const DesktopFooter = ({ className }) => {
             <div className="footer-links-group">
               {/* Footer links */}
               <div className="footer-links">
-                <Link className="footer-link bold" to="/phones">
+                <Link className="footer-link bold" to="/phones" target="_blank">
                   Смартфоны
                 </Link>
-                <Link className="footer-link" to="/phones">
+                <Link className="footer-link" to="/phones" target="_blank">
                   PHANTOM
                 </Link>
-                <Link className="footer-link" to="/phones">
+                <Link className="footer-link" to="/phones" target="_blank">
                   CAMON
                 </Link>
-                <Link className="footer-link" to="/phones">
+                <Link className="footer-link" to="/phones" target="_blank">
                   SPARK
                 </Link>
-                <Link className="footer-link" to="/phones">
+                <Link className="footer-link" to="/phones" target="_blank">
                   POVA
                 </Link>
               </div>
@@ -44,35 +44,78 @@ const DesktopFooter = ({ className }) => {
               </Link>
             </div> */}
               <div className="footer-links">
-                <Link className="footer-link bold" to="/where-to-buy">
+                <Link
+                  className="footer-link bold"
+                  to="/where-to-buy"
+                  target="_blank"
+                >
                   Где купить
+                </Link>
+                <Link
+                  className="footer-link"
+                  to="https://kaspi.kz/shop/p/tecno-phantom-v-flip-5g-8-gb-256-gb-sirenevyi-115769335/?c=750000000&m=30027663&sr=23&ref=shared_link"
+                  target="_blank"
+                >
+                  Каспи Магазин
+                </Link>
+                <Link
+                  className="footer-link"
+                  to="https://www.technodom.kz/catalog/smartfony-i-gadzhety/smartfony-i-telefony/smartfony/f/brands/tecno"
+                  target="_blank"
+                >
+                  Technodom
+                </Link>
+                <Link
+                  className="footer-link"
+                  to="https://shop.kz/offers/smartfony/filter/fltr_brand-is-tecno_mobile/apply/"
+                  target="_blank"
+                >
+                  Белый Ветер
+                </Link>
+                <Link
+                  className="footer-link"
+                  to="https://fora.kz/collection/smartfony"
+                  target="_blank"
+                >
+                  Fora
+                </Link>
+                <Link
+                  className="footer-link"
+                  to="https://shop.beeline.kz/ru/almaty/c/smartphones"
+                  target="_blank"
+                >
+                  Beeline
                 </Link>
               </div>
               <div className="footer-links">
-                <Link className="footer-link bold" to="/about">
+                <Link className="footer-link bold" to="/about" target="_blank">
                   О нас
                 </Link>
-                <Link className="footer-link" to="/about">
+                <Link className="footer-link" to="/about" target="_blank">
                   О Tecno
                 </Link>
-                <Link className="footer-link" to="/news">
+                <Link className="footer-link" to="/news" target="_blank">
                   Новости
                 </Link>
-                <Link className="footer-link" to="/stocks">
+                <Link className="footer-link" to="/stocks" target="_blank">
                   Акции
                 </Link>
               </div>
               <div className="footer-links">
-                <Link className="footer-link bold" to="/support">
+                <Link
+                  className="footer-link bold"
+                  to="/support"
+                  target="_blank"
+                >
                   Поддержка
                 </Link>
-                <Link className="footer-link" to="/support">
+                <Link className="footer-link" to="/support" target="_blank">
                   FAQ
                 </Link>
-                <Link className="footer-link" to="/support">
+                <Link className="footer-link" to="/support" target="_blank">
                   Документация
                 </Link>
-                <Link className="footer-link" to="/services">
+                <Link className="footer-link" to="/services" target="_blank">
                   Сервисные центры
                 </Link>
               </div>
@@ -97,7 +140,11 @@ const DesktopFooter = ({ className }) => {
           <div className="footer-bottom">
             <div className="footer-logo">
               <div className="flag" onClick={toggleMenu}>
-                <img src="https://d3fyizz0b46qgr.cloudfront.net/static/img/svg/kz.e84b974.svg" alt="" height={20} />
+                <img
+                  src="https://d3fyizz0b46qgr.cloudfront.net/static/img/svg/kz.e84b974.svg"
+                  alt=""
+                  height={20}
+                />
                 <p>Kazakhstan (русский)</p>
               </div>
               <img src={logo} alt="" height={32} />
@@ -109,18 +156,17 @@ const DesktopFooter = ({ className }) => {
               <div className="copyright-links">
                 <Link
                   className="footer-link-copyright"
-                  to="https://ru.tecno-mobile.com/privacy-policy/"
+                  to="/policy"
+                  target="_blank"
                 >
                   Политика конфиденциальности
                 </Link>
                 <Link
                   className="footer-link-copyright"
-                  to="https://ru.tecno-mobile.com/terms-of-use/"
+                  to="/terms-of-use"
+                  target="_blank"
                 >
                   Условия использования
-                </Link>
-                <Link className="footer-link-copyright" to="/">
-                  Карта сайта
                 </Link>
               </div>
               <p>Copyright © 2021-2025 Tecno. Все права защищены.</p>
