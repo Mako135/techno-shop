@@ -29,6 +29,7 @@ import NeoSecTwentyTwo from "./components/NeoSecTwentyTwo";
 import NeoSecTwo from "./components/NeoSecTwo";
 import Footer from "../../../../components/footer/Footer";
 import "./neo.css";
+import "./neoMobile.css";
 const PovaNeo = () => {
   return (
     <div className="neo-container">

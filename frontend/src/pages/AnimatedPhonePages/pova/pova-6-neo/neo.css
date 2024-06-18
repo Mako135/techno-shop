@@ -236,6 +236,7 @@
 .neo-right-card video {
   height: 100%;
   position: relative;
+  width: 100%;
 }
 .neo-right-card video::after {
   position: absolute;
@@ -337,6 +338,10 @@
   font-size: 2.5416666667vw;
   line-height: 1.15;
   color: #7593bc;
+}
+
+.neo-9-card-content p {
+  font-size: 1.25vw;
 }
 
 .neo-9-second-card {
@@ -607,8 +612,10 @@
   font-size: 2.5vw;
 }
 
-.left-text2-content p {
+.left-text2-content p,
+.left-text2-content span {
   margin: 0;
+  font-size: 1vw;
 }
 
 .right-text2 {
@@ -651,6 +658,7 @@
 }
 
 .right-text2-content p {
+  font-size: 1.25vw;
   margin: 0;
 }
 .right-text2-content span {
@@ -667,10 +675,37 @@
 
 @media (max-width: 768px) {
   .neo-5-content-inner {
-    width: 80%;
     flex-direction: column;
   }
+  .neo-5-content-inner img{
+    width: 26.2962962963vw;
+    height: 62.8703703704vw;
+  }
   .neo-5-content-titles h1 {
-    font-size: 32px;
+    text-align: center;
+    font-size: 8vw;
+  }
+  .neo-5-content-titles p {
+    text-align: center;
+    font-size: 6vw;
+  }
+  .neo-left-card {
+    flex-direction: column;
+    height: 100vh;
+    padding: 17.037037037vw 0;
+  }
+
+  .neo-left-card img {
+    width: 80%;
+    margin: auto;
+  }
+  .neo-right-card {
+    flex-direction: column-reverse;
+    height: 60vh;
+    align-items: center;
+  }
+
+  .neo-right-card img {
+    width: 80%;
   }
 }

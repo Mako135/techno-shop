@@ -377,6 +377,9 @@
   color: hsl(0, 0%, 100%);
   width: 40.15625vw;
 }
+.pova-sec-12 .pova-text h1 {
+  font-size: 2.25vw;
+}
 .pova-sec-12 .pova-text p {
   font-size: 1.25vw;
 }
@@ -860,32 +863,85 @@
   object-fit: cover;
 }
 
-.sec-24 .pova-text{
+.sec-24 .pova-text {
   position: relative;
   margin: 0 -10vw 0 10vw;
   z-index: 2;
 }
 
-.sec-25 .pova-text{
+.sec-25 .pova-text {
   width: 50vw;
   text-align: center;
   color: #fff;
   margin: auto;
 }
-.sec-25 .pova-text h1{
+.sec-25 .pova-text h1 {
   font-size: 2.875vw;
   line-height: 1.15;
 }
-.sec-25 .pova-text h3{
+.sec-25 .pova-text h3 {
   font-size: 1.875vw;
   margin: 1.25vw 0;
   color: #c8af6d;
 }
-.sec-25 .pova-text p{
+.sec-25 .pova-text p {
   font-size: 1.25vw;
 }
 
 .sec-25 video {
   margin-top: 5vw;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .pova-4 {
+    margin-top: -22vw;
+  }
+  .pova-4-content h1 {
+    font-size: 8.8888888889vw;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 10vw;
+  }
+  .pova-4-content img {
+    width: 100vw;
+    height: 84.9074074074vw;
+    position: absolute;
+    left: 10vw;
+    top: 52.7777777778vw;
+    margin-left: 0;
+  }
+  .sec-10 .pova-4 .pova-4-content img {
+    top: unset;
+  }
+  .pova-sec-12 {
+    padding: 12.5vw 0;
+    flex-direction: column;
+  }
+  .pova-sec-12 .pova-text {
+    width: 80%;
+  }
+  .sec-16 {
+    height: 80vh;
+    padding: 22vw 0;
+  }
+  .sec-16 .pova-text {
+    width: 100%;
+  }
+  .sec-16 video {
+    top: 50vh;
+    width: 82.96875vw;
+    height: 65.15625vw;
+    margin: 0 auto;
+  }
+  .sec-17 .pova-4 .pova-4-content img {
+    top: unset;
+  }
+  .sec-21 .pova-4 .pova-4-content img {
+    top: unset;
+    width: 28.9814814815vw;
+    height: 37.8703703704vw;
+  }
 }
