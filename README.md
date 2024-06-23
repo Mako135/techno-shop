@@ -1,4 +1,4 @@
-<img src="https://d3fyizz0b46qgr.cloudfront.net/ru/newfileadmin/tecno/img/favicon-114db49/favicon-32x32.png" alt="Alt Text" style="height: 120px; object-fit: contain;">
+<img src="https://d3fyizz0b46qgr.cloudfront.net/ru/newfileadmin/tecno/img/favicon-114db49/favicon-32x32.png" alt="Alt Text">
 
 # Tecno Shop
 ## Описание
