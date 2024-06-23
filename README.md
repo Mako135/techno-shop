@@ -1,4 +1,4 @@
-<img src="https://github.com/Mako135/techno-shop/blob/main/frontend/src/assets/logo.png" alt="Alt Text" style="height: 120px;">
+<img src="https://github.com/Mako135/techno-shop/blob/main/frontend/src/assets/logo.png" alt="Alt Text" style="height: 80px;">
 
 # Tecno Shop
 ## Описание
