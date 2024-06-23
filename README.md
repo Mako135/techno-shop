@@ -1,4 +1,4 @@
-<img src="[URL_изображения](https://github.com/Mako135/techno-shop/blob/main/frontend/src/assets/logo.png)" alt="Alt Text" width="300" height="200">
+<img src="https://github.com/Mako135/techno-shop/blob/main/frontend/src/assets/logo.png" alt="Alt Text" width="300" height="200">
 
 # Tecno Shop
 
