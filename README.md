@@ -1,7 +1,13 @@
 <img src="https://github.com/Mako135/techno-shop/blob/main/frontend/src/assets/logo.png" alt="Alt Text" style="height: 150px; object-fit: contain;">
+
 # Tecno Shop
+## Описание
 
 Этот проект создан на библиотеке Реакт и фремворке Джанго
+Сайт доступен по этой ссылке: https://tecno-mobile.kz/
+
+
+## STACK
 
 Frontend STACK
 - React-18
@@ -17,3 +23,8 @@ BACKEND STACK
 
 SQL
 - PostgreSQL
+
+## Авторы
+
+- Қуанышбек Мағжан ([Mako135](https://github.com/Mako135)) - Фронтенд-Разработчик 
+- Сақтағанов Нұржан ([nurekedev](https://github.com/nurekedev)) - Бэкенд-Разработчик
