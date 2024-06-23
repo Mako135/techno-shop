@@ -1,4 +1,4 @@
-<img src="https://d3fyizz0b46qgr.cloudfront.net/ru/newfileadmin/tecno/img/favicon-114db49/favicon-32x32.png" alt="Alt Text">
+<img src="https://github.com/Mako135/techno-shop/blob/main/frontend/src/assets/logo.png" alt="Alt Text">
 
 # Tecno Shop
 ## Описание
@@ -20,7 +20,7 @@ Frontend STACK
 BACKEND STACK
 - DJANGO(DRF ) 5.0.4
 - Grappeli
-- 
+
 
 SQL
 - PostgreSQL
